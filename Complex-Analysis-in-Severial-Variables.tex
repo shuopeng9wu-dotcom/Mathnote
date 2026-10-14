@@ -2,7 +2,58 @@
 \begin{document}
 	\chapter{Holomorpihc Functions in Severial Variables}
 		\section{Fundamentals}
-			\subsection{Cauchy-Riemann Equation}
+			\subsection{Analysis and Topologies}
+				Recall：
+				\begin{itemize}
+					\item Power Series $\CC[[z_1,\dots,z_n]]$ with elements $\sum a_{i_1,\dots,i_n}z_1^{i_1}\dots z_n^{i_n}$, $a_{i_1,\dots,i_n}\in \CC$;
+					\item Convergence of Power Series;
+					\item Uniformly Convergence to function $f:\CC^n\supseteq M\rightarrow \CC$,
+					\begin{gather*}
+						|\sum a_{i_1,\dots,i_n}z_1^{i_1}\dots z_n^{i_n}-f(z)|<\epsilon, \forall z\in M
+					\end{gather*}
+					\item Holomorphic Function $\Leftrightarrow$ Analytic
+					
+					According to Cauchy's theorem in multivariables, we obtain the equivalence.
+					\begin{gather*}
+						f\mbox{ is holomorphic}\Leftarrow f\mbox{ is analytic:} \forall z_0\in M,\exists U(z_0),
+						\sum a_v(z-z_0)^v \mbox{converges on }U(z_0)\mbox{ to }f(z)
+					\end{gather*}
+					\item Absolute Space: A pointed set 
+					\begin{gather*}
+						V=\{(z_1,\dots,z_n)\in \CC^n:|z_i|<r_i\}
+					\end{gather*}
+
+					With the modular mapping on each component,\begin{gather*}
+						\tau:\CC^n\rightarrow V\qquad (z_1,\dots,z_n)\mapsto (|z_1|,\dots,|z_n|)
+					\end{gather*}
+				\end{itemize}
+
+				\subsubsection{Polycylinder}
+				\begin{Def}
+					Let	$\tau\in V$ be an element in absolute space,$z_0\in \CC^n$.
+					
+					then define the \textbf{polycylinder about $z_0$ with radius $\tau$} as
+					\begin{gather*}
+						\Delta(z_0,\tau)=\{z\in \CC^n:|z_i-z_{0,i}|<\tau_i, i=1,\dots,n\}
+					\end{gather*}
+
+					And, $\partial \Delta(z_0,\tau)$ is the \textbf{distinguished boundary} of $\Delta(z_0,\tau)$.
+				\end{Def}
+
+				It is easy to see that the geometric shape of polycylinder is actually a \textbf{product of discs} in $\CC^n$. Thus, the boundary is a product of circles, actually 'torus' in $\CC^n$.
+
+				Now, take the following notion
+				\begin{gather*}
+					\odot{\CC^n}:='CC^n-\{0\}^n\qquad P_\tau=\Delta(0,\tau)
+				\end{gather*}
+
+			\subsection{Rheinhardt Domain}
+				\subsubsection{Torus Action}
+				\subsubsection{Definition of Rheinhardt Domain}
+				\begin{Def}
+					Let $D\subseteq \CC^n$ be a domain, then $D$ is called a \textbf{Rheinhardt Domain} if for any $z\in D$, the polycylinder $\Delta(0,|z|)\subseteq D$.
+				\end{Def}
+			\subsection{Complex Differential and Cauchy-Riemann Equation}
 				\begin{Def}
 					内容...
 				\end{Def}
@@ -40,7 +91,7 @@
 		\subsection{Hartog's Theorem}
 		\begin{proposition}
 			(Jensen's Inequality)
-		\end{proposition}
+			\end{proposition}
 		\begin{proof}
 			内容...
 		\end{proof}
@@ -53,9 +104,4 @@
 		
 		\subsection{Convergence Theorem}
 		\section{Domains of Holomorphy}
-	\chapter{AG Course}
-	\chapter{Coherent Analytic Sheaves}
-	\chapter{Stein Space}
-	\chapter{Frechet Sheaves,Cartan's Theorem}
-	\chapter{Serre's GAGA Theorem}
 \end{document}
