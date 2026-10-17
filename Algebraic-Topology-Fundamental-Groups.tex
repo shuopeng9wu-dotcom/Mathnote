@@ -1,0 +1,614 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+		\chapter{Fundamental Groups}
+	\section{Definitions}
+	\begin{Def}
+		Let $X$ be a topological space:
+		\begin{itemize}
+			\item We define a \textbf{path} in $X$ as a continuous map
+			\begin{gather*}
+				\gamma:[a,b]\rightarrow X
+			\end{gather*}
+			often we say: $\gamma(a)$ is the \textbf{starting point} and $\gamma(b)$ si the \textbf{end point}.
+			\item A \textbf{loop} is a path with $\gamma(a)=\gamma(b)$;
+			\item Given a path $\gamma:[a,b]\rightarrow X$, define its inverse 
+			\begin{gather*}
+				\bar{\gamma}:[a,b]\rightarrow X\qquad t\mapsto \gamma(b+a-t)
+			\end{gather*}
+		\end{itemize}
+	\end{Def}
+	
+	\subsection{Path-Homotopy}
+	\begin{Def}
+		Let $X$ be a topological space:
+		\begin{itemize}
+			\item Let $\gamma_0,\gamma_1:[a,b]\rightarrow X$ be two paths with the same starting point $P$, and the same end point $Q$.
+			
+			A \textbf{path homotopy} between the paths $\gamma_0,\gamma_1$ is a homotopy rel $\{a,b\}$ between $\gamma_0$ and $\gamma_1$.
+			
+			In other words, a path-homotopy is a continuous map
+			\begin{gather*}
+				\Gamma:[a,b]\times [0,1]\rightarrow X
+			\end{gather*}
+			Such that
+			\begin{gather*}
+				\Gamma(t,0)=\gamma_0(t)\qquad \Gamma(t,1)=\gamma_1(t)\\
+				\Gamma(a,s)=P\qquad \Gamma(b,s)=Q
+			\end{gather*}
+			\item If $\gamma_0$ and $\gamma_1$ are path-homotopic, then written as $\gamma_0\simeq_p \gamma_1$;
+			\item Especially, a loop $\gamma$ is \textbf{null-homotopic}, if it is path-homotopic to the constant path $\delta$ given by
+			\begin{gather*}
+				\delta(t):=\gamma(a)
+			\end{gather*}
+		\end{itemize}
+	\end{Def}
+	\subsubsection{Reparametrization}
+	\begin{Def}
+		Let $\gamma:[a,b]\rightarrow X$ be a path in topological space $X$, and let
+		\begin{gather*}
+			\varphi:[a,b]\rightarrow [a,b]
+		\end{gather*}
+		which satisfies:
+		\begin{itemize}
+			\item Continuous;
+			\item $\gamma(a)=a;\gamma(b)=b$;
+			\item Monotone;
+		\end{itemize}
+		
+		Then, $\gamma\circ\varphi$, which is called \textbf{reparametrization} of $\gamma$.
+	\end{Def}
+	\begin{lemma}
+		(Reparametrization-Homotopy Lemma) Let $\gamma:[a,b]\rightarrow X$ be a path in a topological space $X$.
+		
+		If: a path $\delta:[a,b]\rightarrow X$ is obtained from $\gamma$ by a reparametrization, then
+		\begin{gather*}
+			\gamma\simeq_p \delta
+		\end{gather*}
+	\end{lemma}
+	\begin{proof}
+		Suppose $\varphi:[a,b]\rightarrow [a,b]$ a reparametrization such that
+		\begin{gather*}
+			\delta=\gamma\circ \varphi
+		\end{gather*}
+		
+		Then, define the homotopy
+		\begin{gather*}
+			P:[a,b]\times [0,1]\rightarrow X\\
+			(t,s)\mapsto \gamma(t+(1-s)\varphi(t))
+		\end{gather*}
+		
+		is a path homomtopy
+	\end{proof}
+	\subsubsection{Path-Homotopy Class}
+	
+	\begin{lemma}
+		(Path-Homotopy Equivalence Lemma) Let $X$ be topological space and $x,y\in X$. Then,path-homotopy is an equivalence relation on the set of paths $[a,b]\rightarrow X$.
+	\end{lemma}
+	\begin{proof}
+		Path-homotopy satisfies the relation condition:
+		\begin{itemize}
+			\item $\gamma\sim_{p} \gamma$;
+			\item Transitivity: Suppose $P:\gamma_1\sim_p \gamma_2,P':\gamma_2\sim_p \gamma_3$, then
+			\begin{gather*}
+				P''(s,t):=\begin{cases}
+					P(s,2t)&t\in [0,\frac{1}{2}]\\
+					P''(s,2t-1)&t\in [\frac{1}{2},1]
+				\end{cases}
+			\end{gather*}
+			\item Symmetry: Omitted.
+		\end{itemize}
+	\end{proof}
+	
+	\begin{Def}
+		\begin{itemize}
+			\item (Path-Homotopy Class) Suppose $f:[a,b]\rightarrow X$ be path, denote $[f]$ the \textbf{path-homotopy class};
+			\item (Product) Define
+			\begin{gather*}
+				\alpha*\beta(t):=\begin{cases}
+					\alpha(2t)&t\in [0,\frac{1}{2}]\\
+					\beta(2t-1)&t\in [\frac{1}{2},1]
+				\end{cases}
+			\end{gather*}
+			
+			\textbf{Remark} The product does not satisfy the associativity.
+		\end{itemize}
+	\end{Def}
+	\begin{proposition}
+		(Path-Homotopy Product Proposition)
+		
+		\begin{itemize}
+			\item 
+			\item 
+			\item 
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{The Fundamental Group of Pointed Topological Space}
+	\begin{Def}
+		Let $X$ be a topological space, and $x_0\in X$ a point.
+		
+		A \textbf{loop} is a path $f:[0,1]\rightarrow X$ such that
+		\begin{gather*}
+			f(0)=f(1)=x_0
+		\end{gather*}
+	\end{Def}
+	\begin{proposition}
+		($\pi_1$-Group Proposition) Let $X$ be a topological space and $x_0\in X$, the set
+		\begin{gather*}
+			\pi_1(X,x_0):=\{\mbox{path-homotopy classes of loops in }(X,x_0)\}
+		\end{gather*}
+		together with product $[\alpha*\beta]=[\alpha]\cdot [\beta]$ and unit $[e_{x_0}]$, which is a group.
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{Def}
+		内容...
+	\end{Def}
+	\subsubsection{Change of Base Points}	
+	\begin{proposition}
+		(Change of Base Point Propsition)
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{corollary}
+		内容...
+	\end{corollary}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{Examples}
+	\begin{itemize}
+		\item Fundamental Group of the circle:
+		\begin{lemma}
+			(Lesbegue's Lemma) Let
+			\begin{gather*}
+				f:[0,1]^m\rightarrow X
+			\end{gather*}
+			
+			be a continuous map. Let $\{V_i\}$ be an open cover of $X$. 
+			
+			Then, for every $a_1,\dots,a_m\in \{0,1,\dots,N-1\}$there exists an $N\in \NN$ such that
+			\begin{gather*}
+				f([\frac{a_1}{N},\frac{a_1+1}{N}]\times\dots\times [\frac{a_m}{N},\frac{a_m+1}{N}])\subseteq V_i
+			\end{gather*}
+		\end{lemma}
+		\begin{proof}
+			Here: 
+		\end{proof}
+		\begin{Def}
+			\begin{itemize}
+				\item Consider map $\Xi:\RR\rightarrow S^1$;
+				\item Let $X$ be a topological space with $f:X\rightarrow S^1$ continuous.
+				
+				A \textbf{lift} of $f$ is a continuous map
+				\begin{gather*}
+					\tilde{f}:W\rightarrow \RR
+				\end{gather*}
+				such that $\Xi\circ \tilde{f}=f$. In other words, such that for all $w\in W$ we have
+				\begin{gather*}
+					f(w)=exp(i\cdot \tilde{f}(w))
+				\end{gather*}
+				\begin{center}
+					\begin{tikzcd}
+						&\RR\arrow[d,"p"]\\
+						W\arrow[ru,"\tilde{f}"]\arrow[r,"f"]&S^1
+					\end{tikzcd}
+				\end{center}
+			\end{itemize}
+		\end{Def}
+		
+		\begin{example}
+			(Lift) Consider the map $f:[0,1]\rightarrow S^1,t\mapsto exp(2\pi int)$. Then, consider the lift given by
+			\begin{gather*}
+				\tilde{f}:t\mapsto 2\pi in\cdot t
+			\end{gather*}
+			The lift is not unique, take $k=2\pi\cdot n$.
+		\end{example}
+		
+		\begin{lemma}
+			(Lift Uniqueness Lemma) Let $W$ be a connected topological space. Let $f:W\rightarrow S^1$ be a continuous map and $\tilde{\varphi},\tilde{\psi}:W\rightarrow \RR$ be two lifts of $f$.
+			
+			If $\tilde{\varphi},\tilde{\psi}$ agrees on some point $w_0\in W$, then they agree everywhere. 
+		\end{lemma}
+		\begin{proof}
+			Consider the following map
+			\begin{gather*}
+				\theta:W\rightarrow \RR\qquad w\mapsto \theta(w):=\tilde{\varphi}(w)-\tilde{\psi}(w)
+			\end{gather*}
+			Then, by hypothesis, we have
+			\begin{gather*}
+				\theta(w_0)=0\qquad exp(i\theta(w))=f(w)\cdot f(w)^{-1}=1
+			\end{gather*}
+			
+			This implies, that $s\mapsto \theta(w)$ maps $W$ into $2\pi\cdot \ZZ=\Xi^{-1}(1)$. $W$ is connected, so they agrees everywhere.
+		\end{proof}
+		\begin{lemma}
+			(Lift-Extension Lemma) Let $X$ be a topological space, we suppose that we have a decomposition that
+			\begin{gather*}
+				X=A\cup B\qquad A,B\mbox{ are closed}
+			\end{gather*}
+			Now, let $f:X\rightarrow S^1$ be continuous, $\tilde{f}:A\rightarrow \RR$ be a lift of $f|A$. We suppose that the following statements hold:
+			\begin{itemize}
+				\item There exists a $P\in S^1$ with
+				\begin{gather*}
+					f(B)\subseteq S^1-\{P\}
+				\end{gather*}
+				\item The intersection $A\cap B$ is \textbf{connected} and \textbf{nonempty}.
+			\end{itemize}
+			Then, there exists a lift $\tilde{f}:X\rightarrow \RR$ of $f$ agrees with the given lift on $A$.
+		\end{lemma}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.8\textwidth]{AT1.png}
+		\end{figure}
+		\begin{proof}
+			Firstly, pick some $x_0\in A\cap B$, and $s\in \RR$ such that $\Xi(s)=P$. Then,
+			\begin{gather*}
+				f(x_0)\in f(A\cap B)\subseteq f(B)\subseteq S^1-\{P\}\Rightarrow \tilde{f}(x_0)\notin\Xi^{-1}(P) 
+			\end{gather*}
+			So, there exists some $m\in \ZZ$ such that
+			\begin{gather*}
+				\tilde{f}(x_0)\in (s+2\pi m,s+2\pi (m+1))
+			\end{gather*}
+			Then, restriction of $\Xi$ to $(s+2\pi m,s+2\pi(m+1))\rightarrow S^1-\{P\}$ is a homeomorphism. Denote $\Psi:=[\Xi|(s+2\pi m,2+2\pi(m+1))]^{-1}$. 
+			
+			Now, define
+			\begin{gather*}
+				\tilde{f}(x):=\begin{cases}
+					\tilde{f}(x)&x\in A\\
+					\Psi(f(x))&x\in B\Rightarrow f(x)\in S^1-\{P\}
+				\end{cases}
+			\end{gather*}
+			The definition agrees on $A\cap B$: For $x\in A\cap B$,
+			\begin{gather*}
+				\Psi(f(x))=\tilde{f}(x),x\in A
+			\end{gather*}
+			
+			Thus, the definition of $\tilde{f}$ can be extended to $A\cup B$. 
+		\end{proof}
+		
+		\begin{lemma}
+			(Lift from $S^1$ to $\RR$) Given any continuous map 
+			\begin{gather*}
+				f:[0,1]\rightarrow S^1
+			\end{gather*}
+			and any $\tilde{y}_0\in \RR$ with
+			\begin{gather*}
+				f(0)=exp(i\cdot \tilde{y}_0)=\Xi(\tilde{y}_0)
+			\end{gather*}
+			There exists a \textbf{unique lift} $\tilde{f}:[0,1]\rightarrow \RR$ of $f$ with
+			\begin{gather*}
+				\tilde{f}(0)=\tilde{y}_0
+			\end{gather*} 
+		\end{lemma}
+		\begin{proof}
+			\begin{itemize}
+				\item Uniqueness: By Lift Uniqueness lemma.
+				\item Existence: Apply Lift-Extension lemma. Decompose the interval $[0,1]$ into smaller intervals, such that: on each subinterval, the image of $f$misses at least one point in $S^1$.
+			\end{itemize}
+		\end{proof}
+		\begin{theorem}
+			The map
+			\begin{gather*}
+				\Psi:\ZZ\rightarrow \pi_1(S^1,1)\qquad \\
+				\Theta:\pi_1(S^1,z_0)\rightarrow \ZZ\qquad 
+			\end{gather*}
+			are well defined, and are isomorphisms of group.
+		\end{theorem}
+		\begin{proof}
+			
+		\end{proof}
+		\item Lifting of Square:
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\item Fundamental Group of spheres:
+		\begin{lemma}
+			(Sphere Minus Point Lemma)For every $P\in S^n$, $S^n-\{P\}$ is simply connected.
+		\end{lemma}
+		\begin{proof}
+			We have $S^n-\{P\}\cong \RR^n$. 
+		\end{proof}
+		\begin{proposition}
+			For $n\geq 2$ we have
+			\begin{gather*}
+				\pi_1(S^n)=0
+			\end{gather*}
+			i.e. it is simly connected.
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+	\end{itemize}
+	
+	\begin{proposition}
+		($\pi_1$-Group Proposition) Let $X$ be a topological space and $x_0\in X$, the set
+		\begin{gather*}
+			\pi_1(X,x_0):=
+		\end{gather*}
+		together with product
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{Def}
+		内容...
+	\end{Def}
+	\subsubsection{Alternative Descriptions}
+	
+	\subsubsection{Change of Base Points}
+	\subsection{Applications}
+	\subsubsection{The Fundalmental Theorem of Algebra}
+	\begin{theorem}
+		(TFTA) Every nonconstant polynomial in $\CC[z]$ has a zero in $\CC$.
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{2D-BOrsuk-Ulam Theorem}
+	\subsubsection{Path Integrals, Fundamental Groups}
+	\subsection{Functoriality}
+	\subsubsection{Group Homomorphisms induced by Continuous Map}
+	\begin{Def}
+		内容...
+	\end{Def}
+	\section{Coverings and Fundamental Groups}
+	\subsection{Group Action}
+	\subsubsection{Klein Bottle as Quotient}
+	\begin{lemma}
+		内容...
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsection{Covering of Topological Spaces}
+	\begin{Def}
+		Let $p:X\rightarrow B$ be a continuous map between topological spaces:
+		\begin{itemize}
+			\item An open subset $U\subseteq B$ is called \textbf{uniformly covered} if 
+			\item We say that the map $p:X\rightarrow B$ is a covering, if $p$ is surjective and if for every $b\in B$, there exists an open neighborhood $U$ of $b$ which is uniformly covered;
+			\item Sometimes $X$ is called a \textbf{covering space} $B$.
+		\end{itemize}
+	\end{Def}
+	\begin{lemma}
+		(Covering-Preimage Lemma) Let $p:X\rightarrow B$ be a covering of topological spaces. If $B$ is a connected topological space, then for any two point $P,Q\in B$ we have
+		\begin{gather*}
+			\#p^{-1}(P)=\#p^{-1}(Q)
+		\end{gather*}
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{Def}
+		\begin{itemize}
+			\item 
+			\item 
+			\item 
+		\end{itemize}
+	\end{Def}
+	\subsubsection{Action-Covering Proposition}
+	\begin{proposition}
+		内容...
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsection{Basic Properties of Coverings}
+	\begin{proposition}
+		Let $p:X\rightarrow Y$ be a covering. 
+		\begin{itemize}
+			\item Let $\gamma$ be a path in $Y$ wiht $p(x)=\gamma(0)$. Then there exists a unique $\dot{\gamma}$ in $X$ such that
+			\begin{gather*}
+				p\circ \dots{\gamma}=\gamma
+			\end{gather*}
+			\item Let $H$ be the homotopy between te paths $\gamma_0,\gamma_1$, in $Y$ and $l_1:[0,1]\rightarrow X$, be such that
+			\begin{gather*}
+				p(h(1))=H(0,t)
+			\end{gather*}
+			then, there exists unique $\dot{H}:[0,1]\times [0,1]\rightarrow X$ such that
+			\begin{gather*}
+				\dot{H}(0,t)=l_1(t),p(\dot{h})
+			\end{gather*}
+		\end{itemize}
+		
+		\begin{corollary}
+			Let $p:(X,x)\rightarrow (Y,y)$ covering of pointed spaces, then
+			\begin{gather*}
+				p_*:\pi_1(X,x)\rightarrow \pi_1(Y,y)
+			\end{gather*}
+			is injective.
+		\end{corollary}
+		
+		\begin{corollary}
+			Let $\gamma$ be a loop in $(Y,y)$ and $\dot{\gamma}$ a lift of $\gamma$ shifting at $x$, then $\dot{\gamma}(1)\in p^{-1}(x)$ depends only on the homotopy class of $\gamma$.
+			
+			This  defines a mapy
+			\begin{gather*}
+				\pi_1(Y,y)\rightarrow p^{-1}(y)
+			\end{gather*}
+			If $x$ in $p_*\pi(Y,y)\subseteq p()$ $x(1)=x$,
+			\begin{gather*}
+				\pi_1(X,y)/p_*\pi_1(X,x)\rightarrow p^{-1}(y)
+			\end{gather*}
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{proposition}
+			(Classification of Covering Space) Assume $(Y,y)$ connected, locally pat connected ,semilocally simplicial 
+			One assignment
+			\begin{gather*}
+				(X,x)\stackrel{p}{\rightarrow} (Y,y)
+			\end{gather*}
+		\end{proposition}
+		
+		\begin{corollary}
+			Any space $(Y,y)$ as above has a simply connected covering space, unique up to iso
+		\end{corollary}
+		
+		\begin{Def}
+			Let $p(:X,x)\rightarrow (Y,y)$ its deck transformation group $Aut(p)$ is the group of automorphisms of $p$;
+		\end{Def}
+		
+		\begin{proposition}
+			Let $N\subseteq Aut(p)$ be the character of $p_*\pi(X,x)$ then $Aut(p)\rightarrow p^{-1}(y),\varphi\mapsto \varphi(x)$,$\pi_1(Y,y)/p_*\pi_1(X,x)$
+		\end{proposition}
+		have the same image in $p^{-1}(y)$. And composition is an iso of groups.
+	\end{proposition}
+	\begin{Def}
+		$p$ is normal if $N=\pi_1(x,y)$.
+	\end{Def}
+	
+	\begin{corollary}
+		Let $p$ be normal, then:
+		\begin{itemize}
+			\item $Aut(p)=\pi_1(Y,y)/\pi_1(X,x)$;
+			\item The action of $Aut(p)$ on $p^{-1}(y)$ is transitive;
+			\item $p$ induces a homeomorphism
+			\begin{gather*}
+				X/Aut(p)\cong Y
+			\end{gather*}
+		\end{itemize}
+	\end{corollary}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{corollary}
+		Let $p:(X,x)\rightarrow (Y,y)$ be universal covering, let $\gamma_0,\gamma_1$ loops in $(Y,y)$, TFAE:
+		\begin{itemize}
+			\item $X_0\sim X_1$;
+			\item $\dot{\gamma_0}(1)=\dot{\gamma_1}(1)$;
+		\end{itemize}
+		Moreover, $\gamma\leftrightarrow \varphi$
+	\end{corollary}
+	\subsection{Lifts}
+	\subsection{Pullbacks}
+	\section{Group Actions, and Fundamental Groups}
+	\section{Applied Topology}
+	\section{Covering of Smooth and Topological Manifolds}
+	\section{title}
+	\section{Seifert van Kampen Theorem}
+	Firstly, the notion
+	\begin{gather*}
+		A*B:=\mbox{Coproduct of A and B}\\
+		A*_G B:=(A*B)/<<\{\alpha(g)*\beta(g)^{-1}\}_{g\in G}>>,\alpha:G\rightarrow A,\beta:G\rightarrow B
+	\end{gather*}
+	\begin{center}
+		\begin{tikzcd}
+			G\arrow[r]\arrow[d]&A\arrow[d]\arrow[rdd]\\
+			B\arrow[r]\arrow[rrd]&A*_G B\arrow[rd,dash]\\
+			&&W
+		\end{tikzcd}
+	\end{center}
+	\begin{lemma}
+		\begin{itemize}
+			\item The group homomorphsm $\Xi:\pi_1(U,x_0)*\pi_1(V,x_0)$ is surjective for: Topological space $X$ and $U,V\subseteq X$ be open subsets such that
+			\begin{itemize}
+				\item $X=U\cup V$;
+				\item $U\cap V$ is path-connected and non-empty;
+			\end{itemize}
+			We choose a base point $x_0\in U\cap V$, then $x_0\in U\cap V$. 
+			\item Every loop $s:[0,1]\rightarrow X$ in $x_0$ is path-homotopic to to a loop which is the concatenation of finitely many loops, each of which lies in $(U,x_0)$ or in $(V,x_0)$.
+		\end{itemize}
+	\end{lemma}
+	\begin{proof}
+		Let $s:[0,1]\rightarrow X=U\cup V$ be a loop. Then, $U,V$ are open, apply Lesbegue numbmer lemma: There exists a subdivision
+		\begin{gather*}
+			0=t_0<t_1<\dots<t_{k+1}=1	
+		\end{gather*}
+		of the interval $[0,1]$ such that the image each $s_i=s|[t_i,t_{i+1}]$ lies in $U$ or in $V$. 
+		
+		Then, by taking union of these intervals, we can satisfy that
+		\begin{gather*}
+			s(t_i)\in U\cap V
+		\end{gather*}
+		But such $s_i$ may be not a loop. We could construct loop for each $s_i$ by following steps: Notice that $U\cap V$ is path-connected. So we could take another path $s(t_{i+1})\rightarrow s_i$ in $U\cap V$. So we have
+		\begin{gather*}
+			s\simeq_p s_0*\dots*s_k\simeq_p (s_0*p_1)*(\bar{p_1}*s_1*p_2)*\dots 
+		\end{gather*}
+	\end{proof}
+	\begin{theorem}
+		(Seifert-van-Kampen Theorem) Let $X$ be a topological space and $X=U\cup V$ be a decomoposition of $X$ in two open subsets $U$ and $V$ such that: $U\cap V$ is 
+		\begin{itemize}
+			\item nonempty;
+			\item path-connected
+		\end{itemize}
+		Let $x_0\in U\cap V$. We denote $i:U\cap V\rightarrow U$ and $j:U\cap V\rightarrow V$ the inclusions:
+		\begin{itemize}
+			\item The inclusions $k:U\rightarrow X$ and $l:V\rightarrow X$ induce an isomorphism
+			\begin{gather*}
+				\Phi:\pi_1(U,x_0)*\pi_1(V,x_0)\stackrel{\cong}{\rightarrow} \pi_1(X,x_0)
+			\end{gather*}
+			which has the property that the following diagram commutes
+			\begin{center}
+				\begin{tikzcd}
+					\pi_1(U\cap V,x_0)\arrow[r,"i_*"]\arrow[d,"j_*"]&\pi_1(U,x_0)\arrow[rdd,bend left=10,"k_*"]\arrow[d]\\
+					\pi_1(V,x_0)\arrow[r]\arrow[rrd,"l_*",bend right=10]&\pi_1(U,x_0)*_{\pi_1(U\cap V,x_0)} \pi_1(V,x_0)\arrow[rd,"\Phi"]\arrow[rd,"\cong",swap]\\
+					&&\pi_1(X,x_0)
+				\end{tikzcd}
+			\end{center}
+			group $\pi(X,x_0)$ is a pushout.
+			\item Especially:If $U\cap V$ is simply connected, then the inclusions $U\rightarrow V$ and $V\rightarrow X$ induce an isomorphism
+			\begin{gather*}
+				\Phi:\pi_1(U,x_0)*\pi_1(V,x_0)\rightarrow \pi_1(X,x_0)
+			\end{gather*}
+		\end{itemize}
+	\end{theorem}
+	\begin{proof}
+		Notice that: There exists pushout $\Phi:\pi_1(U,x_0)*\pi_1(V,x_0)\rightarrow \pi_1(X,x_0)$:
+		\begin{itemize}
+			\item Surjective:Consider following diagram
+			\begin{center}
+				\begin{tikzcd}
+					\pi_1(U,x_0)*\pi_1(V,x_0)\arrow[rd]\arrow[d,"\Xi"]\\
+					\pi_1(U,x_0)*_{\pi_1(U\cap V,x_0)} \pi_1(V,x_0)\arrow[r]&\pi_1(X,x_0)
+				\end{tikzcd}
+			\end{center}
+			$\Xi$ given by the products. So surjective.
+			\item Injective: $\Phi:\pi_1(U,x_0)*_{\pi_1(U\cap V,x_0)} \pi_1(V,x_0)\rightarrow \pi_1(X,x_0)$ which is induced by the inclusion $i:U\rightarrow X$ and $j:V\rightarrow X$ is injective.
+			
+			We just need to show: Exists map  $\Psi:\pi_1(X,x_0)\rightarrow \pi_1(U,x_0)*_{\pi_1(U\cap V,x_0)} \pi_1(V,x_0)$ such that 
+			\begin{gather*}
+				\Psi\circ \Phi=id
+			\end{gather*}
+		\end{itemize}
+	\end{proof}
+	\subsection{Suspension}
+	\begin{Def}
+		
+	\end{Def}
+	\begin{lemma}
+		(Suspension-$\pi_1$-Lemma)
+	\end{lemma}
+	\subsection{Fundamental Groups of Wedges}
+	\begin{Def}
+		(Good Point) 
+	\end{Def}
+	
+	\begin{lemma}
+		内容...
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\section{Classification of 2-dimensional Manifold}
+	\section{Decision Problem}
+	\section{Directed Colimits}
+	\section{HNN-Seifert-Van Theorem}
+	\section{Curves and Surfaces}
+	\section{Introduction to Higher Homotopy Theory}
+\end{document}

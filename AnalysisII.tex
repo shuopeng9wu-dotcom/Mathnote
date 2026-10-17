@@ -1,0 +1,100 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	
+	\chapter{Apprxiamation}
+	\begin{prob}
+		\begin{itemize}
+			\item 
+			Convergence of function series;
+			\item Limit of Double Sequence;
+		\end{itemize}
+	\end{prob}
+	\section{Uniform Covergent}
+		Recall:
+		\begin{Def}
+			$\{f_n\}$ of sequence in $Func(E,\RR)$ is \textbf{uniform covergent} to $f$ if:
+			\begin{gather*}
+				\forall \epsilon>0\exists N(n\geq N\Rightarrow \sup_{x\in E} |f_n(x)-f(x)|<\epsilon)
+			\end{gather*}
+		\end{Def}
+		
+		\begin{proposition}
+			(Cauchy) Equivalently, $\forall \epsilon>0\exists N(m,n\geq N\Rightarrow \sup_{x\in E} |f_n(x)-f_m(x)|<\epsilon)$
+		\end{proposition}
+		\subsection{Continuity}
+			
+			\begin{theorem}
+				Suppose $f_n\rightarrow f$ on a set $E$ of metric space, let $x$ a limit point of $E$, then
+				\begin{gather*}
+					\lim_{t\rightarrow x}\lim_{n\rightarrow \infty} f_n(t)=\lim_{n\rightarrow \infty}\lim_{t\rightarrow x} f_n(t)
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				The limit of sequence of continuous function is continuous.
+			\end{corollary}
+			
+			\subsubsection{Criteria for Compact Space}
+			
+			\begin{proposition}
+				Suppose $K$ is compact, and:
+				\begin{itemize}
+					\item $\{f_n\}$ a continuous function series
+					\item $\{f_n(x)\}\rightarrow f(x),\forall x\in E$;
+					\item $f_n(x)\geq f_{n+1}(x)$ on $K$;
+				\end{itemize}
+				
+				Then, $f_n\rightarrow f$ uniformly on $K$.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Space $\mathscr{C}(X)$}
+			
+			
+			\begin{Def}
+				Take the following notion
+				\begin{gather*}
+					\mathscr{C}(X,\CC)=\{f\in Func(X,\CC)|f\in C(X),\mbox{f is bounded}\}
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				Space $\mathscr{C}(X)$ is compelete.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Integration}
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Differentation}
+			
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Approxiamation}
+			\subsection{Equicontinuous}
+			\subsection{Stone-Weierstrass Theorem}
+	\chapter{Differentials in $\RR^n$}
+		\section{Variation Problems}	
+			\subsection{Extrema,Derivative}
+				
+			\subsection{Extrema with Restrictions}
+				
+	\chapter{Integrations on $\RR^n$}
+		\section{title}
+			\subsection{A Weak Version for Fubini's Theorem}
+	\chapter{Topics:}
+\end{document}

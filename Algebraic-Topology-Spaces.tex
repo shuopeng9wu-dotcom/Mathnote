@@ -1,0 +1,2280 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Covering Spaces}
+		\section{Coverings of Groupoids}
+			\begin{Def}
+				Suppose $\mathcal{G}$ be a small category, if for any morphism $g:x\rightarrow y$, there \textbf{exists a unique inverse morphism} $g^{-1}$ such that
+				\begin{gather*}
+					g^{-1}g=1_x\qquad gg^{-1}=1_y
+				\end{gather*}
+			\end{Def}
+			
+			And:
+			\begin{Def}
+				It is \textbf{connected} if it is connected as a topological graph.
+			\end{Def}
+			
+			Then:
+			\begin{Def}
+				\begin{itemize}
+					\item Let $\mathcal{C}$ be a category. And $x\in Ob(\mathcal{C})$. Then define category $x\backslash \mathcal{C}$:
+					\begin{itemize}
+						\item $Ob(x\backslash \mathcal{C})=\cup_{y\in Ob(\mathcal{C})} Mor_\mathcal{C}(x,y)$;
+						\item The morphisms: For given $(f:x\rightarrow y),(g:x\rightarrow z)$ in $x\backslash \mathcal{C}$, define
+						\begin{gather*}
+							\gamma:f\rightarrow g\Leftrightarrow g=\gamma\circ f,\gamma:y\rightarrow z
+						\end{gather*}
+					\end{itemize}
+					
+					Especially, if $\mathcal{C}$ is a groupoid, then $\gamma=g\circ f^{-1}$;
+					\item Now, let $\mathcal{C}$ be a small category, define the \textbf{star}
+					\begin{gather*}
+						St(x):=Ob(\mathcal{C})
+					\end{gather*}
+					
+					And write $\pi(\mathcal{C},x):=\mathcal{C}(x,x)$, the automorphisms;
+					\item Let $\mathscr E,\mathscr B$ be \textbf{small connected groupoid}. A \textbf{covering} $p:\mathscr E\rightarrow
+					 \mathscr B$ is a functor that is 
+					 \begin{itemize}
+					 	\item Surjective on objects;
+					 	\item Restrict to a bijection 
+					 	\begin{gather*}
+					 		p:St(e)\rightarrow St(p(e))
+					 	\end{gather*}
+					 \end{itemize}
+					 
+					 \item Denote
+					 \begin{gather*}
+					 	F_b:=\{x\in Ob(\mathcal{C})|p(e)=b\}
+					 \end{gather*}
+					 
+					 Then we have $p^{-1}(St(b))=\sqcup_{e\in F_b} e$.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				Let $p:E\rightarrow B$ be a covering space(top), and notion $\prod(X)$ for fundamental groupoid, then
+				\begin{gather*}
+					\prod(p):\prod(E)\rightarrow \prod (B)
+				\end{gather*}
+				
+				is a covering of groupoid.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				Let $p:\mathscr E\rightarrow \mathscr B$ be a covering of groupoids, let $b$ be an object of $\mathscr B$. Let $e,e'$ in $F_b$:
+				\begin{itemize}
+					\item $p:\pi(\mathscr E,e)\rightarrow \pi(\mathscr B,b)$ is a monomorphism;
+					\item $p(\pi(\mathscr E,e'))$ is conjugate to $p(\pi(\mathscr E,e))$;
+					\item If $e$ runs through all elements of $F_b$, then the group $p(\pi(\mathscr E,e'))$ run through all conjugates of $p(\pi(\mathscr E,e))$ in $\pi(\mathscr B,b)$.
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{Def}
+				(Fiber of Covering of Groupoids) Let $p:\mathscr E\rightarrow $. The \textbf{fiber translation functor}
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				The concept is well-defined
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Classifications}
+				The main  of classification is: The lifting property.
+				
+				\begin{theorem}
+					There exists an equivalence of category
+					\begin{gather*}
+						Cov(X)\simeq Cov(\prod(X))
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Category $Cov(\mathscr B)$}
+			\subsection{Constructions}
+		\section{The Covering Space}
+			\begin{Def} Let $p:X\rightarrow B$ continuous map between topological space $X,B$
+				\begin{itemize}
+					\item (Uniformly Covered) An \underline{open subset}  $U\subseteq B$ is called \textbf{uniformly covered}, if 
+					\begin{gather*}
+						p^{-1}(U)=\sqcup_{i\in I} V_i
+					\end{gather*}
+					with the property: 
+					\begin{gather*}
+						p|V_i:V_i\rightarrow U
+					\end{gather*}
+					is a homeomorphism .
+					\item (Covering) We say that the map
+					\begin{gather*}
+						p:X\rightarrow B
+					\end{gather*}
+					is a \textbf{covering}, if:
+					\begin{itemize}
+						\item $p$ is surjective;
+						\item For every $b\in B$, there exists an open neighborhood of $b$ which is uniformly covered. 
+					\end{itemize}
+					\item (Covering of Pointed Spaces) A covering $p:(X,x_0)\rightarrow (B,b_0)$ of pointed spaces, if $p:X\rightarrow B$ is a covering and with
+					\begin{gather*}
+						p(x_0)=b_0
+					\end{gather*}
+					\item (Path-Connected Covering) A covering $p:X\rightarrow B$ is \textbf{path-connected}, if $X$ is path-connected.
+				\end{itemize}
+			\end{Def}
+			
+			\textbf{Question}: Does every path-connected non-empty topological space $B$ admit a
+			path-connected covering $p:X\rightarrow B$ such that X is simply connected?
+			
+			
+			(The anwser is \textbf{no}, counterexample given by the Hawaiian earring $H$)
+			\subsection{Basic Properties}
+			
+			\begin{lemma}
+				(Covering-Preimage Lemma) Let $p:X\rightarrow B$ be a covering of topological spaces. If $B$ is a connected topological space, then for any two points $P,Q\in B$ we have
+				\begin{gather*}
+					\# p^{-1}(P)=\#p^{-1}(Q)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Notice $\#p^{-1}(-)$ is local-constant, and $B$ is connected.
+			\end{proof}
+			
+			\begin{Def} Suppose $p:X\rightarrow B$ be a covering of connected topological space:
+				\begin{itemize}
+					\item Define the \textbf{degree}
+					\begin{gather*}
+						[X:B]:=\#p^{-1}(b)\qquad b\in B
+					\end{gather*}
+					\item Especially, if $[X:B]$ is finite/infinite/countable, then this is a finite/countable/infinite covering;
+				\end{itemize}
+			\end{Def}
+			
+			\subsection{Local Properties}
+			\begin{Def}
+				Let $P$ be a property. We say that: A topological space is \textbf{locally $P$} if given any $x\in X$, and any neighborhood $U$ of $x$, there exists an open neighborhood $V$ ccontained in $U$ such that $V$ has the property $P$.
+				
+				\begin{gather*}
+					(x,U)\Rightarrow  \exists V,x\in V\subseteq U,V\mbox{ satisfies P}
+				\end{gather*}
+			\end{Def}
+			\subsection{Covering Space as Fibration}
+			We have:
+			\begin{center}
+				Covering Map$\Rightarrow$ Hurewicz Fibration$\Rightarrow$ Serre Fibration
+			\end{center}
+			\subsection{Lifting Maps to Coverings}
+			\begin{Def}
+				\begin{itemize}
+					\item 
+					Let $p:(X,x_0)\rightarrow (B,b_0)$ be a covering of pointed topological spaces.
+					
+					Furthermore, let $(Z,z_0)\rightarrow (B,b_0)$ be a continuous map, a \textbf{lift} is a continuous map $\tilde{f}:(Z,z_0)\rightarrow (X,x_0)$ which make the following diagram commutes:
+					\begin{center}
+						\begin{tikzcd}
+							&(X,x_0)\arrow[d,"p"]\\
+							(Z,z_0)\arrow[r]\arrow[ru,"\tilde{f}"]&(B,b_0)
+						\end{tikzcd}
+					\end{center}
+					\item Similarly for the unpointed space.
+				\end{itemize}
+			\end{Def}
+			
+			Take the following notion 
+			\begin{gather*}
+				Lift(f,p)
+			\end{gather*}
+			
+			for the collection of liftings.
+			
+			\subsubsection{Lift-Uniqueness}
+			\begin{proposition}
+				(Lift Uniqueness Proposition) Let $X\rightarrow B$ be a covering and let $Z$ be a connected topological space.
+				
+				Furthremore, let $f:Z\rightarrow B$ with liftings $\hat{f},\tilde{f}:Z\rightarrow X$. Then: if $\hat{f},\tilde{f}$ agrees at some $z_0\in Z$, then they agree everywhere.
+			\end{proposition}
+			\begin{proof}
+				$Y$ is connected, and 
+				\begin{gather*}
+					\hat{f}(z)=\tilde{f}(z),x\in Y\Leftrightarrow U=\{x\in Z|f(x)=f(y)\}=Z
+				\end{gather*}
+				
+				We will prove $U,Z-U$ are both open. Let $y\in Y$, with the local-homeomorphism
+				\begin{gather*}
+					p^{-1}(W)=\sqcup_{x\in p^{-1}(b)} W_x
+				\end{gather*}
+				
+				Now, take the local diagram:
+				\begin{center}
+					\begin{tikzcd}
+						&W_x\arrow[d,"p|W_x",shift right=2,swap]\\
+						\hat{f}^{-1}(W_x)\arrow[r]\arrow[ru]&W\arrow[u,"q_x",shift right=2,swap]
+					\end{tikzcd}
+				\end{center}
+				
+				So is $\tilde{f}$. Now consider the restriction on intersection $\tilde{f}(W_x)\cap \hat{f}(W_x)$. Either $\subseteq U$ or $Z-U$. 
+				
+				Finally, notice that $U\not=\emptyset$, thus $U=Y$.
+			\end{proof}
+			\subsubsection{Lift-Extension}
+				\begin{lemma}
+					(Lift-Extension Lemma)Let $p:X\rightarrow B$ be a covering and let $Y$ be a topological space, we suppose that we have a decomposition
+					\begin{gather*}
+						Y=C\cup D
+					\end{gather*}
+					
+					where $C,D$ are closed. Let $f:Y\rightarrow B$ be a continous map and let $\tilde{f}:C\rightarrow X$ be a lift of $f|C$, and the following statements hold:
+					\begin{itemize}
+						\item $f(D)$ is contained in a uniformly covered subset;
+						\item $C\cap D$ is connected and nonempty;
+					\end{itemize}
+					
+					Then, there exists a lift $\tilde{f}:Y\rightarrow X$ agree with the lift on $C$.
+				\end{lemma}
+				\begin{proof}
+					Select some $x_0\in C\cap D$, with $f(x_0)\in f(D)$. Given a neighborhood $U\ni f(x_0)$ with homeomorphism $p:\tilde{U}\rightarrow U$, with inverse $q$, define:
+					\begin{gather*}
+						\tilde{f}(x):=\begin{cases}
+							\tilde{f}(x)&x\in C\\
+							q(f(x))&x\in D
+						\end{cases}
+					\end{gather*}
+					
+					By the uniqueness proposition, the liftings agree.
+				\end{proof}
+			\subsubsection{Lift-Existence}
+				\begin{lemma}
+					Let $p:X\rightarrow B$ be a covering of topological space, given a continuous map
+					\begin{gather*}
+						f:[0,1]^m\rightarrow B
+					\end{gather*}
+					
+					with $p(x)=f(0)$, then there exists a lifting $\tilde{f}:[0,1]^m\rightarrow X,\tilde{f}(0)=x$.
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsubsection{Path-Lifting}
+			\begin{Def}
+				Let $p:X\rightarrow B$ be a covering, with path $\gamma:[0,1]\rightarrow B$, and $x\in X$ with 
+				\begin{gather*}
+					p(x)=\gamma(0)
+				\end{gather*}
+				
+				Path $\tilde{\gamma}:[0,1]\rightarrow X$ is called a \textbf{lift} of $f$ to the starting point $x$, if
+				\begin{itemize}
+					\item $\tilde{\gamma}$ is a lift;
+					\item $\tilde{\gamma}(0)=x$;
+				\end{itemize}
+			\end{Def}
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				(Covering-$\pi_1$ Monomorphism) Let $p:X\rightarrow B$ be a covering, the induced
+				\begin{gather*}
+					p_*:\pi_1(X,x_0)\rightarrow \pi_1(X,p(x_0))
+				\end{gather*}
+				
+				is a covering.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{proposition}
+				(Unique Path Lifting) Let $p:E\rightarrow B$ be a covering, with $b\in B;e,e'\in F_b$:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proposition}
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				(Loop-Lifting Proposition)
+				
+				\begin{itemize}
+					\item $\tilde{\gamma}$ is a loop;
+					\item $[\tilde{f}]$ lies in $p_*(\pi_1(X,x_0))\subseteq \pi_1(B,b_0)$;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Covering-Degree}
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Maps-Lifting}
+			\begin{proposition}
+				Let $p:(X,x_0)\rightarrow (B,b_0)$ be a covering of pointed topological spaces. 
+				
+				Furthermore, let $Z$ be a \textbf{path-connected} topological space, and $f:(Z,z_0)\rightarrow (B,b_0)$ be a continuous map. 
+				
+				If $Z$ is locally path-connected, then we have following equivalent statements:
+				\begin{center}
+					\begin{tikzcd}
+						&(X,x_0)\arrow[d,"p"]\\
+						(Z,z_0)\arrow[ru,"\exists \tilde{f}"]\arrow[r,"f"]&(B,b_0)
+					\end{tikzcd}$\Leftrightarrow im(f_*)\subseteq im(p_*)$ 
+				\end{center}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Concatenation of Path Lifting}
+			\begin{proposition}
+				Let $p:(X,x_0)\rightarrow (B,b_0)$ be a covering of pointed topological spaces, and $\gamma$ be a path in $B$ starting point $b_0$. 
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Homotopy Lifting Property}
+			\begin{theorem}
+				
+				
+				\url{https://ncatlab.org/nlab/show/covering+space#HomotopyLiftingPropertyOfCoveringSpaces}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Fiber-Wise Diagonal}
+			\begin{Def}
+				Consider $p:E\rightarrow X$, a covering space and fiber product
+				\begin{gather*}
+					E\times_X E:=\{(e_1,e_2)\in E\times E|p(e_1)=p(e_2)\}\subseteq E\times E
+				\end{gather*}
+			\end{Def}
+			
+			Construct the diagonal map into $E\times_X E$ by
+			\begin{center}
+				\begin{tikzcd}
+					E\arrow[rr,bend right=20]\arrow[r,dashrightarrow]&E\times_X E\arrow[r,hookrightarrow]&E\times E
+				\end{tikzcd}
+			\end{center}
+			
+			Notice that:. Or by pullback property
+			\begin{center}
+				\begin{tikzcd}
+					E\arrow[rrd,"id_E"]\arrow[rdd,"id_E"]\arrow[rd,dashrightarrow]\\
+					&E\times_X E\arrow[r]\arrow[d]&E\arrow[d]\\
+					&E\arrow[r]&X
+				\end{tikzcd}
+			\end{center}
+			
+			\begin{proposition}
+				$\Delta(E)\subseteq E\times_X E$ is open and closed.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				If for any component of $X$, we have $\#p^{-1}(b)\geq 2$, then $E\times_X E$ is disconnected.
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Pullbacks}
+			\begin{Def}
+				Given $p:E\rightarrow B,f:X\rightarrow B$, the pullback of diagram is the pullback of $X\rightarrow B\leftarrow E$. 
+				
+				Then, $q:X\times_B E\rightarrow X$ is called the \textbf{base change}, denoted by $f^*p$.
+			\end{Def}
+			\begin{proposition}
+				Given covering $p:E\rightarrow B$, the base change $q:X\times_B E\rightarrow X$ is still a covering map. 
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Fiber}
+			
+			Given the diagram:
+			\begin{center}
+				\begin{tikzcd}
+					E\times_B X\arrow[r]\arrow[d,"f^*p"]&E\arrow[d,"p"]\\
+					X\arrow[r,"f"]&B
+				\end{tikzcd}
+			\end{center}
+			
+			\begin{proposition}
+				Given any $x\in X$, there exists bijection 
+				\begin{gather*}
+					q^{-1}(x)\stackrel{\cong }{\rightarrow}p^{-1}(f(x))
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			Actually, define:
+			\begin{gather*}
+				(f^*E)_x:=E_{f(x)}
+			\end{gather*}
+			
+			Then, the pullback preserves the coverings.
+			
+			\subsubsection{Connectivity}
+			
+			\textbf{Remark} Suppose $X,E,B$ be connected, but we can not assume that the pullback is connected.
+			
+			\subsubsection{Lift-Pullback Sections Correspondence}
+			
+			\begin{proposition}
+				We have:
+				\begin{gather*}
+					Lift_B(f,p)=\Gamma(X,f^*E)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Fundamental Groups, Fibres}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Covering Actions}
+			
+			\subsubsection{Action of Coverings}
+			
+			Recall: The theory of group action
+			
+			\begin{proposition}
+				Let $X$ be a topological space together with a discrete and continuous action by $G$:
+				\begin{itemize}
+					\item The natural projection $p:X\rightarrow X/G$ is a covering where the degree is $|G|$;
+					\item If $H$ be a subgroup of $G$, the natural projection
+					\begin{gather*}
+						p:X/H\rightarrow X/G
+					\end{gather*}
+					
+					is a covering of degree $[G:H]$
+				\end{itemize}
+				
+				(Discrete Action: For any $x\in X$, there exists neighboorhood $V\ni x,V\cap gV=\emptyset;g\not=e$; Continuous: Multiplication is continuous)
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item Firstly, $p:X\rightarrow X/G$ is a covering: It is actually an open map.  We just select $[x]\in X/G$, and has a neighborhood with
+					\begin{gather*}
+						[x]\in U=p(V)\qquad V\cap gV=\emptyset,g\not=e 
+					\end{gather*}
+					
+					Then, $p^{-1}(U)=\sqcup_{g\in G} gV$.Each $gV$ is open. And $p|gV$ is a bijection and open map, thus is a homeomorphism onto $U$. Thus $p$ is a covering. 
+					
+					Thus, $\#p^{-1}(b)=|G|$;
+					\item Notice $(X/H)/G=X/G$;
+				\end{itemize}
+			\end{proof}
+			
+			\begin{Def}
+				Take the following notions:
+				\begin{itemize}
+					\item \textbf{Transitive action}: For every $s,s'$ there exists some $g$ such that $gs=s'$;
+					
+					The action is \textbf{free} if $gs=s$;
+					\item $G_s:=\{g\in G|gs=s\}\subseteq G$ is the \textbf{isotropy subgroup}
+					\item Orbit $\{gs|g\in G\}$;
+					\item Isomorphism 
+					\item Normalizer of subgroup $H<G$,
+					
+					Weyl group $WH=NH/H$;
+					
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				Let $G$ act transitively on a set $S$. Choose $s\in S$, and $H=G_s$. Then
+				\begin{gather*}
+					WH\cong Aut_G(S)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Given $n\in NH, \bar{n}\in WH$. Then, define the automorphism
+				\begin{gather*}
+					\phi(\bar{n}):gs\mapsto gns
+				\end{gather*}
+				
+				Verify it is an isomorphism by definition!
+			\end{proof}
+			
+			\begin{lemma}
+				A $G$-map $\alpha:G/H\rightarrow G/K$ has the form
+				\begin{gather*}
+					\alpha(gH)=g\gamma K
+				\end{gather*}
+				
+				The element $\gamma\in G$ satisfies $\gamma^{-1}H\gamma\subseteq K,h\in H$;($G$-map: By action of $g$)
+			\end{lemma}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			\subsubsection{Orbit Category}
+			\begin{Def}
+				Define: The category $\mathcal{O}(G)$ of canonical orbits has objects the $G$-sets $G/H$ and the morphisms the $G$-maps of $G$-sets;
+			\end{Def}
+			
+			\begin{corollary}
+				$\mathcal{O}(G)$ is isomorphic to the category $\mathfrak{G}$ with:
+				\begin{itemize}
+					\item Elements:Subgroups of $G$;
+					\item Morphisms: Distinct subconjugacy relations, for $H,K$
+					\begin{gather*}
+						\gamma^{-1}H\gamma\subseteq K;\gamma\in G
+					\end{gather*}
+				\end{itemize}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Groupoids}
+			\subsubsection{Monodromy Action on Fibres}
+		\section{The Universal Covering}
+			
+			\subsection{Classification of Coverings}
+			
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+			\subsubsection{Automorphism of Cover}
+			\subsection{The Universal Covering}
+			
+			\begin{proposition}
+				Let $X$ be a topological space, that is
+				\begin{itemize}
+					\item Path-Connected;
+					\item Locally Path-Connected;
+					\item Semi-locally simply connected
+				\end{itemize}
+				and $x_0\in X$:
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Lifting}
+			\subsubsection{Fundmanetal Groups}
+			
+		\section{Deck Transformation Group}
+			\begin{Def}
+				Let $p:X\rightarrow B$ be a covering:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+			
+			\subsubsection{Discrete Action}
+			\subsubsection{Free Action}
+			\subsubsection{Deck Transformation}
+			\subsection{Galois/Normal Covering}
+			\begin{Def}
+				Consider the following map
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{Def}
+			
+			\textbf{Remark} This is called Galois covering, because it can be used in the \textbf{topological Galois theory}, we will later use a new topic to record it.
+			
+			\subsection{Regular Coverings}
+
+	\chapter{Topics of Covering Spaces}
+	\chapter{Constructions}
+		An important concept is :Mapping Spaces.
+		\section{$H$-Space}
+			\subsection{$H$-Spaces}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						Define the $H$-space: Suppose $X$ be a pointed space, then
+						\begin{gather*}
+							\mu:X\times X\rightarrow X
+						\end{gather*}、
+						
+						with following properties: Define
+						\begin{gather*}
+							i_1(x):=(x,*)\qquad i_2(x):=(*,x)
+						\end{gather*}
+						
+						then, for $\mu:X\times X\rightarrow X$,
+						\begin{gather*}
+							\mu\circ i_1\simeq id_X\qquad \mu\circ i_2\simeq id_X
+						\end{gather*}
+						
+						i.e. The following diagram commutes:(Up to Homotopy at $X$)
+						\begin{center}
+							\begin{tikzcd}
+								X\vee X\arrow[rd,"\triangledown"]\arrow[d,hookrightarrow]&\\
+								X\times X\arrow[r,"\mu"]&X
+							\end{tikzcd}
+						\end{center}
+						
+						where $\triangledown$ is the fold map. 
+						Such structure can be denoted by $(X,\mu)$.
+						\item Suppose $X,Y$ be $H$-spaces, then the \textbf{$H$-map} is the homomorphism $f:X\times Y$ such that the following diagram commutes up to homotopy
+						\begin{center}
+							\begin{tikzcd}
+								X\times X\arrow[r,"f\times f"]\arrow[d,"\mu_X"]&Y\times Y\arrow[d,"\mu_Y"]\\
+								X\arrow[r,"f"]&Y
+							\end{tikzcd}
+						\end{center}
+						
+						There exist homotopy
+						\begin{gather*}
+							f\circ \mu_X\simeq \mu_Y\circ f\times f
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					The two definitions by expression and diagram are equivalent.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{example}
+					\begin{itemize}
+						\item Loop Space;
+					\end{itemize}
+				\end{example}
+				\subsubsection{Associativity, Commutativity}
+				\begin{Def}
+					\begin{itemize}
+						\item Especially, if $\mu\circ(\mu\times id_X)\simeq \mu\circ (id_X\times\mu)$, then it is \textbf{homotopy associative}.
+						\item 
+					\end{itemize}
+				\end{Def}
+			\subsection{Co $H$-Spaces}	
+				\begin{Def}
+					内容...
+				\end{Def}
+			
+				\begin{example}
+					内容...
+				\end{example}
+				
+			\subsection{Homology,Cohomology}
+		\section{Moore Path}
+			\subsection{Moore Path}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						Given a topological space, then its \textbf{Moore path category} $MX$ has
+						\begin{itemize}
+							\item $M_0(X)=Ob(MX)_0=X$;
+							\item $M_1(X)\subseteq X^{[0,\infty]}\times [0,\infty)$, with pairs
+							\begin{gather*}
+								(\gamma,len(\gamma))
+							\end{gather*}
+							
+							where: 
+							\begin{gather*}
+								\gamma:[0,\infty)\rightarrow X\qquad t\mapsto constant,t\in [Len(\gamma),\infty]
+							\end{gather*}
+							
+							And define: Source $s(\gamma)L=\gamma(0),t(\gamma):=\gamma(Len(\gamma))$.
+							
+							\item Composition
+							\begin{gather*}
+								M_1X\times_{M_0X} M_1X\rightarrow M_1 X\qquad Len(\gamma\circ \gamma
+								'):=Len(\gamma)+Len(\gamma')\qquad (\gamma \circ \gamma')(t)=\begin{cases}
+									\gamma(t)&t\in [0,Len(\gamma)]\\
+									\gamma'(t-Len(\gamma))&t\in (Leng(\gamma),\infty]
+								\end{cases}
+							\end{gather*}
+							\item Identity Map: The identity map
+							\begin{gather*}
+								X\rightarrow M_1 X\qquad (t\mapsto x,0) 
+							\end{gather*}
+							\item Path-Reveral Map
+							\begin{gather*}
+								(\gamma,len(\gamma))^\vee:=(t\mapsto \gamma(len(\gamma)-t),len(\gamma))
+							\end{gather*}
+						\end{itemize}
+						\item Then, the \textbf{Moore mapping path space}: Suppose $f:X\rightarrow Y$ be continuous, then the pullback
+						\begin{center}
+							\begin{tikzcd}
+								\Gamma f\arrow[r]\arrow[d]&M_1 Y\arrow[d,"s"]\\
+								X\arrow[r,"f"]&Y
+							\end{tikzcd}
+						\end{center}
+					\end{itemize}
+					
+					\textbf{Remark} Notice that $M_1 Y$ is a groupoid, thus denoted by $\prod_0 Y$ is also acceptable.
+				\end{Def}
+				
+				\begin{proposition}
+					The Moore mapping path space construction 
+					\begin{gather*}
+						\Gamma:Top\rightarrow Top
+					\end{gather*}
+					yields a functorial factorization of maps 
+					as a composition
+					\begin{gather*}
+						X\rightarrow \Gamma f\rightarrow Y
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					A morphism of $Top$ is
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Suspensions and Loops}
+			\subsection{Suspension}
+				\begin{Def}
+					Define 
+					\begin{itemize}
+						\item the \textbf{suspension}
+						\begin{gather*}
+							\Sigma_0 X:=(X\times I)/(X\times \{0\})\cup (X\times \{1\})
+						\end{gather*}
+						\item the \textbf{reduced suspension} of $X$,
+						\begin{gather*}
+							\Sigma X:=S^1\wedge X
+						\end{gather*}
+						
+						where $X$ is a pointed space.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					We have $S^1\cong I/\{0,1\}$, then
+					\begin{gather*}
+						\Sigma X\cong X\times I/(X\times \{0\})\cup (X\times \{1\})\cup (\{*\}\times I)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					Especially, if $X$ is a pointed space, then the inclusion
+					\begin{gather*}
+						*\hookrightarrow X
+					\end{gather*}
+					
+					induces $I\cong \Sigma_0(*)\Rightarrow \Sigma X\cong \Sigma_0 X/I$
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					(CW-Structure) If $X$ has a CW-structure, so is $\Sigma X$.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{The Freudenthal Suspension Theorem}
+				\subsubsection{Mapping Suspension}
+			\subsection{Cone}
+				\begin{Def}
+					Define
+					\begin{itemize}
+						\item the \textbf{cone}
+						\begin{gather*}
+							C_0X:=X\times I/X\times \{0\}
+						\end{gather*}
+						
+						\item the \textbf{reduced cone}
+						\begin{gather*}
+							CX:=X\times I/X\times \{0\}\cup \{*\}\times I\cong C_0X/C_0*\cong X\wedge I
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					We have:
+					\begin{gather*}
+						\Sigma_0 X=C_0X/X\\
+						\Sigma X=CX/X
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{mapping Cone}
+			\subsection{Cyliner}
+				\begin{Def}
+					Define 
+					\begin{itemize}
+						\item The \textbf{cylinder}
+						\begin{gather*}
+							I_0X:=X\times I
+						\end{gather*}
+						\item the \textbf{reduced cylinder}
+						\begin{gather*}
+							IX:=I_0X/I_0*\cong X\wedge I_+
+						\end{gather*}
+						
+						where $I_+=I\sqcup \{+\}$
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					Equivalently, cylinder is the factorization
+					\begin{gather*}
+						X\sqcup X\rightarrow Cyk(X)
+					\end{gather*}
+				\end{proposition}
+				\subsubsection{Mapping Cylinder}
+			\subsection{Loop}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						Define the \textbf{loop space}
+						\begin{gather*}
+							\Omega(X):=Map(S^1,X)
+						\end{gather*}
+						\item Especially, 
+						\begin{gather*}
+							\Omega_{x}(X):=\{\gamma\in \Omega(X)|\gamma(0)=x\}
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					(Yoneda?) There exists a unique space $Q=\Sigma X$ such that
+					\begin{gather*}
+						Map_*(X,\Omega(Y))\cong Map_*(Q,Y)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					\begin{gather*}
+						Map_*(\Sigma X,Y)
+					\end{gather*}
+					
+					And uniqueness: Notiice $Map_*(\Sigma X,Y)\simeq M_*(Q,Y)\Rightarrow \Sigma X\simeq Q$.
+				\end{proof}
+				
+				\begin{corollary}
+					There exists an adjunction of functors
+					\begin{gather*}
+						\Sigma \dashv \Omega
+					\end{gather*}
+				\end{corollary}
+				
+				\begin{corollary}
+					We have
+					\begin{gather*}
+						Map_*(S^n,\Omega(S^m))\cong Map_*(\Sigma S^n,S^m)
+					\end{gather*}
+				\end{corollary}
+				
+				\begin{proposition}
+					$\Omega X$ can be specified by the pullback
+					\begin{center}
+						\begin{tikzcd}
+							\Omega X\arrow[r]\arrow[d]&*\arrow[d]\\
+							*\arrow[r]&X
+						\end{tikzcd}
+					\end{center}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Fundamental Groups}
+					Via definition, we can shifting the homotopy groups
+					\begin{proposition}
+						For (pointed-)topological space $Y$, $\pi_n(\Omega Y)=\pi_{n+1} (Y)$.
+					\end{proposition}
+				\subsubsection{Higher Loop Space}
+				
+					\begin{lemma}
+						(Eckmann-Hilton Argument)
+					\end{lemma}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{corollary}
+						We have: For topological space $X$ and $n\geq 2$,
+						\begin{gather*}
+							内容...
+						\end{gather*}
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Delooping Problem}
+					\begin{Def}
+						(Delooping) By the diagram, which specifies $\Omega X$, for an object $A$, if we can find a topological space $BA$ such that
+						\begin{center}
+							\begin{tikzcd}
+								A\arrow[r]\arrow[d]&*\arrow[d]\\
+								*\arrow[r]&BA
+							\end{tikzcd}
+						\end{center}
+						
+						i.e. $\Omega BA=A$, then $BA$ is called the \textbf{delooping}.
+					\end{Def}
+					
+					This topic is a little deep. We will learn it in
+					\begin{itemize}
+						\item Classifying Space for Topological Group($G\simeq \Omega BG$)
+						\item Bar Construction, Group Compeletion($M\rightarrow \Omega BM$)
+						\item $A_\infty$-Space:$H$-Space Theory, Geometry of Loop Spaces. 
+					\end{itemize}
+			\subsection{Path Space}
+				\begin{Def}
+					Let $X$ be a topological space, then define the \textbf{path space}
+					\begin{gather*}
+						PX:=X^{[0,1]}
+					\end{gather*}
+					
+					The collection of continuous maps $[0,1]\rightarrow X$.
+				\end{Def}
+				
+				\begin{proposition}
+					\begin{itemize}
+						\item 
+						Actually, we have the following relation
+						\begin{center}
+							\begin{tikzcd}
+								\Omega X\arrow[r,"embedding"]\arrow[d,"s(-)=t(-)"]&PX\arrow[d,"{(s(-),t(-))}"]\\
+								X\arrow[r,"\Delta_X"]&X\times X
+  							\end{tikzcd}
+						\end{center}
+						\item Especially, if $X$ is well-pointed by $x:*\rightarrow X$, then the fibre product
+						{
+							\begin{center}
+								\begin{tikzcd}
+									\Omega_x X\arrow[r]\arrow[d]&\Omega_X\arrow[r]\arrow[d]\arrow[r]&PX\arrow[d]\\
+									*\arrow[r,"x"]&X\arrow[r]&X\times X
+								\end{tikzcd}
+						\end{center}}
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}
+				
+				\subsubsection{Cone-Path Adjunction}
+				
+				\begin{theorem}
+					There exists adjunction $C\dashv P$, i.e.
+					\begin{gather*}
+						Map_{Top}(CX,Y)\cong Map_{Top} (X,PY)
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Eilenberg-Maclane Space}
+			\begin{Def}
+				Let $\pi$ be a group and let $n\in \NN$, let $X$ be a topological space:
+				\begin{itemize}
+					\item (Unpointed) $X$ is an Eilenberg-Maclane space of type $K(\pi,n)$ if the following conditions hold:
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+					\item (Pointed) Especially, 
+				\end{itemize}
+			\end{Def}
+			\subsection{Construction: Space $BG$}
+			\subsection{Construction: CW-Complex}
+			\subsection{Construction:Dold-Kan}
+			
+			\subsection{Properties}
+			\subsection{Postnikov Tower}
+				\begin{Def}
+					内容...
+				\end{Def}
+				
+				\subsubsection{Fiber Sequence by Postnikov Tower}
+		\section{Moore Space}
+			\begin{lemma}
+				Let $n\geq 2$:
+				\begin{itemize}
+					\item The rule $i\mapsto in_i;n_i:S^n\hookrightarrow \vee_{k \in I} S^n$ induces the isomorphism
+					\begin{gather*}
+						\oplus \ZZ i\stackrel{\cong}{\rightarrow } \pi_n(\vee_\mathcal{I} S^n)
+					\end{gather*}
+					\item Let $d:\oplus_{I} \ZZ\rightarrow \oplus_{J} \ZZ$, then the following diagram commutes:
+					\begin{center}
+						\begin{tikzcd}
+							\oplus_i \ZZ&\oplus_j \ZZ\\
+							\pi_n(\vee_I S^n)&\pi_n(\vee_J S^n)
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			Recall:
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			Then:
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			\begin{proposition}
+				The construction $M(G,n)$ gives rise to a canonical isomorphism
+				\begin{gather*}
+					G\stackrel{\cong}{\rightarrow } \pi_n(M(G,n),G)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{CW-Structure}
+			\subsection{Suspension}
+			\subsection{Hurewicz Theorem}
+			
+			We have
+			\begin{theorem}
+				For space $X$, $n\geq 2$ we have
+				\begin{gather*}
+					\pi_n(X)\cong H_n(X)
+				\end{gather*}
+			\end{theorem}
+			
+			Then: According to the isomorphism $G\cong \pi_n(M,G)$,
+			\begin{corollary}
+				For group $G$, and $n\geq 2$,
+				\begin{gather*}
+					\pi_n(M(G,n))\cong H_n(M(G,n))\cong G
+				\end{gather*}
+				
+				And
+				\begin{gather*}
+					\pi_i(M(G,n))
+				\end{gather*}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Fibers and Cofibers}
+			\subsection{Exactnesss in Homotopy}
+			\subsection{Cofiber}
+			\subsection{Fiber}
+		\section{Mapping Spaces}
+	\chapter{CW-Chain Complexes}
+		\section{Cell-Attachments}
+			Recall: The pushout of the continuous maps
+			\begin{Def}
+				Let $X,Y$ be topological space. Let $S\subseteq Y$ be a subpace and $\varphi:S\rightarrow X$ be a continuous function, then we write
+				\begin{gather*}
+					X\cup_\varphi Y:=X\cup_{X\stackrel{\varphi}{\leftarrow} S} Y=(X\sqcup Y)/\sim
+				\end{gather*}
+				where $\sim$ is generated by $\varphi(s)\sim s,s\in S$. 
+			\end{Def}
+			
+			Then, define:
+				\begin{Def}
+				Let $X$ be a topolocial space and $\varphi:S^{n-1}\rightarrow X$ be a continuous map. We consider the following continuous space
+				\begin{gather*}
+					X\cup_{S^{n-1}\stackrel{\varphi}{\rightarrow} X}\bar{B^n}
+				\end{gather*}
+				with following language:
+				\begin{itemize}
+					\item We refer to the image of $B^n$ as \textbf{open $n$-ball};
+					\item We refer to the image of $\bar{B}^n$ as \textbf{$n$-cell};
+					\item We refer to $\varphi$ as the \textbf{attaching map} of the $n$-cell
+				\end{itemize}
+				We say: $X\cup_\varphi \bar{B}^n$ is obtained from $X$ by attaching an $n$-cell along the attaching map $\varphi$. 
+			\end{Def}
+			
+			
+			\begin{proposition}
+				The map $X\rightarrow X\cup_\varphi \bar{B}^n$ is a closed embedding.
+			\end{proposition}
+			\begin{proof}
+				By topological push-out maps lemma: $i^{-1}(C)$ is closed$\Leftrightarrow$ $C$ is closed in $X\cup_{\varphi} \bar{B}^n$.
+			\end{proof}
+			
+			Examples: \url{https://friedl.app.uni-regensburg.de/papers/1t-total-public-october-7-2024.pdf}, P2114(2026/6/25)
+			
+			\subsubsection{Cone-Cell Attachment}
+			
+			Recall:
+			\begin{Def}
+				Let $X$ be a topological space with continuous $\varphi:S^{n-1}\rightarrow X$ continuous, then (The image is a cone, when $n=2$)
+				\begin{gather*}
+					cone(S^{n-1}):=(S^{n-1}\times [0,1])/(S^{n-1}\times \{0\})\\
+					cone(f:S^{n-1}\rightarrow X):=(Cone(S^{n-1})\sqcup X)/[(x,1)]\sim f(x)
+				\end{gather*}
+			\end{Def}
+			
+			\begin{lemma}
+				(Mapping Cone Attachment Lemma)The map
+				\begin{gather*}
+					Cone(f:S^{n-1}\rightarrow X)\rightarrow X\cup_{X\stackrel{f}{\leftarrow} S^{n-1}} \bar{B}^n\\
+					[P]\mapsto  \begin{cases}
+						[P]&P\in X\\
+						[x\cdot r]&P=[(x,r)],(x,r)\in S^{n-1}\times [0,1]
+					\end{cases}
+				\end{gather*} 
+				is a homeomorphism.
+			\end{lemma}
+			\begin{proof}
+				Firstly, this is a homeomorphism
+				\begin{gather*}
+					Cone(S^{n-1})\stackrel{\simeq}{\rightarrow} \bar{B}^n\\
+					[(x,r)]\mapsto x\cdot r
+				\end{gather*}
+				Then, consider $Cone(S^{n-1})\sqcup X\rightarrow \bar{B}^n\sqcup X$. Now the quotient by $f(x)\sim y,y\in S^{n-1}$, correspondent to $x\sim y$ in cone(f). Thus homeomorphic.
+			\end{proof}
+			\subsection{Attaching Cell, and Fundamental Group}
+			\subsection{Retraction}
+			\subsection{Attaching Arbitrary Many Cells}
+			\subsection{Discussion of Details in Topology}
+				\subsubsection{Hausdorffness}
+				\subsubsection{Normal}
+		\section{CW-Complexes}
+			
+			\begin{Def}
+				A \textbf{relative CW complex} for a pari $(X,A)$ is a topological space together with filtration
+				\begin{gather*}
+					A=X_{-1}\subseteq \dots\subseteq X
+				\end{gather*}
+				with:
+				\begin{itemize}
+					\item (Cell Structure) For every $n\in \NN$, there exists a pushout of topological space
+					\begin{center}
+						\begin{tikzcd}
+							\sqcup_{i\in I_n} S^{n-1}\arrow[d,"\sqcup j_n"]\arrow[r,"\sqcup "]&X_{n-1}\arrow[d]\\
+							\sqcup_{i\in I_n} \bar{B}^n\arrow[r]&X_n
+						\end{tikzcd}
+					\end{center}
+					\item (Direct-Limit Topology) The sturcture has the following properties:
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{itemize}
+			\end{Def}
+			
+			Especially:
+				\begin{Def}
+				A \textbf{CW-complex} $X$ is a topological space together with a filtration
+				\begin{gather*}
+					\varnothing=X^{-1}\subseteq X^0\subseteq \dots\subseteq X
+				\end{gather*}
+				by subspaces wich has the following properties:
+				\begin{itemize}
+					\item We have $X=colim_{\rightarrow} X^n$, as described in the topological-direct colimit proposition. i.e. As a set we have
+					\begin{gather*}
+						X=\cup_{n\in \NN_0} X^n
+					\end{gather*}
+					And $U\subseteq X$ is open$\Leftrightarrow$ for each $n\in \NN_0$, the intersection $U\cap X^n$ is open in $X^n$.
+					\item For each $n\in \NN_0$, there exists a set $I$, a family $\{\varphi_i:S^{n-1}\rightarrow X^{n-1}\}_{i\in I}$ of continuous maps and a homeomorphism
+					\begin{gather*}
+						\Xi:X^{n-1}\cup_{\sqcup \varphi_i:X^{n-1}\leftarrow \sqcup_{i\in I} S^{n-1}} \sqcup_{i\in I} \bar{B}^n\rightarrow X^n
+					\end{gather*}
+					which is the inclusion on $X^{n-1}$. 
+				\end{itemize}
+			\end{Def}
+			
+			
+		\section{Homotopies on CW-Complexes}
+		\section{Coverings}
+		\section{Constructions}
+		\section{The HET Theorem}
+		\section{The Cellular Approxiamation Theorem}
+		\section{CW Complex Approxiamation Theorem}
+			\subsection{Approxiamation of Spaces}
+			\subsection{Approxiamation of Pairs}
+			\subsection{Approxiamation of Excisitve Triads}
+				\begin{Def}
+					\begin{itemize}
+						\item The \textbf{exsive traid}
+						\begin{gather*}
+							(X;A,B)\qquad X=\dot{A}\cup \dot{B}
+						\end{gather*}
+						\item The CW traid: $(X;A,B)$ is a CW complex $X$ with subcomplex $A,B$ such that
+						\begin{gather*}
+							X=A\cup B 
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				\begin{theorem}
+					内容...
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Whitehead's Theorem}
+	\section{Cell Attachment}
+	
+	Especially:
+
+	
+	\begin{example}
+		\begin{itemize}
+			\item Consider adding $0$-cell: We have
+			\begin{gather*}
+				\bar{B}_0=\{0\},S^{-1}=\varnothing
+			\end{gather*}
+			Thus,
+			\begin{gather*}
+				X\cup_{S^-1\rightarrow X} \bar{B}^0=X\sqcup \bullet
+			\end{gather*}
+			\item Let $X=\bullet,\varphi:S^{n-1}\rightarrow \bullet$, then we have the following homeomorphism
+			\begin{gather*}
+				\bullet\cup_{\bullet\stackrel{\varphi}{\leftarrow}S^{n-1}} \bar{B}^{n-1}\stackrel{\cong}{\rightarrow} \bar{B}^n/S^{n-1}\stackrel{\cong}{\rightarrow} S^n
+			\end{gather*}
+			
+			When $n=2$, attaching the boundary to the point.
+			\item Let $X=\bullet$ with attaching map $c:S^{n-1}\rightarrow \bullet$. If we attaching $k$ n-cells to the space, we have
+			\begin{gather*}
+				\underbrace{((\bullet \cup_c \bar{B}^n)\cup_c\dots)\cup_c \bar{B}^n}_{k}\cong S^n\vee\dots\vee S^n
+			\end{gather*}
+			Apply induction, we have
+			\begin{gather*}
+				LHS\cong (S^n\vee\dots\vee S^n)\cup_c \bar{B}^n=(S^n\vee\dots\vee S^n)\vee S^n
+			\end{gather*}
+			\item Consider the attaching of two balls via $\varphi:S^{n-1}\rightarrow\bar{B}^n$, we have
+			\begin{gather*}
+				\bar{B}^n\cup_{\bar{B}^n\stackrel{\varphi}{\leftarrow} S^{n-1}} \bar{B}^n\stackrel{\cong}{\rightarrow} S^n
+			\end{gather*}
+			\item Consider $X=S^1\vee S^1$ with $\varphi:S^1\rightarrow S^1\vee S^1$. 
+		\end{itemize}
+	\end{example}
+	
+	\subsection{Mapping Cone}
+	
+	
+	\subsection{Attaching Cell and Fundamental Group}
+	\begin{proposition}
+		(Cell Attachment $\pi_1$ Proposition) Let $X$ be a topological space, $n\geq 1$ with $\varphi:S^{n-1}\rightarrow X$ continuous. We set $x_0:=\varphi((0,\dots,0,1))$ the following statement holds:
+		\begin{itemize}
+			\item (n=1) We set $x_0=\varphi(1),y_0=\varphi(-1)$:
+			\begin{itemize}
+				\item Suppose that $x_0$ and $y_0$ line in the same path-component of $X$, $\gamma$ be a loop in $X\cup_\varphi \bar{B}^1$ that is given by the concatenation of obvious path in the 1-cell from $x_0$ to $y_0$ and some path in $X$ from $y_0$ to $x_0$, with the notation of the map
+				\begin{gather*}
+					\pi_1(X,x_0)*<t>\rightarrow \pi_1(X\cup_\varphi \bar{B}^1,x_0)
+				\end{gather*}
+				Given by the inclusion-induced map $\pi_1(X,x_0)\rightarrow \pi_1(X\cup_\varphi \bar{B}^1,x_0)$ and given by $[t]\mapsto [\gamma]$ is an isomorphism.
+				\item Especially: Suppose $x_0,y_0$ lie in two different path components of $X$, then we can get an isomorphism
+				\begin{gather*}
+					\pi_1(X,x_0)*\pi(X,y_0)\rightarrow \pi_1(X\cup_\varphi \bar{B}^1,x_0)
+				\end{gather*}
+			\end{itemize}
+			\item (n>2) The inclusion-induced map $\pi_1(X,x_0)\rightarrow \pi_1(X\cup_\varphi \bar{B}^n,x_0)$ is an isomorphism;
+			\item (n=2) The map $[0,1]\rightarrow X$ given by
+			\begin{gather*}
+				t\mapsto \varphi(exp(2\pi it))
+			\end{gather*}
+			defines an element in $\pi_1(X,x_0)$, denote by $[\varphi]$. Then the elements in $\pi_1(X,x_0)$ denote by $[\varphi]$. Wwe have
+			\begin{gather*}
+				\pi_1(X,x_0)/<[\varphi]>\stackrel{\cong}{\rightarrow} \pi_1(X\cup_\varphi \bar{B}^2,x_0)
+			\end{gather*}
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		\begin{itemize}
+			\item ($n=1$) We consider the case $\varphi(1),\varphi(-1)$ in the same path-component of $X$. Then,
+			\item 
+			\item ($n\geq 2$) Apply Seifert-van Kampen Theorem
+			\begin{gather*}
+				内容...
+			\end{gather*}
+		\end{itemize}
+	\end{proof}
+	
+	\subsubsection{Projective Space}
+	\begin{lemma}
+		(Projective Space-Cell Attachment Lemma) Let $n\in \NN$:
+		\begin{itemize}
+			\item We considerthe continuous map
+			\begin{gather*}
+				\varphi:S^{n-1}\rightarrow \RR P^{n-1}\\
+				(x_1,\dots,x_n)\mapsto [x_1:\dots:x_n]
+			\end{gather*}
+			There exists a homeomorphism
+			\begin{gather*}
+				\RR P^{n-1}\cup_{\RR P^{n-1}\stackrel{\varphi}{\leftarrow} S^{n-1}} \bar{B}^n\rightarrow \RR P^n  
+			\end{gather*}
+			such that the restriction to $\RR P^{n-1}$ is given by the standard embedding
+			\begin{gather*}
+				\RR P^{n-1}\rightarrow \RR P^n
+			\end{gather*}
+			\item We think of $\bar{B}^{2n}$ and $S^{2n-1}$ as subspace of $\CC^n=\RR^{2n}$. Consider the attaching map
+			\begin{gather*}
+				\varphi:S^{2n-1}\rightarrow \CC P^{n-1}\\
+				(z_1,\dots,z_n)\mapsto [z_1:\dots:z_n]
+			\end{gather*}
+			There exists a homeomorphism
+			\begin{gather*}
+				\CC P^{n-1}\cup_{\CC P^{n-1}\stackrel{\varphi}{\leftarrow} S^{2n-1}} \bar{B}^{2n}\rightarrow \CC P^n  
+			\end{gather*}
+			such that the restriction to $\CC P^{n-1}$ is given by the standard embedding
+			\begin{gather*}
+				\CC P^{n-1}\rightarrow \CC P^n
+			\end{gather*}
+		\end{itemize}
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{proposition}
+		(Projective Space $\pi_1$-Proposition)
+		\begin{itemize}
+			\item We have $\pi_1(\RR P^1)\cong \ZZ$, $\pi_1(\RR P^n)\cong \ZZ_2,n\geq  2$;
+			\item We have $\pi_1(\CC P^n)=0,n\in \NN$.
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsection{Retraction}
+	\begin{lemma}
+		There exists an open neighborhood $V$ of $X$ in $X\cup_{\sqcup \varphi_i:S^{n_i-1}\rightarrow X} (\sqcup_i \bar{B}^{n_i})$ and a continuous map $r:V\rightarrow X$ that is the identity on $X$.
+		
+		i.e. $X$ is a neighborhood retract inside $X\cup_{\sqcup \varphi_i:S^{n_i-1}\rightarrow X} (\sqcup_i \bar{B}^{n_i})$.
+	\end{lemma}
+	\begin{proof}
+		Take $V:=X\cup_{\sqcup \varphi_i} (\sqcup_i \bar{B}^{n_i}-\{0\})$, then define
+		\begin{gather*}
+			r:V\rightarrow X\\
+			x\mapsto x,x\in X\\
+			(j,z)\mapsto \varphi_j(\frac{z}{|z|})
+		\end{gather*}
+	\end{proof}
+	\begin{center}
+		\begin{tikzcd}
+			\sqcup_i S^{n_i-1}\arrow[r]\arrow[d]&X\arrow[d,shift right=2]\\
+			\sqcup_i \bar{B}^{n_i}\arrow[r]&X\cup_{\sqcup \varphi_i} (\sqcup \bar{B}^{n_i})\supseteq V\arrow[u,shift right=15,"r"]
+		\end{tikzcd}
+	\end{center}
+	\subsection{Attaching Arbitrary Many Cells}
+	\begin{Def}
+		Let $X$ be a topologicalspace and let $\{\varphi_i:S^{n_i-1}\rightarrow X\}_{i\in I}$ be a family of continuous maps:
+		\begin{itemize}
+			\item We consider the topological space
+			\begin{gather*}
+				X\cup_{\sqcup_i \varphi_i:X\leftarrow S^{n_i-1}} (\sqcup_i \bar{B}^{n_i})
+			\end{gather*}
+			\item $S^{n-1}\rightarrow\bar{B}^n$ are closed embeddings together with the topological pushout lemma, the natural map of $X$ into above topological space
+			\begin{gather*}
+				X\rightarrow X\cup_{\sqcup_i \varphi_i:X\leftarrow S^{n_i-1}} (\sqcup_i \bar{B}^{n_i})
+			\end{gather*}
+			is a closed embedding. 
+		\end{itemize}
+	\end{Def}
+	\begin{lemma}
+		\begin{itemize}
+			\item The composite $X\stackrel{incl}{\rightarrow} X\sqcup (\sqcup_i \bar{B}^{n_i}) \stackrel{p}{\rightarrow} X\cup_{\sqcup\varphi_i} (\sqcup_i \bar{B}^{n_i})$ is a homeomorphism onto its image $p(X)$ which is closed in $X\cup_{\sqcup\varphi_i} (\sqcup_i \bar{B}^{n_i}$;
+			\item The composite $\sqcup B^{n_i}\stackrel{incl}{\rightarrow} X\sqcup (\sqcup_i B^{n_i})\stackrel{p}{\rightarrow} X\cup_{\sqcup\varphi_i} (\sqcup_i B^{n_i})$ is a homeomorphism onto its image $p(\sqcup_i S^{n_i-1})$, which is an open subset of $X\cup_{\sqcup\varphi_i} (\sqcup_i \bar{B}^{n_i})$;
+			\item As a set, $X\cup_{\sqcup\varphi_i} (\sqcup_i \bar{B}^{n_i})$ is the disjoint union of $p(X)$ and $p(\sqcup_i B^{n_i})$
+		\end{itemize}
+	\end{lemma}
+	\begin{proof}
+		\begin{itemize}
+			\item 
+			\item 
+			\item 
+		\end{itemize}
+	\end{proof}
+	\begin{lemma}
+		(Interative Cell-Attachment Lemma) Let $X$be a topological space and let $\{\varphi_i:S^{n_i}\rightarrow X\}_{i\in I}$ be a family of continuous maps, $J\subseteq I$ be a subset. We denote by $X_J$ the result attaching the cell in $J$ and we by $X_I$ the result of attaching the cells in $I$:
+		\begin{itemize}
+			\item $X_J\rightarrow X_I$ is a closed embedding;
+			\item If we attach the cells corresponding to $J-I$ to $X_J$, then the resulting topological space is naturally homeomorphic to $X_I$.
+		\end{itemize}
+	\end{lemma}
+	\begin{proof}
+		\begin{itemize}
+			\item By 
+			\item 
+		\end{itemize}
+	\end{proof}
+	\subsection{Cell Attachment-Hausdorff Proposition}
+	\begin{proposition}
+		(Cell Attachment Hausdorff Proposition) Let $X$ be a topological space and let $\{\varphi_i:S^{n_i-1}\rightarrow X\}$ be a family of continuous maps. We consider the topological space
+		\begin{gather*}
+			\hat{X}:=X\cup_{\sqcup_{i\in I} \varphi_i:X\leftarrow \sqcup_{i\in I} S^{n_i-1}}  \sqcup_{i\in I} \bar{B}^{n_i}
+		\end{gather*}
+		That we obtain from $X$ by attaching cells aloing the attaching maps $\varphi_i$:
+		\begin{itemize}
+			\item Suppose $U,V\subseteq X$ be disjoint open subsets of $X$, then there exist disjoint open subsets $\hat{U}$ and $\hat{V}$ of $\hat{X}$ with
+			\begin{gather*}
+				X\cap \hat{U}=U\qquad X\cap \hat{V}=V
+			\end{gather*}
+			\item If $X$ is Hausdorff, so is $\hat{X}$.
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		Define: 
+		\begin{gather*}
+			\Phi_i:\bar{B}^{n_i}\rightarrow \hat{X}
+		\end{gather*}
+		Firstly, $\hat{U}\subseteq \hat{X}$ is open$\Leftrightarrow$ The intersection $\hat{U}\cap X$ is open in $X,$ for all $i\in I$ the preimage $\Phi_i^{-1}(\hat{U})$ is open.
+		
+		We could construct $\hat{U},\hat{V}$ via
+		\begin{gather*}
+			\hat{U}:=U\cup (\cup_{i\in I}\Phi_i(\{r\cdot u|u\in \Phi_i^{-1}(U),r\in (1/2,1]\}))
+		\end{gather*}
+		Such $\hat{U}$ is open:
+		\begin{itemize}
+			\item $X\cap \hat{U}$: Consider each 
+			\begin{gather*}
+				\Phi_i(\{r\cdot u|u\in \Phi_i^{-1}(U),r\in (1/2,1]\})\cap X=\Phi_i(\Phi_i^{-1}(U))\cap X=\{\varphi_i(u)|u\in \Phi_i^{-1}(U)\}
+			\end{gather*} 
+			And we have:$\Phi_i^{-1}(U)\cap S^{n_i-1}=\{u\in S^{n_i-1}|\varphi(u)\in U\}\subseteq Im(\varphi)\cap U$. 
+			
+			We have: $\hat{U}\cap X=U$ is open;
+			\item Consider $\Phi_j^{-1}(\hat{U})$:
+			\begin{itemize}
+				\item $X$: Boundaries $u\in \bar{S}^{n_i-1},\varphi_j(u)\in U$;
+				\item Cell $\bar{B}_j$: Points $r\cdot u,r\in (1/2,1),\varphi_j(u)\in U$
+				\item Other Cells: No.
+			\end{itemize}
+			Thus
+			\begin{gather*}
+				\Phi_j^{-1}(\hat{U})\stackrel{\cong}{\rightarrow} (1/2,1]\times \varphi_j^{-1}(U)
+			\end{gather*}
+			which is open in $\bar{B}^{n_j}$.
+		\end{itemize}
+		And $\hat{U}\cap \hat{V}=\varnothing$:
+		\begin{itemize}
+			\item $\hat{U}\cap\hat{V}\cap X=U\cap V=\varnothing$;
+			\item In cell: If $x\in \bar{B}^{n_i}\cap \hat{U}\cap \hat{V}$, we have
+			\begin{gather*}
+				x=\varphi_i(r\cdot u),\varphi_i(u)\in U\cap V
+			\end{gather*} 
+			contradict to $U\cap V=\varnothing$.
+		\end{itemize}
+		
+		This is Hausdorff: Select $U,V$ such such that $U\cap V=\varnothing$.
+	\end{proof}
+	
+	Another proof by Note of Topology 1,via retraction map
+	\begin{proof}
+		Suppose $x\not=y\in \hat{X}$. 
+		\begin{itemize}
+			\item $x,y\in $;
+			\item $x\in X,y\in $;
+			\item $x,y\in X$.$X$ is Hausdorff, 
+		\end{itemize}
+	\end{proof}
+	
+	Furthermore, we have
+	\begin{proposition}
+		\begin{itemize}
+			\item If $X$ is compact, $I$ is finite, then $\hat{X}:=X\cup_{\sqcup_{i\in I} \varphi_i:X\leftarrow \sqcup_{i\in I} S^{n_i-1}}  \sqcup_{i\in I} \bar{B}^{n_i}$ is finite;
+			\item Let $K$ be quasi-compact subset of $\hat{X}:=X\cup_{\sqcup_{i\in I} \varphi_i:X\leftarrow \sqcup_{i\in I} S^{n_i-1}}  \sqcup_{i\in I} \bar{B}^{n_i}$, then
+			\begin{gather*}
+				K\cap B^{n_i}=\varnothing
+			\end{gather*}
+			for almost all $i\in I$. In particular, if $I$ is infinite, then $\hat{X}:=X\cup_{\sqcup_{i\in I} \varphi_i:X\leftarrow \sqcup_{i\in I} S^{n_i-1}}  \sqcup_{i\in I} \bar{B}^{n_i}$ is not compact.
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{proof}
+	\subsection{Cell Attachment-Normal Proposition}
+	\begin{lemma}
+		(Auxiliary Lemma) Let $U,V\subseteq S^{n-1}$ be disjoint open subsets and $B\subseteq \bar{B}^n$ be a closed subset with $B\cap S^{n-1}\subseteq V$. There exists an $\epsilon>0$ such that
+		\begin{gather*}
+			\{r\cdot u|r\in (1-\epsilon,1],u\in U\}\cap B=\varnothing
+		\end{gather*}
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\begin{proposition}
+		(Cell-Attachment Normal Proposition)Let $X$ be a topological space and let $\{\varphi_i:S^{n_i-1}\rightarrow X\}_{i\in I}$ be a family of continuous maps. We consider the topological space
+		\begin{gather*}
+			\hat{X}:=X\cup_{\sqcup \varphi_i:X\leftarrow \sqcup_{i\in I} S^{n_i-1}}\sqcup_{i\in I} \bar{B}^{n_i}
+		\end{gather*}
+		We obtain from $X$ by attaching cells along the attaching maps $\varphi_i$:
+		\begin{itemize}
+			\item Let $\hat{A},\hat{B}\subseteq \hat{X}$ be two disjoint closed subsets. We set
+			\begin{gather*}
+				A:=X\cap \hat{A},B:=X\cap \hat{B}
+			\end{gather*}
+			if there exist disjoint open neighborhoods $U\subseteq X,V\subseteq Y$ of $A,B$ then there exist disjoint open neighborhoods $U\subseteq X,V\subseteq Y$ of $A$ and $B$ then there exists disjoint open neighborhood $\hat{U}\subseteq \hat{X},\hat{V}\subseteq \hat{X}$ of $\hat{A},\hat{B}$ with 
+			\begin{gather*}
+				内容...
+			\end{gather*}
+			\item If $X$ is normal, then $\hat{X}$ is also normal.
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\section{CW Complex}
+	\subsubsection{Relative CW Complex}
+	\subsection{CW Complex}
+
+	Then:
+	\begin{Def}
+		Using the notation from above:
+		\begin{itemize}
+			\item $X^n$ is called \textbf{n-skeleton} of $X$;
+			\item The component $X^n-X^{n-1}$ is called the \textbf{open $n$-cells} of $X$;
+			\item For each $n$-cell $\sigma$ of $X$ we refer to its closure $\bar{\sigma}$ in $X$ as an \textbf{$n$-cell} of $X$
+			\item $dim(X):=\sup\{n\in \ZZ_{\geq -1}|X^{n-1}\not= X^n\}$
+			\item The CW-complex is \textbf{finite} if it has only finite many cells;
+			
+			and we say that it is countable if it has countably many cells;
+		\end{itemize}
+	\end{Def}
+	\begin{proposition}
+		Consider the set-theoritic image of filtration $|X|$, naturally has a family of maps $\Phi_i: \sqcup_{J_i} \bar{B}_i\rightarrow |X|$. Then: The following topologies are equivalent on $|X|$:
+		\begin{itemize}
+			\item The initial topology induced by $\{\Phi_i\}_{i\in \NN}$;
+			\item The weak topology defined above.
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		Notice that: The two topologies on $|X|$.
+		\begin{itemize}
+			\item $\succeq$: Suppose $U$ is open in weak topology$\Leftrightarrow U\cap X^n$ is open,$n\in \NN\Rightarrow \Phi_n^{-1}(U)$ 
+			\item $\preceq$:
+		\end{itemize}
+	\end{proof}
+	\subsubsection{Cells}
+	\begin{Def}
+		Let $X$ be a CW-complex:
+		\begin{itemize}
+			\item Given $n\in \NN$, we denote by $Cell_n(X):=$. Furthermore
+			\begin{gather*}
+				Cell(X)=\cup_{n\in \NN} Cell_n(X)
+			\end{gather*}
+			\item Let $c\in Cell_n(x)$ be an $n$-cell of $X$:
+			\begin{itemize}
+				\item An \textbf{attaching map} for $c$ is a continuous map
+				\begin{gather*}
+					S^{n-1}\rightarrow X^{n-1}
+				\end{gather*}
+				such that there exists a homeomorphism
+				\begin{gather*}
+					\Phi_c:X^{n-1}\cup_{\varphi:S^{n-1}\rightarrow X^{n-1}} \bar{B}^{n}\rightarrow X^{n-1}\cup c\subseteq X^n
+				\end{gather*}
+				which is the identity on $X^{n-1}$.(i.e. $\Phi_c|X^{n-1}=id_{X_{n-1}}$)
+				\item A \textbf{characteristic map} for $c$ is the continuous map $\Phi:\bar{B}^n\rightarrow X$ such that
+				\begin{itemize}
+					\item \begin{gather*}
+						X^{n-1}\cup_{\Phi|S^{n-1}:S^{n-1}\rightarrow X^{n-1}} \bar{B}^n\rightarrow X^{n-1}\cup c
+					\end{gather*}
+					induced an identity on $X^{n-1}$;
+					\item The map $\Phi$ on $\bar{{B}}^n$ is well-defined, and it is a homeomorphism(onto its image).
+				\end{itemize}
+			\end{itemize}
+			\item A \textbf{full set of attaching maps for the cell of CW-complex} $X$ is defined as a family of continuous maps
+			\begin{gather*}
+				\{\varphi_c:S^{dim(c)-1}\rightarrow X^{dim(c)-1}\}_{c\in Cell(X)}
+			\end{gather*}
+			such that: each $\varphi_c$ is an attaching map for the cell $c$. 
+			
+			Similarly, define the fullset of characteristics maps for the $n$-cells of $X$.
+		\end{itemize}
+	\end{Def}
+	\begin{Def}
+		(P2136,Reg)Let: $X$ be a CW-complex. Then we know that for $n\in \NN$, there exists a family
+		\begin{gather*}
+			\{\varphi_c:S^{n-1}\rightarrow X^{n-1}\}_{c\in Cell_n(X)}
+		\end{gather*}
+		of continuous maps and a homeomorphism
+		\begin{gather*}
+			\Xi_n:X^{n-1}\cup_{\sqcup \varphi_c:\sqcup_c S_c^{n-1}\rightarrow X} (\sqcup_{c\in Cell(X)} \bar{B}^n_c)\rightarrow X^n
+		\end{gather*}
+		which is the inclusion on $X^{n-1}$.Then for $c\in Cell_n(X)$ consider the map
+		\begin{gather*}
+			\Phi_c:\bar{B}^n\rightarrow X^{n-1}\cup c\\
+			x\mapsto \Xi_N([(x,c)])
+		\end{gather*} 
+	\end{Def}
+	\subsubsection{Cell-Compactness}
+	\begin{proposition}
+		Let $X$ be a CW-complex:
+		\begin{itemize}
+			\item Let $c$ be an $n$-cell of $X$. If $\Phi:\bar{B}^n\rightarrow X$ is a characteristic map for $vc$,then
+			\begin{gather*}
+				\Phi(\bar{B}^n)=c
+			\end{gather*}
+			\item Every cell is compact.
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{proof}
+	
+	\begin{proposition}
+		(Characteristic Maps Proposition) Let $X$ bea CW-complex Furthermore let
+		\begin{gather*}
+			\{\Phi_c:\bar{B}^{dim(c)}\rightarrow X^{dim(c)}\}_{c\in Cell(X)}
+		\end{gather*}
+		be a full set of characteristic maps for the cells of $X$
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{Characateristic Maps}
+	\begin{proposition}
+		(Characteristic Maps Propposition) Let $X$ be a CW-complex, $\{\Phi_c:\bar{B}^{dim(c)}\rightarrow X^{dim(c)}\}_{c\in Cell(X)}$ be a full set of chracteristic maps for the cells of $X$:
+		\begin{itemize}
+			\item Given any subset $U\subseteq X$ the following statements are equivalent:
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+			\item Let $f:X\rightarrow Y$ be a map to a topological space $Y$. The following statements are equivalent:
+			\begin{itemize}
+				\item $f$ is continuous;
+				\item For evert $c\in Cell(X)$ the restriction of $f$ to $c$ is continuous;
+				\item For every $c\in Cell(X)$, the map $f\circ \Phi_c:\bar{B}^{dim(c)}\rightarrow Y$ is continuous; 
+			\end{itemize}
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{Subcomplex}
+	\begin{Def}
+		Suppose $X$ be a CW-complex. Then, a subcomplex $A\subseteq X$ is a CW-complex $A$ which satisfies
+		\begin{itemize}
+			\item For each $n\in \NN$ we have
+			\begin{gather*}
+				A^n=A\cap X^n
+			\end{gather*}
+			\item Each open $n$-cell of $A$ is also an open $n$-cell of $X$;
+		\end{itemize}
+	\end{Def}
+	
+	\begin{lemma}
+		(Subcomplex-Closed Lemma) Each subcomplex of a CW-complex $X$ is a closed subset of $X$
+	\end{lemma}
+	\begin{proof}
+		\textbf{Claim 1} Let $a$ be an open $n$-cell of $A$. The closure of $a$ in $A$ equals the closure of $a$ in $X$.
+		
+		\textbf{Claim 2} If $A$ intersects an open $n$-cell $x$ of $X$, then $\bar{x}$ is an $n$-cell of $A$.
+		
+		\textbf{Claim 3} For each $n\in \NN$ the intersection $A\cap X^n$ is a closed subset of $X^n$.
+	\end{proof}
+	\begin{proposition}
+		(Subcomplex-Characterization Proposition)
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{proposition}
+		[Exercise 109.9,Reg](CW-Subcomplex Criteria for Connected CW-Complex) Let $A\subseteq X$ be a subspace. We suppose that $A$ has the following properties: For any open cell $c$ of $X$ with $c\cap A\not=\varnothing$, we have
+		\begin{gather*}
+			\bar{c}\subseteq A
+		\end{gather*} 
+		
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{proposition}
+		(Component-Subcomplex Lemma) Let $X$ be a CW-complex. Every (path-) component of $X$ is a subcomoplex of $X$.
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{proposition}
+		(CW-Complex Pasting Lemma) Let $X$be a CW-complex and let $\{X_i\}$ be a family of subcomplexes such that
+		\begin{gather*}
+			X=\cup X_i
+		\end{gather*}
+	\end{proposition}
+	\subsubsection{The Finiteness Theorem for CW-Complexes}
+	\begin{theorem}
+		(CW-Complex Finiteness Theorem) Every compact subset of a CW-complex X is contained in a finite subcomplex.
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\begin{corollary}
+		A CW-complex is compact iff it is finite
+	\end{corollary}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{lemma}
+		内容...
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{Topological Graphs}
+	\begin{lemma}
+		(Graph-CW Complex Lemma)
+		\begin{itemize}
+			\item The graph $(X,G=(V,E,\theta))$ is an undirected topological graph. Then, $\varnothing\subseteq$
+			\item 
+		\end{itemize}
+	\end{lemma}
+	\subsubsection{Smooth Manifolds}
+	\begin{theorem}
+		(Smooth Manifold CW-Theorem) Every \underline{text}
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	
+	\subsubsection{Fundamental Groups}
+	\begin{lemma}
+		(CW-Skeleton-$\pi_0$-Lemma)
+		Let $X$ be a CW-complex.
+		\begin{itemize}
+			\item The inclusion-induced map $\pi_0(X^0)\rightarrow \pi_0(X)$ is a surjection;
+			\item For every $k\geq 1$ the inclusion-induced map $\pi_0(X^k)\rightarrow \pi_0(X)$ is a bijection.
+		\end{itemize}
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{Haudorff Property}
+	\subsubsection{Normal Proposition}
+	\subsubsection{Second-Coutability}
+	\subsubsection{Metrizability}
+	\subsubsection{Partition of Unity}
+	\subsubsection{Paracompactness}
+	\subsubsection{CW-Structure of $\Delta^k$}
+	\begin{proposition}
+		Let $k\in \NN$: Consider the filtration of the stadard $k$-simplex $\Delta^k$ that is given by
+		\begin{gather*}
+			(\Delta_k)^i:=\{(t_0,\dots,t_k)\in \Delta^k|\mbox{at least }k-i\mbox{ coordinates are zero}\},i=0,\dots,k
+		\end{gather*}
+		Then, 
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{Numbers of CW-Structure}
+	\begin{Def}
+		Given a comopact topological space $X$ that admits a CW-structure. We define:
+		\begin{gather*}
+			内容...
+		\end{gather*}
+	\end{Def}
+	\begin{proposition}
+		We have:
+		\begin{itemize}
+			\item $\Theta(S^n)=$;
+			\item $\Theta(S^1\times S^1)=$;
+			\item $\Theta(\RR P^2)=$;
+			\item $\Theta($Klein bottle$)$;
+			\item Let $n\in \NN$, then $\Theta(\bar{B}^n)=$
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsection{Homotopies}
+	\subsubsection{Topology of the Product of a CW-Complex with Interval}
+	\begin{proposition}
+		(CW-Interval Proposition) Let $X$ be a CW-complex
+		\begin{itemize}
+			\item The following three topologies on $X\times [0,1]$ agree:
+			\begin{itemize}
+				\item The product topology on the product $X\times [0,1]$;
+				\item The topology on $|X\times [0,1]$ viewed as the direct colimit
+				\begin{gather*}
+					\stackrel{colim}{\rightarrow} (X^k\times [0,1])
+				\end{gather*}
+				\item The topology which is defined on the set $X\times [0,1]$ by the condition:(i.e. The weak topology induced by $\Phi\times id_{[0,1]}$)
+			\end{itemize}
+			\item Let $f:X\times [0,1]\rightarrow Y$ be a map to a topological space $Y$. The followings are equivalent:
+			\begin{itemize}
+				\item The map $f$ is continuous if $X\times [0,1]$ is equipped with the product topology;
+				\item For every $k\in \NN$, the restriction of $f$ to $X^k\times [0,1]$ is continuous;
+				\item For every characteristic map $\Phi:\bar{B}^n\rightarrow X$ of cell of $X$ the map
+				\begin{gather*}
+					\bar{B}^n\times [0,1]\stackrel{(v,t)\mapsto (\Phi(v),t)}{\rightarrow}X\times [0,1]\stackrel{f}{\rightarrow} Y
+				\end{gather*}
+				is continuous.
+			\end{itemize}
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\begin{lemma}
+		(Infinite Sphere-Contractibility Lemma) The infinite-dimensional sphere $S^\infty$ is contractible.
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{Trees}
+	\begin{proposition}
+		(Interated Deformation Retract Proposition) Let $X$ be a CW-complex, and $Y_0\subseteq Y_1\subseteq \dots$ be a sequence of subcomplexes of $X$ such that the two conditions satisfied:
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\begin{Def}
+		内容...
+	\end{Def}
+	\subsubsection{The fundamental group of 1-dimensional CW-complexes}
+	\subsubsection{Loacl Properties of CW-Complexes}
+	\begin{proposition}
+		内容...
+	\end{proposition}
+	\subsubsection{Seifert-van-Kampen Theorem}
+	\subsection{Coverings of CW-Complexes}
+	\subsubsection{Coverings of CW-Complex}
+	\subsubsection{Subgroups of Finitely Presented Groups}
+	\subsubsection{Subgroups of Free Groups}
+	\subsection{Constructions}
+	\subsubsection{Two Categories}
+	\begin{Def}
+		Define:
+	\end{Def}
+	\subsubsection{Cellular}
+	\begin{Def}
+		内容...
+	\end{Def}
+	\subsubsection{Functor fromm CW-complexes to topological spaces}
+	\begin{lemma}
+		内容...
+	\end{lemma}
+	\subsubsection{CW-Disjoint Union}
+	\begin{proposition}
+		Let $\{X_i\}$ be a family of CW-complexes
+		\begin{itemize}
+			\item 
+			\item 
+			\item 
+		\end{itemize}
+	\end{proposition}
+	\subsubsection{Glueing}
+	\subsubsection{Quotient}
+	\subsubsection{Direct Colimit}
+	\subsubsection{Pushout}
+	\begin{Def}
+		内容...
+	\end{Def}
+	\subsubsection{Products}
+	\subsubsection{Cones, Suspensions}
+	\begin{Def}
+		Let $X$ be a CW-complex:
+		\begin{itemize}
+			\item The cone
+			\begin{gather*}
+				cone(X):=(X\times [0,1])/(X\times \{0\})
+			\end{gather*}
+			\item The suspension
+			\begin{gather*}
+				\Sigma(X):=(X\times [-1,1])/(X\times \{-1\})/(X\times \{1\})
+			\end{gather*}
+		\end{itemize}
+	\end{Def}
+	\begin{proposition}
+		(CW-Complex-Cone and Suspension Proposition)
+		\begin{itemize}
+			\item The cone $Cone(X)$ admits a CW-structure, such that the inclusion map $X\rightarrow Cone(X)$ given by
+			\item The suspension $\Sigma(X)$ admits a CW-structure, such that the inclusion map $X\rightarrow \Sigma(X)$ given by
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		
+	\end{proof}
+	\begin{Def}
+		内容...
+	\end{Def}
+	\begin{proposition}
+		内容...
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{CW-HNN-van-Seifert Theorem}
+	\subsection{Homotopy Extension Theorem}
+	\subsubsection{The Homotopy Extension Theorem}
+	\begin{Def}
+		\begin{itemize}
+			\item A continuous map $i:A\rightarrow X$ between topological spaces is called a \textbf{cofibration} if it has the \textbf{homotopy extension property}. i.e. if given any topological space $Y$ and two continuous maps
+			\begin{gather*}
+				f:X\times \{0\}\rightarrow Y\qquad G:A\times [0,1]\rightarrow Y
+			\end{gather*}
+			with $f(i(a),0)=G(a,0),a\in A$. There exists a continuous map
+			\begin{gather*}
+				F:X\times [0,1]\rightarrow Y
+			\end{gather*}
+			such that the following properties diagram commutes
+			\begin{center}
+				\begin{tikzcd}
+					A\times \{0\}\arrow[rr,hookrightarrow]\arrow[dd,"i\times id_{\{0\}}"]&&A\times [0,1]\arrow[ld,"G"]\arrow[dd,"i\times id_{[0,1]}"]\\
+					&Y\\
+					X\times \{0\}\arrow[ru,"f"]\arrow[rr,hookrightarrow]&&X\times [0,1]\arrow[lu,"F"]
+				\end{tikzcd}
+			\end{center}
+			\item If $i:A\rightarrow X$ is a cofibration such that $i(A)$ is a closed subset of $X$, then we refer to $i$ as a \textbf{closed fibration}.
+		\end{itemize}
+	\end{Def}
+	\begin{theorem}
+		(Homotopy Extension Theorem) Let $X$ be a CW-complex and let $A$ be a subcomplex of $X$:
+		\begin{itemize}
+			\item The inclusion map $A\rightarrow X$ is a closed cofibration;
+			\item In slightly different word: Let $Y$ be a topological space and let $f_0:X\rightarrow Y$ be a continuous map. 
+			
+			Furthermore, suppose that $A\subseteq X$ is a subcomplex, and suppose we are given a homotopy $G:A\times [0,1]$ from $g_0:=f_0|A$ to some map $g_1:A\rightarrow Y$,there exists a homotopy
+			\begin{gather*}
+				F:X\times [0,1]\rightarrow Y
+			\end{gather*}
+			starting from $f_0$ such that the restsriction $F|A\times [0,1]=G$.
+		\end{itemize}
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{corollary}
+		(CW-Complex-Vertices-Homotopy Corollary) Let $X$ be a connected CW-complex, let $P$ be a point in the $0$-skeleton of $X$ and let $Q$ be some other point on $Y$:
+		\begin{itemize}
+			\item Given any path $\gamma:[0,1]\rightarrow X$ with
+			\begin{gather*}
+				\gamma(0)=P\qquad \gamma(1)=Q
+			\end{gather*}
+			There exists a homotopy $F:X\times [0,1]\rightarrow X$ with
+			\begin{gather*}
+				F(P,t)=\gamma(t)
+			\end{gather*}
+			\item There exists a continuous map
+			\begin{gather*}
+				h:X \rightarrow X
+			\end{gather*}
+			with $h(P)=Q$ that is homotopic to $id_X$.
+		\end{itemize}
+	\end{corollary}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{corollary}
+		(Quotient by Contractible Corollary) Let $X$ be a CW-complex, $A\subseteq X$ be a subcomplex
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{corollary}
+	\subsection{Cellular Approxiamation Theorem Theorem}
+	\begin{Def}
+		A continuous map $g:X\rightarrow Y$ between CW-complexes is called \textbf{cellular} if for each $n\in \NN$, we have
+		\begin{gather*}
+			f(X^n)\subseteq Y^n
+		\end{gather*}
+	\end{Def}
+	
+	\begin{theorem}
+		(CAT) Let $(X,A)$and $(Y,B)$ be relative CW-complexes and $f:X\rightarrow Y$ be continuous with $f(A)\subseteq f(B)$, then $f$ is homotopic rel $A$ 
+		to a celular map.
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{CW-Skeleton-$\pi_n$-Proposition}
+	\begin{proposition}
+		Let $X$ be connected CW-complex, and $x_0$ be a point in $0$-skeleton of $X$ and $j\in \NN$:
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{proposition}
+		(Sphere Low $\pi_n$ Proposition) Le t$n\in \NN$. For any $k\in \{1,\dots,n-1\}$ we have
+		\begin{gather*}
+			内容...
+		\end{gather*}
+	\end{proposition}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsubsection{Cellular Approxiamation Theorem for Pairs}
+	\begin{theorem}
+		Suppose we are given a continuous map
+		\begin{gather*}
+			g:(X,A)\rightarrow (Y,B)
+		\end{gather*}
+		between pairs of CW-complexes. Let $Z$ be a subcomplex of $A$ that the restriction of $g$ to $Z$ is a cellular map, then $g$ is homotopic rel $Z$ to a cellular map
+		\begin{gather*}
+			\hat{g}:(X,A)\rightarrow (Y,B)
+		\end{gather*}
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\section{The CW-Approxiamation Theorem}
+	\subsection{$k$-Connected}
+	Firstly:
+	\begin{itemize}
+		\item Given $n\in \NN$ we write
+		\begin{gather*}
+			*=(0,\dots,0,1)\in S^n
+		\end{gather*}
+		Then, we can view $S^n$ as a CW-complex with one $0$-cell $\{*\}$ and one $n$-cell.
+		\item We could form any wedge of spheres
+		\begin{gather*}
+			\vee_{i\in I} S_i^{n_i}
+		\end{gather*}
+		by identifying th points $*$. Then, it can be viewed as a CW-complex by the CW-Wedege lemma.
+	\end{itemize}
+	We say:
+	\begin{Def}
+		Let $f:X\rightarrow Y$ be a continuous map between topological spaces:
+		\begin{itemize}
+			\item We say that the map $f:X\rightarrow Y$ is $0$-connected if $f_*:\pi_0(X)\rightarrow \pi_0(Y)$ is a surjection.
+			
+			In other word, 
+			\item Let $k\in \NN$. we say $f:X\rightarrow Y$is \textbf{k-connected} if the following two conditions are satisfied:
+			\begin{itemize}
+				\item The map $f_*:$ is a bijection;
+				\item For every $x_0\in X$, the induced map 		
+				\begin{gather*}
+					f_*:\pi_i(X,x_0)\rightarrow \pi_i(Y,f(x_0))\mbox{ is an}\begin{cases}
+						isomorphism&i=1,\dots,k-1\\
+						epimorphism&i=k
+					\end{cases}
+				\end{gather*}
+			\end{itemize}
+		\end{itemize}
+	\end{Def}
+	
+	\begin{proposition}
+		(Higher Connected Map Proposition) Let $k\in \NN$, $A$ be a CW-complex and let $f:A\rightarrow X$ be comtinuous map.
+		
+		If $A\rightarrow X$ is $k$-connected, there exists a CW-complex $B$ and a continuous map $g:B\rightarrow X$ such that the following statement hold:
+		\begin{itemize}
+			\item $A$ is a subcomplex of $B$;
+			\item The only extra cells of $B$ are $(k+1)$-dimensional.
+			
+			In particular the $k$-skeleton of $B$ equals the $k$-skeleton of $A$;
+			\item the restriction of $g$ to $A$ equals $f$;
+			\item The map $g:B\rightarrow X$ is (k+1)-connected
+		\end{itemize}
+	\end{proposition}
+	\begin{proof}
+		Consider the following diagram
+		\begin{center}
+			\begin{tikzcd}
+				\mbox{k-dim CW-complex A}\arrow[r,"\mbox{k-connected f}"]\arrow[d,hookrightarrow]&X\in {\mathcal Top}\\
+				\mbox{(k+1)-dim CW-complex B,}B^k=A\arrow[ru,"\mbox{(k+1)-connected g}",swap]
+			\end{tikzcd}
+		\end{center}
+		Problem for $f$: Write $x_0=f(a_0)$
+		\begin{itemize}
+			\item The map $\pi_k(A,a_0)\rightarrow \pi_k(X,x_0)$ is not a monomorphism;
+			\item The map $\pi_{k+1}(A,A_0)\rightarrow \pi_{k+1}(X,x_0)$ is not an epimorphism.
+		\end{itemize}
+		We construct the map $g:B\rightarrow X$ as follow:
+		\begin{itemize}
+			\item By the CW-Skeleton proposition,
+			\begin{gather*}
+				\pi_k(A^k,x_0)\rightarrow \pi_k(A,a_0)
+			\end{gather*}
+			is an epimorphism. This implies that we can pick a family
+			\begin{gather*}
+				\{\varphi_i:(S^k,*)\rightarrow (A^k,a_0)\}
+			\end{gather*}
+			\item 
+			\item 
+		\end{itemize}
+	\end{proof}
+	\subsection{Weak Homotopy Equivalence and the CW-Approxiamation Theorem}
+	\subsubsection{Weak Homotopy Equivalence}
+	\begin{Def}
+		We say map $f:X\rightarrow Y$ between topological spaces is a \textbf{weak homotopy equivalence} if $f$ is $k$-connected for all $k\in \NN$.
+	\end{Def}
+	\begin{lemma}
+		(Weak Homotopy Equivalence Criteria Lemma) Let $f:X\rightarrow Y$ be a continuous map between topological spaces:
+		\begin{itemize}
+			\item If $f$is a homotopy equivalence, then it is also a weak homotopy equivalence:
+			\item If $g:X\rightarrow Y$ is a continuous map that homotopic to $f$, then
+			\begin{center}
+				$f$ is a weak homotopy equivalence$\Leftrightarrow g$ is a weak homotopy equivalence
+			\end{center}
+			\item If $X,Y$ are $0$-connected, then following holds:
+			\begin{center}
+				$f$ is weak homotopy equivalence$\Leftrightarrow$ There exists an $x_0\in X$ such that for every $k\in \NN$, the induced map $f_*:\pi_k(X,x_0)\rightarrow \pi_k(Y,f(x_0))$ is an isomorphism
+			\end{center}
+		\end{itemize}
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\begin{proposition}
+		内容...
+	\end{proposition}
+	\subsubsection{CW-Approxiamation}
+	\begin{Def}
+		Let $X$ be a topological space. A \textbf{CW-Approxiamation} is a CW-Complex $Z$ with a weak homotopy equivalence $f:Z\rightarrow X$.
+	\end{Def}
+	\begin{lemma}
+		(Product-CW Approxiamation) Let $X,Y$ be two CW-complexes. Let $P$ be hte product topology on $X\times Y$, and ${\mathcal CWWP}$ be the CW-product topology. Then, identity map
+		\begin{gather*}
+			id:(X\times {\mathcal CWP})\rightarrow (X\times Y,\mathcal{P})
+		\end{gather*}
+		is a CW-approxiamation.
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{theorem}
+		(CW-Approxiamation Theorem)
+		\begin{itemize}
+			\item Every topological space $X$ admits a CW-approxiamation $f:Z\rightarrow X$;
+			\item Let $k\in \NN$. If $X$ is $k$-connected space, then there exists a CW-apprxiamation  
+			\begin{gather*}
+				f:Z\rightarrow X
+			\end{gather*}
+			such that $Z$ has \underline{single} $0$-cell and such that $Z$ has no cells in dimension $1,\dots,k$.
+		\end{itemize}
+		In both case, given a point $x_0\in X$, we can find $f$and $z_0\in Z^0$ such that
+		\begin{gather*}
+			f(z_0)=x_0
+		\end{gather*}
+	\end{theorem}
+	\section{The Whitehead Theorem}
+	\begin{lemma}
+		(Compression Lemma) Let $(X,A)$ be a pair of CW-complexes and let $(Y,B)$ be a pair of topological spaces with $B\not=\varnothing.$ 
+		
+		
+	\end{lemma}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\begin{theorem}
+		
+		(Whitehead Theorem) Let $f:X\rightarrow Y$ be a continuous map between two connected CW-complexes:
+		\begin{itemize}
+			\item If $f:X\rightarrow Y$ is a weak equivalence, then $f$ is a homotopy equivalence.
+			
+			In fact, there is more refined version:
+			\item Let $x_0\in X^0,y_0\in Y^0$ be the base points in $0$-skeleta of $X$ respectly $Y$. If $f:X\rightarrow Y$ is a equivalence with $f(x_0)=y_0$, then there exists a homotopy equivalence between the pointed topological spaces $(X,x_0)$ and $(Y,y_0)$.
+		\end{itemize}
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\subsection{Mapping Cylinder}
+	\begin{Def}
+		Given a continuous map $f:X\rightarrow Y$ between topological spaces, define
+		\begin{gather*}
+			Cyl(f):=Cyl(f:X\rightarrow Y):=((X\times [0,1])\sqcup Y)/\sim\qquad (x,1)\sim f(x),x\in X
+		\end{gather*}
+	\end{Def}
+	\subsection{Homotopy Classification of Lens Spaces}
+	\begin{Def}
+		Consider the action of $\ZZ_p$ on $S^3\subseteq \CC^2$: Suppose $gcd(p,q)=1$, then the mmap
+	\end{Def}
+\end{document}

@@ -1,0 +1,127 @@
+\documentclass[total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Kan Extension}
+	\chapter{Localization of Categories}
+		\section{Definitions}
+			\begin{Def}
+				Let: $\mathcal{C}$ a category and $W$ a collection of morphisms, i.e. $W\subseteq Mor(\mathcal{C})$, then a \textbf{localization} of $\mathcal{C}$ by $W$ is 
+				\begin{itemize}
+					\item A (general large) category $C[W^{-1}]$;
+					\item (Localization Functor) A functor $Q:\mathcal{C}\rightarrow \mathcal{C}[W^{-1}]$;
+					\item Such that:
+					\begin{itemize}
+						\item For all $w\in W$, $Q(w)$ is an isomorphism;
+						\item For any category $A$ and any functor $\mathcal{C}\rightarrow A$ such that $F(w)$ is an isomorphism for all $w\in W$, there exists a functor $F_W:C[W^{-1}]\rightarrow A$ such that the following diagram commutes:
+						\begin{center}
+							\begin{tikzcd}
+								C\arrow[d,"Q"]\arrow[r,"F"]&A\\
+								C[W^{-1}]\arrow[ru,dashrightarrow,"\exists F_W"]
+							\end{tikzcd}
+						\end{center}
+						\item The map between functor categories
+						\begin{gather*}
+							Q:Func(C[W^{-1}])\rightarrow Func(C,A)
+						\end{gather*}
+						
+						is full and faithful for every category $A$.
+					\end{itemize}
+				\end{itemize}
+			\end{Def}
+			
+			\textbf{Remark} General Large:
+			
+			\subsection{Reflective Localization}
+			\subsubsection{Category with Weak Equivalence}
+			\begin{Def}
+				A \textbf{category with weak equivalence} is:
+				\begin{itemize}
+					\item A category $\mathcal{C}$;
+					\item A subcategory $W\subseteq \mathcal{C}$;
+				\end{itemize}
+				
+				such that:
+				\begin{itemize}
+					\item $Iso(\mathcal{C})\subseteq W$;
+					\item (\textbf{Two Out of Three}) If $g,f$ any two \underline{composable morphism} in $\mathcal{C}$, then two out of the set $\{g,f,g\circ f\}$ in $W$, then so is the third.
+					
+					\begin{center}
+						\begin{tikzcd}
+							&B\arrow[rd,"f"]\\
+							A\arrow[rr,"g\circ f"]\arrow[ru,"g"]&&C
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
+			\end{Def}
+			
+			\subsubsection{Homotopy Category}
+				\begin{Def}
+					Given a category with weak equivalence $(\mathcal{C},W)$, its \textbf{homotopy category} $Ho(\mathcal{C})$ is the category with the universal property, that there exists a functor $Q:\mathcal{C}\rightarrow Ho(\mathcal{C})$ sending the weak equivalence to an isomorphism in $Ho(\mathcal{C})$.
+					
+					In more details, the \textbf{universality} of $Ho(\mathcal{C})$:
+					\begin{itemize}
+						\item For any (possibly large) category $A$, and a functor $F:C\rightarrow A$, that $F$ sends $w\in W$ to isomorphisms in $A$, there exists a functor $F_Q:Ho(\mathcal{C})\rightarrow A$ and a natural isomorphism
+						\begin{center}\tiny
+							\begin{tikzcd}
+								\mathcal{C}\arrow[rr]\arrow[dd,"Q"]&&A\\
+								&\Downarrow \cong\\
+								Ho(\mathcal{C})\arrow[rruu,"F_Q",bend right=30,swap]
+							\end{tikzcd}
+						\end{center}
+						\item Functor $Q^*:Func(Ho(\mathcal{C}),A)\rightarrow Func(\mathcal{C},A)$ is full and faithful.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					$Ho(\mathcal{C})$ is unique, up to equivalence of categories.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsubsection{Relective Localization}
+			\begin{Def}
+				Let $W\subseteq \mathcal{C}$ be a category with weak equivalence, then the localization of $\mathcal{C}$ at $W$ is:
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+				
+				such that:
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+			
+			We have:
+			\begin{center}
+				\begin{tikzcd}
+					内容...
+				\end{tikzcd}
+			\end{center}
+			
+			\subsubsection{Local Object}
+			\subsection{Localization of Enriched Category}
+			
+			\subsection{Properties}
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				
+			\subsection{The Calculus of Fractions}
+			\subsection{Gabriel-Zisman Localization}
+			\subsection{Localization of $Ch(\mathcal{A})$}
+				\begin{proposition}
+					We have
+					\begin{gather*}
+						\mathcal{K}(A)\simeq Ch(\mathcal{A})[H^{-1}]
+					\end{gather*}
+					
+					where $H$ is the collection of chain homotopy equivalence.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Localization of Abelian Categories}
+		\section{Zigs-Zags}
+\end{document}

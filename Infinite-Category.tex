@@ -1,0 +1,156 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{$\infty$-Category}
+		\section{Infinity Categories}
+			Some models are listed as following:
+			\begin{Def}
+				Define:
+				\begin{itemize}
+					\item (Keredon;Lurie) The $\infty$-category is weak Kan complex.
+					
+				\end{itemize}
+				
+				Notice that: It is not a category.
+			\end{Def}
+			\subsubsection{Examples}
+			\begin{proposition}
+				Every Kan complex is an $\infty$-category. In particular, if $X$ is a topological space, then the singular simplicial set
+				\begin{gather*}
+					Sing_\bullet(X)
+				\end{gather*}
+				
+				is an $\infty$-category.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				For any category $\mathcal{C}$, the nerve $N_\bullet(\mathcal{C})$ is an $\infty$-category.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Product, Coproduct}
+			
+			\subsection{Elements of Infty Category}
+			\begin{Def}
+				Let $\mathcal{C}=S_\bullet$ be an $\infty$-category:
+				\begin{itemize}
+					\item Object $Ob(\mathcal{C}):=S_0$;
+					\item Morphisms $Mor_{\infty-Cat}(\mathcal{C})=S_1$;
+					
+					Suppose $f\in S_1$, then define
+					\begin{gather*}
+						s(f):=d^1_1(f)\qquad t(f):=d^1_0(f)
+					\end{gather*}
+				\end{itemize}
+				
+			\end{Def}
+			
+			
+			\subsection{Opposite of Infty Category}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsection{Homotopies}
+				\begin{Def}
+					Let $\mathcal{C}$ be an $\infty$-category andc let $f,g:C\rightarrow D$ be pair of morphisms in $\mathcal{C}$, with 
+					\begin{gather*}
+						s(f)=s(g)\qquad t(f)=t(g)
+					\end{gather*}
+					
+					Then, $f\simeq g$ iff \begin{center}
+						\begin{tikzcd}
+							&C\arrow[ld,"f",swap]\arrow[rd,"g"]\\
+							D\arrow[rr,"id_D"]&&D
+						\end{tikzcd}
+					\end{center}
+					
+					satisfying $d^2_0(\sigma)=id_\sigma,d_1^2(\sigma)=g,d_2^2(\sigma)=f$.
+				\end{Def}
+				
+				\begin{proposition}
+					Let $\mathcal{C}$ be an $\infty$-category containing objects $X,Y\in \mathcal{C}$, and $E$ the collection
+					\begin{gather*}
+						E=Mor_{\infty-Cat}
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Composition}
+				\begin{Def}
+					Let $\mathcal{C}$ be an $\infty$-category. Suppose we are given objects $X,Y,Z\in \mathcal{C}$, with morphisms
+					\begin{gather*}
+						f:X\rightarrow Y\qquad g:Y\rightarrow Z\qquad h:X\rightarrow Z
+					\end{gather*}
+					
+					Then, $h$ is called a \textbf{composition} if there exists a 2-simplex $\sigma$ of $\mathcal{C}$ such that
+					\begin{gather*}
+						d^2_0(\sigma)=f\qquad d^2_1(\sigma)=h\qquad d^2_2(\sigma)=g
+					\end{gather*}
+					
+					In this case, the 2-simplex $\sigma$ witnesses as a composition of $f$ and $g$.
+				\end{Def}
+				
+				\begin{proposition}
+					Let $\mathcal{C}$ be an $\infty$-category containing morphisms $f:X\rightarrow Y$ and $g:Y\rightarrow Z$, then:
+					\begin{itemize}
+						\item There exists a morphism $h:X\rightarrow Z$ which is composition of $f$ and $g$;
+						
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					(Transitivity of Homotopy by Composition) Suppose $f,f':X\rightarrow Y,f\simeq f';g,g':Y\rightarrow Z,g\simeq g'$ then if
+					\begin{itemize}
+						\item $h$ is composition of $f,g$;
+						\item $h$ is composition of $f',g'$;
+					\end{itemize}
+					
+					Then
+					\begin{gather*}
+						h\simeq h'
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Homotopy Category}
+				\begin{Def}
+					
+				\end{Def}
+				
+				\begin{Def}
+					(Homotopy Category) Let $\mathcal{C}$ be $\infty$-category, define category $h\mathcal{C}\in Cat$:
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+			\subsection{Isomorphisms}
+				\begin{Def}
+					
+				\end{Def}
+		\section{Functors}
+		
+	\chapter{Kan Complex}
+	\chapter{Stable $\infty$-Categories}
+	
+	\chapter{$\infty$-Operads}
+\end{document}

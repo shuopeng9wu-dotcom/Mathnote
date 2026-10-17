@@ -1,0 +1,2229 @@
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.8.23)  17 OCT 2026 16:08
+ restricted system commands enabled.
+**Complex-Curve-Riemann-Surface.tex
+(./Complex-Curve-Riemann-Surface.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-08-10>
+Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
+Lua module: lualibs 2023-07-13 v2.76 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2023-07-13 v2.76 ConTeXt Lua libraries -- extended 
+collection.
+luaotfload | conf : Root cache directory is "D:/Tex Live/texlive/2026/texmf-var/
+luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2023-12-28.lua" from kpse-res
+olved path "d:/Tex Live/texlive/2026/texmf-dist/tex/luatex/luaotfload/fontloader
+-2023-12-28.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.134
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "D:/Tex Live/texlive/2026/texmf-var/
+luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
+Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `tracingstacklevels' in `input_level_string'. ("d:/Tex Live/texlive/2
+026/texmf-dist/tex/latex/subfiles/subfiles.cls"
+Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
+Preamble taken from file `Total.tex'
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/import/import.sty"
+Package: import 2020/04/01  v 6.2
+)
+(./Total.tex (./ModulEN.cls
+Document Class: ModulEN 
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/base/book.cls"
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/base/bk10.clo"
+File: bk10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from D:/Tex Live/texlive/2026/texmf
+-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
+\c@part=\count274
+\c@chapter=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen149
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty"
+Package: amsmath 2026/05/19 v2.18d AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty"
+Package: amstext 2024/11/17 v2.01 AMS text
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen150
+))
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen151
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty"
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count283
+LaTeX Info: Redefining \frac on input line 235.
+\uproot@=\count284
+\leftroot@=\count285
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count286
+\DOTSCASE@=\count287
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen152
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count288
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count289
+\dotsspace@=\muskip17
+\c@parentequation=\count290
+\dspbrk@lvl=\count291
+\tag@help=\toks18
+\row@=\count292
+\column@=\count293
+\maxfields@=\count294
+\andhelp@=\toks19
+\eqnshift@=\dimen153
+\alignsep@=\dimen154
+\tagshift@=\dimen155
+\tagwidth@=\dimen156
+\totwidth@=\dimen157
+\lineht@=\dimen158
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2965.
+LaTeX Info: Redefining \] on input line 2966.
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/stix.sty"
+Package: stix 2018/04/17 v1.1.3-latex STIX fonts support package
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/base/textcomp.sty"
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+LaTeX Font Info:    Changing ? sub-encoding to TS1/0 on input line 75.
+)
+LaTeX Encoding Info:    Text command \textpertenthousand (encoding T1) is not d
+eclared on input line 51.
+LaTeX Encoding Info:    Redeclaring text command \textpertenthousand (encoding 
+?) on input line 52.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 76.
+LaTeX Font Info:    Encoding `OML' has changed to `LS1' for symbol font
+(Font)              `letters' in the math version `normal' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> LS1/stix/m/it on input line 76.
+LaTeX Font Info:    Encoding `OML' has changed to `LS1' for symbol font
+(Font)              `letters' in the math version `bold' on input line 76.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> LS1/stix/m/it on input line 76.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 77.
+LaTeX Font Info:    Encoding `OT1' has changed to `LS1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 77.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> LS1/stix/m/n on input line 77.
+LaTeX Font Info:    Encoding `OT1' has changed to `LS1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 77.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> LS1/stix/m/n on input line 77.
+\symbold-operators=\mathgroup6
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 79.
+LaTeX Font Info:    Encoding `OMS' has changed to `LS1' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 79.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> LS1/stixscr/m/n on input line 79.
+LaTeX Font Info:    Encoding `OMS' has changed to `LS1' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 79.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> LS1/stixscr/m/n on input line 79.
+\symsymbols2=\mathgroup7
+\symsymbols3=\mathgroup8
+\symsymbols4=\mathgroup9
+\symintegrals=\mathgroup10
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 84.
+LaTeX Font Info:    Encoding `OMX' has changed to `LS2' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 8
+4.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> LS2/stixex/m/n on input line 84.
+LaTeX Font Info:    Encoding `OMX' has changed to `LS2' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 84.
+
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> LS2/stixex/m/n on input line 84.
+\symarrows1=\mathgroup11
+\symarrows2=\mathgroup12
+\symarrows3=\mathgroup13
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  LS1/stix/m/it --> LS1/stix/b/it on input line 88.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  LS1/stix/m/n --> LS1/stix/b/n on input line 89.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LS1/stixscr/m/n --> LS1/stixscr/b/n on input line 90.
+LaTeX Font Info:    Overwriting symbol font `symbols2' in version `bold'
+(Font)                  LS1/stixfrak/m/n --> LS1/stixfrak/b/n on input line 91.
+
+LaTeX Font Info:    Overwriting symbol font `symbols3' in version `bold'
+(Font)                  LS1/stixbb/m/n --> LS1/stixbb/b/n on input line 92.
+LaTeX Font Info:    Overwriting symbol font `symbols4' in version `bold'
+(Font)                  LS1/stixbb/m/it --> LS1/stixbb/b/it on input line 93.
+LaTeX Font Info:    Overwriting symbol font `integrals' in version `bold'
+(Font)                  LS2/stixcal/m/n --> LS2/stixcal/b/n on input line 94.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LS2/stixex/m/n --> LS2/stixex/b/n on input line 95.
+LaTeX Font Info:    Overwriting symbol font `arrows1' in version `bold'
+(Font)                  LS1/stixsf/m/n --> LS1/stixsf/b/n on input line 96.
+LaTeX Font Info:    Overwriting symbol font `arrows2' in version `bold'
+(Font)                  LS1/stixsf/m/it --> LS1/stixsf/b/it on input line 97.
+LaTeX Font Info:    Overwriting symbol font `arrows3' in version `bold'
+(Font)                  LS2/stixtt/m/n --> LS2/stixtt/b/n on input line 98.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 99.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 102.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 106.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 108.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 109.
+LaTeX Info: Redefining \yen on input line 456.
+LaTeX Info: Redefining \circledR on input line 458.
+LaTeX Info: Redefining \checkmark on input line 460.
+LaTeX Info: Redefining \maltese on input line 461.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 698.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 699.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 700.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 701.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 702.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 703.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 704.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 705.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 707.
+LaTeX Font Info:    Redeclaring math accent \check on input line 708.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 716.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 728.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 729.
+LaTeX Info: Redefining \vdots on input line 1518.
+LaTeX Info: Redefining \cdots on input line 1522.
+LaTeX Font Info:    Redeclaring math symbol \mathsterling on input line 1978.
+LaTeX Info: Redefining \not on input line 2144.
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/base/latexsym.sty"
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup14
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/mdframed/mdframed.sty"
+Package: mdframed 2013/07/01 1.9b: mdframed
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty"
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty"
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty"
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty"
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty"
+Package: expl3 2026-08-10 L3 programming layer (loader) 
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-luatex.def"
+File: l3backend-luatex.def 2026-08-10 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count295
+Inserting `l3color' in `luaotfload.parse_color'.))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+) ("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty"
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count296
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/zref/zref-abspage.sty"
+Package: zref-abspage 2026-03-07 v2.37 Module abspage for zref (HO)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/zref/zref-base.sty"
+Package: zref-base 2026-03-07 v2.37 Module base for zref (HO)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty"
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+"
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) ("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty"
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty"
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks23
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/etexcmds/etexcmds.sty"
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/auxhook/auxhook.sty"
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 767.
+Package zref Info: New property: default on input line 768.
+Package zref Info: New property: page on input line 769.
+)
+\c@abspage=\count297
+Package zref Info: New property: abspage on input line 67.
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty"
+Package: needspace 2025/03/13 v1.3e reserve vertical space
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics/color.sty"
+Package: color 2026-05-17 v1.3f Standard LaTeX Color (DPC)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: luatex.def on input line 149.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics-def/luatex.def"
+File: luatex.def 2025/09/29 v1.2f Graphics/color driver for luatex
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx"))
+\mdf@templength=\skip54
+\c@mdf@globalstyle@cnt=\count298
+\mdf@skipabove@length=\skip55
+\mdf@skipbelow@length=\skip56
+\mdf@leftmargin@length=\skip57
+\mdf@rightmargin@length=\skip58
+\mdf@innerleftmargin@length=\skip59
+\mdf@innerrightmargin@length=\skip60
+\mdf@innertopmargin@length=\skip61
+\mdf@innerbottommargin@length=\skip62
+\mdf@splittopskip@length=\skip63
+\mdf@splitbottomskip@length=\skip64
+\mdf@outermargin@length=\skip65
+\mdf@innermargin@length=\skip66
+\mdf@linewidth@length=\skip67
+\mdf@innerlinewidth@length=\skip68
+\mdf@middlelinewidth@length=\skip69
+\mdf@outerlinewidth@length=\skip70
+\mdf@roundcorner@length=\skip71
+\mdf@footenotedistance@length=\skip72
+\mdf@userdefinedwidth@length=\skip73
+\mdf@needspace@length=\skip74
+\mdf@frametitleaboveskip@length=\skip75
+\mdf@frametitlebelowskip@length=\skip76
+\mdf@frametitlerulewidth@length=\skip77
+\mdf@frametitleleftmargin@length=\skip78
+\mdf@frametitlerightmargin@length=\skip79
+\mdf@shadowsize@length=\skip80
+\mdf@extratopheight@length=\skip81
+\mdf@subtitleabovelinewidth@length=\skip82
+\mdf@subtitlebelowlinewidth@length=\skip83
+\mdf@subtitleaboveskip@length=\skip84
+\mdf@subtitlebelowskip@length=\skip85
+\mdf@subtitleinneraboveskip@length=\skip86
+\mdf@subtitleinnerbelowskip@length=\skip87
+\mdf@subsubtitleabovelinewidth@length=\skip88
+\mdf@subsubtitlebelowlinewidth@length=\skip89
+\mdf@subsubtitleaboveskip@length=\skip90
+\mdf@subsubtitlebelowskip@length=\skip91
+\mdf@subsubtitleinneraboveskip@length=\skip92
+\mdf@subsubtitleinnerbelowskip@length=\skip93
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.
+tex"
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen159
+\pgfutil@tempdimb=\dimen160
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.d
+ef"
+\pgfutil@abb=\box55
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+" ("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/pgf.revision.tex")
+Package: pgfrcs 2026-08-01 v3.1.12 (3.1.12)
+))
+Package: pgf 2026-08-01 v3.1.12 (3.1.12)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty"
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty"
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics/trig.sty"
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics-cfg/graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 106.
+)
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.t
+ex"
+Package: pgfsys 2026-08-01 v3.1.12 (3.1.12)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.te
+x"
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryf
+iltered.code.tex"
+\pgfkeys@tmptoks=\toks27
+))
+\pgf@x=\dimen163
+\pgf@y=\dimen164
+\pgf@xa=\dimen165
+\pgf@ya=\dimen166
+\pgf@xb=\dimen167
+\pgf@yb=\dimen168
+\pgf@xc=\dimen169
+\pgf@yc=\dimen170
+\pgf@xd=\dimen171
+\pgf@yd=\dimen172
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count299
+\c@pgf@countb=\count300
+\c@pgf@countc=\count301
+\c@pgf@countd=\count302
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count303
+Lua function pgfsys@strcmp = 31
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg"
+File: pgf.cfg 2026-08-01 v3.1.12 (3.1.12)
+)
+Driver file for pgf: pgfsys-luatex.def
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex
+.def"
+File: pgfsys-luatex.def 2026-08-01 v3.1.12 (3.1.12)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common
+-pdf.def"
+File: pgfsys-common-pdf.def 2026-08-01 v3.1.12 (3.1.12)
+)))
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpat
+h.code.tex"
+File: pgfsyssoftpath.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfsyssoftpath@smallbuffer@items=\count304
+\pgfsyssoftpath@bigbuffer@items=\count305
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotoco
+l.code.tex"
+File: pgfsysprotocol.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)) ("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty"
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ ("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 274.
+LaTeX Info: Redefining \color on input line 762.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx")
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.t
+ex"
+Package: pgfcore 2026-08-01 v3.1.12 (3.1.12)
+ ("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex
+")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.t
+ex"
+\pgfmath@dimen=\dimen173
+\pgfmath@count=\count306
+\pgfmath@box=\box56
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.cod
+e.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.bas
+ic.code.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.tri
+gonometric.code.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.ran
+dom.code.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.com
+parison.code.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.bas
+e.code.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rou
+nd.code.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.mis
+c.code.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.int
+egerarithmetics.code.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.te
+x"
+\c@pgfmathroundto@lastzeros=\count307
+)) ("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfint.code.tex")
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.
+code.tex"
+File: pgfcorepoints.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@picminx=\dimen174
+\pgf@picmaxx=\dimen175
+\pgf@picminy=\dimen176
+\pgf@picmaxy=\dimen177
+\pgf@pathminx=\dimen178
+\pgf@pathmaxx=\dimen179
+\pgf@pathminy=\dimen180
+\pgf@pathmaxy=\dimen181
+\pgf@xx=\dimen182
+\pgf@xy=\dimen183
+\pgf@yx=\dimen184
+\pgf@yy=\dimen185
+\pgf@zx=\dimen186
+\pgf@zy=\dimen187
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathcon
+struct.code.tex"
+File: pgfcorepathconstruct.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@path@lastx=\dimen188
+\pgf@path@lasty=\dimen189
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusa
+ge.code.tex"
+File: pgfcorepathusage.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@shorten@end@additional=\dimen190
+\pgf@shorten@start@additional=\dimen191
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.
+code.tex"
+File: pgfcorescopes.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
+\pgf@picture@serial@count=\count308
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphic
+state.code.tex"
+File: pgfcoregraphicstate.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgflinewidth=\dimen192
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransfo
+rmations.code.tex"
+File: pgfcoretransformations.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@pt@x=\dimen193
+\pgf@pt@y=\dimen194
+\pgf@pt@temp=\dimen195
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.c
+ode.tex"
+File: pgfcorequick.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects
+.code.tex"
+File: pgfcoreobjects.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathpro
+cessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.
+code.tex"
+File: pgfcorearrows.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfarrowsep=\dimen196
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.c
+ode.tex"
+File: pgfcoreshade.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@max=\dimen197
+\pgf@sys@shading@range@num=\count309
+\pgf@shadingcount=\count310
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.c
+ode.tex"
+File: pgfcoreimage.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexterna
+l.code.tex"
+File: pgfcoreexternal.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfexternal@startupbox=\box60
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.
+code.tex"
+File: pgfcorelayers.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspa
+rency.code.tex"
+File: pgfcoretransparency.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepattern
+s.code.tex"
+File: pgfcorepatterns.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.cod
+e.tex"
+File: pgfcorerdf.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)))
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.c
+ode.tex"
+File: pgfmoduleshapes.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfnodeparttextbox=\box61
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.cod
+e.tex"
+File: pgfmoduleplot.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-versi
+on-0-65.sty"
+Package: pgfcomp-version-0-65 2026-08-01 v3.1.12 (3.1.12)
+\pgf@nodesepstart=\dimen198
+\pgf@nodesepend=\dimen199
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-versi
+on-1-18.sty"
+Package: pgfcomp-version-1-18 2026-08-01 v3.1.12 (3.1.12)
+))
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgffor.sty"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.te
+x")) ("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/pgf/math/pgfmath.sty"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex"))
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+"
+Package: pgffor 2026-08-01 v3.1.12 (3.1.12)
+\pgffor@iter=\dimen256
+\pgffor@skip=\dimen257
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
+))
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.c
+ode.tex"
+Package: tikz 2026-08-01 v3.1.12 (3.1.12)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryploth
+andlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@plot@mark@count=\count311
+\pgfplotmarksize=\dimen258
+)
+\tikz@lastx=\dimen259
+\tikz@lasty=\dimen260
+\tikz@lastxsaved=\dimen261
+\tikz@lastysaved=\dimen262
+\tikz@lastmovetox=\dimen263
+\tikz@lastmovetoy=\dimen264
+\tikzleveldistance=\dimen265
+\tikzsiblingdistance=\dimen266
+\tikz@figbox=\box62
+\tikz@figbox@bg=\box63
+\tikz@tempbox=\box64
+\tikz@tempbox@bg=\box65
+\tikztreelevel=\count312
+\tikznumberofchildren=\count313
+\tikznumberofcurrentchild=\count314
+\tikz@fig@count=\count315
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.c
+ode.tex"
+File: pgfmodulematrix.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfmatrixcurrentrow=\count316
+\pgfmatrixcurrentcolumn=\count317
+\pgf@matrix@numberofcolumns=\count318
+)
+\tikz@expandcount=\count319
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librar
+ies/tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)))
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/mdframed/md-frame-1.mdf"
+File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
+)
+\mdf@frametitlebox=\box66
+\mdf@footnotebox=\box67
+\mdf@splitbox@one=\box68
+\mdf@splitbox@two=\box69
+\mdf@splitbox@save=\box70
+\mdfsplitboxwidth=\skip94
+\mdfsplitboxtotalwidth=\skip95
+\mdfsplitboxheight=\skip96
+\mdfsplitboxdepth=\skip97
+\mdfsplitboxtotalheight=\skip98
+\mdfframetitleboxwidth=\skip99
+\mdfframetitleboxtotalwidth=\skip100
+\mdfframetitleboxheight=\skip101
+\mdfframetitleboxdepth=\skip102
+\mdfframetitleboxtotalheight=\skip103
+\mdffootnoteboxwidth=\skip104
+\mdffootnoteboxtotalwidth=\skip105
+\mdffootnoteboxheight=\skip106
+\mdffootnoteboxdepth=\skip107
+\mdffootnoteboxtotalheight=\skip108
+\mdftotallinewidth=\skip109
+\mdfboundingboxwidth=\skip110
+\mdfboundingboxtotalwidth=\skip111
+\mdfboundingboxheight=\skip112
+\mdfboundingboxdepth=\skip113
+\mdfboundingboxtotalheight=\skip114
+\mdf@freevspace@length=\skip115
+\mdf@horizontalwidthofbox@length=\skip116
+\mdf@verticalmarginwhole@length=\skip117
+\mdf@horizontalspaceofbox=\skip118
+\mdfsubtitleheight=\skip119
+\mdfsubsubtitleheight=\skip120
+\c@mdfcountframes=\count320
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count321
+\c@mdf@env@i=\count322
+\c@mdf@env@ii=\count323
+\c@mdf@zref@counter=\count324
+Package zref Info: New property: mdf@pagevalue on input line 895.
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty"
+Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.te
+x"
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librar
+ies/tikzlibrarymatrix.code.tex"
+File: tikzlibrarymatrix.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librar
+ies/tikzlibraryquotes.code.tex"
+File: tikzlibraryquotes.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrow
+s.meta.code.tex"
+File: pgflibraryarrows.meta.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfarrowinset=\dimen267
+\pgfarrowlength=\dimen268
+\pgfarrowwidth=\dimen269
+\pgfarrowlinewidth=\dimen270
+)))
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty"
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box71
+\beforetitleunit=\skip121
+\aftertitleunit=\skip122
+\ttl@plus=\dimen271
+\ttl@minus=\dimen272
+\ttl@toksa=\toks36
+\titlewidth=\dimen273
+\titlewidthlast=\dimen274
+\titlewidthfirst=\dimen275
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/titlesec/titletoc.sty"
+Package: titletoc 2025/01/04 v2.17 TOC entries
+\ttl@leftsep=\dimen276
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty"
+Package: geometry 2026/03/07 v6.0 Page Geometry
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty"
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count325
+\Gm@cntv=\count326
+\c@Gm@tempcnt=\count327
+\Gm@bindingoffset=\dimen277
+\Gm@wd@mp=\dimen278
+\Gm@odd@mp=\dimen279
+\Gm@even@mp=\dimen280
+\Gm@layoutwidth=\dimen281
+\Gm@layoutheight=\dimen282
+\Gm@layouthoffset=\dimen283
+\Gm@layoutvoffset=\dimen284
+\Gm@dimlist=\toks37
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty"
+Package: hyperref 2026-06-17 v7.01r Hypertext links for LaTeX
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty"
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty"
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty"
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty"
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring
+.sty"
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count328
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty"
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen285
+\Hy@linkcounter=\count329
+\Hy@pagecounter=\count330
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def"
+File: pd1enc.def 2026-06-17 v7.01r Hyperref: PDFDocEncoding definition (HO)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty"
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count331
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def"
+File: puenc.def 2026-06-17 v7.01r Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count332
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/url/url.sty"
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen286
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty"
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty"
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count333
+\Field@Width=\dimen287
+\Fld@charsize=\dimen288
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count334
+\c@Item=\count335
+\c@Hfootnote=\count336
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/hyperref/hluatex.def"
+File: hluatex.def 2026-06-17 v7.01r Hyperref driver for luaTeX
+\Fld@listcount=\count337
+\c@bookmark@seq@number=\count338
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.s
+ty"
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.s
+ty"
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip123
+) ("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty"
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip124
+\f@nch@offset@elh=\skip125
+\f@nch@offset@erh=\skip126
+\f@nch@offset@olh=\skip127
+\f@nch@offset@orh=\skip128
+\f@nch@offset@elf=\skip129
+\f@nch@offset@erf=\skip130
+\f@nch@offset@olf=\skip131
+\f@nch@offset@orf=\skip132
+\f@nch@height=\skip133
+\f@nch@footalignment=\skip134
+\f@nch@widthL=\skip135
+\f@nch@widthC=\skip136
+\f@nch@widthR=\skip137
+\@temptokenb=\toks38
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/subfiles/subfiles.sty"
+Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/algorithms/algorithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/float/float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count339
+\float@exts=\toks39
+\float@box=\box72
+\@float@everytoks=\toks40
+\@floatcapt=\box73
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/base/ifthen.sty"
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks41
+\c@algorithm=\count340
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/algorithms/algorithmic.sty"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count341
+\c@ALC@line=\count342
+\c@ALC@rem=\count343
+\c@ALC@depth=\count344
+\ALC@tlm=\skip138
+\algorithmicindent=\skip139
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf.sty"
+Package: epstopdf 2020-01-24 v2.11 Conversion with epstopdf on the fly (HO)
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/grfext/grfext.sty"
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg"
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+\c@thm=\count345
+\c@prob=\count346
+)))
+LaTeX Font Info:    Trying to load font information for T1+stix on input line 3
+.
+ ("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/t1stix.fd"
+File: t1stix.fd 2015/04/17 v1.1.2-latex STIX T1 font definitions
+)
+No file Complex-Curve-Riemann-Surface.aux.
+
+\openout1 = Complex-Curve-Riemann-Surface.aux
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for LS1/stix/m/n on input line 3.
+LaTeX Font Info:    Trying to load font information for LS1+stix on input line 
+3.
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ls1stix.fd"
+File: ls1stix.fd 2015/04/17 v1.1.2-latex STIX LS1 font definitions
+)
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for LS2/stix/m/n on input line 3.
+LaTeX Font Info:    Trying to load font information for LS2+stix on input line 
+3.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ls2stix.fd"
+File: ls2stix.fd 2015/04/17 v1.1.2-latex STIX LS2 font definitions
+)
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Info: Command `\dddot' is already robust on input line 3.
+LaTeX Info: Command `\ddddot' is already robust on input line 3.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count347
+\scratchdimen=\dimen289
+\scratchbox=\box74
+\nofMPsegments=\count348
+\nofMParguments=\count349
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count350
+\MPscratchDim=\dimen290
+\MPnumerator=\count351
+\makeMPintoPDFobject=\count352
+\everyMPtoPDFconversion=\toks43
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(47.7999pt, 478.00812pt, 71.69986pt)
+* v-part:(T,H,B)=(67.60269pt, 676.04005pt, 101.4041pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=478.00812pt
+* \textheight=676.04005pt
+* \oddsidemargin=-24.4701pt
+* \evensidemargin=-0.57013pt
+* \topmargin=-34.73479pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=125.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 3.
+\@outlinefile=\write4
+
+\openout4 = Complex-Curve-Riemann-Surface.out
+Chapter 1.
+Package mdframed Info: mdframed works in twoside mode on input line 8.
+LaTeX Font Info:    Trying to load font information for LS1+stixscr on input li
+ne 9.
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ls1stixscr.fd"
+File: ls1stixscr.fd 2015/04/17 v1.1.2-latex STIX script LS1 font definitions
+)
+LaTeX Font Info:    Trying to load font information for LS2+stixex on input lin
+e 9.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ls2stixex.fd"
+File: ls2stixex.fd 2015/04/17 v1.1.2-latex STIX extentions LS2 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for LS1+stixfrak on input l
+ine 9.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ls1stixfrak.fd"
+File: ls1stixfrak.fd 2015/04/17 v1.1.2-latex STIX fraktur LS1 font definitions
+)
+LaTeX Font Info:    Trying to load font information for LS1+stixbb on input lin
+e 9.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ls1stixbb.fd"
+File: ls1stixbb.fd 2015/04/17 v1.1.2-latex STIX blackboard LS1 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for LS2+stixcal on input li
+ne 9.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ls2stixcal.fd"
+File: ls2stixcal.fd 2015/04/17 v1.1.2-latex STIX calligraphic LS2 font definiti
+ons
+)
+LaTeX Font Info:    Trying to load font information for LS1+stixsf on input lin
+e 9.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ls1stixsf.fd"
+File: ls1stixsf.fd 2015/04/17 v1.1.2-latex STIX sans-serif LS1 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for LS2+stixtt on input lin
+e 9.
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ls2stixtt.fd"
+File: ls2stixtt.fd 2015/04/17 v1.1.2-latex STIX typewriter LS2 font definitions
+
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 9.
+
+
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/base/ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 9.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-1' on page 1 undefined on input line 22
+.
+
+Package mdframed Info: mdframed works in twoside mode on input line 28.
+
+LaTeX Warning: Reference `mdf@pagelabel-2' on page 1 undefined on input line 30
+.
+
+Package mdframed Info: mdframed works in twoside mode on input line 33.
+LaTeX Font Info:    Trying to load font information for TS1+stix on input line 
+35.
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/stix/ts1stix.fd"
+File: ts1stix.fd 2015/04/17 v1.1.2-latex STIX TS1 font definitions
+)
+
+LaTeX Warning: Reference `mdf@pagelabel-3' on page 1 undefined on input line 42
+.
+
+Package mdframed Info: mdframed works in twoside mode on input line 45.
+
+LaTeX Warning: Reference `mdf@pagelabel-4' on page 1 undefined on input line 57
+.
+
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+[1
+
+
+{d:/Tex Live/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `T1/stix/m/sl' in size <10> not available
+(Font)              Font shape `T1/stix/m/it' tried instead on input line 151.
+
+[2]
+Package mdframed Info: mdframed works in twoside mode on input line 187.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-5' on page 3 undefined on input line 19
+4.
+
+Package mdframed Info: mdframed works in twoside mode on input line 205.
+
+LaTeX Warning: Reference `mdf@pagelabel-6' on page 3 undefined on input line 20
+7.
+
+Package mdframed Info: mdframed works in twoside mode on input line 212.
+[3]
+
+LaTeX Warning: Reference `mdf@pagelabel-7' on page 4 undefined on input line 21
+9.
+
+Package mdframed Info: mdframed works in twoside mode on input line 223.
+
+LaTeX Warning: Reference `mdf@pagelabel-8' on page 4 undefined on input line 23
+1.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 236.
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-9' on page 4 undefined on input line 23
+8.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 250.
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-10' on page 4 undefined on input line 2
+52.
+
+Package mdframed Info: mdframed works in twoside mode on input line 256.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 268.
+
+LaTeX Warning: Reference `mdf@pagelabel-11' on page 4 undefined on input line 2
+68.
+
+[4
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+
+LaTeX Warning: Reference `mdf@pagelabel-12' on page 5 undefined on input line 2
+68.
+
+Package mdframed Info: mdframed works in twoside mode on input line 300.
+
+LaTeX Warning: Reference `mdf@pagelabel-13' on page 5 undefined on input line 3
+04.
+
+Package mdframed Info: mdframed works in twoside mode on input line 315.
+
+LaTeX Warning: Reference `mdf@pagelabel-14' on page 5 undefined on input line 3
+23.
+
+[5]
+! Undefined control sequence.
+<recently read> \PP 
+                    
+l.336 				Every meromorphic function $f$ on $\PP
+                                                ^1$ is rationnal. i.e. it ca...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.338 				i.e. $\CC(z)=\mathcal{O}(\PP
+                                      ^1)$
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.353 ...he poles are in the affine chart $\CC=\PP
+                                                  ^1-\{\infty\}$, then
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: mdframed works in twoside mode on input line 361.
+
+LaTeX Warning: Reference `mdf@pagelabel-15' on page 6 undefined on input line 3
+63.
+
+! Undefined control sequence.
+<recently read> \PP 
+                    
+l.365 ...y, it can be extended to holomorphic $\PP
+                                                  ^1\rightarrow \CC$, thus i...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: mdframed works in twoside mode on input line 368.
+! Undefined control sequence.
+l.371 ...eromorphic function $f:\CC\rightarrow \PP
+                                                  ^1$ is called \textbf{doub...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-16' on page 6 undefined on input line 3
+75.
+
+Package mdframed Info: mdframed works in twoside mode on input line 377.
+! Undefined control sequence.
+l.380 ...romomrphic function $f:\CC\rightarrow \PP
+                                                  ^1$ attains every value $c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.380 ...rrow \PP^1$ attains every value $c\in \PP
+                                                  ^1$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-17' on page 6 undefined on input line 3
+81.
+
+Missing character: There is no 、 (U+3001) in font t1-stixgeneral!
+Missing character: There is no 、 (U+3001) in font t1-stixgeneral!
+[6
+Missing character: There is no 、 (U+3001) in font t1-stixgeneral!
+]
+Package mdframed Info: mdframed works in twoside mode on input line 414.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-18' on page 7 undefined on input line 4
+21.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 444.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 451.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-19' on page 7 undefined on input line 4
+51.
+
+[7
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+
+LaTeX Warning: Reference `mdf@pagelabel-20' on page 8 undefined on input line 4
+51.
+
+Package mdframed Info: mdframed works in twoside mode on input line 460.
+
+LaTeX Warning: Reference `mdf@pagelabel-21' on page 8 undefined on input line 4
+65.
+
+Package mdframed Info: mdframed works in twoside mode on input line 482.
+
+LaTeX Warning: Reference `mdf@pagelabel-22' on page 8 undefined on input line 4
+87.
+
+Package mdframed Info: mdframed works in twoside mode on input line 520.
+Package mdframed Info: Not enough space on this page on input line 522.
+[8]
+Package mdframed Info: Not enough space on this page on input line 522.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-23' on page 9 undefined on input line 5
+22.
+
+[9]
+Chapter 2.
+
+Overfull \hbox (5.43501pt too wide) in paragraph at lines 524--524
+\T1/stix/b/n/24.88 Sur-faces and Al-ge-braic Func-tions| 
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 526.
+
+LaTeX Warning: Reference `mdf@pagelabel-24' on page 10 undefined on input line 
+546.
+
+Package mdframed Info: mdframed works in twoside mode on input line 548.
+
+LaTeX Warning: Reference `mdf@pagelabel-25' on page 10 undefined on input line 
+557.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+[10
+
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+] [11]
+Chapter 3.
+Package mdframed Info: mdframed works in twoside mode on input line 590.
+
+LaTeX Warning: Reference `mdf@pagelabel-26' on page 12 undefined on input line 
+597.
+
+Package mdframed Info: mdframed works in twoside mode on input line 622.
+
+LaTeX Warning: Reference `mdf@pagelabel-27' on page 12 undefined on input line 
+641.
+
+[12
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 740.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-28' on page 13 undefined on input line 
+745.
+
+Package mdframed Info: mdframed works in twoside mode on input line 749.
+Package mdframed Info: Not enough space on this page on input line 761.
+[13]
+Package mdframed Info: Not enough space on this page on input line 761.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-29' on page 14 undefined on input line 
+761.
+
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+Package mdframed Info: mdframed works in twoside mode on input line 778.
+
+LaTeX Warning: Reference `mdf@pagelabel-30' on page 14 undefined on input line 
+799.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+[14
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+Package mdframed Info: mdframed works in twoside mode on input line 823.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-31' on page 15 undefined on input line 
+841.
+
+Package mdframed Info: mdframed works in twoside mode on input line 857.
+
+LaTeX Warning: Reference `mdf@pagelabel-32' on page 15 undefined on input line 
+874.
+
+Package mdframed Info: mdframed works in twoside mode on input line 877.
+
+LaTeX Warning: Reference `mdf@pagelabel-33' on page 15 undefined on input line 
+884.
+
+[15]
+Overfull \hbox (70.96165pt too wide) detected at line 897
+[]
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 900.
+
+LaTeX Warning: Reference `mdf@pagelabel-34' on page 16 undefined on input line 
+902.
+
+Package mdframed Info: mdframed works in twoside mode on input line 913.
+
+LaTeX Warning: Reference `mdf@pagelabel-35' on page 16 undefined on input line 
+918.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 919.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 919.
+
+Package mdframed Info: mdframed works in twoside mode on input line 921.
+
+LaTeX Warning: Reference `mdf@pagelabel-36' on page 16 undefined on input line 
+926.
+
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 933.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 933.
+
+Package mdframed Info: mdframed works in twoside mode on input line 934.
+
+LaTeX Warning: Reference `mdf@pagelabel-37' on page 16 undefined on input line 
+939.
+
+Package mdframed Info: mdframed works in twoside mode on input line 949.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 956.
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 956.
+
+LaTeX Warning: Reference `mdf@pagelabel-38' on page 16 undefined on input line 
+956.
+
+[16]
+
+LaTeX Warning: Reference `mdf@pagelabel-39' on page 17 undefined on input line 
+956.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 968.
+
+LaTeX Warning: Reference `mdf@pagelabel-40' on page 17 undefined on input line 
+975.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 996.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 996.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 996.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 999.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 999.
+
+[17
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+Chapter 4.
+Package mdframed Info: mdframed works in twoside mode on input line 1014.
+
+LaTeX Warning: Reference `mdf@pagelabel-41' on page 18 undefined on input line 
+1016.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1021.
+
+LaTeX Warning: Reference `mdf@pagelabel-42' on page 18 undefined on input line 
+1028.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1040.
+
+LaTeX Warning: Reference `mdf@pagelabel-43' on page 18 undefined on input line 
+1044.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1051.
+
+LaTeX Warning: Reference `mdf@pagelabel-44' on page 18 undefined on input line 
+1053.
+
+[18
+
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+] [19]
+Chapter 5.
+Package mdframed Info: mdframed works in twoside mode on input line 1066.
+
+LaTeX Warning: Reference `mdf@pagelabel-45' on page 20 undefined on input line 
+1073.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1102.
+
+LaTeX Warning: Reference `mdf@pagelabel-46' on page 20 undefined on input line 
+1107.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+[20
+
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+! Undefined control sequence.
+<argument>  \tilde {f}:C\rightarrow \PP 
+                                        ^1\CC 
+l.1131 					\end{gather*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  \tilde {f}:C\rightarrow \PP 
+                                        ^1\CC 
+l.1131 					\end{gather*}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+Package mdframed Info: mdframed works in twoside mode on input line 1143.
+
+LaTeX Warning: Reference `mdf@pagelabel-47' on page 21 undefined on input line 
+1148.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1162.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1169.
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 1169.
+
+LaTeX Warning: Reference `mdf@pagelabel-48' on page 21 undefined on input line 
+1169.
+
+[21
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+
+LaTeX Warning: Reference `mdf@pagelabel-49' on page 22 undefined on input line 
+1169.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1172.
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+
+LaTeX Warning: Reference `mdf@pagelabel-50' on page 22 undefined on input line 
+1181.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1187.
+
+LaTeX Warning: Reference `mdf@pagelabel-51' on page 22 undefined on input line 
+1200.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+! Undefined control sequence.
+<argument>  f:C\rightarrow \PP 
+                               ^1 \CC 
+l.1212 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  f:C\rightarrow \PP 
+                               ^1 \CC 
+l.1212 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1214.
+
+LaTeX Warning: Reference `mdf@pagelabel-52' on page 22 undefined on input line 
+1219.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1225.
+Package mdframed Info: Not enough space on this page on input line 1227.
+[22
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+Package mdframed Info: Not enough space on this page on input line 1227.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-53' on page 23 undefined on input line 
+1227.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1234.
+
+LaTeX Warning: Reference `mdf@pagelabel-54' on page 23 undefined on input line 
+1236.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1246.
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-55' on page 23 undefined on input line 
+1248.
+
+[23
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+Chapter 6.
+[24
+
+]
+Chapter 7.
+[25
+
+]
+Chapter 8.
+Package mdframed Info: mdframed works in twoside mode on input line 1258.
+
+LaTeX Warning: Reference `mdf@pagelabel-56' on page 26 undefined on input line 
+1263.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1266.
+! Undefined control sequence.
+l.1270 					\Sigma \cong \PP
+                            ^1\CC$;
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-57' on page 26 undefined on input line 
+1274.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 内 (U+5185) in font stix-mathrm!
+Missing character: There is no 容 (U+5BB9) in font stix-mathrm!
+[26
+
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+Package mdframed Info: mdframed works in twoside mode on input line 1320.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-58' on page 27 undefined on input line 
+1322.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1326.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1326.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1331.
+
+LaTeX Warning: Reference `mdf@pagelabel-59' on page 27 undefined on input line 
+1333.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1338.
+
+LaTeX Warning: Reference `mdf@pagelabel-60' on page 27 undefined on input line 
+1344.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1346.
+
+LaTeX Warning: Reference `mdf@pagelabel-61' on page 27 undefined on input line 
+1348.
+
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Package mdframed Info: mdframed works in twoside mode on input line 1353.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1358.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 1358.
+
+LaTeX Warning: Reference `mdf@pagelabel-62' on page 27 undefined on input line 
+1358.
+
+[27
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 1358.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-63' on page 28 undefined on input line 
+1358.
+
+[28]
+Chapter 9.
+[29
+
+]
+Chapter 10.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+366.
+("d:/Tex Live/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd"
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [30
+
+]
+Chapter 11.
+
+Overfull \hbox (26.88158pt too wide) in paragraph at lines 1371--1371
+|[]\T1/stix/b/n/24.88 Riemann-Hilbert Cor-re-spon-dence| 
+ []
+
+[31
+
+]
+Chapter 12.
+[32
+
+]
+Chapter 13.
+[33
+
+]
+Chapter 14.
+Package mdframed Info: mdframed works in twoside mode on input line 1394.
+
+LaTeX Warning: Reference `mdf@pagelabel-64' on page 34 undefined on input line 
+1410.
+
+! Undefined control sequence.
+<recently read> \diff 
+                      
+l.1413 				Actually, $\diff
+                           ^0(S,P)$ is the pointwise isotopy subgroup(to ide...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \diff 
+                      
+l.1413 ... isotopy subgroup(to identity) of $\diff
+                                                  (S,P)$, which is invariant...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  \diff 
+                  ^\circ (S,P)\triangleleft \diff ^+(S,P) 
+l.1422 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  \diff ^\circ (S,P)\triangleleft \diff 
+                                                  ^+(S,P) 
+l.1422 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  \diff 
+                  ^\circ (S,P)\triangleleft \diff ^+(S,P) 
+l.1422 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  \diff ^\circ (S,P)\triangleleft \diff 
+                                                  ^+(S,P) 
+l.1422 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \diff 
+                      
+l.1425 				Firstly, $\diff
+                          ^\circ(S,P)\subseteq \diff^+(S,P)$: Notice that, if
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.1425 ...irstly, $\diff^\circ(S,P)\subseteq \diff
+                                                  ^+(S,P)$: Notice that, if
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1431.
+! Undefined control sequence.
+<argument>  Mod(S,P)=\diff 
+                           ^+(S,P)/\diff ^\circ (S,P) 
+l.1435 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  Mod(S,P)=\diff ^+(S,P)/\diff 
+                                         ^\circ (S,P) 
+l.1435 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  Mod(S,P)=\diff 
+                           ^+(S,P)/\diff ^\circ (S,P) 
+l.1435 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument>  Mod(S,P)=\diff ^+(S,P)/\diff 
+                                         ^\circ (S,P) 
+l.1435 				\end{gather*}
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: Not enough space on this page on input line 1436.
+[34
+
+]
+Package mdframed Info: Not enough space on this page on input line 1436.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-65' on page 35 undefined on input line 
+1436.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1451.
+
+LaTeX Warning: Reference `mdf@pagelabel-66' on page 35 undefined on input line 
+1453.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1458.
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+
+LaTeX Warning: Reference `mdf@pagelabel-67' on page 35 undefined on input line 
+1460.
+
+[35
+Missing character: There is no 内 (U+5185) in font t1-stixgeneral!
+Missing character: There is no 容 (U+5BB9) in font t1-stixgeneral!
+]
+Chapter 15.
+[36
+
+]
+Chapter 16.
+[37
+
+]
+Chapter 17.
+[38
+
+]
+Chapter 18.
+[39
+
+] (./Complex-Curve-Riemann-Surface.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-08-10>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `Complex-Curve-Riemann-Surface.out' has ch
+anged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Complex-Curve-Riemann-Surface.out':
+
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  3C0D7F031EF6D3410721532774A0E695;18121.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 27825 strings out of 475635
+ 125036,1144653 words of node,token memory allocated
+ 3626 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 7 glue, 353 kern, 1 sub_mlist, 7 glyph, 277 attribu
+te, 98 glue_spec, 277 attribute_list, 2 write nodes
+   avail lists: 2:1939,3:1554,4:171,5:490,6:75,7:5909,8:101,9:1159,10:9,11:329
+ 49733 multiletter control sequences out of 65536+600000
+ 133 fonts using 9658343 bytes
+ 157i,17n,151p,532b,1259s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{d:/Tex Live/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/Tex Live/t
+exlive/2026/texmf-dist/fonts/enc/dvips/stix/stix-t1.enc}{d:/Tex Live/texlive/202
+6/texmf-dist/fonts/enc/dvips/stix/stix-ts1.enc}<d:/Tex Live/texlive/2026/texmf-d
+ist/fonts/type1/public/stix/STIXGeneral-Bold.pfb><d:/Tex Live/texlive/2026/texmf
+-dist/fonts/type1/public/stix/STIXGeneral-BoldItalic.pfb><d:/Tex Live/texlive/20
+26/texmf-dist/fonts/type1/public/stix/STIXGeneral-Italic.pfb><d:/Tex Live/texliv
+e/2026/texmf-dist/fonts/type1/public/stix/STIXGeneral-Regular.pfb><d:/Tex Live/t
+exlive/2026/texmf-dist/fonts/type1/public/amsfonts/latxfont/lasy10.pfb><d:/Tex L
+ive/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><d:/Tex Live/texliv
+e/2026/texmf-dist/fonts/type1/public/stix/stix-mathbb.pfb><d:/Tex Live/texlive/2
+026/texmf-dist/fonts/type1/public/stix/stix-mathcal.pfb><d:/Tex Live/texlive/202
+6/texmf-dist/fonts/type1/public/stix/stix-mathex.pfb><d:/Tex Live/texlive/2026/t
+exmf-dist/fonts/type1/public/stix/stix-mathfrak.pfb><d:/Tex Live/texlive/2026/te
+xmf-dist/fonts/type1/public/stix/stix-mathit.pfb><d:/Tex Live/texlive/2026/texmf
+-dist/fonts/type1/public/stix/stix-mathrm.pfb><d:/Tex Live/texlive/2026/texmf-di
+st/fonts/type1/public/stix/stix-mathscr.pfb><d:/Tex Live/texlive/2026/texmf-dist
+/fonts/type1/public/stix/stix-mathsf.pfb><d:/Tex Live/texlive/2026/texmf-dist/fo
+nts/type1/public/stix/stix-mathtt.pfb>
+Output written on Complex-Curve-Riemann-Surface.pdf (39 pages, 346764 bytes).
+
+PDF statistics: 489 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 261 named destinations out of 1000 (max. 1048576)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+

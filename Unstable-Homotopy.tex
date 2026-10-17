@@ -1,0 +1,271 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	\chapter{Homotopy Groups}
+		Recall:
+		\begin{itemize}
+			\item Component $\pi_0$;
+			\item Fundamental Group $\pi_1$;
+		\end{itemize}
+		
+		And with covering $p:X\rightarrow Y$, we obtain the induced injection
+		\begin{gather*}
+			\pi_1(p,x):\pi_1(X,x)\rightarrow \pi_1(Y,y)
+		\end{gather*}
+		
+		
+		Especially, for a $G$-covering, an exact sequence
+		\begin{gather*}
+			1\rightarrow \pi_1(X,x)\stackrel{\pi_1(p,x)}{\rightarrow} \pi_1(Y,y) \stackrel{\partial}{\rightarrow} G\rightarrow 1
+		\end{gather*};
+		
+		Seifert-van Kampen: 
+		
+		$Aut_{\prod(X)}(x)$;
+		
+		Homotopy $f_0,f_1:X\rightarrow Y$, then we obtain a group isomorphism $\pi_1(Y,y_0)\cong \pi_1(Y,y_1)$:
+		\begin{center}
+			\begin{tikzcd}
+				&\pi_1(Y,y_0)\arrow[dd]\\
+				\pi_1(X,x)\arrow[ru]\arrow[rd]\\
+				&\pi_1(Y,y_1)
+			\end{tikzcd}
+		\end{center}
+		
+		\subsubsection{LES}
+		
+		Consider the following triple $(X,A,x)$. The \textbf{long exact sequence}
+		\begin{gather*}
+			\pi_1(A,x)\stackrel{\pi_1(i,x)}{\rightarrow} 
+		\end{gather*}
+		\section{Homotopy Group}
+			\begin{Def}
+				Define:
+				\begin{itemize}
+					\item $I^n$; $\partial I^n=\{(s_1,\dots,s_n)|\exists i,s_i\in \{0,1\}\}$
+					\item Homotopy Classes $\pi_n(X,x)=\{[f]|f:(I^n,\partial I^n)\rightarrow (X,\{x\})\}$;
+				\end{itemize}
+				
+				Then: Group Structure
+				\begin{itemize}
+					\item Multiplication:
+					\begin{gather*}
+						f*g:=\begin{cases}
+							f(2s_1,s_2,\dots,s_n)&\\
+							f(2s_1-1,s_2,\dots,s_n)
+						\end{cases}
+					\end{gather*}
+					\item Identity:$s\mapsto x$;
+					\item Inverse: $f^-(s_1,\dots,s_n):=(1-s_1,s_2,\dots,s_n)$;
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				The group $\pi_n(X,x)$ is abelian, $n\geq 2$. 
+			\end{proposition}
+			\begin{proof}
+				We observe, that
+			\end{proof}
+			\subsubsection{Definition through Loop Space}
+			\subsubsection{Factorization through Sphere}
+			\subsection{Functorial Property}
+			\subsection{Coverings}
+			
+			\begin{theorem}
+				(Homotopy Groups and Coverings) Let $p:X\rightarrow Y$ be a covering, choose a base point $x\in X$ with $p(x)=y$, then
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{theorem}
+			\subsection{Homotopy Groups of Pairs and Triple,Long Exact Sequence}
+		\section{$n$-Connectivity}
+			\begin{Def}
+				\begin{itemize}
+					\item A space $X$ is called \textbf{$0$-connected} if $\pi_0(X)$ consists of one point; (Path-connected)
+					\item A space $X$ is called \textbf{$1$-connected} if $\pi_k(X)=\bullet,\forall 1\leq k\leq n$;
+					\item A space $X$ is called \textbf{$\infty$-connected} if $\pi_k(X)=\bullet,k\geq 1$;
+				\end{itemize}
+			\end{Def}
+			
+			And:
+			\begin{Def} Let $f:X\rightarrow X$;
+				\begin{itemize}
+					\item It is called $0$-connected if the induced map 
+					\begin{gather*}
+						\pi_0(f):\pi_0(X,x)\rightarrow \pi_0(X,x)
+					\end{gather*}
+					
+					is surjective;
+					\item It is called \textbf{$n$-connected} of the induced map
+					\begin{gather*}
+						\pi_k(f):\pi_k(X,x)\rightarrow \pi_k(X,x)\qquad\mbox{is bijective},0\leq k\leq n-1\\
+						\pi_n(f):\pi_n(X,x)\rightarrow \pi_n(X,x)\qquad\mbox{is surjective}
+					\end{gather*}
+					\item It is called \textbf{$\infty$-connected} if $\pi_k(f):\pi_k(X,x)\rightarrow \pi_k(X,x)$ is bijective;
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				(Criteria by Sphere) TFAE:
+				\begin{itemize}
+					\item $\pi_n(X,x)$ is trivial for any base point $x\in X$;
+					\item Every $S^n\rightarrow X$ is nullhomotopic. i.e. $[S^n,X]=id_\bullet$;
+					\item Every $S^n\rightarrow X$ extends to $D^{n+1}\rightarrow X$;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				(Criteria by Sphere) TFAE:
+				\begin{itemize}
+					\item $X$ is $n$-connected;
+					\item Given any $k$ with $0\leq k\leq n$, every map $S^k\rightarrow X$ is nullhomotopic;
+					\item Given any $k$ with $0\leq k\leq n$, every map $S^k\rightarrow X$ extends to a map $D^{k+1}\rightarrow X$;
+				\end{itemize}
+			\end{corollary}
+			\begin{proof}
+				Omitted. 
+			\end{proof}
+			
+			Moreover, 
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\section{Colimits}
+			\begin{theorem}
+				(Homotopy Groups and Colimits) Let: $X$ be a topological Hausdorff space, with a sequence of \underline{closed subspaces}
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+	\chapter{CW-Theory}
+		
+		\section{CW-Approxiamation}
+		\section{Whitehead's Theorem}
+	\chapter{Homotopy and Homology}
+		\section{Hurewicz's Theorem}
+	\chapter{Fibration and Cofibration}
+		\section{Fibrations}
+			\subsection{Homotopy Lifting Property}
+			\subsection{Maps into Fibration}
+	\chapter{Spectra}
+		Preparations: Recall some operations of spaces
+		\begin{itemize}
+			\item $\Sigma X:=X\wedge S^1$ Reduced suspension;
+			\item $\Omega X:=\{\gamma:I\rightarrow X|\gamma(0)=\gamma(1)\}$;
+		\end{itemize}
+			\subsection{Stable Equivalence}
+		\section{Spectra}
+			
+			\subsection{Some of Spectrum}
+				Because of adjunction
+				\begin{gather*}
+					\Sigma \dashv \Omega
+				\end{gather*}
+				
+				The spectrum has $\Sigma$-Representation and $\Omega$-Representation
+				
+				
+				\subsubsection{Pre-Spectrum}
+					\begin{Def}
+						A \textbf{prespectrum} or \textbf{sequential spectrum} is:
+						\begin{itemize}
+							\item $E=((E_n),(\sigma_n:\Sigma E_n\rightarrow E_{n+1}))$; or by adjunction
+							\item $E=((E_n),(\sigma_n:E_n\rightarrow \Omega E_{n+1}))$;
+						\end{itemize}
+						
+						The only requirement is: The structure maps are maps between pointed spaces;
+						
+						Such $E_n$ is called $n$-level set.
+					\end{Def}
+					
+					Then, a \textbf{morphism} between the is a family of morphisms $(f_n:E_n\rightarrow E_n')$ such that
+					\begin{gather*}
+						f_{n+1}\circ\sigma_n=\sigma_n\circ (\Sigma f_n)
+					\end{gather*}
+					
+					\begin{center}
+						\begin{tikzcd}
+							\dots&X_n\arrow[dd,bend right=40,"f_n",swap]\arrow[d]&X_{n+1}\arrow[d]\arrow[dd,bend right=40,"f_{n+1}",swap]\\
+							\dots&\Sigma X_n\arrow[ru]\arrow[dd,bend left=40,"\Sigma f_n"]&\Sigma X_{n+1}\arrow[dd,bend left=40,"\Sigma f_{n+1}"]\\
+							\dots&Y_n\arrow[d]&Y_{n+1}\arrow[d]\\
+							\dots&\Sigma Y_n\arrow[ru]&\Sigma Y_{n+1}
+						\end{tikzcd}
+					\end{center}
+					
+					\begin{Def}
+						Category of sequential spectrum $\mathcal{Sp}^\NN$;
+					\end{Def}
+					
+					And
+					\begin{Def}
+						Let $X$ be a spectrum, define
+						\begin{gather*}
+							内容...
+						\end{gather*}
+					\end{Def}
+					
+					
+					\begin{example}
+						(Sphere Spectral)
+					\end{example}
+					
+					\begin{theorem}
+						内容...
+					\end{theorem}
+					
+				\subsubsection{Stable Homotopy Groups}
+					In principle, we should not introduce this concept in unstable homotopy theory... But the fact is, we must introduce it here
+					
+					\begin{Def}
+						
+					\end{Def}
+				\subsubsection{Spectrum}
+				\begin{Def}
+					A \textbf{$\Omega$-spectrum} is:
+					\begin{itemize}
+						\item $((E_n),(\sigma_n:\Sigma E_n\rightarrow E_{n+1}))$, and $\sigma_n$ is a weak equivalence; or
+						\item $((E_n),(\tilde{\sigma}_n:E_n\rightarrow \Omega E_{n+1}))$ and $\tilde{\sigma}$ is a weak equivalence;
+					\end{itemize}
+				\end{Def}
+				
+				\begin{example}
+					(Eilenberg-Maclane Spectrum)
+				\end{example}
+				
+			\subsection{Spectrification}
+				\begin{example}
+					(Sphere Spectrum) Consider following spectrum
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{example}
+			
+			\subsection{Categoricial Property}
+			
+		\section{Stability}
+	\chapter{Excision Theorem, and Freudenthal Suspension Theorem}
+	\chapter{Appendix: Serre's Finiteness Theorem for Spheres}
+		\begin{theorem}
+			(Serre) 
+			\begin{gather*}
+				\pi_k(S^n)=\begin{cases}
+					\ZZ&n=0\\
+					a
+				\end{cases}
+			\end{gather*}
+		\end{theorem}
+		
+		\section{Nilpotence Theorem}
+		
+		\section{Computing of $\pi_*(S^n)$	}
+\end{document}

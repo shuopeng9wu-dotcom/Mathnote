@@ -1,0 +1,107 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	Main contents:
+	\begin{itemize}
+		\item A collection for special functions. Mainly used in PDE and so on.;
+		\item Lie Groups, Algebras and Special Funcitons;
+	\end{itemize}
+		\chapter{Mollifiers}
+			What is Mollifer?
+			
+			\begin{Def}
+				Let $\varphi\in C^\infty(\RR^n)$ be a \textbf{smooth function} on $\RR^n$, $n\geq 1$. and put
+				\begin{gather*}
+					\varphi_\epsilon(x):=\epsilon^{-n}\varphi(\frac{x}{\epsilon})\qquad \RR\ni \epsilon>0
+				\end{gather*}
+				
+				Then, $\varphi$ is a \textbf{mollifier} if it satisfies the following three requirements:
+				\begin{itemize}
+					\item It is compactly supported: The closed support 
+					\begin{gather*}
+						supp_C(f):=\{x\in X|f(x)\not=0\}
+					\end{gather*} 
+					
+					is closed.  
+					\item $\int_{\RR^n} \varphi(x)dx=1$;
+				\end{itemize}
+				
+				Then,
+				\begin{gather*}
+					lim_{\epsilon\rightarrow 0}\varphi_\epsilon(x)=\lim_{\epsilon\rightarrow 0}\epsilon^{-n}\varphi(x/\epsilon)=\delta(x)
+				\end{gather*}
+				
+				where: $\delta(x)$ is the \textbf{Dirac delta function}.
+			\end{Def}
+			
+			
+			\section{Mollifier $\eta$}
+			
+				\begin{Def}
+					A classical construction is
+					\begin{gather*}
+						\eta(x):=\begin{cases}
+							Cexp(\frac{1}{|x^2|-1})&|x|<1\\
+							0&|x|\geq 1
+						\end{cases}
+					\end{gather*}
+					
+					Define: $U_\epsilon:=\{x\in U|dist(x,\partial U)>\epsilon\}$
+				\end{Def}
+				
+				\begin{proposition}
+					$\eta(x)$ is a mollifier.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					Function $\eta_\epsilon$ satisfies 
+					\begin{gather*}
+						\int_{\RR^n} \eta_\epsilon dx=1\qquad supp(\eta_\epsilon)\subseteq B(0,\epsilon)
+					\end{gather*}
+					
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsection{Properties}
+				
+				\begin{Def}
+					Now, define
+					\begin{gather*}
+						f^\eta:=\eta_\epsilon*f\qquad x\in U_\epsilon
+					\end{gather*}
+				\end{Def}
+				
+				\begin{proposition}
+					\begin{itemize}
+						\item $f^\epsilon\in C^\infty(U_\epsilon)$;
+						\item $f^\epsilon\rightarrow f,\epsilon\rightarrow 0$;
+						\item If $f\in C(U)$, then $f^\epsilon\rightarrow f$ uniformly on compact subsets of $U$;
+						\item If $1\leq p<\infty$ and $f\in L_{loc}^p(U)$, then $f^\epsilon\rightarrow f$ in $L_{loc}^p(U)$.
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}
+			\section{Poisson Kernel}
+				\begin{Def} Poisson Kernel:
+					\begin{itemize}
+						\item (For Ball) $K(x,y)=\frac{r^2-|x|^2}{n\alpha(n)r}$
+						\item (For Half Plane)
+						\item (For Complex Analysis)
+					\end{itemize}
+				\end{Def}
+			\section{Fejer Kernel}
+				
+			\section{Heat Kernel}
+			
+			
+		\chapter{Spherical Harmonics}
+\end{document}

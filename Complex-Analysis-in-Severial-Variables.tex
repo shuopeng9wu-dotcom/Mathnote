@@ -20,81 +20,456 @@
 					\end{gather*}
 					\item Absolute Space: A pointed set 
 					\begin{gather*}
-						V=\{(z_1,\dots,z_n)\in \CC^n:|z_i|<r_i\}
+						V=\{(z_1,\dots,z_n)\in \CC^n:z_i\geq 0\}
 					\end{gather*}
 
 					With the modular mapping on each component,\begin{gather*}
 						\tau:\CC^n\rightarrow V\qquad (z_1,\dots,z_n)\mapsto (|z_1|,\dots,|z_n|)
 					\end{gather*}
 				\end{itemize}
-
-				\subsubsection{Polycylinder}
-				\begin{Def}
-					Let	$\tau\in V$ be an element in absolute space,$z_0\in \CC^n$.
+				\subsubsection{Covergence}
+					\begin{Def}
+						\begin{itemize}
+							\item Compact Convergence: For every $K\subseteq \Omega$ compact
+							\begin{gather*}
+								\sup_{z\in K} |f_k-f|\stackrel{k\rightarrow\infty}{\rightarrow} 0
+							\end{gather*}
+							
+							\item Locally Uniform Covergence: For every $a\in \Omega$, there exists an open neighborhood $U_a\subseteq \Omega$, such that
+							\begin{gather*}
+								\sup_{z\in U_a} |f_k(z)-f(z)|\stackrel{k\rightarrow \infty}{\rightarrow} 0
+							\end{gather*}
+						\end{itemize}
+					\end{Def}
 					
-					then define the \textbf{polycylinder about $z_0$ with radius $\tau$} as
-					\begin{gather*}
-						\Delta(z_0,\tau)=\{z\in \CC^n:|z_i-z_{0,i}|<\tau_i, i=1,\dots,n\}
-					\end{gather*}
+					\begin{lemma}
+						TFAE: For open $\Omega\subseteq \CC^n,f_k:\Omega\rightarrow \CC$
+						\begin{itemize}
+							\item $f_k$ is compact covergent in $\Omega$;
+							\item $f_k$ is locally covergent in $\Omega$;
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						\begin{itemize}
+							\item $\Rightarrow$ We could choose some $r>0$, then $K=\overline{B(a,r)}$, $f_k\rightarrow f$ uniformly, thus $f_k\rightarrow f$ uniformly on $B(a,r)$. 
+							
+							\item $\Leftarrow$ Conversely, we just select a finite covering.
+						\end{itemize}
+					\end{proof}
+					
+					\begin{proposition}
+						Let $z_0\in \mathring{\CC}^n$, with polycylinder $P_{z_0}=\{z\in \CC^n||z_k|<|z_0^k|=r_k\}$, then
+						\begin{gather*}
+							\sum_{v=0}^\infty a_v z^v
+						\end{gather*}
+						
+						converges locally uniformly in $P_{z_0}$.
+					\end{proposition}
+					\begin{proof}
+						We just select $0<q<1$, then for $z\in P^*=P_{qz_0}$,
+						\begin{gather*}
+							|z^v|=\prod |z_i|^{v_i}<q^{\sum v_i} \prod |z_0^i|^{v_i}=q^{|v|}|z_0^v|
+						\end{gather*}
+						
+						Thus, we obtain the following majorance
+						\begin{gather*}
+							|\sum a_v\cdot z^v|\leq \sum |a_v|\cdot q^{|v|}\cdot |z_0^v|
+						\end{gather*}
+						
+						Now, we observe that $\{a_v z_0^v\}$ is bounded(it is the product of bounded sequence and covergent sequence to 0). So
+						\begin{gather*}
+							\leq M\cdot \sum q^{|v|}=M\prod_1^n (\sum q^{v_i})= \frac{M}{(1-q)^n}
+						\end{gather*}
+						
+						So, the series is absolutely convergent on $P_{qz_0}$.
+						
+						Furthermore, for arbitrary compact subset $K\subseteq P_{z_0}$, take the covering $P_{z_0}=\cup P_{q_iz_0}$. And for finite indices $q_1,\dots,q_k$ take $q=\max\{q_i\}$. We obtain, that the series is absolutely covergent on $P_{qz_0}$, so it is absolutely coverent on $K\subseteq P_{qz_0}$.
+					\end{proof}
+					
+					Another method is to apply T-test by Weierstrass:
 
-					And, $\partial \Delta(z_0,\tau)$ is the \textbf{distinguished boundary} of $\Delta(z_0,\tau)$.
-				\end{Def}
-
-				It is easy to see that the geometric shape of polycylinder is actually a \textbf{product of discs} in $\CC^n$. Thus, the boundary is a product of circles, actually 'torus' in $\CC^n$.
-
-				Now, take the following notion
-				\begin{gather*}
-					\odot{\CC^n}:='CC^n-\{0\}^n\qquad P_\tau=\Delta(0,\tau)
-				\end{gather*}
-
-			\subsection{Rheinhardt Domain}
-				\subsubsection{Torus Action}
-				\subsubsection{Definition of Rheinhardt Domain}
-				\begin{Def}
-					Let $D\subseteq \CC^n$ be a domain, then $D$ is called a \textbf{Rheinhardt Domain} if for any $z\in D$, the polycylinder $\Delta(0,|z|)\subseteq D$.
-				\end{Def}
+		
 			\subsection{Complex Differential and Cauchy-Riemann Equation}
 				\begin{Def}
 					内容...
 				\end{Def}
-			\subsection{Some of Conclusions}
-				\begin{lemma}
+				\subsubsection{Real Jacobian, and Standard Complex Structure}
+				
+				\subsubsection{Complexification, and $(1,0),(0,1)$ DFecomposition}
+				
+					The complexifying
+					
+					\begin{proposition}
+						$\CC^n_\RR\otimes_\RR \CC=V_{\CC^n}^{1,0}\oplus V_{\CC^n}^{(0,1)}$, where
+						\begin{gather*}
+							V_{\CC^n}^{(1,0)}=span_\CC\{\}\qquad V_{\CC^n}^{(0,1)}=span_\CC\{\}
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+				\subsubsection{Holomorphicity}
+					\begin{Def}
+						Let: $\emptyset\not=\Omega\subseteq \CC^n$ be an open subset, then a function
+						\begin{gather*}
+							f:\Omega\rightarrow \CC
+						\end{gather*}
+						
+						is \textbf{separately holomorphic} if for any $a\in \Omega$ and every $1\leq j\leq n$,
+						\begin{gather*}
+							\xi\mapsto f(a_1,\dots,a_{j-1},\xi,a_{j+1},\dots,a_n)
+						\end{gather*}
+						
+						is holomorphic. Take the following notion
+						\begin{gather*}
+							\mathcal{O}(\Omega)\subseteq \mathcal{O}_s(\Omega)
+						\end{gather*}
+					\end{Def}
+			\subsection{$\partial$ and $\bar{\partial}$-Operators}
+			
+				\begin{Def}
 					内容...
-				\end{lemma}
-		\section{Theorems}
+				\end{Def}
+				
+				We will discuss more in complex geometry. 
+		\section{Properties and Theorems}
 		\subsection{Cauchy's Formula}
 			\begin{proposition}
-				(Cauchy) If $f$ is a function defined in a neighborhood $U$ of a \underline{closed polydisc} $\bar{\Delta}(a,r)=\prod D(a_n,r_n)$ and holomorphic in(contains) a neighborhood $U$ and holomorphic in each variable $z_i$ at each point $U$, then
+				(Cauchy) Suppose $f\in C(\bar{\Delta}(a,r))$. 
+				
+				If $f$ is a function defined in a neighborhood $U$ of a \underline{closed polydisc} $\bar{\Delta}(a,r)=\prod D(a_n,r_n)$ and holomorphic in(contains) a neighborhood $U$ and holomorphic in each variable $z_i$ at each point $U$,$\Leftrightarrow$
 				\begin{gather*}
-					f(z)=(\frac{1}{2\pi i})^n \int_{|\xi_n-a_n|=r_n}\dots \int_{|\xi_1-a_1|=r_1} \frac{f(\xi_1,\dots,\xi_n)}{\prod (\xi_i-z_i)} d\xi_i,z\in \bar{\Delta}(a,r)
+					f(z)=(\frac{1}{2\pi i})^n \int_{|\xi_n-a_n|=r_n}\dots \int_{|\xi_1-a_1|=r_1} \frac{f(\xi_1,\dots,\xi_n)}{\prod (\xi_i-z_i)} d\xi_i\dots d\xi_n,z\in \bar{\Delta}(a,r)
 				\end{gather*}
 			\end{proposition}
 			\begin{proof}
-				Omitted,from Cauchy's formula in one variable.
+				We just apply Cauchy's formula on disk componentwise. By induction
+				\begin{gather*}
+					f(z)=\frac{1}{(2\pi i)^n} \int_{\Gamma_1\times\dots\times \Gamma_n} \frac{f(\xi_1,\dots,\xi_n)}{\prod (\xi_i-z_i)} d\xi_i\dots d\xi_n
+				\end{gather*}
+				
+				Now, notice that the function is defined on the compact subset, thus is bounded. Fubini's theorem could be apply here. Finally,
+				\begin{gather*}
+					=(\frac{1}{2\pi i})^n \int_{|\xi_n-a_n|=r_n}\dots \int_{|\xi_1-a_1|=r_1} \frac{f(\xi_1,\dots,\xi_n)}{\prod (\xi_i-z_i)} d\xi_i\dots d\xi_n,z\in \bar{\Delta}(a,r)
+				\end{gather*}
 			\end{proof}
-			Note that:
-			\begin{itemize}
-				\item 
-				\item 
-			\end{itemize}
 			
+			Shortly to say,
+			\begin{center}
+				$f\in A(\bar{\Delta}(a,r))=\mathcal{O}(D)\cap C(\bar{D})$$\Leftrightarrow$ $f\in C(\bar\Delta(a,r))$ and satisfies Cauchy integral formula.
+			\end{center}
+			Due to Cauchy, we obtain:
+			
+			\begin{corollary}
+				Let:$\Omega\subseteq \CC^n$ be open and $f:\Omega\rightarrow \CC$, TFAE:
+				\begin{itemize}
+					\item $f$ is complex (Frechet) differentiable at any point of $\Omega$;
+					\item $f\in \mathcal{O}(\Omega)$;
+					\item (Osgood's Lemma)$f\in \mathcal{O}_s(\Omega)\cap C(\Omega)$;
+				\end{itemize}
+			\end{corollary}
+			\begin{proof}
+				By Cauchy, (I)$\Leftrightarrow$ (II)
+				
+				To show (II)$\Leftrightarrow$ (III), $\Rightarrow$ is easy to check
+				
+				$\Leftarrow$ This is actually a weaker version of Osgood's lemma. 
+				
+				Choose an embedding disk $\bar{\Delta}(a,r)\subseteq \Omega$(regularity). The function of integral is finite on the compact subset, because of bounded. 
+				
+				Then, we use Cauchy's integral formula. 
+			\end{proof}
+			
+			
+			This implies, that continuous separately diffentiable function is holomorphic;
+			
+			And later, we will see, if $\Omega\subseteq \CC^n,n\geq 2$,
+			\begin{gather*}
+				\mathcal{O}_s(\Omega)=\mathcal{O}(\Omega)
+			\end{gather*}
+			
+			\begin{Def}
+				Define: The \textbf{Cauchy integral}. Let $P$ be a polycylinder and $T$ the corresponding $n$-dimensional torus. Let $f$ be a continuous function on $T$.
+				
+				Then, the continuous function $ch(f):P\rightarrow \CC$ defined by
+				\begin{gather*}
+					ch(f)(\xi):=
+				\end{gather*}
+			\end{Def}
+		
+		\subsubsection{Taylor's Expansion}
+		\begin{proposition}
+			(Holomorphic$\Leftrightarrow$ Analytic) If $f$ is analytic at $p\in \CC^n$, then in a ball $B(a,r)$,
+			\begin{gather*}
+				f(z)=\sum 
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\subsubsection{Cauchy's Estimitation}
 			\begin{proposition}
-				(Osgood's Lemma)
+				(Cauchy's Inequality) Suppose $f\in \mathcal{O}(\Omega)$, then we obtain the following inquality
+				\begin{gather*}
+					内容...
+				\end{gather*}
 			\end{proposition}
 			\begin{proof}
 				内容...
 			\end{proof}
 			
-			\begin{proposition}
-				(Cauchy's Inequality)
-			\end{proposition}
+		\subsubsection{Identity's Lemma}
+			\begin{theorem}
+				(Identity's Lemma)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\subsection{Schwartz's Lemma}
+			\begin{theorem}
+				(Schwartz) Given $\mathbb{B}^n$. And $f\in \mathcal{O}(\mathbb{B}^n,\mathbb{B}^n)$, and $f(0)=0$, then
+				\begin{gather*}
+					\Vert f(z)\Vert\leq \Vert z\Vert
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				Consider the Hermitian scalar product
+				\begin{gather*}
+					h(\lambda):=<f(\lambda u),v>\qquad u=\frac{z}{\Vert z\Vert},v=\frac{f(z)}{\Vert f(z)\Vert};\lambda\in \mathbb{B}^1
+				\end{gather*}
+				
+				We got $|h(\lambda)|\leq |\lambda|,\lambda=\Vert z\Vert\Rightarrow \Vert f(z)\Vert\leq \Vert z\Vert$
+			\end{proof}
+		\subsection{Holomorphic, Sperately Holomorphic}
+		
+			\begin{Def}
+				Let: $f:D\times G\rightarrow \RR$. Take the following notion
+				\begin{gather*}
+					S_C(f):=\{(a,b)\in D\times G|f\mbox{ is not continuous at }(a,b)\}
+				\end{gather*}
+			\end{Def}
+			
+			Recall:
+			\begin{theorem}
+				(Baire)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				(Baire)
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\begin{theorem}
+				(Osgood) Suppose $\Omega\subseteq \CC^n$ open;
+				\begin{itemize}
+					\item (1899) If 
+					\begin{itemize}
+						\item $f\in \mathcal{O}_s(\Omega)$;
+						\item $f$ is locally bounded;
+					\end{itemize}
+					
+					Then, $f\in C(\Omega)$;
+					
+					Consequently, 
+					\begin{gather*}
+						\mathcal{O}(\Omega)=\{f\in \mathcal{O}_s(\Omega)|f\mbox{ is locally bounded}\}
+					\end{gather*}
+					\item (1900) Now, suppose that $n=p+q$, with $f:\Omega\rightarrow \CC$ such that: For every $(a,b)\in \Omega\subseteq \CC^p\times \CC^q$, the function
+					\begin{gather*}
+						z\mapsto f(z,b)\qquad w\mapsto f(a,w)
+					\end{gather*}
+					
+					are holomorphic in the neighborhood of $a,b$ respectively. Then, $S_\mathcal{O}(f)$ is nowhere dense in $\Omega$;
+				\end{itemize}
+			\end{theorem}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
 		\subsection{Hartog's Theorem}
-		\begin{proposition}
-			(Jensen's Inequality)
-			\end{proposition}
+		
+		\begin{theorem}
+			(Hartogs) Let $U\subseteq \CC^n$ be a domain. If $n\geq 2$, $a\in U$, every holomorphic function
+			\begin{gather*}
+				f:U-\{a\}\rightarrow \CC
+			\end{gather*}
+			
+			extends uniquely to a holomorphic function on $U$.
+		\end{theorem}
+		\begin{proof}
+			We just consider the following function: With $P(a,r)=D(a_1,r_1)\times\dots\times D(a_n,r_n)$:\
+			\begin{gather*}
+				|z-a_1|<r_1,|\xi-z|\geq r_1-|z-a_1|>0\Rightarrow F(z,w)=\frac{1}{2\pi i} \int_{|\xi-a_1|=r_1} \frac{f(\xi,w)}{(\xi-z)}d\xi\qquad (z,w)\in P(a,r)
+			\end{gather*}
+			
+			And $F$ is well-defined on $P(a,r)$; $F$ is holomorphic:
+			\begin{gather*}
+				\frac{\partial F}{\partial \bar{z}_i}=\frac{1}{2\pi i} \int_{|\xi-a_1|=r_1} \frac{1}{\xi-z}\cdot \frac{\partial f}{\partial \bar{z_i}}fd\xi=0
+			\end{gather*}
+			
+			Finally, $F=f$:
+			\begin{gather*}
+				h:=F-f\in \mathcal{O}(P(a,r)-\{a\})\Rightarrow F=f\mbox{ on }\Omega
+			\end{gather*}
+			
+			We apply identity's lemma, because $P(a,r)-\{a\}$ is connected, so there exists analytic continuation to $a$. 
+		\end{proof}
+		
+		Furthermore:
+		
+		\begin{Def}
+			Let: $
+			P=\{\xi\in \CC^n||\xi|<1\}$ be the unit polycylinder, $q_1,\dots,q_n$ be the real number such that $0<q_v<1$.
+			
+			Then, define
+			\begin{gather*}
+				内容...
+			\end{gather*}
+		\end{Def}
+		
+		
+		\subsubsection{Leja's Proof}
+		
+		Another proof is given by Leja
+		\begin{lemma}
+			内容...
+		\end{lemma}
 		\begin{proof}
 			内容...
 		\end{proof}
+		\subsubsection{Koseki's Proof}
+		\subsubsection{Generalized Hartog's Lemma}
+		
+		\subsection{Extension of Holomorphic Functions}
+			\subsubsection{Riemann Regions}
+		
+		
+		
+		\subsection{Jensen's Formula}
+		\section{Domains of Holomorphy}
+		
+		\subsection{Rheinhardt Domain}
+		\subsubsection{Polycylinder}
+		\begin{Def}
+			Let	$\tau\in V$ be an element in absolute space,$z_0\in \CC^n$.
+			
+			then define the \textbf{polycylinder about $z_0$ with radius $\tau$} as
+			\begin{gather*}
+				\Delta(z_0,\tau)=\{z\in \CC^n:|z_i-z_{0,i}|<\tau_i, i=1,\dots,n\}
+			\end{gather*}
+			
+			And, $\partial \Delta(z_0,\tau)$ is the \textbf{distinguished boundary} of $\Delta(z_0,\tau)$.
+		\end{Def}
+		
+		It is easy to see that the geometric shape of polycylinder is actually a \textbf{product of discs} in $\CC^n$. Thus, the boundary is a product of circles, actually 'torus' in $\CC^n$.
+		\subsubsection{Torus Action}
+		\begin{Def}
+			Let $M$ be a smooth manifold. A \textbf{torus action} is a smooth action
+			\begin{gather*}
+				\rho:T^n\times M\rightarrow M
+			\end{gather*}
+			
+			where: 
+			\begin{gather*}
+				e\cdot p=p\qquad (st)\cdot p=s\cdot (t\cdot p)
+			\end{gather*}
+		\end{Def}
+		
+		\begin{proposition}
+			We obtain that:
+			\begin{itemize}
+				\item Every orbit 
+				\begin{gather*}
+					T^k\cdot p=\{t\cdot p|t\in T^k\}
+				\end{gather*}
+				
+				is compact;
+				\item The action $\rho$ is proper;
+				\item There exists homeomorphism by action
+				\begin{gather*}
+					T^k\cdot p\cong T^k/T_p^k\qquad T_p^k=Stab(p)=\{t\in T^k|t\cdot p=p\}
+				\end{gather*}
+			\end{itemize}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		For the torus action on $\CC^n$, we have a standard action
+		\begin{proposition}
+			\begin{itemize}
+				\item On $\CC^n$, the torus action has a standard form
+				\begin{gather*}
+					\rho:(z_1,\dots,z_n)\mapsto (e^{i\theta_1}z_1,\dots,e^{i\theta_n}z_n)
+				\end{gather*}
+				\item $\CC^n/T^n\cong [0,\infty)^n$;
+			\end{itemize}
+		\end{proposition}
+		\begin{proof}
+			\begin{itemize}
+				\item 
+				\item 
+			\end{itemize}
+		\end{proof}
+		
+		Wwe will discuss more in:
+		\begin{itemize}
+			\item Kähler Geometry.
+		\end{itemize}
+		\subsubsection{Definition of Rheinhardt Domain}
+		\begin{Def}
+			Let $\Omega\subseteq \CC^n$ be a domain, then $D$ is called a \textbf{Rheinhardt Domain} iff: 
+			
+			It is stable under arbitrary $T^n$-action
+			\begin{gather*}
+				T^n\cdot_\rho \Omega=\Omega
+			\end{gather*}
+		\end{Def}
+		
+		\begin{lemma}
+			For every Reinhardt domain $\Omega$, we could construct an embedding
+			\begin{gather*}
+				T^n\hookrightarrow \Omega
+			\end{gather*}
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		Thus, the quotient manifold structure is well-defined:
+		
+		\begin{proposition}
+			Consider the mapping $\tau:\CC^n\rightarrow V$. Then, we obtain the following (diffeo-?)homeomorphism
+			\begin{gather*}
+				\Omega/T^n\cong \tau(\Omega)
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsubsection{Properness and Compeleteness}
+		\begin{Def}
+			Let $G\subseteq \CC^n$ be a Reinhardt domain:
+			\begin{itemize}
+				\item $G$ is called \textbf{proper} if
+				\begin{itemize}
+					\item $G$ is connected;
+					\item $0\in G$;
+				\end{itemize}
+				\item $G$ is called \textbf{complete} if
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
 		\begin{proposition}
 			内容...
 		\end{proposition}
@@ -102,6 +477,145 @@
 			内容...
 		\end{proof}
 		
-		\subsection{Convergence Theorem}
-		\section{Domains of Holomorphy}
+		\begin{theorem}
+			内容...
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsubsection{Expansion in Reinhardt Domain}
+		\subsection{The Continuity Theorem}
+			\begin{Def}
+				Let: 
+				\begin{itemize}
+					\item $P=\{z\in \CC^n||z|<1\}$;
+					\item Real numbers $q_1,\dots,q_n;0<q_i<1$;
+					\item $D_\mu:=\{z\in P||z_1|\leq q_1,q_\mu\leq |z_\mu|<1\};2\leq \mu\leq n$;
+					\item $D:=\cup_{\mu=2}^b D_\mu;H=P-D=\cap (P-D_\mu)$
+					\begin{gather*}
+						=\{z\in P||z_1|>q_1\vee |z_\mu|<q_\mu,2\leq \mu\leq n\}\\
+						=\{z\in P|q_1<|z_1|\}\cup \{z\in P||z_\mu|<q_\mu,2\leq \mu\leq 2\}
+					\end{gather*}
+				\end{itemize}
+				
+				Then
+				\begin{itemize}
+					\item $(P,H)$ is called a \textbf{Euclidean Hartogs figure} in $\CC^n$;
+					\item Let $(P,H)$ be a Euclidean Hartogs figure in $\CC^n$, and given $g:P\rightarrow \CC^n$ be a biholomorphic mapping, then
+					\begin{gather*}
+						\tilde{P}=g(P)\qquad \tilde{H}=g(H)
+					\end{gather*}
+					
+					such $(\tilde{G},\tilde{H})$ is called a \textbf{general Hartogs figure}
+				\end{itemize}
+			\end{Def}
+			
+			\begin{theorem}
+				(Hartog's Extension Theorem for Hartogs Figure)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				(Continuity Theorem)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\subsection{Pseudoconvexity}
+		\subsection{Holomorphic Convexity}
+		\section{Holomorphic Functions on Unit Ball}
+		\subsection{Automorphism Groups}
+	\chapter{Weierstrass's Prparation Theorem}
+		Recall: In complex analysis in variable
+		\begin{theorem}
+			
+		\end{theorem}
+		
+		This chapter is an introduce to the concept 'analytic'
+		
+		Take the following notion 
+		\begin{gather*}
+			内容...
+		\end{gather*}
+		
+		\section{Algebra of Power Series}
+			\begin{Def}
+				Define:
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				The followings are equivalent:
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			Recall: \textbf{Complex Banach space}.
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			
+			\subsection{Weierstrass's Division Theorem}
+				\begin{theorem}
+					(Weierstrass)
+				\end{theorem}
+			\subsection{Some of Commutative Algebra Conclusions}
+			
+		\section{Analytic Set}
+			\begin{Def}
+				Let $B\subseteq \CC^n$ be a region, and $M\subseteq B$ be a subsec, $z_0\in B$ be a point.
+				
+				$M$ is called \textbf{analytic} at $z_0$, if there exists a neighborhood $z_0\in U$, and $f_1,\dots,f_t\in \mathcal{O}(U)$,
+				\begin{gather*}
+					U\cap M=\{z\in U|f_1(z)=\dots=f_t(z)=0\}
+				\end{gather*}
+				
+			\end{Def}
+			
+			\begin{lemma}
+				(Closedness of Analytic Set)
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+	\chapter{Analysis Tools}
+		\section{Lesbegue Spaces}
+		\section{Bergman Metric}
+		\section{Green's Formula}
+		\section{Subharmonic Functions}
+	\newpage Now, we will introduce some of contents in the style of analysis. The knowledge like coherent sheaves usw. will be introduced in complex geometry.
+	
+	The core of first part is the technique of integral kernels and function spaces.	
+	\chapter{Bergman Space}
+	
+	\chapter{The Bloch Space}
+	
+	
+	\newpage This part is Pluripotential Theory;
+	
+	\newpage This part is harmonic method.
 \end{document}

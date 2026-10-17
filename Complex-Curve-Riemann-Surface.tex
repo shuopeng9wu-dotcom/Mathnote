@@ -1,0 +1,1489 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+	
+	\chapter{Riemann Surfaces}
+		\section{Definitions}
+		
+			\begin{Def}
+				A \textbf{Riemann surface} is one-dimensional complex=\underline{connected} $1$-dimensional complex analytic manifold.
+				
+				That is, equipped with maximal charts $\{(U_\alpha,z_\alpha)\}_{\alpha\in A}$ on $M$ 
+				\begin{gather*}
+					z_\alpha:U_\alpha\rightarrow \mathbb{C}
+				\end{gather*}
+				
+				Then,if  transition functions are holomorphic
+				\begin{gather*}
+					f_{\alpha\beta}=z_\alpha\circ z_\beta^{-1}:;U_\alpha\cap U_\beta=\varnothing
+				\end{gather*}
+				
+				The charts are called \textbf{holomorphic compactible}.
+			\end{Def}
+			
+			\begin{lemma}
+				(Local-Global Principle) For every family $\{V_k\}$ of open sets, and union $V=\cup V_k$: A function $f:V\rightarrow \CC$ is holomorphic$\Leftrightarrow$ $f|V_k$ is holomorphic.
+			\end{lemma}
+			
+			\begin{Def}
+				Classically, a compact Riemann surface is called \textbf{closed}, elsewise is \textbf{open}.
+			\end{Def}
+			
+			\subsection{Complex Structure}
+			\begin{Def}
+				\begin{itemize}
+					\item A (complex) atlas is the collection of pair
+					\begin{gather*}
+						\{(U_\alpha,z_\alpha)\}
+					\end{gather*}
+					\item Two atlas $\mathfrak{U},\mathfrak{U}'$ are \textbf{analytically equivalent} if every chart of $\mathfrak{U}'$ is holomorphically compatible with every chart of $\mathfrak{U}$ is holomorphically compatible with every chart of $\mathfrak{U}'$. 
+					\item \textbf{complex structure} is an equivalence class of complex structure. 
+				\end{itemize}
+			\end{Def}
+			
+			\subsubsection{Tori}
+			\begin{Def}
+				Suppose $\omega_1,\omega_2\in \CC$ are linearly independent over $\RR$, then
+				\begin{gather*}
+					\Gamma:=\ZZ\omega_1+\ZZ\omega_2
+				\end{gather*}
+				
+				is the \textbf{lattice} spanned by $\omega_1,\omega_2$. The set of all equivalence classes is denoted by
+				\begin{gather*}
+					\CC/\Gamma
+				\end{gather*}
+				
+				is the tori. 
+			\end{Def}
+			
+			The topology of Tori: Induced by the quotient topology
+			\begin{gather*}
+				内容...
+			\end{gather*}
+			
+			\begin{lemma}
+				$\CC/\Gamma$ is a Riemann surface.
+			\end{lemma}
+			\begin{proof}
+				Induced by quotient topology, the corresponding atlas. 
+			\end{proof}
+			
+			\begin{lemma}
+				(Universal Covering of Tori) The mapping
+				\begin{gather*}
+					\pi:\CC\rightarrow \CC/\Gamma
+				\end{gather*}
+				
+				is a universal covering.
+			\end{lemma}
+			\begin{proof}
+				By definition, $\CC$ is simply connected, locally path-connected, semi-locally path connected. 
+				
+				And, it is a covering map: Select some $\bar{z}\in \CC/\Gamma$, then select a neighborhood $\bar{U}$, then $\pi^{-1}(\bar{U})=\cup_{m,n\in \ZZ} U+(n\omega_1+m\omega_2)$. 
+				
+				Now, if $U$ is small enough, $=\sqcup_{m,n\in \ZZ} U+(n\omega_1+m\omega_2)$. This is possible by Hausdorffness. 
+			\end{proof}
+			
+			\begin{proposition}
+				Let $\Gamma=\ZZ\omega_1+\ZZ \omega_2,\Gamma'=\ZZ \omega_1'+\ZZ \omega_2'$, then the followings are equivalent:
+				\begin{itemize}
+					\item $\Gamma=\Gamma'$;
+					\item There exists a matrix $A\in SL_2(\ZZ)$ such that
+					\begin{gather*}
+						(\omega_1,\omega_2)^T=A(\omega_1',\omega_2')
+					\end{gather*}
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				It is easy to verify: If $\Gamma=\Gamma'$, then when we obtain $\omega_1,\omega_2$ as $\ZZ$-vector,
+				\begin{gather*}
+					\omega_1=\lambda_1 \omega_1'+\lambda_2\omega_2'\\
+					\omega_2=\mu_1 \omega_1'+\mu_2 \omega_2'
+				\end{gather*}
+			\end{proof}
+			
+			\begin{proposition}
+				Suppose: $\Gamma,\Gamma'$ be two lattice, with $\alpha\in \CC^*$ such that $\alpha \Gamma\subseteq \Gamma'$. 
+				
+				Then, the map 
+				\begin{gather*}
+					z\mapsto \alpha z\qquad \CC\rightarrow \CC
+				\end{gather*}
+				
+				induces a holomorphic mapping $\CC/\Gamma\rightarrow \CC/\Gamma'$. 
+				
+				Then, it is biholomorphic, iff $\alpha\Gamma=\Gamma'$. 
+			\end{proposition}
+			\begin{proof}
+				$\Leftarrow$ It is easy to check;
+				
+				$\Rightarrow$ If $\CC/\Gamma,\CC/\Gamma'$ are biholomorphic, then we lift the map to unviersal covering:
+				\begin{center}
+					\begin{tikzcd}
+						\CC\arrow[r,dashrightarrow,"\tilde{f}"]\arrow[d]&\CC\arrow[d]\\
+						\CC/\Gamma\arrow[r,"f"]&\CC/\Gamma'
+					\end{tikzcd}
+				\end{center}
+				
+				And such $\hat{f}$ is unique, given by $z\mapsto \alpha z$. We ibtain that $\Gamma=\alpha \Gamma'$. 
+			\end{proof}
+			
+			Especially, a special art of tori is given by the lattice
+			\begin{gather*}
+				\Gamma=\ZZ+\ZZ\tau,\tau\in \CC\qquad Im(\tau)>0
+			\end{gather*}
+			
+			\begin{lemma}
+				Every tori $\CC/\Gamma$ is biholomorphic to a torus of the form
+				\begin{gather*}
+					X(\tau):=\CC/(\ZZ+\ZZ\tau)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Suppose $\Gamma=\ZZ\omega_1+\ZZ \omega_2,arg(\omega_2)>arg(\omega_1)$, we just use the spin $z\mapsto re^{i\theta}z$, where
+				\begin{gather*}
+					r= |\frac{1}{\omega_1}| \qquad \theta=-arg(\omega_1)
+				\end{gather*}
+				
+				then we get a lattice $\ZZ+\ZZ\tau$.  Furthermore, we could calculate $\tau$:
+				\begin{gather*}
+					\tau= |\frac{\omega_2}{\omega_1}|e^{arg(\omega_2)-\arg(\omega_1)}=\frac{\omega_2}{\omega_1}
+				\end{gather*}
+			\end{proof}
+			
+			Then, under base change of $\Gamma$:
+			\begin{gather*}\begin{cases}
+					\omega_1'=a\omega_1+b\omega_2\\
+					\omega_2'=c\omega_1+d\omega_2
+				\end{cases},\begin{pmatrix}
+					a&b\\
+					c&d
+				\end{pmatrix}\in SL_2(\ZZ)
+			\end{gather*}
+			
+			We obtain that,
+			\begin{gather*}
+				\tau'=\frac{\omega_1'}{\omega_2'}=\frac{a\omega_1+b\omega_2}{c\omega_1+d\omega_2}
+			\end{gather*}
+			
+			Thus:
+			
+			\begin{proposition}
+				Suppose $\begin{pmatrix}
+					a&b\\
+					c&d
+				\end{pmatrix}\in SL_2(\ZZ),Im(\tau)>0$, then for
+				\begin{gather*}
+					\tau'=\frac{a\tau+b}{c\tau+d}
+				\end{gather*}
+				
+				$X(\tau)$ is biholomorphic to $X(\tau')$. 
+			\end{proposition}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\subsection{Holomorphic Functions}
+			\begin{Def}
+				Let $X$ be a Riemann surface, $Y\subseteq U$ be open subset, then $f:Y\rightarrow \CC$ is called \textbf{holomorphic}, if
+				\begin{gather*}
+					f\circ \psi^{-1}:\psi(U\cap Y)\rightarrow \CC
+				\end{gather*}
+				
+				is holomorphic, for every chart $(U,\psi)$. Such collection can be denoted by $\mathcal{O}(Y)$. 
+			\end{Def}
+			
+			But, this lead to a question: Is the complex structure of a Riemann surface unique? The fact is, no.
+			
+			\begin{proposition}
+				(The $\CC$-Algebra Structure) $\mathcal{O}(X)$ is a $\CC$-algebra,
+			\end{proposition}
+			\begin{proof}
+				By conclusion of $\CC$-algebra of $\mathcal{O}(U),U\subseteq \CC$. 
+			\end{proof}
+			
+			\begin{theorem}
+				(Riemann, Removable Singularity) If $f$ is holomorphic on $U-\{a\}$, and is bounded in some neighborhood of $a$, then $f$ can be uniquely extended to $\tilde{f}$. 
+			\end{theorem}
+			\begin{proof}
+				By the statement in complex ana. 
+			\end{proof}
+			
+			\begin{Def}
+				Suppose $X,Y$ be Riemann surface. Then, the function $f:X\rightarrow Y$ is called \textbf{holomorphic} if
+				\begin{gather*}
+					\varphi\circ f\circ \psi^{-1}:\psi(U\cap X)\rightarrow \varphi(V\cap X)
+				\end{gather*}
+				
+				is holomorphic. 
+			\end{Def}
+			
+			Especially, when $Y=\CC$, take the chart of $(\CC,id_\CC)$.
+			
+			\begin{theorem}
+				(Identity Theorem) Suppose $X,Y$ be Riemann surfaces, and $f_1,f_2:X\rightarrow Y$ are two holomorphic mappings, such that 
+				\begin{itemize}
+					\item $f_1|A=f_2|A$;
+					\item $A$ has a limit point/accumulation poitn $a\in X$
+				\end{itemize}
+				
+				Then, $f_1=f_2$. 
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				内容...
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Mobius Transforamation}	
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Meormorphic Functions, Function Field}
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			\subsection{Local Properties}
+			\subsubsection{Local Behavior, Open Mapping}
+			\begin{theorem}
+				(Local Behavior of Holomorphic Mappings) Suppose $X,Y$ be Riemann surfaces, and $f:X\rightarrow Y$ be a \underline{non-constant} holomorphic mapping. 
+				
+				Suppose $a\in X$, $b=f(a)$, then there exists an integer $k\geq 1$ and chart $\varphi:U\rightarrow V$ on $X$,$\psi:U'\rightarrow V'$ on $Y$ with following properties:
+				\begin{itemize}
+					\item $a\in U,\varphi(a)=0; b\in U', \psi(b)=0$;
+					\item $f(U)\subseteq U'$;
+					\item $F=\psi\circ f\circ \varphi^{-1}:V\rightarrow V'$ is given by
+					\begin{gather*}
+						F(z)=z^k\qquad \forall z\in V
+					\end{gather*}
+				\end{itemize}
+			\end{theorem}
+			\begin{proof}
+				Notice that, for arbitrary atlas,  $\psi\circ f\circ\varphi^{-1}$ is holomorphic, and apply the conclusion in complex analysis. We obtain
+				\begin{gather*}
+					F(\xi)=(\xi h(\xi))^m\qquad g(\xi)=e^{L(\xi)}, h(\xi)=e^{\frac{L(\xi)}{m}}
+				\end{gather*}
+				
+				Now, instead of $\varphi^{-1}$, we use a local coordinate by compositition with $\phi:\xi:\mapsto \xi h(\xi)$, then we obtain 
+				\begin{gather*}
+					F\circ \phi^{-1}(\eta)=\eta^m
+				\end{gather*}
+			\end{proof}
+			
+			\begin{corollary}
+				Let $X,Y$ be Riemann surfaces, and let $f:X\rightarrow Y$ be a nonconstant holomorphic mapping.
+				
+				Then, $f$ is open, i.e. the image of open subset is open. 
+			\end{corollary}
+			\begin{proof}
+				Apply the conclusion. 
+			\end{proof}
+			
+			\begin{corollary}
+				Let $X,Y$ be Riemann surfaces, and $f:X\rightarrow Y$ be an injective holomorphic mapping. 
+				
+				Then, $f$ is biholomorphic mapping of $X$ onto $f(X)$. 
+			\end{corollary}
+			\begin{proof}
+				Then, the degree $m=1$. Thus, the inverse mapping is holomorphic. 
+			\end{proof}
+			
+			
+			\begin{Def}
+				If $w=z^{e_p}$, then $e_p\geq 1$ is called \textbf{ramification index}.
+				
+				And the \textbf{branching number} is defined by $b_f(p):=e_p-1$. 
+			\end{Def}
+			
+			\subsubsection{Maximum,Minimum Principle}
+			\begin{corollary}
+				If $f:X\rightarrow \CC$ is a nonconstant holomorphic function, then the absolute value of $f$, $|f|$ not attain its maximum. 
+			\end{corollary}
+			\begin{proof}
+				Notice $|f|$ is also open. 
+			\end{proof}
+			
+			
+			\begin{theorem}
+				Let $M,N$ be Riemann surface, with $M$ compact, then for holomorphic	$f:M\rightarrow N$, $f$ is either:
+				\begin{itemize}
+					\item Constant; or
+					\item Surjective.
+				\end{itemize}
+				
+				In particular, $\mathcal{O}(M)=\CC$. 
+			\end{theorem}
+			\begin{proof}
+				Firstly, $f$ is open. And $M$ is compact. Thus, if $f$ is nonconstant, $f(M)$ is open and closed, $f(M)=N$. 
+			\end{proof}
+			
+			\begin{corollary}
+				Every holomorphic function on a compact Riemann surface is constant. 
+			\end{corollary}
+			\begin{proof}
+				Notice that, $\CC$ is not compact, but $f$ is open. 
+			\end{proof}
+			
+			\begin{corollary}
+				Every meromorphic function $f$ on $\PP^1$ is rationnal. i.e. it can be written as quotient of two polynomials. 
+				
+				i.e. $\CC(z)=\mathcal{O}(\PP^1)$
+			\end{corollary}
+			\begin{proof}
+				The poles:
+				
+				If $f$ has infinity numbers of poles, then it has a limit point(by compactness), by identity theorem,
+				\begin{gather*}
+					f=\infty
+				\end{gather*}
+				
+				If $f$ has finite many of poles, then we could choose a chart by Mobius transformation
+				\begin{gather*}
+					z\mapsto \frac{1}{z-a}
+				\end{gather*}
+				
+				Then, suppose the poles are in the affine chart $\CC=\PP^1-\{\infty\}$, then
+				\begin{gather*}
+					f=g+\sum h_v
+				\end{gather*}
+				
+				$g\in \mathcal{O}(P^1)\Rightarrow g=c$. Thus, $f$ is rational. 
+			\end{proof}
+			\subsubsection{Liouville's Theorem}
+				\begin{theorem}
+					Every bounded holomorphic function on $\CC$ is constant. 
+				\end{theorem}
+				\begin{proof}
+					If $f$ is bounded, then by Riemann's removable singularity, it can be extended to holomorphic $\PP^1\rightarrow \CC$, thus is constant. 
+				\end{proof}
+			\subsection{Double Periodic Functions}
+				\begin{Def}
+					Suppose $\omega_1,\omega_2\in \CC$, are linearly independent over $\RR$, with $\Gamma$ be the lattice. 
+					
+					Then, a meromorphic function $f:\CC\rightarrow \PP^1$ is called \textbf{doubly periodic} with respect to $\Gamma$, if
+					\begin{gather*}
+						f(z)=f(z+\omega),\forall z\in \CC,\omega\in \Gamma
+					\end{gather*}
+				\end{Def}
+				
+				\begin{theorem}
+					Every doubly periodic holomorphic function $f:\CC\rightarrow \CC$ is constant. 
+					
+					Every non-constant periodic meromomrphic function $f:\CC\rightarrow \PP^1$ attains every value $c\in \PP^1$. 
+				\end{theorem}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}、
+				
+			\subsubsection{Example: Weierstrass's $\zeta$-Function}
+				
+		\section{Topology of Riemann Surface}
+			\subsection{Fundamental Groups}
+				Given in topology. 
+			\subsection{Covering Manifolds}
+			
+			\subsection{Branched and Unbrached Covering}
+				\subsubsection{Logarithm}
+					\begin{proposition}
+						$exp:\CC\rightarrow \CC^\times$ is a universal covering. Thus, for every 
+					\underline{simply-connected} Riemann surface $X$, the following diagram commutes
+						\begin{center}
+							\begin{tikzcd}
+								&\CC\arrow[d]\\
+								X\arrow[r]\arrow[ru,dashrightarrow]&\CC^\times
+							\end{tikzcd}
+						\end{center}
+						
+						Especially, if $X=\CC^\times$, $f=id$, then the lifting is the logarithm.
+					\end{proposition}
+					\begin{proof}
+						$\CC$ satisfies those properties of universal covering. Then, we obtain the lifting. 
+					\end{proof}
+				\subsubsection{Ramification/Branched Point}
+					\begin{Def}
+						$f$ is called \textbf{ramified} or \textbf{branched} at $p$ if the ramification number
+						\begin{gather*}
+							F(z)=z^k\qquad b_p(f)=k>1
+						\end{gather*}
+						
+						Elsewise is \textbf{uniramified} or \textbf{unbranched}.
+					\end{Def}
+					
+					\begin{proposition}
+						(Criteria)
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+			\subsection{Euler Characteristics of Surface, and Riemann-Hurwitz Relation}
+			
+			\textbf{Recall:} The \textbf{Euler-Poincare charater} of a compact surface of genus $g$ is described as
+			\begin{gather*}
+				\chi=\alpha_0-\alpha_1+\alpha_2
+			\end{gather*}
+			
+			\textbf{Recall} The structure of compact orientable surface:
+			
+			\begin{lemma}
+				For surface $M,N$,
+				\begin{gather*}
+					\chi(M\# N)=\chi(M)+\chi(N)-2
+				\end{gather*}
+			\end{lemma}
+			\begin{theorem}
+				The genus of surface is defined as: 
+				\begin{gather*}
+					M\cong \#_g T^2=\Sigma_g
+				\end{gather*}
+				
+				Thus, $H_1(M)\cong \ZZ^{2g}$. 
+			\end{theorem}
+			
+			\begin{corollary}
+				We obtain, that
+				\begin{gather*}
+					\chi(\Sigma_g)=2-2g
+				\end{gather*}
+			\end{corollary}
+			
+			\begin{Def}
+				For $f:X\rightarrow Y$, the \textbf{Branching number} is defined as
+				\begin{gather*}
+					B(f):=\sum_{P\in M} b_f(P)
+				\end{gather*}
+			\end{Def}
+			
+			To show, $B(f)$ is well-defined:
+			\begin{lemma}
+				If $f:X\rightarrow Y$ is a non-constant holomorphic mapping, then the ramification set is discrete. 
+			\end{lemma}
+			\begin{proof}
+				Notice that, $df_p\not=0,\forall p\in X$, then the zero of $f'$ is discrete. Thus, the ramification set is discrete. 
+			\end{proof}
+			
+			\begin{lemma}
+				If $f:X\rightarrow Y$ is a holomorphic mapping, then the ramification set is finite
+			\end{lemma}
+			\begin{proof}
+				The discrete subset is compact Hausdorff space should be finite. 
+			\end{proof}
+			
+			\begin{theorem}
+				(Riemann-Hurwitz) We have
+				\begin{gather*}
+					g=n(\gamma-1)+1+\frac{B}{2}
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				Firstly, the surface is can be triangulated with the finite subset
+				\begin{gather*}
+					S=\{f(x)|b_f(x)>0\}
+				\end{gather*}
+				
+				By $F$ faces, $E$ edges, $V$ vertices. 
+				
+				Lift this to $M$. The induced triangulation of $M$ has: $nF$ faces, $nE$ edges, $nV-B$ vertices. Because: The inside of triangles contains no branch point.
+				
+				We obtain, that
+				\begin{gather*}
+					\begin{cases}
+						F-E+V=2-2\gamma\\ nF-nE+nV-B=2-2g
+					\end{cases}
+				\end{gather*}
+				
+				And solve the equation
+			\end{proof}
+			
+			\begin{corollary}
+				Branching number $B$ is always even. 
+			\end{corollary}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+		\subsection{Cohomology of Riemann Surface}
+			
+		\subsection{Poincare's Lemma in Complex:Dolbeault's Lemma}
+			
+		\subsection{Serre's Duality}
+			\begin{theorem}
+				(Serre)
+			\end{theorem}
+			We will prove this in complex geometry. 
+	\chapter{Analytic Continuation, Covering Surfaces and Algebraic Functions}
+		\section{Analytic Continuation}
+			\begin{Def}
+				\begin{itemize}
+					\item (Function Element) Let $M,N$ be fixed Riemann surfaces. A \textbf{function element} is pair
+					\begin{gather*}
+						(f,D)
+					\end{gather*}
+					
+					where:
+					\begin{itemize}
+						\item $D$ is a connected, open nonempty subset of $M$;
+						\item $f:D\rightarrow N$ is analytic. 
+					\end{itemize}
+					
+					\item Two elements $(f_1,D_1),(f_2,D_2)$ are \textbf{direct analytic continuation} of each other if
+					\begin{gather*}
+						D_1\cap D_2\not=\emptyset\qquad f_1|D_1\cap D_2=f_2|D_1\cap D_2
+					\end{gather*}
+					
+					Use the following notion $(f_1,D_1)\simeq (f_2,D_2)$.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{Def}
+				(Analytic Continuations)
+				\begin{itemize}
+					\item We say $(f,D)$, $(g,\tilde{D})$ are \textbf{analytic continuation} if there exists function elements $(f_j,D_j);1\leq j\leq J$: 
+					\begin{gather*}
+						(f_1,D_1)=(f,D)\qquad (f_J,D_J)=(g,\tilde{J})\qquad (f_j,D_j)\simeq (f_{j+1},D_{j+1})
+					\end{gather*}
+					\item A \textbf{compelete analytic continuation} is an equivalence class of suc $(f,D)$. By analytic continuation.
+				\end{itemize}
+			\end{Def}
+			
+			\begin{lemma}
+				(Analytic Continuation$\Rightarrow$ Path) Suppose $(f,D),(g,\tilde{D})$ is an analytic continuation. Then, there exists a path
+				\begin{gather*}
+					\gamma:[0,1]\rightarrow M
+				\end{gather*}
+				
+				Connecting the points of $D$, with following property: Exists
+				\begin{gather*}
+					0<t_1<\dots<t_m=1
+				\end{gather*}
+				
+				where: Exists $B(\gamma(t_i),r_i)$
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				内容...
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\section{The Unramified Riemann Surface of An Analytic Germ}
+			\section{The Ramified Riemann Surface of An Analytic Germ}
+			\section{Algebraic Germs and Functions}
+	
+	\chapter{Analysis on Riemann Surface}
+	\section{Differential Forms and Integration Formula}
+	\subsection{Complex Structure}
+	\begin{Def}
+		Let $X$ be a Riemann surface.
+		
+		Then, the \textbf{(almost)complex structure} of $X$ is defined as following: 
+		\begin{gather*}
+			J:TM\rightarrow TM\qquad J_p^2=-id_{T_p }
+		\end{gather*}
+	\end{Def}
+	
+	Then, $(0,1)$ and $(1,0)$-form are specified by
+	\begin{gather*}
+		T^{*(1,0)}X:=Ker(J^*-i)\qquad T^{*(0,1)}X:=Ker(J^*+i)
+	\end{gather*}
+	
+	\textbf{Remark} In higher dimension, there is a difference between complex structure and almost complex structure, depends on the integrability. 
+	
+	\begin{proposition}
+		Suppose $X$ be a Riemann surface, then, the complexification of cotangent space satisfies
+		\begin{gather*}
+			T^*X\otimes_\RR \CC=T^{*(1,0)}X\oplus T^{*(0,1)}X
+		\end{gather*}
+		
+		where $TR^*X$ is the real cotangent space. 
+	\end{proposition}
+	\begin{proof}
+		Notice: $dim_\RR(T_p M)=2$, thus
+		\begin{gather*}
+			ker(J^*_p+i)\oplus ker(J^*_p-i)=T_p M
+		\end{gather*}
+	\end{proof}
+	
+	\subsection{Differential Forms}
+	\begin{Def}
+		For a Riemann surface $M$:
+		\begin{itemize}
+			\item The $0$-form is the function on $M$;
+			\item The $1$-form is the form such that
+			\begin{gather*}
+				fdx+gdy;f,g\in C(U,\CC)
+			\end{gather*}
+			
+			is invariant under coordinate change. 
+			\item The $2$-form is the form 
+			\begin{gather*}
+				fdx\wedge dy;f\in C(U;\CC)
+			\end{gather*}
+			
+			which is also invariant under coordinate change.  
+		\end{itemize}
+		
+		Take the following notion of $\Omega^k(M;\CC) $. 
+	\end{Def}
+	
+	i.e. For the coordinate change $\tilde{z}$, we obtain the new $1$-form $\tilde{f}(\tilde{z}),\tilde{g}(\tilde{z})$, with $\tilde{\omega}=\tilde{f}d\tilde{x}+\tilde{g}d\tilde{y}$:
+	\begin{gather*}
+		\begin{pmatrix}
+			d\tilde{x}&d\tilde{y}
+		\end{pmatrix}\begin{pmatrix}
+			\tilde{f}(\tilde{z})\\
+			\tilde{g}(\tilde{z})
+		\end{pmatrix}=\begin{pmatrix}
+			dx&dy
+		\end{pmatrix}\begin{pmatrix}
+			\frac{\partial\tilde{x}}{\partial x}&\frac{\partial \tilde{y}}{\partial x}\\
+			\frac{\partial \tilde{y}}{\partial x}&\frac{\partial \tilde{y}}{\partial y}
+		\end{pmatrix}\begin{pmatrix}
+			\tilde{f}(\tilde{z})\\
+			\tilde{g}(\tilde{z})
+		\end{pmatrix}\Rightarrow \begin{pmatrix}
+			\tilde{f}(\tilde{z})\\
+			\tilde{g}(\tilde{z})
+		\end{pmatrix}=\begin{pmatrix}
+			\frac{\partial\tilde{x}}{\partial x}&\frac{\partial \tilde{y}}{\partial x}\\
+			\frac{\partial \tilde{y}}{\partial y}&\frac{\partial \tilde{y}}{\partial y}
+		\end{pmatrix}\begin{pmatrix}
+			\tilde{f}(\tilde{z})\\
+			\tilde{g}(\tilde{z})
+		\end{pmatrix}
+	\end{gather*}
+	
+	and the new $2$-form $\tilde{\omega}=\tilde{f}d\tilde{x}\wedge d\tilde{y}$
+	\begin{gather*}
+		\tilde{\omega}=\tilde{f}(\frac{\partial \tilde{x}}{\partial x}+\frac{\partial \tilde{x}}{\partial y})dx\wedge (\frac{\partial \tilde{y}}{\partial x}+\frac{\partial \tilde{y}}{\partial y})dy\Rightarrow \tilde{f}(\tilde{z})=f(z(\tilde{z}))\frac{\partial (x,y)}{\partial(\tilde{x},\tilde{y})}=|\frac{\partial z}{\partial \tilde{z}}|^2 f(z(\tilde{z}))
+	\end{gather*}
+	
+	where $\frac{\partial (x,y)}{\partial(\tilde{x},\tilde{y})}$ is the determinant of Jacobian. 
+	
+	
+	
+	\begin{proposition}
+		We obtain, that
+		\begin{gather*}
+			dz\wedge d\bar{z}=-2idx\wedge dy
+		\end{gather*}
+	\end{proposition}
+	\begin{proof}
+		$(dx+idy)\wedge (dx-idy)=-2i dx\wedge dy$
+	\end{proof}
+	
+	
+	\begin{proposition}
+		We obtain: For a Riemann surface $M$,
+		\begin{gather*}
+			\Omega^k(M;\CC)=\Omega^k(M;\RR)\otimes_\RR \CC
+		\end{gather*}
+	\end{proposition}
+	\begin{proof}
+		Notice: We decompose the differential form into
+		\begin{gather*}
+			fdx+gdy=(u_1+iv_1)dx+(u_2+iv_2)dy=(u_1dx+u_2dy)+i(v_1dx+v_2dy)\\
+			fdx\wedge dy=(u+iv)dx\wedge dy=fdx\wedge dy+i(vdx\wedge dy)
+		\end{gather*}
+	\end{proof}
+	
+	
+	And in the viewpoint of differential, there exists pairing
+	\begin{gather*}
+		\Omega^1(M;\CC)\times TM\rightarrow \RR\qquad (\omega,v)\mapsto \omega(v)
+	\end{gather*}
+	
+	Then, with the decomposition of $TM$, we obtain that
+	
+	\begin{corollary}
+		$\Omega^1(M;\CC)=\Omega^{(1,0)}(M)\oplus \Omega^{(0,1)}(M)$, where
+		\begin{gather*}
+			\Omega^{(1,0)}(M)=\cap_{v\in T^{0,1}(M)} Ker(<-,v>)=Ann(T^{(0,1)M})\\
+			 \Omega^{(0,1)}(M)=\cap_{v\in T^{1,0}(M)} Ker(<-,v>)=Ann(T^{(1,0)M})
+		\end{gather*}
+	\end{corollary}
+	\begin{proof}
+		Easy to verify. 
+	\end{proof}
+	
+	The differential form could be written in a conjugation of differentials
+	\begin{gather*}
+		fdx+gdy=udz+vd\bar{z}\qquad\begin{cases}
+			f=u+v\\
+			g=i(u-v)
+		\end{cases}\begin{cases}
+			dz=dx+idy\\
+			d\bar{z}=dx-idy
+		\end{cases}
+	\end{gather*}
+	
+	Similarly, the $2$-form
+	\begin{gather*}
+		g(z)dz\wedge d\bar{z}=-2ig(z)dx\wedge dy
+	\end{gather*}
+	
+	
+	\begin{Def}
+		The \textbf{conjugation} of differential $1$-form
+		\begin{gather*}
+			\omega=fdx+gdy\Rightarrow \bar{\omega}=\bar{f}dx +\bar{g}dy
+		\end{gather*}
+	\end{Def}
+	
+	\subsubsection{Integration}
+	
+	\begin{Def}
+		\begin{itemize}
+			\item 
+			(Line Integration) Given $\gamma:I\rightarrow M, \omega\in \Omega^1(M)$, then
+			\begin{gather*}
+				\int_\gamma \omega:=\int_0^1(f(x,y)\frac{dx}{dt}+g(x,y)\frac{dy}{dt})dt
+			\end{gather*}
+			\item (Area Integration) Given area $D$ with $\omega\in \Omega^2(M)$, then
+			\begin{gather*}
+				\iint_D\Omega=\iint_D f(x,y)dx\wedge dy
+			\end{gather*}
+		\end{itemize}
+	\end{Def}
+	
+	\subsubsection{Differential of $C^1$ Form}
+		For $C^1$-Form $\omega\in \Omega^1(M;\CC)$
+		\begin{gather*}
+			d\omega=fdx+gdy\Rightarrow d\omega=(g_x-f_y)dx\wedge dy
+		\end{gather*}
+		
+		
+		Thus, the differential is finally a $2$-form. Now, apply Stokes's theorem
+		\begin{gather*}
+			内容...
+		\end{gather*}
+		
+		where: 
+		
+	\subsubsection{Conjugation of Differentials}
+		\begin{Def}
+			\begin{itemize}
+				\item 
+				Let $f\in C^1(U,\CC)$, then define
+				\begin{gather*}
+					\partial f:=f_zdz\qquad \bar{\partial} f=f_{\bar{z}}dz
+				\end{gather*}
+				
+				where the notion $f_z,f_{\bar{z}}$ are Wirtinger derivation. 
+				\item 
+				For the differential form $\omega=udz+vd\bar{z}$,
+				\begin{gather*}
+					\partial\omega=v_z dz\wedge d\bar{z}\\
+					\bar{\partial}\omega=-u_{\bar{z}} dz\wedge d\bar{z}
+				\end{gather*}
+				
+				where 
+				\begin{gather*}
+					f_z=\frac{1}{2}(f_x-if_y)\qquad f_{\bar{z}}=\frac{1}{2}(f_x+if_y)
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		
+		Notice: $f_{\bar{z}}=0\Leftrightarrow f$ is holomorphic. 
+		
+		\begin{proposition}
+			We obtain a decomposition
+			\begin{gather*}
+				d=\partial+\bar{\partial}
+			\end{gather*}
+			
+			And 
+			\begin{gather*}
+				\partial^2=\partial\bar{\partial}+\bar{\partial}\partial=\bar{\partial}^2
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+	Under the form $\omega=fdz+gd\bar{z}$, we obtain
+	\begin{gather*}
+		\bar{\omega}=
+	\end{gather*}
+	\subsubsection{Hodge Star Operator}
+	\begin{Def}Given: A Riemann surface $M$, with a non-vanishing $2$-form $\lambda dx\wedge dy$ on the surface(canonical $2$-form), and
+		\begin{itemize}
+			\item  A function $f$, then
+			\begin{gather*}
+				*f=f(z)(\lambda(z)dz\wedge dy)
+			\end{gather*}
+			\item 
+			 A differential $1$-form
+			\begin{gather*}
+				\omega=fdx+gdy\Rightarrow *\omega:=-gdx+fdy
+			\end{gather*}
+			
+			which is called \textbf{Hodge star} of $1$-form $\omega$. 
+			\item A differential $2$-form
+			\begin{gather*}
+				*\Omega=\Omega/\lambda(z)dx\wedge dy
+			\end{gather*}
+		\end{itemize}
+	\end{Def}
+	
+	Except the $1$-form, it depends on the conformal metric. 
+	
+	\begin{proposition}
+		If we take the complex notion $\omega=udz+vd\bar{z}$, then
+		\begin{gather*}
+			*\omega=-iudz+ivd\bar{z}
+		\end{gather*}
+	\end{proposition}
+	\begin{proof}
+		$*\omega=-gdx+fdy=i(u-v)\frac{dz+d\bar{z}}{2}+(u+v)\frac{dz-d\bar{z}}{2i}=\frac{i}{2}[(u-v)(dz+d\bar{z})-(u+v)(dz-d\bar{z})]$
+		
+		$i(-udz+vd\bar{z})$.
+	\end{proof}
+	\subsection{Exactness, Closedness}
+		\begin{Def}
+			Let $\omega\in \Omega^1(M;\CC)$.
+			
+			\begin{itemize}
+				\item $\omega$ is called \textbf{exact} if
+				\begin{gather*}
+					\omega=df\qquad f\in C^2
+				\end{gather*}
+				
+				And coexact if $*\omega$ is exact;
+				\item $\omega$ is called \textbf{closed} if it is $C^1$, and 
+				\begin{gather*}
+					d\omega=0
+				\end{gather*}
+				
+				And cocolosed if $*\omega$ is exact;
+			\end{itemize}
+		\end{Def}
+		
+		\subsubsection{Laplacian,Harmonic Differentials}
+		\begin{Def}
+			Suppose $f\in (U,\CC)$, then define the \textbf{Laplacian}
+			\begin{gather*}
+				\Delta f=(f_{xx}+f_{yy})dx\wedge dy
+			\end{gather*}
+			
+			Especially, a function is called \textbf{harmonic} if $\Delta f=0$.
+		\end{Def}
+		
+		\begin{proposition}
+			For $f\in C^2(U)$,
+			\begin{gather*}
+				\Delta f=-2i \bar{\partial} \partial f=d*df
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			Notice:
+			\begin{gather*}
+				-2i\bar{\partial}\partial f=-2i\bar{\partial}(f_zdz)=-2i\bar{\partial}(\frac{1}{2}(f_x-if_y)dz)= \frac{i}{2}(f_{xx}+if_{xy}-if_{yx}+f_{yy})dz\wedge d\bar{z}=\frac{1}{2i} (f_{xx}+f_{yy})dz\wedge d\bar{z}=(f_{xx}+f_{yy})dx\wedge dy\\
+				d*df=d*(f_xdx+f_ydy)=d(-f_ydx+f_x dy)=-(f_{xy}dx\wedge dx+f_{yy} dy\wedge dx)+(f_{xx}dx\wedge dy+f_{yx}dy\wedge dy)=(f_{xx}+f_{yy})dx\wedge dy
+			\end{gather*}
+		\end{proof}
+		
+		\begin{Def}
+			$1$-form $\omega$ is called \textbf{harmonic} if $\omega=df$ locally, $\Delta f=0$;
+		\end{Def}
+		
+		\begin{proposition}
+			A differential $\omega$ is harmonic, iff it is closed and co-closed. 
+		\end{proposition}
+		\begin{proof}
+			$\Rightarrow$: Notice that $d(*\omega)=0$. And it is closed becasue $d^2f=0$;
+			
+			$\Leftarrow$: Notice $\omega=df$ locally, and $d(*df)=0$. Thus, $f$ is harmonic. 
+		\end{proof}
+		
+		\begin{Def}
+			Take the following notion:
+			\begin{gather*}
+				\mathcal{H}^k(M;\CC):=\{\omega\in \Omega^k(M)|\Delta \omega=0\}
+			\end{gather*}
+		\end{Def}
+	\subsection{$n$-Homology Group}
+		\subsubsection{Pairing Between $n$-form and $n$-Homology Group}
+		\begin{Def}
+			Define the following integral pairing
+			\begin{gather*}
+				H_n(X;\ZZ)\times Z^n(X;\CC)\rightarrow \CC\qquad ([c],\omega)\mapsto \int_c \omega
+			\end{gather*}
+		\end{Def}
+		
+		Thus, we obtain the equivalence 
+		\begin{gather*}
+			内容...
+		\end{gather*}
+		
+	\subsection{Holomorphic $1$-Form}
+		\begin{Def}
+			A $1$-form $\omega$ is called \textbf{holomorphic} provided that locally:
+			\begin{gather*}
+				\omega=df\qquad f\in \mathcal{O}(U)
+			\end{gather*}
+		\end{Def}
+		\begin{proposition}
+			If $u$ is a harmonic function on $M$, then $\partial u$ is a holomorphic differential. 
+		\end{proposition}
+		\begin{proof}
+			Notice: $\Delta u=$
+		\end{proof}
+		
+		A special case is the complex $\CC$. We obtain $\Delta f=0\Rightarrow f\in \mathcal{O}(U)$. 
+		
+		\begin{theorem}
+			A differential form $\omega$ is \textbf{holomorphic} iff
+			\begin{gather*}
+				\omega=\alpha+i*\alpha
+			\end{gather*}
+			
+			for some harmonic differential $\alpha$;
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			A differential $\omega$ is holomorphic iff it is closed, and $*\omega=-i\omega$. 
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+	\section{Integration Formula}
+		\begin{theorem}
+			(Integration by Parts) Let $D$ be a \underline{relative compact} region on a Riemann surface $M$, with piecewise differentiable boundary.
+			
+			Let $f\in C^1(M)$ and $\omega$ be a $C^1$ form on a neighborhood of the closure of $D$, then
+			\begin{gather*}
+				\int_{\partial D} f\omega=\iint fd\omega-\iint_D \omega\wedge df
+			\end{gather*}
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			If $\omega$ is closed, in particular or holomorphic $1$-form
+			\begin{gather*}
+				\int_{\partial D} \omega=0
+			\end{gather*}
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			内容...
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+	\section{$L^2$ Structure of Riemann Surface}
+		\subsection{Weyl's Theorem}
+		
+		\subsection{$L^2$ Space}
+	\section{Mittag-Leffers Obstruction}
+	\chapter{Geometry of Riemann Surface}
+		\section{Geometric Properties}
+		\subsection{Riemann-Metric Structure}
+		\subsection{Orientability}
+			\begin{proposition}
+				Every Riemann surface is orientable. 
+			\end{proposition}
+			\begin{proof}
+				Notice that, for 
+			\end{proof}
+			
+			Conversely:
+			
+			\begin{theorem}
+				Every orientable connected surface admits a complex structure.
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Line Bundles}
+			\begin{Def}
+				Let $X$ be an algebraic curve. A \textbf{line bundle} over $X$ is 
+				\begin{gather*}
+					\pi:L\rightarrow X
+				\end{gather*}
+				
+				where for every $p\in X$, there exists $p\in U\subseteq X$ such that $\pi^{-1}(U)\cong U\times \CC$. 
+			\end{Def}
+			
+			This implies, that we obtain a projection map
+			\begin{gather*}
+				p:\sqcup U_p\times \CC\rightarrow X
+			\end{gather*}
+			
+			Factorization
+			\begin{gather*}
+				\sqcup U_p\times \CC\rightarrow L\rightarrow X
+			\end{gather*}
+			
+			\begin{Def}
+				Such $U$ with $\pi^{-1}(U)\cong U\times \CC$ is called \textbf{support} of line bundle.
+				
+				Equippedd with $\phi:\pi^{-1}(U)\rightarrow U\times \CC$. 
+			\end{Def}
+			
+			Thus, for $pr_1:U\times \CC\rightarrow U$, we obtain that
+			\begin{gather*}
+				pr_1\circ \phi=\pi|\pi^{-1}(U):\pi^{-1}(U)\rightarrow U
+			\end{gather*}
+			
+			\begin{Def}
+				Let $X$ 
+			\end{Def}
+		\subsubsection{Homomorphisms}
+		\subsubsection{Invertible Sheaves}
+		\subsubsection{Rational Section}
+		\subsection{Holomorphic Line Bundle}
+		\subsection{The Tautological Line Bundle}
+		\subsection{Canonical Bundle}
+		\subsection{Tangent Bundle}	
+		\subsection{Picard Group}
+	\chapter{Compact Riemann Surface}
+		\section{Compact Riemann Surface}
+			\subsection{Differential Forms}
+				\subsubsection{Residue}
+					\begin{Def}
+						Let $f$ be a (local) meromorphic function, $\omega=fdz$ be a meromorphic $1$-form.  
+						
+						Then, $\omega=(\sum_{-m}^\infty a_mz^m)dz$, and define 
+						\begin{gather*}
+							Res_p(\omega):=a_{-1}
+						\end{gather*}
+					\end{Def}
+					
+					\begin{lemma}
+						(Local Integration) Suppose $p\in Pole(\omega)\subseteq M$, then for a small enough closed curve around $p$, $\gamma_p$, 
+						\begin{gather*}
+							\oint_{\gamma_p} \omega=2\pi i Res_p(\omega)
+						\end{gather*}
+						
+						Here: Small enough means, we obtain a local coordinate in a small enough unit disk:
+						\begin{gather*}
+							U\ni p,z:U\rightarrow \Delta
+						\end{gather*}
+						
+						such that $z(p)=0$(in center). And $U$ contains no other pole. $Im(\gamma_p)\subseteq U$. 
+					\end{lemma}
+					\begin{proof}
+						Notice that
+						\begin{gather*}
+							\oint_{\gamma_p} \omega=\oint_{\gamma_p} (\sum_{-m}^\infty a_m z^m)dz
+						\end{gather*}
+						
+						Now, by Cauchy's integration formula
+						\begin{gather*}
+							\stackrel{z=\epsilon e^{i\theta}}{=}\int_0^{2\pi} (\sum_{-m}^\infty a_m (\epsilon e^{i\theta})^m)\epsilon ie^{i\theta}\\
+							=\sum_{-m}^\infty 
+						\end{gather*}
+					\end{proof}
+					
+				\subsubsection{Global Residue Theorem}
+					\begin{theorem}
+						(Global Residue Theorem) Given a meromorphic function $f\in M(C)$, $C$ is a compact Riemann surface, then
+						\begin{gather*}
+							\sum_p Res_p(\frac{df}{f})=0
+						\end{gather*}
+					\end{theorem}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					
+					
+					\begin{corollary}
+						(Argument Principle)
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+			\subsection{Meromorphic Functions}
+				\begin{proposition}
+					Let $f\in M(C),C$ is a compact Riemann surface, then define:Number of poles $n(f)$ and number of zeros $m(f)$:
+					\begin{gather*}
+						n(f)=m(f)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					A viewpoint is to observe $f:C\rightarrow \CC$ as a holomorphic map 
+					\begin{gather*}
+						\tilde{f}:C\rightarrow \PP^1\CC
+					\end{gather*}
+					
+					Then, $n(f)=card(f^{-1}(\infty))$, $m(f)=card(f^{-1}(0))$, we obtain that $n(f)=m(f)$
+					
+					Another way is by: Suppose $f$ be locally in the form of
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{proof}
+			\subsection{Decompositon of Differential Form and Cohomology}
+			\subsubsection{Hodge Decomposition of Forms, Hodge Theorem}
+				
+				\begin{theorem}
+					(Hodge) For a compact Riemann Surface $M$,
+					\begin{gather*}
+						\mathcal{H}^k(M)=H^k_{dR}(M)
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+			\subsubsection{Hodge Decomposition of Cohomology}
+			
+			\subsection{Harmonic Differentials}
+			
+			\subsection{Analytic Differentials}
+			
+		\section{Intersection Theory}
+			\subsection{Intersection Number}
+				\subsubsection{Topological Definition}
+				\begin{Def}
+					Let $a,b$ be two cycles on the Riemann surface $M$. We define the \textbf{intersection number}
+					\begin{gather*}
+						a*b:=\int_M \eta_a\wedge \eta_b
+					\end{gather*}
+					
+					where $\eta_s=PD([a])$ by poincare duality. 
+				\end{Def}
+				
+				\subsubsection{Geometric Definition}
+				\begin{Def}
+					Let $M$ be oriented, and $\gamma_1,\gamma_2$ be two oriented closed curves, and tranverse $T_p \gamma_1\oplus T_p \gamma_2=T_p M$(Equivalently, not tangent)
+					
+					Then,
+					\begin{gather*}
+						\gamma_1\cdot \gamma_2:=\sum_{p\in \gamma_1\cap\gamma_2} \epsilon_p\qquad \epsilon_p=\begin{cases}
+							内容...
+						\end{cases}
+					\end{gather*}
+				\end{Def}
+				
+			\subsection{Local Intersection}
+				Recall the contents in algebraic curve.
+		\section{Riemann-Roch Theorem}
+			\subsection{Divisors}
+				\begin{Def}
+					Suppose $C$ be a Riemann surface, then the \textbf{divisor} is the finite sum
+					\begin{gather*}
+						D=\sum m_ip_i\qquad m_i\in \ZZ,p_j\in C\\
+						deg(D):=\sum m_i\qquad Div(C)\rightarrow \ZZ
+					\end{gather*}
+					
+					Especially, for the meromorphic function $f\in K(C)^\times=M(C)$, then
+					\begin{gather*}
+						(f)=\sum_{p\in C} v_p(f)p
+					\end{gather*}
+					
+					$v_p$ is the degree of $f$ at $p$. 
+				\end{Def}
+				
+				This implies
+				\begin{proposition}
+					
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{gather*}
+					f:C\rightarrow \PP^1 \CC
+				\end{gather*}
+				
+				\begin{theorem}
+					If $f\in K(C)$ is not constant, and $C$ is compact, then 
+					\begin{gather*}
+						deg(f)=\sum v_p(f)=0
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					Notice that: On compact Riemann surface, the number of poles is equal to zeros. 
+				\end{proof}
+				
+				\subsubsection{Bezout's Theorem}
+				\begin{theorem}
+					(Bezout)
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Ramification Divisors}
+			\subsection{Riemann-Roch Theorem on Complex Surface}
+				\subsubsection{Effective Divisor}
+					\begin{Def}
+						
+					\end{Def}
+					
+				\subsubsection{Dimension of $\Omega^1(C)$}
+				
+				\subsubsection{Hodge Theorem}
+				
+				\subsubsection{De Rham Theorem}
+				\subsubsection{Riemann Inequality}
+				\subsubsection{Riemann-Roch Theorem}
+				
+					\begin{theorem}
+						内容...
+					\end{theorem}
+			\subsection{Applications}
+				\subsubsection{title}
+		\section{Hyperelliptic Riemann Surfaces}'
+		
+		\section{Projective Embedding}
+	\chapter{Uniformization}
+		\section{Classification Theorem of Universal Covering}
+	\chapter{Group Action on Riemann Surface}
+	\chapter{Automorphisms}
+		\begin{Def}
+			Define: For a Riemann surface $X$,
+			\begin{gather*}
+				Aut(X):=\{f:X\rightarrow X|f\mbox{ is biholomorphic}\}
+			\end{gather*}
+		\end{Def}
+		\section{Automorphisms}
+			\subsection{Riemann Mapping Theorem: Simply Connected}
+			\begin{theorem}
+				(Riemann Mapping Theorem) Every simply-connected surface is biholomorpic to one of the following:
+				\begin{itemize}
+					\item Riemann Sphere $
+					\Sigma \cong \PP^1\CC$;
+					\item Complex Plane $\CC$;
+					\item Upper half plane $\mathbb{H}$;
+				\end{itemize}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			And recall a small skill
+			\begin{proposition}
+				There exists biholomorphism
+				\begin{gather*}
+					\mathbb{H}\cong \mathbb{D}
+				\end{gather*}
+				
+				where $\mathbb{D}$ is the unit disk. 
+			\end{proposition}
+			\begin{proof}
+				Given by \underline{Cayley transformation}
+				\begin{gather*}
+					\phi(z):=\frac{z-i}{z+i}\qquad \mathbb{H}\rightarrow \mathbb{D}
+				\end{gather*}
+			\end{proof}
+			
+			\begin{lemma}
+				$Aut(\mathbb{D})=\{e^{i\theta}\frac{z-a}{1-\bar{a}z}|a\in \CC\}$;
+			\end{lemma}
+			\begin{proof}
+				By Schwartz's lemma:
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{proof}
+			
+			\begin{proposition}
+				\begin{gather*}
+					Aut(\Sigma)=\{z\mapsto \frac{\alpha z+\beta}{\gamma z+\delta}|\alpha\delta-\beta\gamma\not=0,\alpha,\beta,\gamma,\delta\in \CC\cup \{\infty\}\}\cong PGL(2,\CC)\\
+					Aut(\CC)=\{z\mapsto az+b|a\not=0\}\cong \CC\rtimes_\rho \CC^\times\qquad \rho:\\
+					Aut(\mathbb{H})=\{z\mapsto \frac{\alpha z+\beta}{\gamma z+\delta}|\alpha,\beta,\delta,\gamma\in \RR\cup \{\infty\},\alpha\delta-\beta\gamma=1\}\cong PSL(2,\RR)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+					\item We have discussed the necessary steps. 
+				\end{itemize}
+			\end{proof}
+			\subsection{Group Action}
+			\begin{theorem}
+				Let: 
+			\end{theorem}
+			
+			\subsection{Finite Group Action on Riemann Surface}
+			
+			\subsection{$\ZZ/p$-Action on Surfaces}
+		\section{Hurwitz's Theorem}
+			\subsection{Schwartz's Theorem}
+			
+			\subsection{Hurwitz's Theorem}
+				\begin{theorem}
+					(Hurwitz,1893, Automorphism Group of Riemann Surface with Genus $\geq 2$)
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						(Hurwitz Group);
+						\item ($(2,3,7)$ Triangle Group)
+					\end{itemize}
+				\end{Def}
+				
+				\begin{theorem}
+					(Hurwitz's Criterion)
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Fuchsian Groups}
+			\begin{Def}
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+		\section{Hurwitz Grup}
+		\section{Compact Riemann Surface Theory}
+		\section{Non-Commpact Riemann Surface Theory}
+	\chapter{Riemann Theta Function}
+	\chapter{Jacobi Variety}
+		Now, we just discuss the Jacobi Variety related to Riemann surface(in this part). For Jacobi Variety in general. For the Jacobi variety in general , we will do some note for Milne's note:
+		\begin{center}
+			\url{https://www.jmilne.org/math/xnotes/JVs.pdf}
+		\end{center} 
+		
+		in a new part...
+	
+	\chapter{Riemann-Hilbert Correspondence}
+	\chapter{Differential Galois Theory (for Riemann Surface)}
+	
+	\chapter{Stein Manifold}
+		We will research the Stein Manifold in higher dimension, in the a new note.  Here, we just discuss the connection between Stein manifold and Riemann Surface. 
+	\chapter{Mapping Class Group}
+		\section{Mapping Class Group and Dehn Twisted}
+			We will research Riemann surface. Thus, we assume:
+			\begin{center}
+				Every surface in this context, is orientable. 
+			\end{center}
+			\subsection{Preparation: Some of Concepts}
+			
+			\subsubsection{Topology of Mappings}
+				Topology: Whitney Topology
+				
+				\begin{proposition}
+					If $S$ is comapct, then in the category of topological space,
+					\begin{gather*}
+						S_{Weak-Whitney}=S_{Strong-Whitney}
+					\end{gather*}
+				\end{proposition}
+			\subsubsection{Some of Sets}
+			\begin{Def}
+				Let $S$ be a surface, and $P\subseteq S$:
+				\begin{itemize}
+					\item \begin{gather*}
+						\operatorname{Diff}(S):=\{f:S\rightarrow S|f\mbox{ is diffeomorphism}\}
+					\end{gather*}
+					\item 
+					\begin{gather*}
+						\operatorname{Diff}(S,P)=\{f\in \operatorname{Diff}(S)|f|S=id_S\}
+					\end{gather*}
+					\item Then, under the weak-whitney topology, denote
+					\begin{itemize}
+						\item The identity component: $\operatorname{Diff}^\circ(S,P)\subseteq \operatorname{Diff}(S,P)$;
+						\item The orientation preserving diffeomorphism $Diff^+(S,P)$; 
+					\end{itemize}
+				\end{itemize}
+			\end{Def} 
+			
+			\begin{lemma}
+				Actually, $\diff^0(S,P)$ is the pointwise isotopy subgroup(to identity) of $\diff(S,P)$, which is invariant on $P$. 
+			\end{lemma}
+			\begin{proof}
+				
+			\end{proof}
+			
+			\begin{lemma}
+				\begin{gather*}
+					\diff^\circ(S,P)\triangleleft \diff^+(S,P)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Firstly, $\diff^\circ(S,P)\subseteq \diff^+(S,P)$: Notice that, if 
+				
+				Secondly, it is a normal subgroup: Under the operator of composition, it is actually a subgroup. And the topological subgroup is normal, because it is stable under conjugation. 
+			\end{proof}
+			
+			Thus, we could define
+			\begin{Def}
+				Let $P$ be a smooth surface with $S\subseteq P$, then
+				\begin{gather*}
+					Mod(S,P)=\diff^+(S,P)/\diff^\circ(S,P)
+				\end{gather*}
+			\end{Def}
+			
+			\textbf{Remark} In general, we will talk about 
+			\begin{gather*}
+				\operatorname{Homeo}(S,P)\qquad 
+				\operatorname{Homeo}^+(S,P)\qquad 
+				\operatorname{Homeo}^\circ(S,P)
+			\end{gather*}
+			
+			Then,
+			\begin{gather*}
+				Mod(S)=\pi_0(Homeo^+(S))=Hoemo^+(S)/Homeo^\circ(S)
+			\end{gather*}
+			
+			\subsection{Dehn Twists}
+			\begin{Def}
+				Suppose $S$ be an orientable surface, and 
+			\end{Def}
+			
+			
+			\subsection{Fundamental Group}
+			
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+		\section{Conformal Structure}
+		
+		\section{Geometry of Upper Half Plane}
+		
+		\section{Hyperbolic Surface}
+	\chapter{Moduli Space of Riemann Surface}
+	\chapter{Tecihmüller Space}
+	\chapter{Tropical Curves}
+	\chapter{Curves and Divisors}
+	\section{Algebraic Curve and Analytification}
+		In this section, we will mainly talk about the smooth curve over $\CC$, and the normalization. 
+		
+		Especially: Smooth Projective Curve and Compact Riemann Surface.
+		
+		\subsection{Analytification}
+		\subsection{Singular Curve}
+		\subsection{Hyperelliptic Curves}
+	\section{Divisors}
+	\section{the Riemann-Roch for Curve}
+		\subsection{Applications}
+	\section{Degree of Projective Curve}
+		
+		\subsection{Poincare-Hopf Theorem}
+	\section{Abel's Theorem}
+	
+	
+
+\end{document}
