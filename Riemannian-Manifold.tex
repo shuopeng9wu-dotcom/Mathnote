@@ -157,6 +157,146 @@
 			\end{proof}
 			\subsection{Cartan's Fixed Point Theorem}
 			\subsection{Cartan's Torsion Theorem}
+	\chapter{Appendix: Curvatures by Curves}
+		\section{Classification of Curves: A Review}
+			\begin{Def}
+				Given a $C^1$-curve $c:[a,b]\rightarrow \RR^n$:
+				
+				\begin{itemize}
+					\item $c$ is called \textbf{regular} if
+					\begin{gather*}
+						\Vert \dot{c}(t)\Vert\not=0,t\in [a,b]
+					\end{gather*}
+					\item $c$ is called \textbf{path-parametrized} if $\Vert \dot{c}(t)\Vert=1,t\in [a,b]$;
+					\item $c$ is called \textbf{closed}, if $c(a)=c(b)$;
+					\item $c$ is called \textbf{differentiable closed} if $c(a)=c(b);c'(a)=c'(b)$;
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				Suppose $c:[a,b]\rightarrow \RR^n$ be $C^k$-regular, then there exists a $C^k$-diffeomorphism
+				\begin{gather*}
+					\operatorname{Diff}^k([0,1],[a,b])\ni \varphi:[0,l]\rightarrow [a,b]\qquad \tilde{c}=c\circ \varphi
+				\end{gather*}
+				
+				where $\tilde{c}$ is path-parametrized, $\Vert \dot{\tilde{c}}\Vert=1$;
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				\begin{itemize}
+					\item Given a regular $C^1$-curve $c:I\rightarrow \RR^n$, then
+					\begin{gather*}
+						T(t):=\frac{\dot{c}(t)}{\Vert \dot{c}(t)\Vert}
+					\end{gather*}
+					
+					is called the unit tangential vector field. 
+					\item Given a regular $C^2$-curve $c$. Then, define
+					\begin{gather*}
+						\kappa(t):=\frac{\Vert T'(t)\Vert}{\Vert \dot{c}(t)\Vert}
+					\end{gather*}
+					
+					is called the \textbf{curvature} of $c$ at $t$;
+				\end{itemize}
+			\end{Def}
+			
+			As a matter of fact, $T_t c:\RR\cong T_t I\rightarrow T_{c(t)} \RR^n\cong \RR^n$, this is a linear map, then
+			\begin{gather*}
+				T(t)=T_tc(1)
+			\end{gather*}
+			
+			\begin{proposition}
+				Suppose $c$ be regular. Then,
+				\begin{gather*}
+					\kappa(t)=\frac{\Vert (\ddot{c}(t))^\perp \Vert}{\Vert \dot{c}(t)\Vert^2}
+				\end{gather*}
+				
+				where $ (\ddot{c}(t))^\perp$ is the orthogonal projection onto hyperplane $T(t)^\perp$, i.e. $=\ddot{c}(t)-T(t)<T(t),\ddot{c}(t)>$;
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				Suppose $c$ be path-parametrized, then $\kappa(t)=\Vert \ddot{c}(t)\Vert$.
+			\end{corollary}
+			\begin{proof}
+				
+			\end{proof}
+			
+			\begin{proposition}
+				(Curvature is not related to Parametrimization)
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{Def}
+				Given a regular $C^2$ curve, with $\kappa(t_0)\not=0,t_0\in I$:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+			
+			
+		\section{Curvature of Curve}
+			\subsection{Total Curvature}
+				\begin{lemma}
+					内容...
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Curvature on Plane}
+				\begin{proposition}
+					We could calculating the unit tangent vector field and normal vector field as following
+					\begin{Def}
+						Define the spin operation 
+						\begin{gather*}
+							\begin{pmatrix}
+								cos\theta&-sin\theta\\
+								sin\theta&cos\theta
+							\end{pmatrix}\qquad J:=\begin{pmatrix}
+								0&-1\\
+								1&0
+							\end{pmatrix},\theta=\frac{\pi}{2}
+						\end{gather*}
+					\end{Def}
+					
+					Then, 
+					\begin{gather*}
+						N(t)=JT(t)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+				\end{proof}
+				
+				And the curvature on plane is 'orientable', because of the property of $\RR^2$: 
+			\subsection{Knotted Curves}
+			
+		\section{Isoperimetric inequality}
+			\begin{lemma}
+				Suppose $c:I\rightarrow \RR^2$ be: simply closed, positive oriented, regular $C^1$-curve, and with coordinate
+				\begin{gather*}
+					c(t)=(x(t),y(t))
+				\end{gather*}
+				
+				Then, for the area described by the curve, 
+				\begin{gather*}
+					A=-\int_0^l x'(t)y(t)=\int_0^l x(t)y'(t)dt
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				(Isometric Inequality)
+			\end{proposition}
 	\chapter{Riemannian Submanifold}
 	\chapter{Gauss-Bonnet Theorem}
 	\chapter{Jacobi Field}

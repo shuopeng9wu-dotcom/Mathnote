@@ -1,11 +1,663 @@
 \documentclass[Total.tex]{subfiles}
 
 \begin{document}
-	\chapter{Additional Text for Ring and Modules}
-		\section{Local Properties}
-			\subsection{Local Rings}
-			\subsection{Localization}
-		\section{Spectrum of Ring}
+		\chapter{Chain Conditions}
+		
+		
+		\begin{Def} Let $R$ be a ring
+			\begin{itemize}
+				\item A finite sequence of $n+1$ prime ideals
+				\begin{gather*}
+					p_0\supset \dots\supset p_n
+				\end{gather*}
+				
+				is called a \textbf{prime chain} of length $n$;
+				\item Suppose $I\in Ideal(R),p\in Spec(R)$, then, the \textbf{height} of $p$ is
+				\begin{gather*}
+					ht(p)=\sup\{n\in \NN|p=p_0\supset \dots\sup p_n\}\\
+					ht(I):=\inf\{ht(p)|p\supseteq I\}
+				\end{gather*}
+				
+				\item The \textbf{dimension} of $R$ is defined to be the superemum
+				\begin{gather*}
+					dim(R)=\sup\{ht(p)|p\in Spec(A)\}=\sup \{ht(I)|I\in Ideal(R)\}
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		\section{Noetherian Rings, Modules}
+		
+		\subsection{Noetherian Ring}
+		
+		\begin{Def}
+		\end{Def}
+		
+		\subsection{Noetherian Modules}
+		
+		\begin{Def}
+			Let $R$ be a commutative ring, and $M$ be $R-Mod$. Then, $M$ is \textbf{Noetherian} if for any descending sequence of submodules
+			
+			\begin{gather*}
+				M_0\subset M_1\subset \dots\subset \dots
+			\end{gather*}
+			
+			There exists some $N\geq 0$ such that $M_{N}=M_{N+1}=\dots$. i.e. The submodules satisfy ACC.
+		\end{Def}
+		
+		\begin{proposition}
+			The following conditions are equivalent:
+			
+			\begin{itemize}
+				\item $M$ is Noetherian;
+				\item For every subset $S\subseteq M$, there exists elements $m_1,\dots,m_r\in S$,
+				
+				\begin{gather*}
+					(S)_R=(m_1,\dots,m_r)_R
+				\end{gather*}
+				\item Every submodule of $M$ is finitely generated.
+			\end{itemize}
+		\end{proposition}
+		
+		\begin{proof}
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+		\end{proof}
+		
+		\begin{proposition}
+			The following conditions are equivalent:
+			
+			\begin{itemize}
+				\item $M$ is Noetherian;
+				\item $M$ is finitely generated.
+			\end{itemize}
+		\end{proposition}
+		
+		\begin{proof}
+			\begin{itemize}
+				\item 
+				\item 
+			\end{itemize}
+		\end{proof}
+		
+		\subsubsection{Polynomial Rings over Noetherian Rings}
+		
+		Given here:
+		
+		\section{Length}
+		
+		\begin{Def}
+			Let $R$ be a ring. For any $R$-module $M$ we define the \textbf{length} of $M$ over $R$ by the formula
+			
+			\begin{gather*}
+				length_R(M):=\sup\{\alpha\in Ord|M_0=0,M_\alpha=M,M_{\gamma}\subset M_{\gamma-1}\}
+			\end{gather*}
+		\end{Def}
+		
+		It is the superemum of legths of chain of submodules. There exists a partial order relation for chains by extending elements. Then the length of $M$ is the length of maximal chain.
+		
+		\subsection{Properties}
+		
+		\begin{lemma}
+			$length_R(M)<\infty\Leftrightarrow M$ is a finite $R$-module.
+		\end{lemma}
+		
+		\begin{proof}
+			\begin{itemize}
+				\item $\Rightarrow$ We have
+				\begin{gather*}
+					M_i=(m_1,\dots,m_i)
+				\end{gather*}
+				
+				Then, the filtration is finite. Only finite generators.
+				\item $\Leftarrow$ If $M=(m_1,\dots,m_n)$, then the maximal filration must be finite.
+			\end{itemize}
+		\end{proof}
+		
+		\subsubsection{Lengths of Modules of short Exact Sequence}
+		
+		\begin{lemma}
+			If 
+			\begin{center}
+				\begin{tikzcd}
+					0\arrow[r]&M'\arrow[r]&M\arrow[r]&M''\arrow[r]&0
+				\end{tikzcd}
+			\end{center}
+			is a short exact sequence of modules over $R$, then 
+			\begin{gather*}
+				length_R(M)=length_R(M')+length_R(M'')
+			\end{gather*}
+		\end{lemma}
+		
+		\begin{proof}
+			Via inequality:
+			\begin{itemize}
+				\item $length_R(M)\leq length_R(M')+length_R(M'')$: We have the following filtration:For $(E^i)$ of $M'$, $(F^i)$ of $M''$, and we take the image and inverse image of filtrations:
+				\begin{gather*}
+					E^0\subseteq \dots\subseteq \cup E^i\subseteq F^0\subseteq\dots\subseteq  M 
+				\end{gather*}
+				\item $length_R(M)\geq length_R(M')+length+R(M'')$: 
+				\begin{gather*}
+					0\subseteq E^0\cap M'\subseteq \dots\subseteq M'\qquad  F^0\subseteq \dots\subseteq M''
+				\end{gather*}
+				
+				Such $E^0\subseteq \dots\subseteq M'\subseteq F^0 \dots\subseteq M$ is a filtration of $M$. 
+			\end{itemize}
+		\end{proof}
+		
+		\subsubsection{Local Rings}
+		
+		\begin{lemma}
+			Let $(R,m)$ be a local ring with maximal ideal $m$. If $M$ is an $R$-module and $m^nM\not=0,n\geq 0$. 
+			
+			If $M$ is an $R$-module and $m^n M\not=0$ for all $n\geq 0$, then $length_R(M)=\infty$.
+			
+			In other word: $M$ has finite length if $m^n M=0$ for some $n$. 
+		\end{lemma}
+		\begin{proof}
+			Choose $f_1,\dots,f_n\in m$, where $f_1\dots f_n x\not=0$ Then, the filtration
+			\begin{gather*}
+				0\subseteq Rf_1\dots f_n x\subseteq \dots \subseteq Rx\subseteq M
+			\end{gather*}
+			
+			are \textbf{distinct}: Prove by contradiction, if $Rf_1fx=Rf_1ff_2x\Rightarrow f_1x=gf_1f_2x\Rightarrow (1-gf_2)f_1x=0\Rightarrow f_1x=0$
+			
+			Remark: $1-gf_2\in R-m$.
+		\end{proof}
+		
+		\textbf{Remark of} $m^n M$: Furthermore, in algebra, we can construct the \textbf{$m$-filtration}. 
+		\subsubsection{Ring Maps}
+		
+		\begin{lemma}
+			Let $R\rightarrow S$ be a ring map. Let $M$ be an $S$-module. We always have:
+			\begin{gather*}
+				length_R(M)\geq length_S(M)
+			\end{gather*}
+			
+			If $R\rightarrow S$ is surjective, then the equality holds.
+		\end{lemma}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsubsection{Length-Quotient of Fields}
+		\begin{lemma}
+			Let $R$ be a ring with maximal ideal $m$. Suppose that $M$ is an $R$-module with
+			\begin{gather*}
+				mM=0
+			\end{gather*}
+			Then, the length of $M$ as an $R$ agrees with the dimension of $M$ as $R/m$ vector space.
+			\begin{gather*}
+				length_R(M)=dim_{R/m}(M)
+			\end{gather*}
+			
+			The length is finite iff $M$ is a finite $R$-module.
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\subsubsection{Localization}
+		
+		\begin{lemma}
+			Let $R$ be a ring, and $M$ be an $R$-module.
+			
+			Let $S\subseteq R$ be a multiplicative subset, then
+			\begin{gather*}
+				length_R(M)\geq length_{S^{-1}R}(S^{-1}M)
+			\end{gather*}
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsubsection{Finitely Generated Maximal Ideal}
+		
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsection{Simple Modules}
+		
+		\begin{Def}
+			Let $R$ be a ring. $M$ be an $R$-module. $M$ is \textbf{simple} if every submodule of $M$ is either $M$ or $0$.
+		\end{Def}
+		
+		\begin{lemma}
+			Let $R$ be a ring and $M$ be an $R$-module. The following are equivalent:
+			
+			\begin{itemize}
+				\item $M$ is simple;
+				\item $length_R(M)=1$;
+				\item $M\cong R/m$ for some maximal ideal $m\subset R$.
+			\end{itemize}
+		\end{lemma}
+		
+		\begin{proof}
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+		\end{proof}
+		
+		\begin{lemma}
+			Let $R$ be a ring, let $M$ be a finite length $R$-module. Choose any maximal chain of submodules
+			\begin{gather*}
+				0=M_0\subseteq M_1\subseteq \dots\subseteq M_n=M;M_i\not= M_{i-1}
+			\end{gather*}
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{lemma}
+			Let
+			\begin{itemize}
+				\item  $A$ be a local ring with maximal ideal $m$;
+				\item $B$ is a semi-local ring with maximal ideals $m_i;i=1,\dots,n$, 
+			\end{itemize}
+			
+			Suppose that $A\rightarrow B$ is a homomorphism such that: each $m_i$ lies over $m$ nd such that
+			\begin{gather*}
+				[\kappa(m_i):\kappa(m)]<\infty
+			\end{gather*}
+			
+			Let $M$ be a $B$-module of finite length, then
+			\begin{gather*}
+				内容...
+			\end{gather*}
+			
+			In particular, $length_A(M)<\infty$.
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsection{Flat Local Homomorphism}
+		
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\section{Artinian Rings, Modules}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item 
+				\item A ring $R$ is \textbf{Artinian} if it satisfies the DDC;
+			\end{itemize}
+		\end{Def}
+		\subsubsection{Finite Dimensional Algebra}
+		\begin{lemma}
+			Suppose $R$ be is a finite dimensional algebra over a field. Then, $R$ is artinian. 
+		\end{lemma}
+		
+		\begin{proof}
+			内容...
+		\end{proof}
+		\subsubsection{Equivalent Conditions of Artinian Ring}
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsection{Jacobson Radical}
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{lemma}
+			内容...
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\section{Dimensions}
+		\section{K-Groups}
+		
+		\begin{Def}
+			Let $R$ be a ring. We will introduce the two abelian groups associated to $R$:
+			
+			\begin{itemize}
+				\item 
+				\item $K_0(R)$ with follwing properties
+				
+				\begin{enumerate}
+					\item For every finite projective $R$-module $M$, there is given an element $[M]$ in $K_0(R)$;
+					\item For every short exact sequence
+					\begin{center}
+						\begin{tikzcd}
+							0\arrow[r]&M'\arrow[r]&M\arrow[r]&M''\arrow[r]&0
+						\end{tikzcd}
+					\end{center}
+					of finite projective $R$-module. Then we have $[M]=[M']+[M'']$.
+					
+					\item The group $K_0(R)$ is generated by elements $[M]$;
+					\item All relations in $K_0(R)$ are $\ZZ$-linear combinations of the relations comming from exact sequences as above.
+				\end{enumerate}
+			\end{itemize}
+		\end{Def}
+		
+		\chapter{Fundamentals of Commutative Ring Theory}
+			\begin{Def}
+				A ring $R$ is called \textbf{commutative} if 
+				\begin{gather*}
+					ab=ba\qquad \forall a,b\in R
+				\end{gather*}
+			\end{Def}
+			
+			\section{Localizations of Commutative Rings}
+			
+				\begin{proposition}
+					Let $R$ be a ring and $f\in R$. Then,
+					\begin{gather*}
+						R_f\cong R[t]/(1-ft)
+					\end{gather*}
+					
+					where $R[t]$ is the polynomial ring. 
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\section{Radical;Nilpotent Elements and Nilradical; Jacoboson Radicals}
+				\subsection{Radical}
+					\begin{Def}
+						Let $R$ be a ring.
+						
+						For an ideal $I\subseteq R$: The \textbf{radical} of $I$ is
+						\begin{gather*}
+							\sqrt{I}:=\{x\in R|\exists n\in \NN, x^n\in I\}
+						\end{gather*}
+					\end{Def}
+					
+					\begin{lemma}
+						Such $I$ is an ideal. 
+					\end{lemma}
+					\begin{proof}
+						Suppose that $x,y\in \sqrt{I},r\in R$:
+						\begin{itemize}
+							\item $x+y\in \sqrt{I}$:
+							
+							\begin{gather*}
+								x^n\in I,y^m\in I\Rightarrow (x+y)^{m+n}\in I
+							\end{gather*}
+							
+							\item $rx\in \sqrt{I}$: 
+							
+							\begin{gather*}
+								x^m\in I\Rightarrow (rx)^m=r^mx^m\in I
+							\end{gather*}
+						\end{itemize}
+					\end{proof}
+				\subsection{Nilpotency}
+					\begin{Def} Let $R$ be a ring, with $x\in R,I\in Ideal(R)$:
+						\begin{itemize}
+							\item $x$ is called \textbf{nilpotent element} if there exists some $n\in \NN$,
+							\begin{gather*}
+								x^n=0
+							\end{gather*}
+							
+							The collection could be given by
+							\begin{gather*}
+								Nil(R)=\sqrt{(0)}
+							\end{gather*}
+							\item An ideal $I$ is calld \textbf{nilpotent} if $I^n=0$ for some $n$;
+							
+							\item A ring $R$ is called \textbf{reduced} if
+							\begin{gather*}
+								Nil(R)=(0)
+							\end{gather*}
+						\end{itemize}
+						
+						
+						We could get a reduced ring by following factorization:
+						\begin{gather*}
+							R\rightarrow R_{red}=R/Nil(R)
+						\end{gather*}
+					\end{Def}
+					
+					
+					
+					\subsubsection{Nilpotent Elements}
+					
+					with nilpotency, we could describe the radical of ideals by following lemma
+					\begin{proposition}
+						TFAE:
+						\begin{itemize}
+							\item $x\in \sqrt{I} $;
+							\item $x+I\in R/I$ is nilpotent;
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						Trivial. 
+					\end{proof}
+					
+						\begin{lemma}
+						The followings are equivalence:
+						\begin{itemize}
+							\item $f$ is nilpotent;
+							\item $R_f=0$;
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						Trivial. 
+					\end{proof}
+					
+					\begin{lemma}
+						The followings are equivalent:
+						\begin{itemize}
+							\item $x\in R$ is nilpotent;
+							\item $1-xt\in U(R[t])=R[t]^\times$;
+						\end{itemize}
+					\end{lemma}
+					\begin{proof}
+						According to our discussion in localization, $R_x=0\Leftrightarrow 1-xt\in R[t]^\times$; Because of the isomorphism $R[t]/(1-ft)\cong R_f$;
+					\end{proof}
+					
+					\begin{proposition}
+						Suppose that $x\in Nil(R),y\in R^\times$, then
+						\begin{gather*}
+							x+y\in R^\times
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						Suppose $x^n=0,yz=1$, then
+						\begin{gather*}
+							(x+y)=y(zx+1) 
+						\end{gather*}
+					\end{proof}
+					\subsubsection{Nilradical}
+					
+					\begin{proposition}
+						\begin{gather*}
+							Nil(R)=\cap_{p\in Spec(R)} p
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						$\subseteq$ Easy to check: $x^n=0\Rightarrow x^n\in p\Rightarrow x\in p$;
+						
+						$\supseteq$ According to the proof on ItCA, we observe the following proposition
+						\begin{gather*}
+							\forall n\in \NN,x^n\not=0\Rightarrow x\notin \cap_{p\in Spec(R)} p
+						\end{gather*}
+						
+						We just need to show that there exists one of prime ideal such that $x\notin p$. 
+						
+						Consider the following set $\Sigma:=\{I\in Ideal(R)|x^n\notin I,\forall n\}$. 
+						
+						We obtain that $0\in \Sigma\Rightarrow \Sigma\not=\emptyset$. According to Zorn's lemma, there exists a maximal $p\in \Sigma$. And $p$ should be prime
+						
+						
+						Suppose $a,b\notin p$, then 
+						\begin{gather*}
+							x^m\in (a)+p,x^n\in (b)+p\Rightarrow x^{m+n}\in p+(ab)
+						\end{gather*}
+						
+						Thus $ab\notin p$. Finnally, $x\notin p$. 
+					\end{proof}
+					
+					Another method is: Consider the topology of $Spec(R)$,
+					\begin{gather*}
+						x\in \cap_{p\in Spec(R)} p\Rightarrow D(x)=\emptyset\Rightarrow D(x)\cong D(R_x)=\emptyset\Rightarrow x^n=0\in R
+					\end{gather*}
+					
+					
+					Furthermore, the proof in algebraic form is localization.
+					
+				
+					
+					\begin{corollary}
+						$Nil(R)=\cap p$;
+					\end{corollary}
+					\begin{proof}
+						We could just compare the coefficient. 
+						\begin{gather*}
+							(1-xt)(\sum a_i t^i)=1\Rightarrow 
+						\end{gather*}
+					\end{proof}
+					
+					\begin{proposition}
+						\begin{gather*}
+							Nil(R)=ker(\prod_{p\in \operatorname{Spec}(R)} R\rightarrow \kappa(p))
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						Omitted.
+					\end{proof}
+				\subsection{Jacobson Radicals}
+					\begin{Def}
+						Define:
+						\begin{gather*}
+							Jac(R):=\cap_{p\in \operatorname{maxSpec}(R)} p
+						\end{gather*}
+					\end{Def}
+					
+					
+					\begin{proposition}
+						TFAE:
+						\begin{itemize}
+							\item $x\in Jac(R)$;
+							\item $1-xy\in U(R),\forall y\in R$;
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						$\Rightarrow$: Suppose $x\in Jac(R)$, then, if $1-xy\notin U(R)$, there exists some $m\in \operatorname{maxSpec}(R)$ such that 
+						\begin{gather*}
+							1-xy\in m
+						\end{gather*}
+						
+						But $xy\in m$, thus $m=(1)$ contradiction;
+						
+						$\Leftarrow$ If $1-xy\in U(R)$, then suppose $x\notin m\Rightarrow 1-x\in m\Rightarrow 1-x\notin U(R)$. Contradiction. 
+					\end{proof}
+					
+					By definition, it is easy to get
+					\begin{proposition}
+						\begin{gather*}
+							Jac(R)\subseteq Nil(R)
+						\end{gather*}
+					\end{proposition}
+					
+					
+					Similarly,
+					\begin{proposition}
+						Let $R$ be a ring, with the homomorphism
+						\begin{gather*}
+							R\rightarrow \kappa(m);m\in \operatorname{maxSpec}(R)
+						\end{gather*}
+						
+						Then,
+						\begin{gather*}
+							Jac(R)=ker(R\rightarrow \prod_{m\in \operatorname{maxSpec}(R)} \kappa(m))
+						\end{gather*}
+					\end{proposition}
+				\subsection{Jacobson Rings}
+					\begin{Def}
+						Let $R$ be a commutative ring. Then, $R$ is called a \textbf{Jacobson ring} if for every prime ideal $p$, 
+						\begin{gather*}
+							p=\cap_{m\in \operatorname{maxSpec}(R),p\subseteq m} m
+						\end{gather*}
+					\end{Def}
+					
+					\subsubsection{Geometry}
+			\section{Prime and Primary}	
+				\subsection{Associated Prime}
+					\begin{Def}  Let $R$ be a ring with module $M$:
+						\begin{itemize}
+							\item 
+							A prime ideal $P\subseteq R$ is \textbf{associated} to $M$, if $P$ is the annihilator of an element of $M$. 
+							\begin{gather*}
+								P=Ann(M)=\{x\in R|x\cdot M=0\}
+							\end{gather*}
+						\end{itemize}
+					\end{Def}
+					
+					\begin{proposition}
+						Let $R$ be a Noetherian ring, and let $M$ be a finitely generated, nonzero $R$-module:
+						\begin{itemize}
+							\item 
+							\item 
+							\item 
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{Def}
+						内容...
+					\end{Def}
+					
+					\begin{corollary}
+						内容...
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsection{Prime Avoidance}
+					\begin{proposition}
+						(Prime Avoidance) Suppose that $I_1,\dots,I_n$ are ideals of a ring $R$, and suppose that $J\subseteq \cup_j I_j$. 
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsection{Primary Decompostion}
+					\begin{Def}
+						内容...
+					\end{Def}
+					
+					\subsubsection{Factoriality}
+					
+					\subsubsection{Graded Case}
+					\subsubsection{Discussion: Uniqueness}
+					
+					
+					\subsubsection{Homological Method}
+				\subsection{Symbolic Powers}
+				
+			\section{Spectrum of Ring}
 			\begin{Def}
 				Let $R$ be CR. The spectrum is the topology given by:
 				
@@ -16,36 +668,36 @@
 			
 			\subsection{Zariski Topology}
 			
-				\begin{Def}
-					
-				\end{Def}
-		
+			\begin{Def}
+				
+			\end{Def}
+			
 			\subsection{Localization}
 			\subsection{Open and Closed Subsets of Spectra}
 			
-				\subsubsection{Closed Points in $Spec(R)$}
+			\subsubsection{Closed Points in $Spec(R)$}
+			
+			\begin{proposition}
+				Let $x=p\in Spec(R)$ be a point. Then
 				
-					\begin{proposition}
-						Let $x=p\in Spec(R)$ be a point. Then
-						
-						\begin{center}
-							$\{x\}$ is closed$\Leftrightarrow$ p is maximal ideal.
-						\end{center}
-					\end{proposition}
-					
-					\begin{proof}
-						$\{x\}$ is closed $\Leftrightarrow \{x\}=V(x)=\{p\in Spec(R)|x\subseteq p\}\Leftrightarrow x$ is a maximal ideal.
-					\end{proof}
+				\begin{center}
+					$\{x\}$ is closed$\Leftrightarrow$ p is maximal ideal.
+				\end{center}
+			\end{proposition}
+			
+			\begin{proof}
+				$\{x\}$ is closed $\Leftrightarrow \{x\}=V(x)=\{p\in Spec(R)|x\subseteq p\}\Leftrightarrow x$ is a maximal ideal.
+			\end{proof}
 			
 			\subsection{Connected Component}
 			
 			\subsection{Glueing Property}
-				\begin{lemma}
-					内容...
-				\end{lemma}
-				\begin{proof}
-					内容...
-				\end{proof}
+			\begin{lemma}
+				内容...
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
 			\subsection{Glueing Functions}
 			
 			\qquad \textbf{Goal}: To show
@@ -176,34 +828,33 @@
 			\subsection{Irrducible Component}
 			
 			\subsection{Image}
-				\subsubsection{Images of Ring Maps of Finite Representation}
+			\subsubsection{Images of Ring Maps of Finite Representation}
+			
+			\begin{lemma}
+				Let $U\subseteq Spec(R)$ be open. The followings are equivalent:
 				
-					\begin{lemma}
-						Let $U\subseteq Spec(R)$ be open. The followings are equivalent:
-						
-						\begin{itemize}
-							\item $U$ is \textbf{retrocompact} in $R$;
-							\item $U$ is \textbf{quasi-comapct}
-							\item $U$ is finite union of standard opens;
-							\item There exist a finitely generated ideal $I\subseteq R$ such that $X/V(I)=U$;
-						\end{itemize}
-					\end{lemma}
-					
-					\begin{proof}
-						\begin{itemize}
-							\item (3)$\Leftrightarrow$ (4) Omitted;
-							\item (3)$\Rightarrow$ (4): 
-							\item (4)$\Rightarrow$ (1):
-							\item (1)$\Rightarrow$ (3)
-						\end{itemize}
-					\end{proof}
-				
-				\subsubsection{More on Images}
-				
-		\section{Jacobson Radical of a Ring}
-		
-			\subsection{Nakayama's Lemma}
-		\section{Additional Propositions for Prime Ideals}
+				\begin{itemize}
+					\item $U$ is \textbf{retrocompact} in $R$;
+					\item $U$ is \textbf{quasi-comapct}
+					\item $U$ is finite union of standard opens;
+					\item There exist a finitely generated ideal $I\subseteq R$ such that $X/V(I)=U$;
+				\end{itemize}
+			\end{lemma}
+			
+			\begin{proof}
+				\begin{itemize}
+					\item (3)$\Leftrightarrow$ (4) Omitted;
+					\item (3)$\Rightarrow$ (4): 
+					\item (4)$\Rightarrow$ (1):
+					\item (1)$\Rightarrow$ (3)
+				\end{itemize}
+			\end{proof}
+			
+			\subsubsection{More on Images}
+			
+			\section{Local Properties}
+			\subsection{Local Rings}
+			\subsection{Localization}
 		
 		\section{Nilpotent}
 		
@@ -236,354 +887,7 @@
 			\begin{proof}
 			\end{proof}
 			
-		\section{Jacobson Ring}
-		
-			\begin{Def}
-				
-			\end{Def}
-		\section{title}
-	\chapter{Chain Conditions}
-		\begin{Def}
-			\begin{itemize}
-				\item 
-				\item 
-			\end{itemize}
-		\end{Def}
-		
-		\section{Noetherian Rings, Modules}
-			
-			\subsection{Noetherian Ring}
-				
-				\begin{Def}
-				\end{Def}
-		
-			\subsection{Noetherian Modules}
-				
-				\begin{Def}
-					Let $R$ be a commutative ring, and $M$ be $R-Mod$. Then, $M$ is \textbf{Noetherian} if for any descending sequence of submodules
-					
-					\begin{gather*}
-						M_0\subset M_1\subset \dots\subset \dots
-					\end{gather*}
-					
-					There exists some $N\geq 0$ such that $M_{N}=M_{N+1}=\dots$. i.e. The submodules satisfy ACC.
-				\end{Def}
-				
-				\begin{proposition}
-					The following conditions are equivalent:
-					
-					\begin{itemize}
-						\item $M$ is Noetherian;
-						\item For every subset $S\subseteq M$, there exists elements $m_1,\dots,m_r\in S$,
-						
-						\begin{gather*}
-							(S)_R=(m_1,\dots,m_r)_R
-						\end{gather*}
-						\item Every submodule of $M$ is finitely generated.
-					\end{itemize}
-				\end{proposition}
-				
-				\begin{proof}
-					\begin{itemize}
-						\item 
-						\item 
-						\item 
-					\end{itemize}
-				\end{proof}
-				
-				\begin{proposition}
-					The following conditions are equivalent:
-					
-					\begin{itemize}
-						\item $M$ is Noetherian;
-						\item $M$ is finitely generated.
-					\end{itemize}
-				\end{proposition}
-				
-				\begin{proof}
-					\begin{itemize}
-						\item 
-						\item 
-					\end{itemize}
-				\end{proof}
-				
-				\subsubsection{Polynomial Rings over Noetherian Rings}
-				
-				Given here:
-				
-		
-		\section{Length}
-		
-		\begin{Def}
-			Let $R$ be a ring. For any $R$-module $M$ we define the \textbf{length} of $M$ over $R$ by the formula
-			
-			\begin{gather*}
-				length_R(M):=\sup\{\alpha\in Ord|M_0=0,M_\alpha=M,M_{\gamma}\subset M_{\gamma-1}\}
-			\end{gather*}
-		\end{Def}
-		
-		It is the superemum of legths of chain of submodules. There exists a partial order relation for chains by extending elements. Then the length of $M$ is the length of maximal chain.
-		
-		\subsection{Properties}
-		
-		\begin{lemma}
-			$length_R(M)<\infty\Leftrightarrow M$ is a finite $R$-module.
-		\end{lemma}
-		
-		\begin{proof}
-			\begin{itemize}
-				\item $\Rightarrow$ We have
-				\begin{gather*}
-					M_i=(m_1,\dots,m_i)
-				\end{gather*}
-				
-				Then, the filtration is finite. Only finite generators.
-				\item $\Leftarrow$ If $M=(m_1,\dots,m_n)$, then the maximal filration must be finite.
-			\end{itemize}
-		\end{proof}
-		
-		\subsubsection{Lengths of Modules of short Exact Sequence}
-		
-		\begin{lemma}
-			If 
-			\begin{center}
-				\begin{tikzcd}
-					0\arrow[r]&M'\arrow[r]&M\arrow[r]&M''\arrow[r]&0
-				\end{tikzcd}
-			\end{center}
-			is a short exact sequence of modules over $R$, then 
-			\begin{gather*}
-				length_R(M)=length_R(M')+length_R(M'')
-			\end{gather*}
-		\end{lemma}
-		
-		\begin{proof}
-			Via inequality:
-			\begin{itemize}
-				\item $length_R(M)\leq length_R(M')+length_R(M'')$: We have the following filtration:For $(E^i)$ of $M'$, $(F^i)$ of $M''$, and we take the image and inverse image of filtrations:
-				\begin{gather*}
-					E^0\subseteq \dots\subseteq \cup E^i\subseteq F^0\subseteq\dots\subseteq  M 
-				\end{gather*}
-				\item $length_R(M)\geq length_R(M')+length+R(M'')$: 
-				\begin{gather*}
-					0\subseteq E^0\cap M'\subseteq \dots\subseteq M'\qquad  F^0\subseteq \dots\subseteq M''
-				\end{gather*}
-				
-				Such $E^0\subseteq \dots\subseteq M'\subseteq F^0 \dots\subseteq M$ is a filtration of $M$. 
-			\end{itemize}
-		\end{proof}
-		
-		\subsubsection{Local Rings}
-		
-		\begin{lemma}
-			Let $(R,m)$ be a local ring with maximal ideal $m$. If $M$ is an $R$-module and $m^nM\not=0,n\geq 0$. 
-			
-			If $M$ is an $R$-module and $m^n M\not=0$ for all $n\geq 0$, then $length_R(M)=\infty$.
-			
-			In other word: $M$ has finite length if $m^n M=0$ for some $n$. 
-		\end{lemma}
-		\begin{proof}
-			Choose $f_1,\dots,f_n\in m$, where $f_1\dots f_n x\not=0$ Then, the filtration
-			\begin{gather*}
-				0\subseteq Rf_1\dots f_n x\subseteq \dots \subseteq Rx\subseteq M
-			\end{gather*}
-			
-			are \textbf{distinct}: Prove by contradiction, if $Rf_1fx=Rf_1ff_2x\Rightarrow f_1x=gf_1f_2x\Rightarrow (1-gf_2)f_1x=0\Rightarrow f_1x=0$
-			
-			Remark: $1-gf_2\in R-m$.
-		\end{proof}
-		
-		\textbf{Remark of} $m^n M$: Furthermore, in algebra, we can construct the \textbf{$m$-filtration}. 
-		\subsubsection{Ring Maps}
-		
-		\begin{lemma}
-			Let $R\rightarrow S$ be a ring map. Let $M$ be an $S$-module. We always have:
-			\begin{gather*}
-				length_R(M)\geq length_S(M)
-			\end{gather*}
-			
-			If $R\rightarrow S$ is surjective, then the equality holds.
-		\end{lemma}
-		
-		\begin{proof}
-			内容...
-		\end{proof}
-		
-		\subsubsection{Length-Quotient of Fields}
-		\begin{lemma}
-			Let $R$ be a ring with maximal ideal $m$. Suppose that $M$ is an $R$-module with
-			\begin{gather*}
-				mM=0
-			\end{gather*}
-			Then, the length of $M$ as an $R$ agrees with the dimension of $M$ as $R/m$ vector space.
-			\begin{gather*}
-				length_R(M)=dim_{R/m}(M)
-			\end{gather*}
-			
-			The length is finite iff $M$ is a finite $R$-module.
-		\end{lemma}
-		\begin{proof}
-			内容...
-		\end{proof}
-		\subsubsection{Localization}
-		
-		\begin{lemma}
-				Let $R$ be a ring, and $M$ be an $R$-module.
-				
-				Let $S\subseteq R$ be a multiplicative subset, then
-				\begin{gather*}
-					length_R(M)\geq length_{S^{-1}R}(S^{-1}M)
-				\end{gather*}
-		\end{lemma}
-		\begin{proof}
-			内容...
-		\end{proof}
-		
-		\subsubsection{Finitely Generated Maximal Ideal}
-		
-		\begin{lemma}
-			内容...
-		\end{lemma}
-		
-		\begin{proof}
-			内容...
-		\end{proof}
-		
-		\subsection{Simple Modules}
-		
-		\begin{Def}
-			Let $R$ be a ring. $M$ be an $R$-module. $M$ is \textbf{simple} if every submodule of $M$ is either $M$ or $0$.
-		\end{Def}
-		
-		\begin{lemma}
-			Let $R$ be a ring and $M$ be an $R$-module. The following are equivalent:
-			
-			\begin{itemize}
-				\item $M$ is simple;
-				\item $length_R(M)=1$;
-				\item $M\cong R/m$ for some maximal ideal $m\subset R$.
-			\end{itemize}
-		\end{lemma}
-		
-		\begin{proof}
-			\begin{itemize}
-				\item 
-				\item 
-				\item 
-			\end{itemize}
-		\end{proof}
-		
-		\begin{lemma}
-			Let $R$ be a ring, let $M$ be a finite length $R$-module. Choose any maximal chain of submodules
-			\begin{gather*}
-				0=M_0\subseteq M_1\subseteq \dots\subseteq M_n=M;M_i\not= M_{i-1}
-			\end{gather*}
-		\end{lemma}
-		\begin{proof}
-			内容...
-		\end{proof}
-		
-		\begin{lemma}
-			Let
-			\begin{itemize}
-				\item  $A$ be a local ring with maximal ideal $m$;
-				\item $B$ is a semi-local ring with maximal ideals $m_i;i=1,\dots,n$, 
-			\end{itemize}
-			
-			Suppose that $A\rightarrow B$ is a homomorphism such that: each $m_i$ lies over $m$ nd such that
-			\begin{gather*}
-				[\kappa(m_i):\kappa(m)]<\infty
-			\end{gather*}
-			
-			Let $M$ be a $B$-module of finite length, then
-			\begin{gather*}
-				内容...
-			\end{gather*}
-			
-			In particular, $length_A(M)<\infty$.
-		\end{lemma}
-		\begin{proof}
-			内容...
-		\end{proof}
-		
-		\subsection{Flat Local Homomorphism}
-		
-		\begin{lemma}
-			内容...
-		\end{lemma}
-		\begin{proof}
-			内容...
-		\end{proof}
-		
-		\begin{lemma}
-			内容...
-		\end{lemma}
-		\begin{proof}
-			内容...
-		\end{proof}
-		\section{Artinian Rings, Modules}
-		
-			\begin{Def}
-				\begin{itemize}
-					\item 
-					\item A ring $R$ is \textbf{Artinian} if it satisfies the DDC;
-				\end{itemize}
-			\end{Def}
-			\subsubsection{Finite Dimensional Algebra}
-			\begin{lemma}
-				Suppose $R$ be is a finite dimensional algebra over a field. Then, $R$ is artinian. 
-			\end{lemma}
-			
-			\begin{proof}
-				内容...
-			\end{proof}
-			\subsubsection{Equivalent Conditions of Artinian Ring}
-			\begin{lemma}
-				内容...
-			\end{lemma}
-			\begin{proof}
-				内容...
-			\end{proof}
-			
-			\subsection{Jacobson Radical}
-			\begin{lemma}
-				内容...
-			\end{lemma}
-			\begin{proof}
-				内容...
-			\end{proof}
-			
-			\begin{lemma}
-				内容...
-			\end{lemma}
-			\begin{proof}
-				内容...
-			\end{proof}
-		\section{K-Groups}
-		
-			\begin{Def}
-				Let $R$ be a ring. We will introduce the two abelian groups associated to $R$:
-				
-				\begin{itemize}
-					\item 
-					\item $K_0(R)$ with follwing properties
-					
-					\begin{enumerate}
-						\item For every finite projective $R$-module $M$, there is given an element $[M]$ in $K_0(R)$;
-						\item For every short exact sequence
-						\begin{center}
-							\begin{tikzcd}
-								0\arrow[r]&M'\arrow[r]&M\arrow[r]&M''\arrow[r]&0
-							\end{tikzcd}
-						\end{center}
-						of finite projective $R$-module. Then we have $[M]=[M']+[M'']$.
-						
-						\item The group $K_0(R)$ is generated by elements $[M]$;
-						\item All relations in $K_0(R)$ are $\ZZ$-linear combinations of the relations comming from exact sequences as above.
-					\end{enumerate}
-				\end{itemize}
-			\end{Def}
-			
+
 	\chapter{Integrality}
 	
 		\section{Integral Closure}
@@ -728,6 +1032,472 @@
 			\begin{proof}
 				内容...
 			\end{proof}
+		\chapter{Polynomials}
+		
+		Now, we will discuss something of polynomials
+	\section{Polynomial Algebras and Power Series}
+		\subsection{Polynomial Algebras}
+			\begin{Def}
+				Let $R$ be a ring. Then, the polynomial algebra
+				\begin{itemize}
+					\item 
+					\begin{gather*}
+						R[t]=\{\sum a_i t^i|a_i\in R\}
+					\end{gather*}
+					
+					with natural $(R[t],+,\times)$.
+					
+					\item 
+					\begin{gather*}
+						R[t_1,\dots,t_n]=\{\sum a_v t^v|a_v\in R;t^v=t_1^{v_1}\dots t_n^{v_n}\}
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\subsubsection{One-Variables}
+			
+			\begin{proposition}
+				Let $R$ be a ring, with $A=R[t]$:
+				\begin{itemize}
+					\item $R$ is integral domain$\Leftrightarrow$ $A$ is integral domain;
+					\item $R$ is reduced$\Leftrightarrow$ $A$ is reduced;
+					\item $R$ is Noetherian$\Leftrightarrow$ $A$ is Noetherian;
+					\item $R$ is Jacobson$\Leftrightarrow$ 
+					\item $R$ is UFD $\Leftrightarrow$ $A$ is UFD;
+					\item $R$ is normal domain$\Leftrightarrow$ $A$ is normal domain. 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			
+			
+			\begin{lemma}
+				(Polynomial Ring over Quotient Ideal) Suppose $I\in Ideal(R)$, then
+				\begin{gather*}
+					R[t]/I[t]\cong (R/I)[t]
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				The canonical isomorphism is specified by the quotient map
+				\begin{gather*}
+					\pi[t]:R[t]\rightarrow (R/I)[t]
+				\end{gather*}
+				
+				which is induced by the quotient ring map $R\xrightarrow R/I$;
+				
+				Then, we may conclude that
+				\begin{gather*}
+					Ker(\pi[t])=I[t]
+				\end{gather*}
+				
+				Because: The quotient is specified by addition. 
+			\end{proof}
+			
+			\begin{proposition}
+				Suppose $R$ be ring with $p\in Spec(R)$, then
+				\begin{gather*}
+					p[t]\in Spec(R[t])
+				\end{gather*}
+				
+				Conversely also hold. 
+			\end{proposition}
+			\begin{proof}
+				
+			\end{proof}
+			
+			But for the maximal ideal:
+			
+			\begin{lemma}
+				Suppose $k$ be a field, then
+				\begin{gather*}
+					k[X]\subset k(X)
+				\end{gather*}
+				
+				The inclusion is strict. 
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				Suppose $m\in \operatorname{maxSpec}(R)$, then $m[x]\notin \operatorname{maxSpec}(R)$
+			\end{proposition}
+			\begin{proof}
+				As following: $\Leftrightarrow$ $R/m$ is a field $\not\Leftrightarrow (R/m)[x]\cong R[x]/m[x]$ is a field $\Leftrightarrow$ 
+			\end{proof}
+			
+			\subsubsection{Multivariables}
+			\begin{proposition}
+				We have equivalent definitions
+				\begin{gather*}
+					R[t_1,\dots,t_n]\cong R[t_1,\dots,t_{n-1}][t_n\cong ]
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				Let $R$ be a ring, with $A=R[t_1,\dots,t_n]$:
+				\begin{itemize}
+					\item $R$ is integral domain$\Leftrightarrow$ $A$ is integral domain;
+					\item $R$ is reduced$\Leftrightarrow$ $A$ is reduced;
+					\item $R$ is Noetherian$\Leftrightarrow$ $A$ is Noetherian;
+					\item $R$ is Jacobson$\Leftrightarrow$ 
+					\item $R$ is UFD $\Leftrightarrow$ $A$ is UFD;
+					\item $R$ is normal domain$\Leftrightarrow$ $A$ is normal domain. 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				We just apply the conclusions with one variable. 
+			\end{proof}
+			
+			\begin{proposition}
+				Let $R$ be a Noetherian ring. Then TFAE
+				\begin{itemize}
+					\item $R$ is regular;
+					\item $A$ is regular;
+				\end{itemize}
+				
+				TFAE
+				\begin{itemize}
+					\item $R$ is Cohen-Macaulay;
+					\item $A$ is Cohen-Macaulay;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				The embedding 
+				\begin{gather*}
+					R\rightarrow A
+				\end{gather*}
+				
+				is faithfully flat.
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				\begin{gather*}
+					Nil(A)=Nil(R)[x_1,\dots,x_n]
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				TFAE:
+				\begin{itemize}
+					\item $f=a_0+\sum_{\alpha\not=0} a_\alpha x^\alpha\in R[x_1,\dots,x_n]^\times$;
+					\item $a_0\in R^\times,a_\alpha\in Nil(R),\alpha\not=0$. 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				$\Rightarrow$
+				
+				$\Leftarrow$ 
+				
+				
+				Another structural proof is given by: Consider the reduction
+				\begin{gather*}
+					R\rightarrow R_{red}\Rightarrow R[x]\rightarrow R_{red}[x]
+				\end{gather*}
+				
+				And $R_{red}^\times=R^\times$. Thus $\bar{f}=\bar{a_0}$. Now we could apply this on each $x_i$. 
+			\end{proof}
+			
+			This implies, that 
+			
+			\begin{gather*}
+				\Gamma(\mathbb{A}^n_R,\mathcal{O}^\times)=\Gamma(X,\mathcal{O}^\times_X)\qquad X=Spec(R)
+			\end{gather*}
+		\subsection{Laurent Polynomial Rings}
+			\begin{Def}
+				Define:
+				\begin{gather*}
+					R[t,t^{-1}]:=\{\sum_{-n}^m a_i t^i|a_i\in R\}
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				\begin{gather*}
+					R[t,t^{-1}]\cong R[t]_t=R[t,s]/(ts-1)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\subsection{Power Series}
+			\begin{Def}
+				Let $R$ be a ring. The power series
+				\begin{gather*}
+					R[[t]]=\{\sum_0^\infty a_i t^i|a_i\in R\}
+				\end{gather*}
+				
+				which is a formal sum. 
+			\end{Def}
+			
+			\begin{proposition}
+				(Criterion for Unit) TFAE
+				\begin{itemize}
+					\item $f=\sum a_n x^n$ is unit;
+					\item $a_0$ is a unit in $R$. 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				$\Rightarrow a_0b_0=1$;
+				
+				$\Leftarrow$ We just solve the equation of coordinates. 
+			\end{proof}
+			
+			\begin{proposition}
+				(Nilpotency for Power Series) If $f=\sum a_n x^n$ is a nilpotent power series, then $a_0\in Nil(R)$. 
+			\end{proposition}
+			\begin{proof}
+				Easy to check. 
+				
+				Coversely not true: For example $x\in R[[x]]$. 
+			\end{proof}
+			
+			\begin{proposition}
+				TFAE:
+				\begin{itemize}
+					\item $f\in Jac(R[[x]])$;
+					\item $a_0\in Jac(R)$;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				With conclusions $x\in Jac(A)\Leftrightarrow 1-xy\in A^\times$, we obtain that
+				
+				$\Rightarrow$ $1-xf\in R[[x]]^\times\Leftrightarrow       1-a_0x\in R[[x]]^\times$
+			\end{proof}
+			
+			\begin{lemma}
+				$k[[x]]$ is DVR.
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				\begin{gather*}
+					Spec(k[[x]])=\{(0),(x)\}
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				
+			\end{proof}
+			
+			\subsubsection{Multivariables}
+			
+		\subsection{Formal Laurent Series}
+			\begin{Def}
+				Let $R$ be a ring. Then, the formal Laurent series
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{Def}
+			
+	\section{Noether's Normalization Theorem}
+	
+	
+	\subsection{Noether's Normalization}
+	
+	Notice: Algebracally closed is not necessary for the theorem. 
+	\subsubsection{Infinite Field}
+	\begin{theorem}
+		(Noether's Normalization Theorem)  Let $k$ be an infinite field, and 
+		
+		\begin{gather*}
+			A=K[a_1,\dots,a_n]
+		\end{gather*}
+		
+		is a finitely generated algebra. Then, there exists a finite $y_1,\dots,y_m,m\leq n$. 
+		
+		\begin{itemize}
+			\item $y_1,\dots,y_m$ are algebraically independent;
+			\item $A$ is a finite $k[y_1,\dots,y_m]$-algebra.
+		\end{itemize}
+	\end{theorem}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\begin{example}
+		(Cusp Curve) Consider $f=y^2-x^3,A=F[x,y]/(y^2-x^3)$, then the Noether normalization
+		\begin{gather*}
+			内容...
+		\end{gather*}
+	\end{example}
+	
+	\subsubsection{Finite Field Version}
+	
+	\begin{theorem}
+		内容...
+	\end{theorem}
+	\begin{proof}
+		内容...
+	\end{proof}
+	\section{Hilbert's Basis Theorem}
+	
+	\begin{theorem}
+		(Hilbert) Suppose that $R$ be a Noetherian ring, so is $R[X]$.
+	\end{theorem}
+	
+	\begin{proof}
+		Let $I\subseteq R[X]$ be an arbitrary ideal. We need to show: $I$ is finitely generated. Define the collection
+		
+		\begin{gather*}
+			J_i=\{a_i\in R|\exists a_0,\dots,a_{i-1}\in R,\sum_{k=0}^i a_k X^k\in I\}
+		\end{gather*}
+		
+		Then, $J_i$ is an $R$-ideal:
+		
+		For $\alpha,\beta\in J_i,\gamma\in R$, then they have correspondent polynomials $f,g\in I$. And
+		
+		\begin{gather*}
+			f+g\in I\Rightarrow \alpha+\beta\in J_i\\
+			\gamma g\in I\Rightarrow \gamma\beta\in J_i
+		\end{gather*}
+		
+		$J_i$ are an ascending chain ideals: $\alpha\in J_i$ with $f\in I,Lead(f)=\alpha$. Then $fX\in I\Rightarrow \alpha\in J_{i+1}$. Thus, 
+		
+		\begin{gather*}
+			J_i=(a_{n,1},\dots,a_{n,r})_{R}
+		\end{gather*}
+		
+		Let $r$ be the maximal number of genrating elements of $J_i$ from $0$ to $n$. Suppose $a_{n,1},\dots,a_{n_r}$ are correspondent to the polynomials $f_{n,1},\dots,f_{n,r}\in R[X]$, then define
+		
+		\begin{gather*}
+			I':=(f_{i,j}|i=0,\dots,n;j=1,\dots,r)\subseteq I
+		\end{gather*}
+		
+		We will prove: $I'=I$. Suppose $g=\sum b_i X^i\in I$, with $deg(g)$. Consider the degree of $g$: Apply induction
+		
+		\begin{itemize}
+			\item $deg(g)<n$: $b_d\in J_d$, there exists representation
+			
+			\begin{gather*}
+				b_d=\sum_{i=1}^r r_i a_{d,i} 
+			\end{gather*}
+			
+			Then,
+			
+			\begin{gather*}
+				\hat{f}=f-\sum_{i=1}^r r_i f_{d,i}\in I\Rightarrow f\in I
+			\end{gather*}
+			
+			\item $g\geq n$: Similarly.
+		\end{itemize}
+		
+		Thus, $I=I'$. 
+	\end{proof}
+	
+	\begin{corollary}
+		Suppose $R$ be a Noetherian ring, so is $R[X_1,\dots,X_n]$.
+	\end{corollary}
+	
+	\begin{proof}
+		Notice,
+		
+		\begin{gather*}
+			R[X_1,\dots,X_n]=R[X_1,\dots,X_{n-1}][X_n]
+		\end{gather*}
+	\end{proof}
+	
+	\begin{corollary}
+		Suppose $R$ be a Noetherian ring, then any of finitely algebra over $R$ is Noetherian. 
+		
+		In particular, every \textbf{affine algebra} is Noetherian.
+	\end{corollary}
+	
+	\begin{proof}
+		Consider the quotient.
+	\end{proof}
+	
+	\begin{lemma}
+		Let $K$ be a field, then $K[X]$ is Noetherian.
+	\end{lemma}
+	
+	\begin{proof}
+		$K$ can be seen as ring with only finite chain of length 1.
+	\end{proof}
+	
+	\begin{corollary}
+		The polynomial ring $K[X_1,\dots,X_n]$ is Noetherian.
+	\end{corollary}
+	
+	\begin{proof}
+		As above.
+	\end{proof}	
+	
+	\textbf{Remark} This is a fundamental result, that the space $A^n_K$ is Noetherian.
+	
+	\section{Hilbert's Nullstellensatz}
+	
+	
+	\begin{lemma}
+		\begin{itemize}
+			\item If $A$ is an integral domain and algebraic over $K$, then $A$ is a field;
+			\item Let $k$ be a field and $K$ a field extension which is finitely generated as a $k$-algebra, then $K$ is algebraic over $k$.
+			
+			Equivalently, for a field $A$, which is contained in a $k$-affine domain, then $A$ is algebraic.	
+		\end{itemize}
+	\end{lemma}
+	
+	\begin{proof}
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+	\end{proof}
+	
+	\begin{theorem}
+	\end{theorem}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\begin{theorem}
+	\end{theorem}
+	
+	\begin{proof}
+	\end{proof}
+	
+	
+	\begin{lemma}
+	\end{lemma}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\subsection{Hilbert's Nullstellensatz, and Applications}
+	
+	\begin{theorem}
+		(Hilbert) Suppose that
+		
+		\begin{gather*}
+		\end{gather*}
+	\end{theorem}
+	
+	\begin{proof}
+	\end{proof}
+	
+	\subsection{Textual Research: The Original Version by Hilbert}
+	
 	\chapter{Algebras I}
 		\section{The Separable Extension I}
 		\section{Geometrically Reduced Algebras}
@@ -1759,175 +2529,7 @@
 			\end{itemize}
 		\end{Def}
 		
-	\chapter{Polynomials}
-		
-		\section{Noether's Normalization Theorem}
-		
-			\begin{theorem}
-				(Noether's Normalization Theorem)  Let $k$ be an infinite field, and 
-				
-				\begin{gather*}
-					A=K[a_1,\dots,a_n]
-				\end{gather*}
-				
-				is a finitely generated algebra. Then, there exists a finite $y_1,\dots,y_m,m\leq n$. 
-				
-				\begin{itemize}
-					\item $y_1,\dots,y_m$ are algebraically independent;
-					\item $A$ is a finite $k[y_1,\dots,y_m]$-algebra.
-				\end{itemize}
-			\end{theorem}
-			
-			\begin{proof}
-			\end{proof}
-			
-		\section{Hilbert's Basis Theorem}
-		
-		\begin{theorem}
-			(Hilbert) Suppose that $R$ be a Noetherian ring, so is $R[X]$.
-		\end{theorem}
-		
-		\begin{proof}
-			Let $I\subseteq R[X]$ be an arbitrary ideal. We need to show: $I$ is finitely generated. Define the collection
-			
-			\begin{gather*}
-				J_i=\{a_i\in R|\exists a_0,\dots,a_{i-1}\in R,\sum_{k=0}^i a_k X^k\in I\}
-			\end{gather*}
-			
-			Then, $J_i$ is an $R$-ideal:
-			
-			For $\alpha,\beta\in J_i,\gamma\in R$, then they have correspondent polynomials $f,g\in I$. And
-			
-			\begin{gather*}
-				f+g\in I\Rightarrow \alpha+\beta\in J_i\\
-				\gamma g\in I\Rightarrow \gamma\beta\in J_i
-			\end{gather*}
-			
-			$J_i$ are an ascending chain ideals: $\alpha\in J_i$ with $f\in I,Lead(f)=\alpha$. Then $fX\in I\Rightarrow \alpha\in J_{i+1}$. Thus, 
-			
-			\begin{gather*}
-				J_i=(a_{n,1},\dots,a_{n,r})_{R}
-			\end{gather*}
-			
-			Let $r$ be the maximal number of genrating elements of $J_i$ from $0$ to $n$. Suppose $a_{n,1},\dots,a_{n_r}$ are correspondent to the polynomials $f_{n,1},\dots,f_{n,r}\in R[X]$, then define
-			
-			\begin{gather*}
-				I':=(f_{i,j}|i=0,\dots,n;j=1,\dots,r)\subseteq I
-			\end{gather*}
-			
-			We will prove: $I'=I$. Suppose $g=\sum b_i X^i\in I$, with $deg(g)$. Consider the degree of $g$: Apply induction
-			
-			\begin{itemize}
-				\item $deg(g)<n$: $b_d\in J_d$, there exists representation
-				
-				\begin{gather*}
-					b_d=\sum_{i=1}^r r_i a_{d,i} 
-				\end{gather*}
-				
-				Then,
-				
-				\begin{gather*}
-					\hat{f}=f-\sum_{i=1}^r r_i f_{d,i}\in I\Rightarrow f\in I
-				\end{gather*}
-				
-				\item $g\geq n$: Similarly.
-			\end{itemize}
-			
-			Thus, $I=I'$. 
-		\end{proof}
-		
-		\begin{corollary}
-			Suppose $R$ be a Noetherian ring, so is $R[X_1,\dots,X_n]$.
-		\end{corollary}
-		
-		\begin{proof}
-			Notice,
-			
-			\begin{gather*}
-				R[X_1,\dots,X_n]=R[X_1,\dots,X_{n-1}][X_n]
-			\end{gather*}
-		\end{proof}
-		
-		\begin{corollary}
-			Suppose $R$ be a Noetherian ring, then any of finitely algebra over $R$ is Noetherian. 
-			
-			In particular, every \textbf{affine algebra} is Noetherian.
-		\end{corollary}
-		
-		\begin{proof}
-			Consider the quotient.
-		\end{proof}
-		
-		\begin{lemma}
-			Let $K$ be a field, then $K[X]$ is Noetherian.
-		\end{lemma}
-		
-		\begin{proof}
-			$K$ can be seen as ring with only finite chain of length 1.
-		\end{proof}
-		
-		\begin{corollary}
-			The polynomial ring $K[X_1,\dots,X_n]$ is Noetherian.
-		\end{corollary}
-		
-		\begin{proof}
-			As above.
-		\end{proof}	
-		
-		\textbf{Remark} This is a fundamental result, that the space $A^n_K$ is Noetherian.
-		
-		\section{Hilbert's Nullstellensatz}
-		
-			
-				\begin{lemma}
-					\begin{itemize}
-						\item If $A$ is an integral domain and algebraic over $K$, then $A$ is a field;
-						\item Let $k$ be a field and $K$ a field extension which is finitely generated as a $k$-algebra, then $K$ is algebraic over $k$.
-						
-						Equivalently, for a field $A$, which is contained in a $k$-affine domain, then $A$ is algebraic.	
-					\end{itemize}
-				\end{lemma}
-				
-				\begin{proof}
-					\begin{itemize}
-						\item 
-						\item 
-					\end{itemize}
-				\end{proof}
-				
-				\begin{theorem}
-				\end{theorem}
-				
-				\begin{proof}
-				\end{proof}
-				
-				\begin{theorem}
-				\end{theorem}
-				
-				\begin{proof}
-				\end{proof}
-		
-			
-				\begin{lemma}
-				\end{lemma}
-				
-				\begin{proof}
-				\end{proof}
-				
-			\subsection{Hilbert's Nullstellensatz, and Applications}
-			
-				\begin{theorem}
-					(Hilbert) Suppose that
-					
-					\begin{gather*}
-					\end{gather*}
- 				\end{theorem}
-				
-				\begin{proof}
-				\end{proof}
-		
-			\subsection{Textual Research: The Original Version by Hilbert}
-			
+
 	\chapter{Compeletion}
 		\section{Completion}
 	
@@ -2089,7 +2691,7 @@
 		
 		\subsubsection{Limits}
 			\begin{lemma}
-				Let $I$ be a directed set, a system of $(R_i\rightarrow S_i,\varphi_{ii')$ be a system of ring maps over$I$, then we have
+				Let $I$ be a directed set, a system of $(R_i\rightarrow S_i,\varphi_{ii'})$ be a system of ring maps over$I$, then we have
 				\begin{gather*}
 					\Omega_{S/R}=colim_i \Omega_{S_i/R_i}
 				\end{gather*}
@@ -2148,7 +2750,7 @@
 				\begin{gather*}
 					D:M\rightarrow N
 				\end{gather*}
-				of order $k$ to be an $R$-linear map such that $m\mapsto D(gm)-gD(m)$ is a differential operator of order $k-1$ for \underline{all} $g\in S.
+				of order $k$ to be an $R$-linear map such that $m\mapsto D(gm)-gD(m)$ is a differential operator of order $k-1$ for \underline{all} $g\in S$.
 				
 				Especially: The differential operator of order $0$ is an $S$-linear map.
 				

@@ -1,11 +1,64 @@
 \documentclass[Total.tex]{subfiles}
 
 \begin{document}
+	\chapter{Preliminaries: Some of Program}
+		\section{Principle of Equivalence}
+	\chapter{Set-Theoretic Discussions}
+		\section{Small, Large, Locally Small}
+			\subsection{Small and Large Category}
+				\begin{Def}
+					Let $\mathcal{C}$ be a category:
+					\begin{itemize}
+						\item If $Ob(\mathcal{C}),Mor(\mathcal{C})\in Sets$, then it is called \textbf{small category};
+						\item Elsewise, is large category;
+					\end{itemize}
+				\end{Def}
+				
+				\begin{example}
+					
+					Large categories:
+					\begin{itemize}
+						\item $Set$: Russuel's Paradox;
+						\item $Grp$;
+						\item $Top$;
+						\item $Ring$;
+					\end{itemize}
+				\end{example}
+			\subsection{Locally Small}
+				\begin{Def}
+					Especially, a category $\mathcal{C}$ is called \textbf{locally small}, if
+					\begin{itemize}
+						\item $Hom_\mathcal{C}(X,Y)\in Set$;
+					\end{itemize}
+				\end{Def}
+			\subsection{Essentially Small}
+				\begin{Def}
+					We use the terminology 'skeleton' and 'equivalence of categories';
+					
+					TFAE:
+					\begin{itemize}
+						\item There exists a small category $\mathcal{D}$ such that
+						\begin{gather*}
+							\mathcal{C}\simeq \mathcal{D}
+						\end{gather*}
+						\item $\mathcal{C}$ has a skeleton of small category;
+					\end{itemize}
+					
+					Then, such category is called \textbf{essentially small}.
+				\end{Def}
+		\section{Universe}
+		\subsection{Groethendieck's Universe}
+		\subsection{Universe Hierarchy}
+		\subsection{Universe Enlargement}
+		\section{Small Structure}
+		\subsection{Large and Small Limits}
 	\chapter{Fundamentals}
 		\section{Definitions}
 		
 			\subsection{Categories}
-			
+				\begin{Def}
+					内容...
+				\end{Def}
 			\subsection{Functors}
 				\subsubsection{Full,Faithful}
 					\begin{Def}
@@ -19,33 +72,31 @@
 							\item \textbf{faithfully full} if bijective;
 						\end{itemize}
 					\end{Def}
-					\subsubsection{Continuous Functors}
-					\begin{Def}
-						A functor $F:C\rightarrow D$ is \textbf{continuous} if it preserves all \textbf{small limits} that exists in the domain $\mathcal{C}$.
-						
-						i.e. given any \textbf{small category diagram} $A:E\rightarrow \mathcal{C}$ in $\mathcal{C}$ for which
-						\begin{itemize}
-							\item $lim(A)$ exists;
-							\item the universal cone $lim(A)\rightarrow A$
-						\end{itemize}
-						
-						Application of $F$ to that cone results in a universal cone $F(lim(A))\rightarrow F\circ A$. Thus making $F(lim(A))$ the limit of $F\circ A$.
-						
-						The limit $lim(F\circ A)$ exists, and te natural map induced by the universal property of the limit
-						\begin{gather*}
-							F(lim(A))\rightarrow lim(F\circ A)
-						\end{gather*}
-						
-						is an isomorphism.
-					\end{Def}
 					
-					\textbf{Continuous Functors in Enriched Category Theory}
-					\begin{Def}
+					\begin{proposition}
+						(Criteria for Faithful) The followings are equivalent:
+						\begin{itemize}
+							\item $F$ is faithful;
+							\item $\Delta_F:\mathcal{C}\rightarrow \mathcal{C}\times_\mathcal{D} \mathcal{C}$ is full;
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
 						内容...
-					\end{Def}
+					\end{proof}
+					
+					\begin{proposition}
+						(Criteria for Full) The followings are equivalent:
+						\begin{itemize}
+							\item $F$ is full;
+							\item $\triangledown_F:$ is faithful;
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
 				\subsection{Natural Transformation}
 			\begin{Def}
-				Consider the natural transformation of two  \textbf{natural isomorphism} if there exists functor $G:\mathcal{D}\rightarrow \mapsto\mathcal{C}$ such that
+				Consider the natural transformation $F:\mathcal{C}\rightarrow \mathcal{D}$ is \textbf{natural isomorphism} if there exists functor $G:\mathcal{D}\rightarrow \mathcal{C}$ such that
 				\begin{gather*}
 					GF=id_\mathcal{C}\qquad FG=id_\mathcal{D}
 				\end{gather*}
@@ -54,10 +105,15 @@
 			\begin{lemma}
 				Consider a natural transformation $\eta:F\rightarrow G$, where $F,G:\mathcal{C}\rightarrow \mathcal{D}$. 
 				
-				$\eta$ is a natural isomorphism$\Leftrightarrow \eta(x):F(x)\rightarrow G(x)$ are isomorphisms, $x\in X$. 
+				Then, the followings are equivalent:
+				\begin{itemize}
+					\item $\eta$ is a natural isomorphism
+					\item $\eta(x):F(x)\rightarrow G(x)$ are isomorphisms, $x\in X$. 
+					
+				\end{itemize}
 			\end{lemma}
 			\begin{proof}
-				内容...
+				Definition. 
 			\end{proof}
 			\subsection{Adjunction}
 			\begin{Def}
@@ -70,8 +126,49 @@
 				\begin{gather*}
 					\Phi_{x,y}:Hom_\mathcal{C}(Fx,y)\rightarrow Hom_\mathcal{D}(x,Gy) 
 				\end{gather*}
+				
+				i.e. a natural isomorphism of functors
+				\begin{gather*}
+					\Phi:Hom_D(F^{op}(-),-)\simeq Hom_C(-,G(-)):\mathcal{C}^{op}\times D\rightarrow Set
+				\end{gather*}
 			\end{Def}
 			
+			We will take the following notion
+			\begin{gather*}
+				F\dashv G
+			\end{gather*}
+			
+			\begin{proposition}
+				\begin{itemize}
+					\item Composition of left-adjoint functors is left-adjoint;
+					
+					\item Composition of right-adjoint functors is right-adjoint;
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{proof}
+			\subsubsection{Whiskering}
+				\begin{Def}
+					Let $F,F':\mathcal{C}\rightarrow \mathcal{D},E:\mathcal{B}\rightarrow \mathcal{C},G:\mathcal{D}\rightarrow \mathcal{E}$.
+					
+					Now, given natural transformation $\eta:F\rightarrow F'$, we obtain
+					\begin{gather*}
+						\eta*E:FE\rightarrow F'E\qquad \eta_{E(x)}:FE(x)\rightarrow F'E(x),x\in \mathcal{B}\\
+						G*\eta:\qquad:GF\rightarrow GF'\qquad 
+					\end{gather*}
+				\end{Def}
+				
+				\begin{center}
+					\begin{tikzcd}
+						\mathcal{B}\arrow[rrr,bend left=40]\arrow[rrr,bend right=40]\arrow[r,"E"]\arrow[r]&\mathcal{C}\arrow[rr,bend left=20,"F"]\arrow[rr,bend right=20,swap,"F'"]&\Downarrow \eta&\mathcal{D}
+					\end{tikzcd}\begin{tikzcd}
+						\mathcal{C}\arrow[rr,bend left=20,"F"]\arrow[rr,bend right=20,swap,"F'"]\arrow[rrr,bend left=40]\arrow[rrr,bend right=40]&\Downarrow \eta&\mathcal{D}\arrow[r,"G"]&\mathcal{E}
+					\end{tikzcd}
+				\end{center}
 			\subsubsection{Unit;Counit}
 			
 			\begin{Def}
@@ -99,15 +196,55 @@
 						G\arrow[rr,"id_G"]\arrow[ru,"\epsilon*G"]&&G
 					\end{tikzcd}
 				\end{center}
+				
+				\textbf{Remark} Here, $\circ$ is the composition of natural transformations, $*$ is \textbf{whiskering}.
 			\end{Def}
 			
 			\begin{proposition}
-				内容...
+				The followings are equivalent:
+				\begin{itemize}
+					\item There exists an adjunction pair $(F,G)$;
+					\item $\epsilon,\eta$ exists.
+				\end{itemize}
 			\end{proposition}
 			\begin{proof}
 				内容...
 			\end{proof}
-			
+			\subsubsection{Limits, Colimits}
+				\begin{theorem} In general, we could say that: 
+					\begin{itemize}
+						\item The left adjoint functor preserves colimits;
+						\item The right adjoint functor preserves limits;
+					\end{itemize}
+					
+					But precisely to say, we could describe it by indexing category: Suppose there exists
+					\begin{gather*}
+						L:C\stackrel{\rightarrow}{\leftarrow} D:R\qquad L\dashv R
+					\end{gather*}
+					
+					Then, for any category $J$, and diagram $F:J\rightarrow C,G:J\rightarrow D$, 
+					\begin{itemize}
+						\item If $colim_J F\in C$ exists, then $colim_J(L\circ F)$ exists, and
+						\begin{gather*}
+							L(colim_J F)\cong colim_J(L\circ F)
+						\end{gather*}
+						\item If $\lim_J G$ exists, then $\lim_J(R\circ G)$ exists, and 
+						\begin{gather*}
+							R(\lim_J F)=\lim_J(R\circ F)
+						\end{gather*}
+					\end{itemize}
+				\end{theorem}
+				\begin{proof}
+					\begin{itemize}
+						\item Dual of limit. 
+						\item Existence: Take $l=\lim_J F$, then by limit of $Hom(A,-)$
+						\begin{gather*}
+							Hom_{C'}(c',Rl)\cong Hom_{C}(Lc',l)\cong \lim Hom_C(Lc',F(d))\cong \lim Hom_{C'}(c',RF(d))
+						\end{gather*}
+						
+						Then, we obtain by universal property, $Rl=\lim_J (R\circ F)$.
+					\end{itemize}
+				\end{proof}
 			\subsubsection{Adjoint Functor Theorem}
 				
 				\begin{theorem}
@@ -125,31 +262,120 @@
 				\begin{theorem}
 					Let $F:\mathcal{C}\rightarrow\mathcal{D}$ be a functor between \textbf{locally presentable categories}, then
 					\begin{itemize}
-						\item $F$ has a right adjoint$\Leftrightarrow$ It reserves all smallt colimits;
+						\item $F$ has a right adjoint$\Leftrightarrow$ It reverse all small colimits;
 						\item 
 					\end{itemize}
 				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Functor Category, and Power, Copower}
+				\subsubsection{Functor Category}
+					\begin{Def}
+						内容...
+					\end{Def}
+				\subsubsection{Power and Copower}
+					(This power/copower is not the power in closed monoidal category, the 'internal hom')
+					\begin{Def} Let $C$ be a locally small category
+						\begin{itemize}
+							\item Define: The power/cotensor by a set
+							\begin{gather*}
+								A^S\in \mathcal{C}\qquad C(-,A^S)\cong Set(S,C(-,A))
+							\end{gather*}
+							\item The copower/tensor by a set is 
+							\begin{gather*}
+								C(S\odot A,X)\cong Set(S,C(A,-))
+							\end{gather*}
+						\end{itemize}
+					\end{Def}
+					
+					\begin{proposition}
+						(Criteria for Existence, Structure of Power/Copwer) If $C$ is $Set$-enriched, then
+						\begin{itemize}
+							\item Power exists$\Leftrightarrow$ Product exists;
+							\item Copower exists$\Leftrightarrow$ Coproduct exists;
+						\end{itemize}
+						
+						And
+						\begin{gather*}
+							内容...
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						(Adjointness for $Hom$) Suppose those power/copwer exist. We obtain, that
+						\begin{gather*}
+							B^{(-)}\dashv Hom(-,B)\qquad -\odot A\vdash Hom(A,-)
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
 			\subsection{Equivalence of  Categories}
 				\subsubsection{'Principle of Equivalence'}
 				
 				\url{https://ncatlab.org/nlab/show/principle+of+equivalence}
-				\subsubsection{Equivalence of Categories}
+				
+				
 				\begin{Def}
 					\begin{itemize}
 						\item One object $A\in \mathcal{C}$ is equivalent to another object $B\in \mathcal{C}$, every context with $A$ can be replaced by $B$.
 						
 						\item In higher category theory, an \textbf{equivalence} often means a morphism which is invertible in a maximally weak sence.
 						
-						Tow objects are \textbf{equivalent} if there is an equivalence between them.
+						Two objects are \textbf{equivalent} if there is an equivalence between them.
 					\end{itemize}
 				\end{Def}
+				\subsubsection{Isomorphism of Categories}
 					\begin{Def}
-					Let $F:\mathcal{C}\leftrightarrow \mathcal{D}$ be an adjunction. The adjunction is called an \textbf{adjoint equivalence}, if the unit and counit are natural isomorphisms.
+						$F:C\stackrel{\rightarrow}{\leftarrow} D:G$ is called \textbf{isomorphism of categories} if
+						\begin{gather*}
+							FG=id_D,GF=id_C
+						\end{gather*}
+					\end{Def}
+				\subsubsection{Strong Equivalence}
+					\begin{Def}
+						$F:\mathcal{C}\leftrightarrow \mathcal{D}:G$ is a \textbf{strong equivalence}, if
+						\begin{gather*}
+							\epsilon:id_c\stackrel{\cong}{\rightarrow} GF\qquad \eta:FG\stackrel{\cong}{\rightarrow} id_D
+						\end{gather*}
+					\end{Def}
+				\subsubsection{Adjoint Equivalence}
+					\begin{Def}
+					Let $F:\mathcal{C}\leftrightarrow \mathcal{D}$ be an adjunction.
 					
-					In this case, $F$ and $G$ are called \textbf{equivalences of categories}.
+					\begin{itemize}
+						\item  The adjunction is called an \textbf{adjoint equivalence}, if the unit and counit are natural isomorphisms. i.e.
+						\begin{gather*}
+							\epsilon:id_c\stackrel{\cong}{\rightarrow} GF\qquad \eta:FG\stackrel{\cong}{\rightarrow} id_D
+						\end{gather*}
+						
+						In this case, $F$ and $G$ are called \textbf{equivalences of categories}.
+					\end{itemize}
 				\end{Def}
-			
-				\subsubsection{Colimits}
+				
+				\subsubsection{Skeleton}
+					\begin{Def}
+						\begin{itemize}
+							\item 
+							A \underline{strict category} is called \textbf{skeletal} if for $a,b\in C$<
+							\begin{gather*}
+								a\cong b\Rightarrow a=b
+							\end{gather*}
+							\item 
+							\item 
+						\end{itemize}
+					\end{Def}
+					
+					\begin{theorem}
+						(Existence of Skeletons of Categories)
+					\end{theorem}
+					\begin{proof}
+						内容...
+					\end{proof}
 			\subsection{Product Category}
 				
 				\begin{Def}
@@ -191,55 +417,983 @@
 					\end{Def}
 					
 					This implies, that the performance of $h$ decides the performance of $X$.
-			\section{Limits,Colimits (in Small Category)}
-			\subsection{Limits}
-			\subsubsection{Set-Thoeretic Limits}
-			\subsubsection{Limit of Functors in an Arbitrary Category}
-			
+				\subsection{Join}
+					\begin{Def}
+						Let $A,B$ be categories, then define:
+						\begin{itemize}
+							\item $Ob(A\star B)=Ob(A)\sqcup Ob(B)$
+							\item $Hom_{A\star B}(x,y)=\begin{cases}
+								Hom_C(x,y)&x,y\in A\mbox{ or }x,y\in B\\
+								\{*\}&x\in A,y\in B\\
+								\emptyset
+							\end{cases}$
+						\end{itemize}
+					\end{Def}
+			\section{Limits, Colimits}
+			\subsection{Cone, Cocone}
+			\subsubsection{Cone Structure in Category}
 			\begin{Def}
-				(Limit of a functor, wth values in an arbitrary category) Now,  take the notion of limit for functors
+				\begin{itemize}
+					\item The \textbf{cone} of $C$ is the cocomma object of identity on $C$, and the unique map to the terminal category $!:C\rightarrow *$
+					\begin{center}{\small
+							\begin{tikzcd}
+								C\arrow[rr,"id_C"]\arrow[dd,"!"]&&C\arrow[dd]\\
+								&\Rightarrow\\
+								*\arrow[rr]&&Cone(C)
+						\end{tikzcd}}
+					\end{center}
+					
+					
+					\item Again, this may be computed as a pushout
+					\begin{center}
+						\begin{tikzcd}
+							C\arrow[r,"d_1"]\arrow[d]&C\times 2\arrow[d]\\
+							*\arrow[r]&Cone(C)
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
+			\end{Def}
+			
+			\subsubsection{Cone over Index Category}
+			\begin{Def}
+				A \textbf{cone} in a category is given by a category $J$, together with a functor 
 				\begin{gather*}
-					F^{op}:D^{op}\rightarrow \mathcal{C}
+					cone(J)\rightarrow C
 				\end{gather*}
 				
-				for $\mathcal{C}$ an arbitrary category, if we construct a certain presheaf $\mathcal{C}$, which we will call $\hat{lim}F$.
+				By the universal property, 
+			\end{Def}
+			\subsection{Limits, Colimits}
+				\subsubsection{Set-Valued Functor Limit}
+				\begin{Def} Suppose $D$ be small category. 
+					\begin{itemize}
+						\item Given a functor $F:D^{op}\rightarrow Set$, then
+						\begin{gather*}
+							\lim F:=Hom_{[D^{op},Set]}(pt,F)\in Set\\
+							pt:D^{op}\rightarrow Set\qquad d\mapsto \{*\}
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
 				
-				More precisely, using the \textbf{Yoneda embedding}
+				There is no such construction of equalizer. Could specified by
 				\begin{gather*}
+					\operatorname{colim}_D\dashv \Delta\dashv \lim_D\qquad \Delta:C\rightarrow [D,C]
+				\end{gather*}
+				
+				\begin{proposition}
+					(Limit, Colimit as Equalizer, Coequalizer) 
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
 					内容...
-				\end{gather*}
+				\end{proof}
 				
-				Then:
-				\begin{gather*}
-					(\hat{lim})(c):=Hom_{Set^{D^{op}}}(pt,Hom_\mathcal{C}(c,F(-)))
-				\end{gather*}
+				\begin{proposition}
+					There is bijection
+					\begin{gather*}
+						Hom_{set}(S,limF)\cong \lim Hom_{Set}(S,F(-))
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Limit of a Functor, with Values in Arbitrary Category}
+					\begin{Def} If $C$ is locally small category:
+						\begin{itemize}
+							\item By \underline{Yoneda embedding} $y:C\rightarrow [C^{op},Set]$, define for $F:D^{op}\rightarrow C$, the presheaf
+							\begin{gather*}
+								(\hat{lim} F)\in [C^{op},Set]\qquad (\hat{lim} F)(c)=Nat(pt,Hom(c,F(-)))=Nat(pt, y(F(-))(c))
+							\end{gather*}
+							
+							\item By \underline{co-Yoneda embedding} $y^\vee:C^{op}\rightarrow [C,Set],c\mapsto Hom(c,-)$, define for $F:D^{op}\rightarrow C$,
+							\begin{gather*}
+								\hat{colim}F\in [C,Set]\qquad \hat{colim}F(c):=Nat(pt,Hom_C(F(-),c))=Nat(pt,y^\vee(F(-))(c))
+							\end{gather*}
+						\end{itemize}
+					\end{Def}
+					
+					\begin{proposition}
+						(Existence)
+						\begin{itemize}
+							\item The presheaf $\hat{lim}$ exists, if it  is representable by an object $\lim F\in C$, 
+							\begin{gather*}
+								Hom(c,limF)\cong Hom(pt, Hom(c,F(-)))\Rightarrow Hom(-,\lim F)\cong (\hat{lim} F)
+							\end{gather*}
+							
+							\item The presheaf $\hat{\operatorname{colim}}$ exists, if it is representable by an object $\operatorname{colim} F\in C$
+							\begin{gather*}
+								Hom(\operatorname{colim} F,c)\cong Hom(pt,Hom(F(-),c))\Rightarrow Hom(\operatorname{colim} F,-)\cong (\hat{\operatorname{colim}} F)
+							\end{gather*}
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{proposition}
+						(Right and Left Adjoint Preserving) Let $D$ be a small category
+						\begin{itemize}
+							\item Let $R:C\rightarrow C'$ be a functor which is right adjoint, and $C$ admits limits of shape $D$. Then, $R$ commutes with $D$-shaped limits in $C$, in that
+							
+							For $F:D^{op}\rightarrow C$, we have
+							\begin{gather*}
+								R(\lim F)\cong \lim(R\circ F)
+							\end{gather*}
+							\item 
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						Proved.
+					\end{proof}
+					
+					
+					\begin{proposition}
+						(Hom-Functor Preserving) For $C$ a locally small category, functor $F:D^{op}\rightarrow C$,
+						\begin{itemize}
+							\item $Hom_C(c,F(-)):D^{op}\rightarrow Set$,
+							\begin{gather*}
+								Hom_C(c,\lim F)\cong \lim Hom_C(c,F(-))
+							\end{gather*}
+							\item $Hom_C(F(-),c):D\rightarrow Set$,
+							\begin{gather*}
+								Hom_C(\operatorname{colim} F,c)\cong \operatorname{colim} Hom_C(F(-),c)
+							\end{gather*}
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						\begin{itemize}
+							\item Define: $L:=\lim F$, then $u:c\rightarrow L$, 
+							\begin{gather*}
+								\lambda_d\circ u:c\rightarrow F(d)
+							\end{gather*}
+							
+							Then, there exists a family $(\lambda_d\circ u)$, then 
+							\begin{gather*}
+								\Phi:C(c,L)\rightarrow \lim C(c,F(d))\qquad u\mapsto (\lambda_d u)_d
+							\end{gather*}
+							Conversely, for $(u_d)_d\in \lim_d C(c,F(d))$, we obtain a unique 
+							\begin{gather*}
+								u:c\rightarrow L\qquad \lambda_d\circ u=u_d
+							\end{gather*}
+							
+							Thus, we obtain
+							\begin{gather*}
+								\Psi:\lim_d C(c,F(d))\rightarrow C(c,L)\qquad (u_d)_d\mapsto u
+							\end{gather*}
+							
+							
+							And $\Psi\phi,\Phi\Psi$ are inverse;
+							\item Similarly. 
+						\end{itemize}
+					\end{proof}
+					
+					\begin{proposition}
+						(Product and Coproduct Componentwised)
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Universal Cone}
+					The limit and colimit could be given by the diagram:
+					\begin{center}
+						\begin{tikzcd}
+							内容...
+						\end{tikzcd}
+					\end{center}
+				\subsubsection{Fubini's Interchange Isomorphism}
+					\begin{proposition}
+						\begin{itemize}
+							\item (Limit) Let $F(-,-):K\times L\rightarrow \mathcal{C}$ be a functor such that: For every $l\in L$, there exists a limit
+							\begin{gather*}
+								\lim_{k\in K} F(-,l)\in \mathcal{C}
+							\end{gather*}
+							
+							Then, the followings are equivalent:
+							\begin{itemize}
+								\item $F(-,-)$ admits a limit;
+								\item Construction of canonical functor
+								\begin{gather*}
+									\lim_{k\in K} F(k,-):L\rightarrow \mathcal{C}\qquad l\mapsto \lim_K F(-,l)
+								\end{gather*}
+								
+								admits a limit;
+							\end{itemize}
+							
+							Furthermore, in this case we obtain
+							\begin{gather*}
+								\lim_{K\times L} F(-,-)\simeq \lim_L \lim_{k\in K} F(k,-)\in \mathcal{C}
+							\end{gather*}
+							\item (Colimit) The following are equivalent:
+							\begin{itemize}
+								\item $F(-,-)$ admits a colimit;
+								\item Construction of canonical functor
+								\begin{gather*}
+									内容...
+								\end{gather*}
+								
+								admits a colimit;
+							\end{itemize}
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					\begin{corollary}
+						If $F:K\times L\rightarrow C$ be a diagram with $K,L$ small categories.
+						
+						If $F$ admits a limit, and the limit of $F(k,-),F(-,l)$ exists, then for all $k\in K, l\in L$,
+						\begin{gather*}
+							内容...
+						\end{gather*}
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					And for limit and colimit, a counter example is:
+					\begin{example}
+						内容...
+					\end{example}
+					
+					\subsubsection{Filtered Colimits, Finite Limits Exchanges}
+					
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+			\subsection{Preverse of Limits and Colimits, Continuous annd Cocontinuous Functors}
+			\begin{Def} Let $F:\mathcal{C}\rightarrow \mathcal{D}$ be a functor:
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
 			\end{Def}
 			
-			\subsubsection{Universal Cone}
+			\subsection{Pullbacks and Pushout}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						\begin{center}
+							\begin{tikzcd}
+								A\\
+								&X\times_Z Y&Y\\
+								&X&Z
+							\end{tikzcd}
+						\end{center}
+						\item 
+						\begin{center}
+							\begin{tikzcd}
+								Z&X\\
+								Y&X\times_Z Y\\
+								&&A
+							\end{tikzcd}
+						\end{center}
+					\end{itemize}
+				\end{Def}
+				\subsubsection{Relative Diagonal and Codiagonal}
+					\begin{proposition}
+						With the diagonal, codiagonal, we obtain the relative diagonal and codiagonal: By 
+						\begin{center}
+							\begin{tikzcd}
+								\mathcal{C}\arrow[rd,dashrightarrow,"\Delta_F"]\arrow[rrd]\arrow[ddr]\\
+								&\mathcal{C}\times_\mathcal{D} \mathcal{C} \arrow[r]\arrow[d]&\mathcal{C}\arrow[d,"F"]\\
+								&\mathcal{C}\arrow[r,"F"]&\mathcal{D}
+							\end{tikzcd}\begin{tikzcd}
+								X\arrow[r]\arrow[d]&Y\arrow[d]\arrow[rdd]\\
+								Y\arrow[rrd]\arrow[r]&Y\sqcup_X Y\arrow[rd,dashrightarrow,"\triangledown_F"]\\&&Y
+							\end{tikzcd}
+						\end{center}
+					\end{proposition}
+					\begin{proof}
+						Omitted.
+					\end{proof}
+			\section{Product, Coproduct}
+			\subsection{Definitions}
+				\begin{Def}
+					\begin{itemize}
+						\item The product 
+						\item 
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					(Commutativity of Product, Coproducts) For index category $I,J$, and a family of objects $F_{i,j}$:
+					\begin{itemize}
+						\item \begin{gather*}
+							\prod_I\prod_J F_{i,j}\cong \prod_{J}\prod_I F_{i,j}
+						\end{gather*}
+						\item \begin{gather*}
+							\sqcup_I\sqcup_J F_{i,j}\cong \sqcup_J\sqcup_I F_{i,j}
+						\end{gather*}
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{proof}
+				
+				\subsubsection{Binary Product, Coproduct}
+					\begin{Def}
+						\begin{itemize}
+							\item Binary Product $A\times B$;
+							\item Binary Coproduct $A\sqcup B$;
+						\end{itemize}
+					\end{Def}
+				\subsubsection{Nullary Product and Corproduct, Existence Criteria}
+					\begin{Def}
+						\begin{itemize}
+							\item Nullary product $\prod_\emptyset X=1$;
+							\item Nullary coproduct $\sqcup_\emptyset=0$;
+						\end{itemize}
+					\end{Def}
+					
+					We should verify, that they satisfy the property of terminal object:
+					\begin{proof}
+						\begin{itemize}
+							\item $I\rightarrow X$ is not needed;
+							\item Similarly;
+						\end{itemize}
+					\end{proof}
+					
+					\begin{proposition}
+						(Universal Property with $Hom$) 
+						\begin{gather*}
+							Hom(X,\prod_I Y_i)\cong \prod_I Hom(X,Y_i)\\
+							Hom(\sqcup_I X_i,Y)\cong \sqcup_I Hom(X_i,Y)
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+				\subsubsection{Discussion of Associativity}
+					There exists canonical isomorphism
+					\begin{gather*}
+						(\pi_1\circ\pi_1,\times\circ (\pi_2\circ \pi_1,\pi_2))\qquad (X\times Y)\times Z\cong X\times (Y\times Z)\\
+						(\pi_2,\pi_1)\qquad X\times Y\cong Y\times X\\
+						X\times 1\cong X
+					\end{gather*}
+					
+					Thus, $(\mathcal{C},\times,1)$ is a Cartesian symmetric monoidal category.
+					
+				\subsubsection{Pullback, Pushout}
+				
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Finite Products}
+			\subsection{Cartesian Category}
 			\begin{Def}
-				(Universal Cone) Let $F:D^{op}\rightarrow \mathcal{C}$ be a functor. Then, every object $c\in \mathcal{C}$, an element
-				\begin{gather*}
-					*\rightarrow Hom(pt,Hom(c,F(-)))
-				\end{gather*}
-				
-				is identiafied with a collection of morphisms $(c\rightarrow F(d))$.
-				
-				For all $d\in D$, such that all triangles
-				\begin{center}
-					\begin{tikzcd}
-						&c\\
-						F(d_i)&&F(d_j)
-					\end{tikzcd}
-				\end{center}
-				
-				Such a collection of morphisms is called a \textbf{cone} over $F$.
+				A \textbf{cartesian category} is a category with finite products.
 			\end{Def}
-			\subsection{Colimits}
 			
-			\subsection{Compeleteness,Co-Compeleteness}
+			We will use this concepts in the later discussion. 
+			\subsection{Diagonal,Codiagonal}
+			\begin{Def} Let $\mathcal{C}$ be a category:
+				\begin{itemize}
+					\item If $X\times X$ exists, then the canonical morphism
+					\begin{gather*}
+						\Delta_X:X\rightarrow X\times X\qquad \pi_1 \Delta_X=\pi_2\Delta_X=id_X
+					\end{gather*}
+					
+					is called the \textbf{diagonal morphism}; Denoted by $\Delta_X=<id_X,id_X>$;
+					\item Similarly, 
+					\begin{gather*}
+						\triangledown:X\sqcup X\rightarrow X\qquad \triangledown_X\iota_1=\triangledown \iota_2=id_X
+					\end{gather*}
+					
+					is called the \textbf{codiagonal morphism}; Denoted by $\triangledown_X=[id_X,id_X]$;
+				\end{itemize}
+			\end{Def}
+			
+			Diagram, and universal properties
+			
+			\begin{center}
+				\begin{tikzcd}
+					&X\arrow[d,dashrightarrow,"\Delta_X"]\arrow[rd,"id_X"]\arrow[ld,swap,"id_X"]\\
+					X&X\times X\arrow[r,"\pi_2"]\arrow[l,"\pi_1",swap]&X
+				\end{tikzcd}\begin{tikzcd}
+					X\arrow[r,"\iota_1"]\arrow[rd,"id_X"]&X\sqcup X\arrow[d,"\triangledown_X"]&X\arrow[l]\arrow[ld,"id_X"]\\
+					&X
+				\end{tikzcd}
+			\end{center}
+			\subsubsection{Diagonal and Codiagonal as Element Functor Categories}
+				\begin{lemma}
+					Consider the index discrete category  $I=\{x_1,x_2\}$, then there exists an isomorphism 
+					\begin{gather*}
+						Func(I,\mathcal{C})\cong \mathcal{C}\times \mathcal{C}
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					Then, we can view diagonal and codiagonal as the functor
+					\begin{gather*}
+						\Delta_X:\mathcal{C}\rightarrow Func(I,\mathcal{C})\\
+						\triangledown_X:Func(I,\mathcal{C})\rightarrow \mathcal{C}
+					\end{gather*}
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Adjunciton}
+				
+				\begin{proposition}
+					There exists adjunction: For discrete category $I$,
+					\begin{gather*}
+						\sqcup_I \dashv \Delta_I\dashv \prod_I
+					\end{gather*}
+					
+					Especially, for $I=\{1,2\}$
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{proposition}
+				
+		\section{Functor Categories}
 			\begin{Def}
+				Given categories $C,D$, the \textbf{functor category}, written as $[C,D]$ is the category whose:
+				\begin{itemize}
+					\item $Ob([C,D])=Func(C,D)$;
+					\item Morphsims are natural transformations. 
+				\end{itemize}
+			\end{Def}
+			
+			\subsection{Limits and Colimits}\
+			\subsection{$I$-Shaped }
+				\begin{Def}
+					For fixed $I$, then 
+					\begin{gather*}
+						Func(I,\mathcal{C})=I-\mbox{shaped diagrams in }\mathcal{C}
+					\end{gather*}
+					
+					With:
+					\begin{itemize}
+						\item Objects $Ob(Func(I,\mathcal{C}))=\{F:I\rightarrow \mathcal{C}\}$;
+						\item Morphisms $Mor(Func(I,\mathcal{C}))=Nat(F,G)$;
+					\end{itemize}
+					
+					For element $F:I\rightarrow \mathcal{C}$, such $I$ is called \textbf{index category}.
+				\end{Def}
+				
+				\subsubsection{Discrete Category-Shaped}
+				\begin{proposition}
+					If $S$ is discrete category, then
+					\begin{gather*}
+						Func(S,\mathcal{C})\cong \mathcal{C}^S
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					Trivial. 
+				\end{proof}
+				
+				\subsubsection{Evaluation and Diagonal}
+				\begin{Def}
+					Let $\mathcal{C}$ be a category:
+					\begin{itemize}
+						\item Evaluation $ev_i:Fun(I,\mathcal{C})\rightarrow \mathcal{C}, F\mapsto F(i)$;
+						\item Diagonal/Constant $\Delta:\mathcal{C}\mapsto Func(I,\mathcal{C}),X\mapsto (i\mapsto X)$;
+					\end{itemize}
+				\end{Def}
+				
+				A special case is $I=\{1,2\}$.
+				
+				\begin{proposition}
+					Evaluation preserves limits and colimits;
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					内容...
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Limits, Colimits, Adjunction}
+				\begin{Def}
+					Now suppose $I$ be the 'index category'. 
+					\begin{itemize}
+						\item The limit $\lim_I$ should be understand as a functor $Func(I,\mathcal{C})\rightarrow \mathcal{C}$;
+						\item The colimit $\operatorname{colim}_I$ should also be understand as a functor $\mathcal{C}\rightarrow Func(I,\mathcal{C})$
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					There exists adjunction $\operatorname{colim}_I\dashv \Delta\dashv \lim_I$. i.e.
+					\begin{gather*}
+						Hom()\cong Hom()\\
+						Hom()\cong Hom()
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					For $I=\{1,2\}$,
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{corollary}
+				\begin{proof}
+					Omitted.
+				\end{proof}
+				
+				\subsubsection{Compeletness}
+				
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Set-Theoretic Discussion}
+				
+					\begin{proposition}
+						内容...
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+					
+				\subsubsection{Exponential, Currying}
+					\begin{theorem}
+						(Currying) There exists isomorphism of categories
+						\begin{gather*}
+							Func(I\times J,\mathcal{C})\cong Func(I,Func(C,J))\\
+							(F:I\times J\rightarrow \mathcal{C})\mapsto (\tilde{F}:I\rightarrow Func(J,C))
+						\end{gather*}
+					\end{theorem}
+					\begin{proof}
+						内容...
+					\end{proof}
+			
+			
+			\subsection{Restriction/Pullback of Diagrams/Precompostion}
+			\begin{proposition}
+				Given: Functor $u:I\rightarrow J$, then the precomposition
+				\begin{gather*}
+					u^*:Func(J,\mathcal{C})\rightarrow Func(I,\mathcal{C})\qquad F\mapsto  F\circ u
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
 				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				$I\mapsto Func(I,\mathcal{C})$ is contravariant for indexing category
+			\end{corollary}
+			
+			
+			\begin{proposition}
+				There exists adjunction
+				\begin{gather*}
+					Lan_u\dashv u^*\dashv Ran_u
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			
+			Especially: For functor $p:I\rightarrow *$, $p^*$ is the constant diagram functor $\Delta$. Thus
+			\begin{gather*}
+				Lan_p=colim_I\qquad Ran_p=\lim_i
+			\end{gather*}
+			
+		\section{Comma Category, and Slice Category}
+			\subsection{Comma Category}
+				\begin{Def}
+					Let: $f:C\rightarrow E,g:D\rightarrow E$ be functors, their \textbf{comma category} is denoted by $(f/g)$ whose:
+					\begin{itemize}
+						\item $Ob(f/g)$: Triples
+						\begin{gather*}
+							(c,d,\alpha)\qquad \alpha:f(c)\rightarrow g(d);c\in C,d\in D,\alpha\in Mor(E)
+						\end{gather*}
+						\item $Mor(f/g)$:
+						\begin{center}
+							\begin{tikzcd}
+								f(c_1)\arrow[r,"\alpha_1"]\arrow[d,"f\beta"]&g(d_1)\arrow[d,"f\gamma"]\\
+								f(c_2)\arrow[r,"\alpha_2"]&g(d_2)
+							\end{tikzcd}\qquad $(c_1,\alpha_1,d_1)\stackrel{(\beta,\gamma)}{\rightarrow} (c_2,\alpha_2,d_2)$. 
+						\end{center}
+						\item Composition is composition of morphisms.
+					\end{itemize}
+				\end{Def}
+				
+				
+				To distinguish with the cocomma category, us the notion of $F\downarrow G$. 
+				\subsubsection{Cocomma Category}
+				
+					Similarly
+					
+					\begin{Def}
+						$F:E\rightarrow C,G:E\rightarrow D$, the \textbf{cocomma category}
+						\begin{itemize}
+							\item $Ob(F\downarrow_{co}  G):=Ob(C)\sqcup Ob(D)$;
+							\item $Mor(F\downarrow_{co} G):=Mor(C)\cup Mor(D)\cup \{\tau_e|e\in E\}$, where
+							\begin{center}
+								\begin{tikzcd}
+									F(a)\arrow[r,"F\alpha"]\arrow[d,"\tau_{a}"]&F(a')\arrow[d,"\tau_{a'}"]\\
+									G(a)\arrow[r,"G\alpha"]&G(a')
+								\end{tikzcd}$,a,a'\in E$
+							\end{center}
+							
+						\end{itemize}
+					\end{Def}
+					
+					\begin{proposition}
+						As a matter of fact, 
+						\begin{gather*}
+							(F\downarrow_{co} G)\simeq B\sqcup_A (A\times [1])\sqcup_A C
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\subsubsection{Comma Object}
+				\subsubsection{Compeleteness,Cocompeleteness}
+				\subsection{Slice Category}
+					\begin{Def}
+						The \textbf{slice category} $\mathcal{C}/c$ over object $c\in C$ is:
+						\begin{itemize}
+							\item Objects are the arrows $f\in Mor(\mathcal{C})$ such that
+							\begin{gather*}
+								t(f)=c
+							\end{gather*}
+							\item Morphisms: $g:X\rightarrow X'$ for $f:X\rightarrow c,g:X'\rightarrow c$ such that $f'\circ g=f$.
+						\end{itemize}
+						
+						Thus,
+						\begin{center}
+							$C/c=$\begin{tikzcd}
+								X\arrow[rr,"g"]\arrow[rd,"f"]&&X'\arrow[ld]\\
+								&c
+							\end{tikzcd}
+						\end{center}
+					\end{Def}
+					
+					According to definition, we obtain that
+					\begin{gather*}
+						C/c=(Id_\mathcal{C}/F_c)\qquad F_c:*\rightarrow C\qquad *\mapsto c
+					\end{gather*}
+			\subsection{Arrow Category}
+				\begin{Def}
+					For $C$ any category, its arrow category $Arr(C)$ is the category such that:
+					\begin{itemize}
+						\item Objects are arrows;
+						\item Morphisms are commutative squares;
+						\item Composition are composiiton of squares.
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					Let $I=\{0\rightarrow 1\}=2$ be the interval  category, then
+					\begin{gather*}
+						Arrow(\mathcal{C})\cong Func(I,C)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					Trivial;
+				\end{proof}
+			
+			\subsection{Twisted Category}
+			\begin{Def}
+				Define: The twisted category
+				\begin{itemize}
+					\item $Ob(Tw(\mathcal{C}))=Mor(\mathcal{C})$;
+					\item $Mor(Tw(\mathcal{C}))$ are such $(p,q)$ with following diagram commutes:
+					\begin{center}
+						\begin{tikzcd}
+							A\arrow[d,"f"]&C\arrow[l,"p"]\arrow[d,"g"]\\
+							B\arrow[r,"q"]&D
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
 			\end{Def}
+		\section{Grothendieck Construction}
+			\subsection{Category of Elements}
+		\section{End and Coend}
+			\subsection{Extranatural}
+				
+				\begin{Def}
+					\begin{itemize}
+						\item A family of morphisms $\alpha_{a,b,c}: F(a,b,b)\rightarrow G(a,c,c);F:A\times B\times B^{op}\rightarrow D,G:A\times C\times C^{op}\rightarrow D$ is \textbf{ordinary-natural} in $a$ and \textbf{extranatural} in $b$and $c$ if the following hold:
+						\begin{itemize}
+							\item For $f:a\rightarrow a'$ in $A$; $b\in B,c\in C$, the following square commutes:
+							\begin{center}
+								\begin{tikzcd}
+									F(a,b,b)\arrow[r,"{F(f,id_b,id_b)}"]\arrow[d,"{\alpha_{a,b,c}}"]&F(a',b,b)\arrow[d,"{\alpha_{a',b,c}}"]\\
+									G(a,c,c)\arrow[r,"{G(f,id_c,id_c)}"]&G(a',c,c)
+								\end{tikzcd}
+							\end{center}
+							\item For all $g:b\rightarrow b'$ in $B$, and all $a\in A,c\in C$, the following square commutes(extranaturality in $b$)
+							\begin{center}
+								\begin{tikzcd}
+									F(a,b,b')\arrow[r]\arrow[d]&F(a,b,b)\arrow[d]\\
+									F(a,b',b')\arrow[r]&G(a,c,c)
+								\end{tikzcd}
+							\end{center}
+							\item For all $h:c\rightarrow c'$ in $C$, and all $a\in A,b\in B$, the following square commutes(extranaturality in $c$)
+							\begin{center}
+								\begin{tikzcd}
+									F(a,b,b)\arrow[r,"{F(\alpha_{a,b,c}}"]\arrow[d,"{\alpha_{a,b,c'}}"]&G(a,c,c)\arrow[d,"{G(1,h,1)}"]\\
+									G(a,c',c')\arrow[r,"{G(1,1,h)}"]&G(a,c',c)
+								\end{tikzcd}
+							\end{center}
+						\end{itemize}
+						\item Especially, when $A=*$. 	Suppose:
+						\begin{gather*}
+							F:C\times C^{op}\rightarrow \mathcal{D}
+						\end{gather*}
+						
+						Fix a $X\in \mathcal{D}$, a family of morphisms
+						\begin{gather*}
+							\alpha_c:F(c,c)\rightarrow X
+						\end{gather*}
+						is called \textbf{extranatural}, if for each $f:c\rightarrow c'$, $\alpha_c\circ F(f,1_c)=\alpha_{c'}\circ F(1_{c'},f)$
+						
+						\begin{center}
+							\begin{tikzcd}
+								F(c',c)\arrow[r,"{F(1_{c'},f)}"]\arrow[d,"{F(f,1)}"]&F(c',c')\arrow[d,"\alpha_{c'}"]\\
+								F(c,c)\arrow[r,"\alpha_c"]&X
+							\end{tikzcd}
+						\end{center}
+					\end{itemize}
+				\end{Def}
+				
+				Conversely,
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						\item Suppose $F:C^{op}\times C\rightarrow X$, then a family of morphisms
+						\begin{gather*}
+							\eta_c:F(c,c)\rightarrow x
+						\end{gather*}
+						
+						is called \textbf{coextranatural}, if for each $f:c\rightarrow c',\eta_c\circ F(f,1_c)=\eta_{c'}\circ F(1_{c'},f)$
+						
+						\begin{center}
+							\begin{tikzcd}
+								内容...
+							\end{tikzcd}
+						\end{center}
+					\end{itemize}
+				\end{Def}
+			\subsection{Wedge, Cowedge}
+				\begin{Def} 
+				 Let $F:C^{op}\times C\rightarrow X$ be a functor. 
+					
+					\begin{itemize}
+							\item A \textbf{wedge} $e:w\rightarrow F$ is:
+						\begin{itemize}
+							\item An object $w$;
+							\item Maps $e_c:w\rightarrow F(c,c)$;
+							\item For each $c,c'$ in $C$, $f:c\rightarrow c'$, the following diagram commutes:
+							\begin{center}
+								\begin{tikzcd}
+									w\arrow[r,"e_{c'}"]\arrow[d,"e_c"]&F(c',c')\arrow[d,"{F(f^{op},id_{c'})}"]\\
+									F(c,c)\arrow[r,"{F(id_c,f)}"]&F(c,c')
+								\end{tikzcd}
+							\end{center}
+						\end{itemize}
+						\item A \textbf{cowedge} $e:F\rightarrow w$ is:
+						\begin{itemize}
+							\item An object $w$;
+							\item Maps $e_c:F(c,c)\rightarrow w$;
+							\item For each $c,c'$ in $C$, $f:c\rightarrow c'$, the following diagram commutes:
+							\begin{center}
+								\begin{tikzcd}
+									F(c,c')&F(c,c)\\
+									F(c',c')&w
+								\end{tikzcd}
+							\end{center}
+						\end{itemize}
+					\end{itemize}
+				\end{Def}
+			\subsection{End, Coend}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						Given a functor $F:C^{op}\times C\rightarrow X$, an \textbf{end} of $F$ in $X$ is an object $e$ of $X$, equipped with a universal extranatural transformation from $e$ to $F$. 
+						
+						Denoted by $\int_{c:C} F(c,c)$.
+						
+						i.e.
+						\begin{itemize}
+							\item Object $e=\int_{c:C} F(c,c)$;
+							\item Extranatural morphisms $\pi_c:e\rightarrow F(c,c)$;
+						\end{itemize}
+						\item By universal property: For any wedge
+						\begin{gather*}
+							(x,(\alpha_c)_{c\in C})\qquad \exists u:x\rightarrow e, \alpha_c=\pi_c\circ u
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				It is actually a special kind of limit over a functor of the form of bifunctor:
+				\begin{proposition}
+					\begin{gather*}
+						\int_{c:C} F(c,c)=\lim_{Tw(C)} F\circ p\qquad p:Tw(C)\rightarrow C^{op}\times C
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{example}
+					We obtain, that for functors $F,G:\mathcal{C}\rightarrow \mathcal{D}$, 
+					\begin{gather*}
+						Nat(F,G)\cong \int_{c\in C} Hom_D(F(c),G(c))
+					\end{gather*}
+				\end{example}
+				\subsubsection{Right and Left Adjointness}
+				\subsubsection{Equalizer and Coequalizer}
+				
+				\subsubsection{Fubini's Theorem}
+						
+	\chapter{Groupoids}
+		\section{Fundamentals}
+			\begin{Def}
+				\begin{itemize}
+					\item 
+					A \underline{small} groupoid $G$ is:
+					\begin{itemize}
+						\item A set, which is called the set if objects;
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+					
+					such that 
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+					\item 
+				\end{itemize}
+			\end{Def}
+			\subsection{'Base Loops' of Category}
+				\begin{Def}
+					Let $\mathcal{C}$ be a category, with object $x\in \mathcal{C}$.
+					
+					Then, define
+					\begin{gather*}
+						\Omega_x \mathcal{C}:=End_\mathcal{C}(x)=Hom_\mathcal{C}(x)
+					\end{gather*}
+				\end{Def}
+			\subsection{Deloping Category}
+				\begin{Def}
+					The \textbf{delooping} of an object $A$, it is exists, a uniquely pointed object $BA$ such that: $A$ is the loop space object of $BA$:
+					\begin{gather*}
+						A\simeq \Omega(BA)
+					\end{gather*}
+				\end{Def}
+				
+				\begin{proposition}
+					Suppose $G$ be a group, then the space $BG$ exists.
+				\end{proposition}
+				\begin{proof}
+					Given by:
+					\begin{itemize}
+						\item $Ob(BA)=\{*\}$;
+						\item $End_\mathcal{C}(*)=G$
+					\end{itemize}
+					
+					And $G\simeq \Omega(BG)$: 
+				\end{proof}
+				
+				And:
+				\begin{proposition}
+					Let $G$ be a group, which is small, then
+					\begin{itemize}
+						\item Category $Fun(BG,Set)$;
+						\item The category of sets with:
+						\begin{itemize}
+							\item A $G$-action;
+							\begin{gather*}
+								G\times BG\rightarrow BG\\
+								(g,*)\mapsto *\\
+								(g,x)\mapsto Bg\circ x
+							\end{gather*}
+							
+							And satisfies
+							\begin{gather*}
+								\rho(gh,x)=\rho(g,\rho(h,x))\qquad \rho(e,x)=x
+							\end{gather*}
+							\item Equivariant Maps:For the map $f:X\rightarrow Y$,
+							\begin{gather*}
+								\rho_X：G\times X\rightarrow X\qquad \rho_Y:G\times Y\\
+								f(g\cdot x)=g\cdot f(x)
+							\end{gather*}
+						\end{itemize}
+					\end{itemize}
+					
+					This implies, that 
+					\begin{gather*}
+						Fun(BG,Set)\cong G-Set
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					$\Rightarrow$ The action $\rho:G\times BG\rightarrow BG$ is specified by
+					\begin{gather*}
+						(g,f)\mapsto Bg\circ f
+					\end{gather*}
+					
+					where $B:G\rightarrow Mor(BG)$. And it is easy to verify that 
+					\begin{gather*}
+						\rho(gh,x)=\rho(g,\rho(h,x))\qquad \rho(e,x)=x
+					\end{gather*}
+					
+					And the equivariance map is specified by the natural transformations: Suppose $F:h\Rightarrow g$, then
+					\begin{gather*}
+						F(\rho(g,x))=F(Bg\circ x)=F(Bg)\circ F(x)=
+					\end{gather*}
+					
+					$\Leftarrow$ 
+				\end{proof}
+				
+				\begin{corollary}
+					Furthermore,
+					\begin{gather*}
+						Fun(BG^{op},Set)\cong Set-G
+					\end{gather*}
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Nerve Constructions}
 	\chapter{Presheaves, Yoneda Lemma}
 		\section{Presheaves}
 			\begin{Def}
@@ -249,23 +1403,41 @@
 					\begin{gather*}
 						\mathscr{F}:C^{op}\rightarrow Set
 					\end{gather*}
+					\item The category of presheaf is denoted by $Psh(\mathcal{C})$;
+					\item A \textbf{copresheaf/covariant} is a presheaf on the opposite category $C^{op}$
+					\begin{gather*}
+						\mathscr:C\rightarrow Set
+					\end{gather*}
 				\end{itemize}
 			\end{Def}
+			\subsection{Representable Presheaf}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						Especially, a kind of presheaf is the \textbf{representable presheaf}
+						\begin{gather*}
+							F\cong h_X=Hom_\mathcal{C}(-,X):\mathcal{C}^{op}\rightarrow Set\qquad U\mapsto Hom_\mathcal{C}(U,X)
+						\end{gather*}
+						\item The natural transformations induced by $F:X\rightarrow Y$ could be
+						\begin{gather*}
+							h_F:h_X\rightarrow h_Y
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				And similarly
+				\begin{Def}
+					内容...
+				\end{Def}
 			\subsection{Yoneda Embedding}
 			\begin{Def}
 				Define:
 				\begin{gather*}
-					Y:C\rightarrow Psh(C)\qquad
+					Y:C\rightarrow Psh(C)\qquad Y\mapsto Hom_C(-,c)
 				\end{gather*}
+				
+				which is called \textbf{Yoneda embedding},
 			\end{Def}
-			
-			With $Hom$-functor $Hom:C^{op}\times C\rightarrow Set$, there exists adjunction
-			\begin{lemma}
-				内容...
-			\end{lemma}
-			\begin{proof}
-				内容...
-			\end{proof}
 			
 			\begin{proposition}
 				Yoneda functor is:
@@ -280,7 +1452,12 @@
 			\begin{proof}
 				内容...
 			\end{proof}
-			
+			\begin{Def}
+				The \textbf{Coyoneda embedding}
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{Def}
 			\subsection{Yoneda's Lemma}
 			
 			\begin{theorem}
@@ -296,14 +1473,22 @@
 			\begin{proof}
 				内容...
 			\end{proof}
-			\subsection{Properties of Categories of Presheaves}
-			\begin{proposition}
+			
+			\begin{corollary}
 				内容...
-			\end{proposition}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				(CoYoneda)
+			\end{corollary}
 			\begin{proof}
 				内容...
 			\end{proof}
 		
+		\section{Restsricted Yoneda Embedding,Yoneda Extension}
 		\section{Representable Functors}
 		
 		\subsection{Generalized Element}
@@ -344,13 +1529,552 @@
 		\begin{Def}
 			内容...
 		\end{Def}
-		\section{Copresheaf}
-		\section{Restsricted Yoneda Embedding,Yoneda Extension}
-	\chapter{Monoid Category}
-		\section{Fundamentals}
-			\subsection{Moduli Category}
+		\subsection{Density Theorems}
+		\section{Isbell Duality}
+		\section{Closed Category}
+			\subsection{LaPlaza-Manzyuk Definition}
+			\begin{Def}
+				A \textbf{closed category} is a category $\mathcal{C}$ with the following datas:
+				\begin{itemize}
+					\item A functor
+					\begin{gather*}
+						[-,-]=\underline{Hom}(-,-):C^{op}\times C\rightarrow C
+					\end{gather*}
+					
+					called the \textbf{internal hom-functor};
+					\item An object $I\in \mathcal{C}$ called \textbf{unit object};
+					\item A natural isomrophism
+					\begin{gather*}
+						i:Id_\mathcal{C}\stackrel{\cong}{\rightarrow} [I,-]
+					\end{gather*}
+					\item A transformation $j_X:I\rightarrow [X,X]$, the \textbf{extranatural} in $X$
+					\item A transformation 
+					\begin{gather*}
+						L_{YZ}^X:[Y,Z]\rightarrow [[X,Y],[Y,Z]]
+					\end{gather*}
+				\end{itemize}
+				
+				which is required satisfy the following axioms:
+				\begin{itemize}
+					\item The following diagram commutes for any $X,Y$:
+					\begin{center}
+						\begin{tikzcd}
+							I\arrow[r,"j_X"]\arrow[rd,"j_{[X,Y]}"]&{[Y,Y]}\arrow[d,"L_{YY}^X"]\\
+							&{[[X,Y],[X,Y]]}
+						\end{tikzcd}
+					\end{center}
+					\item \begin{center}
+						\begin{tikzcd}
+							{[X,Y]}\arrow[r,"L_{XY}^X"]\arrow[rd,"i_{[X,Y]}"]&{[[X,X],[X,Y]]}\arrow[d,"{[j_X,1]}"]\\
+							&{[I,[X,Y]]}
+						\end{tikzcd}
+					\end{center}
+					\item \begin{center}
+						\begin{tikzcd}
+							{[Y,Z]}\arrow[r,"L_{YZ}^I"]\arrow[rd,"{[1,i_Z]}",swap]&{[[I,Y],[I,Z]]}\arrow[d,"{[i_Y,1]}"]\\
+							&{[Y,[I,Z]]}
+						\end{tikzcd}
+					\end{center}
+					\item \begin{center}
+						\begin{tikzcd}
+							{[U,V]}\arrow[r,"L_{UV}^Y"]\arrow[d,"L_{UV}^X"]&{[[Y,U],[Y,V]]}\arrow[dd,"{[1,L_{YV}^X]}"]\\
+							{[[X,U],[X,V]]}\arrow[d,"L^{[X,Y]}_{[X,U],[X,V]}"]\\
+							{[[[X,Y]],[X,U]],[[X,Y],[X,V]]]}\arrow[r,"{[L_{YU}^X,1]}"]&{[[Y,U],[[X,Y],[X,V]]]}
+						\end{tikzcd}
+					\end{center}
+					\item Finally,
+					\begin{gather*}
+						\gamma:C(X,Y)\rightarrow C(I,[X,Y])\qquad f\mapsto [1,f](j_X)
+					\end{gather*}
+					
+					is a bijection.
+				\end{itemize}
+			\end{Def}
+			\subsubsection{Symmetric Closed Category}
 				\begin{Def}
-					A \textbf{monoidal category} is a category $\mathcal{C}$ equpped with
+					Furthermore, a \textbf{symmetric closed category} is additionally equipped with natural isomorphisms
+					\begin{gather*}
+						C^{XY}_Z:[X,[Y,Z]]\cong [Y,[X,Z]]
+					\end{gather*}
+				\end{Def}
+				
+				\subsubsection{Cartesian Closed Category}
+				
+				\textbf{Remark} Not 'Closed' Cartesian category!
+				
+				\begin{Def}
+					The Cartesian category has:
+					\begin{itemize}
+						\item $!_X:X\rightarrow 1$;
+						\item $\Delta_X:X\rightarrow X\times X$;
+					\end{itemize}
+					
+					And in Cartesian closed category:
+					\begin{itemize}
+						\item Weakening $K$:
+						\begin{gather*}
+							K^X_Y:Y\rightarrow [X,Y]
+						\end{gather*}
+						
+						\item Contraction 
+						\begin{gather*}
+							T^X_Y:[X,[X,Y]]\rightarrow [X,Y]
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				\subsubsection{$S$-Combinator}
+				\begin{Def}
+					Consider:
+					\begin{gather*}
+						S_{Y,Z}^X:[X,[Y,Z]]\rightarrow [[X,Y],[X,Z]]
+					\end{gather*}
+				\end{Def}
+				
+				Operators $C,S,T,K$, have their correspondence in \underline{logic operation}
+				
+				\begin{itemize}
+					\item $K$: Weakening
+					\begin{gather*}
+						K^X_Y:Y\rightarrow [X,Y]\Leftrightarrow K(y)(x)=y
+					\end{gather*}
+					
+					\item $C$: Exchange
+					\begin{gather*}
+						C_{X,Y}^Z:\Leftrightarrow C(f)(y)(x)=f(x)(y)
+					\end{gather*}
+					
+					\item $T$ contraction
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					
+					\item $S$:
+					
+				\end{itemize}
+			\subsection{Eilenberg-Kelly Definition}
+			\begin{Def}
+				(Eilenberg-Kelly) Instead of $\gamma$, there exists an underlying-set functor
+				\begin{gather*}
+					U:C\rightarrow Set
+				\end{gather*}
+		 
+				such that $U([X,Y])=C(X,Y)$.Then isomorphism 
+				\begin{gather*}
+					C(X,X)=U([X,X])\stackrel{Ui_{X,X}}{\rightarrow} U([I,[X,X]])=C(I,[X,X])\qquad 1_X\mapsto j_X
+				\end{gather*}
+				
+				The wo are essentially equivalent.
+			\end{Def}
+			\subsection{Prounital Closed Category}
+				\begin{Def}
+					Especially, when $C$ is not required: A \textbf{prounitial closed category} is a category $C$ together with the following data:
+					\begin{itemize}
+						\item A functor $[-,-]:C^{op}\times C\rightarrow C$, 
+						\item A functor $U:C\rightarrow Set$;
+						\item A transformation $L_{YZ}^X:[Y,Z]\rightarrow [[X,Y],[X,Z]]$;
+						\item A transformation $ev:U(X)\rightarrow C([X,Y],Y)$;
+					\end{itemize}
+					
+					with following axiom:
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+			\subsection{Extra Natural Transformation}
+			\subsection{Reconstruction of Monoidal Structure}
+			
+				Suppose that $[A,[B,-]]:C\rightarrow C$ is representable as $C$-enriched functor, i.e.
+				
+				\begin{gather*}
+					F=[A,[B,-]]:\mathcal{C}\rightarrow \mathcal{C}
+				\end{gather*}
+				
+				be a functor, then it is representable if there exists some $R\in \mathcal{C}$ such that
+				\begin{gather*}
+					[A,[B,X]]\cong [R,X]
+				\end{gather*}
+				
+				Then, if we can find some $R$, then define it as $R=A\otimes B$, thus the followings are equivalnet:
+				\begin{itemize}
+					\item $[A,[B,-]]$ is enriched-representable;
+					\item Exists $A\otimes B$, $[A,[B,X]]\cong [A\otimes B,X]$
+				\end{itemize}
+	\chapter{Limits}
+		\section{Limits,Colimits (in Small Category)}
+		\subsection{Limits}
+		\subsubsection{Set-Thoeretic Limits}
+		\subsubsection{Limit of Functors in an Arbitrary Category}
+		
+		\begin{Def}
+			(Limit of a functor, wth values in an arbitrary category) Now,  take the notion of limit for functors
+			\begin{gather*}
+				F^{op}:D^{op}\rightarrow \mathcal{C}
+			\end{gather*}
+			
+			for $\mathcal{C}$ an arbitrary category, if we construct a certain presheaf $\mathcal{C}$, which we will call $\hat{lim}F$.
+			
+			More precisely, using the \textbf{Yoneda embedding}
+			\begin{gather*}
+				内容...
+			\end{gather*}
+			
+			Then:
+			\begin{gather*}
+				(\hat{lim})(c):=Hom_{Set^{D^{op}}}(pt,Hom_\mathcal{C}(c,F(-)))
+			\end{gather*}
+		\end{Def}
+		
+		\subsubsection{Universal Cone}
+		\begin{Def}
+			(Universal Cone) Let $F:D^{op}\rightarrow \mathcal{C}$ be a functor. Then, every object $c\in \mathcal{C}$, an element
+			\begin{gather*}
+				*\rightarrow Hom(pt,Hom(c,F(-)))
+			\end{gather*}
+			
+			is identiafied with a collection of morphisms $(c\rightarrow F(d))$.
+			
+			For all $d\in D$, such that all triangles
+			\begin{center}
+				\begin{tikzcd}
+					&c\\
+					F(d_i)&&F(d_j)
+				\end{tikzcd}
+			\end{center}
+			
+			Such a collection of morphisms is called a \textbf{cone} over $F$.
+		\end{Def}
+		\subsection{Colimits}
+		
+		\subsection{Compeleteness,Co-Compeleteness}
+		\begin{Def}
+			内容...
+		\end{Def}
+		\section{Product,Coproduct}
+		\section{Pullback and Pushout}
+		\section{Equalizer,Coequalizer}
+		\section{Special Limits}
+			The reference is: Mac Lane.  
+			\subsection{Filtered Limits}
+			\subsection{Ends, Coends}
+				\subsubsection{Ends}
+				\begin{Def}
+					内容...
+				\end{Def}
+				
+			\subsubsection{Coends}
+			\subsubsection{Ends with Parameters}
+	\chapter{Localization of Categories}
+		\section{Multiplicative Sets}
+			\begin{Def}
+				Let $\mathcal{C}$ be a category. Then a set of arrows $\mathcal{S}$ of $\mathcal{C}$ is called a \textbf{left multiplicative system} if it has following property:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+			
+			Similarly, the right multiplicative system is well-defined.
+			
+			\subsection{Left Calculus of Fraction}
+		\section{Gabriel-Zisman Localization}
+			Now we will introduce a starker localization,
+			
+			
+			\begin{Def}
+				(Gabriel-Zisman)Suppose $\mathcal{K}$ be an additive category, and $\mathcal{S}\subseteq \mathcal{K}$ be a subclass:
+				\begin{itemize}
+					\item (FR1)$\mathcal{S}$ is closed under the composition of morphisms;
+					
+					$Id_X\in \mathcal{S},\forall X\in \mathcal{K}$;
+					\item (FR2)We use $\Rightarrow$ to represent the morphisms in $\mathcal{S}$:
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+					\item (FR3)
+				\end{itemize}
+			\end{Def}
+			
+			Especially, a Gabriel-Zisman system is called \textbf{text} if it has the property:
+			\begin{itemize}
+				\item 
+			\end{itemize}
+	\chapter{Kan Extension}
+		\section{Definition}
+			\begin{Def}
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\end{Def}
+			\subsection{Formula}
+			\subsection{Pointwise Kan Extensions}
+			\subsection{Kan Limits, and Other Categoricial Concepts}
+			
+			\begin{center}
+				All concepts are Kan extensions\qquad ------Mac Lane
+			\end{center}
+		\section{Derived Functors as Kan Extensions}
+		
+	\chapter{Monads, and Their Algebras}
+		\section{Monads}
+			\begin{Def}
+				A \textbf{monad} on a category $C$ consists of:
+				\begin{itemize}
+					\item An endomorphism $T:C\rightarrow C$;
+					\item A \textbf{unit} is a natural transformation $\eta:id_C\Rightarrow T$;
+					\item A \textbf{multiplication}: Natural transformation $\mu:T^2\Rightarrow T$;
+				\end{itemize}
+				
+				With the following diagrams commute in $Mor(\mathcal{C})$
+				\begin{center}
+					\begin{tikzcd}
+						T^3\arrow[r,Rightarrow,"T\mu"]\arrow[d,Rightarrow,"\mu T"]&T^2\arrow[d,Rightarrow,"\mu"]\\
+						T^2\arrow[r,Rightarrow,"\mu"]&T
+					\end{tikzcd}\qquad\begin{tikzcd}
+						T\arrow[r,Rightarrow,"\eta T"]\arrow[rd,Rightarrow,"id_T",swap]&T^2\arrow[d,Rightarrow,"\mu"]&T\arrow[l,Rightarrow,"T\eta",swap]\arrow[ld,Rightarrow,"id_T"]\\
+						&T
+					\end{tikzcd}
+				\end{center}
+				
+				i.e. 
+				\begin{gather*}
+					\mu\circ \mu T=\mu\circ T\mu\\
+					\mu\circ \eta T=\mu\circ T\eta=id_T
+				\end{gather*}
+			\end{Def}
+			
+			\subsubsection{Commutative Monads}
+				\begin{Def}
+					Especially, let $(T,\eta,\mu)$ be monad on \underline{symmetric monoidal category} $C$, equipped with \textbf{left-length} 
+					\begin{gather*}
+						\sigma_{X,Y}:TX\otimes TY\rightarrow T(TX\otimes Y)\qquad X,Y\in Ob(\mathcal{C})
+					\end{gather*}
+					
+					With braiding, we have \textbf{right-length} $\tau_{X,Y}=\sigma_{X,Y}\circ s(X,Y)$. 
+					
+					Then, $T$ is \textbf{commutative} if the following diagram commutes for all objects $X,Y$ of $\mathcal{C}$
+					\begin{center}
+						\begin{tikzcd}
+							&TX\otimes TY\\
+							T(TX\otimes Y)&&T(X\otimes TY)\\
+							TT(X\otimes Y)&&TT(X\otimes Y)\\
+							&T(X\otimes Y 	)
+						\end{tikzcd}
+					\end{center}
+				\end{Def}
+				
+				\begin{Def}
+					For such structure, take the notion
+					\begin{gather*}
+						\triangledown_{X,Y}:TX\otimes TY\rightarrow T(X\otimes Y)
+					\end{gather*}
+					
+					which is called \textbf{monoidal multiplication}
+				\end{Def}
+		\section{Adjunction}
+		\section{Monadic Functors}
+		
+		\section{Algebra over Monads}
+			\begin{Def}
+				Let $(T,\eta,\mu)$　be a monad on category $\mathcal{C}$. An \textbf{algebra over} $T$ consists of 
+				\begin{itemize}
+					\item Object $A$ of $\mathcal{C}$;
+					\item Morphism $\alpha:T(A)\rightarrow A$ of $\mathcal{C}$;
+					\item (Unit Property) 
+					\begin{center}
+						\begin{tikzcd}
+							A\arrow[rd,"id_A",swap]\arrow[r,"\eta_A"]&T(A)\arrow[d,"\alpha"]\\
+							&A
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
+				
+				We will take the notion of $\mathcal{C}^T$ for the category of algebras over $T$.
+				
+				\textbf{Remark} Such category is also called \textbf{Eilenberg-Moore category}, EM. 
+			\end{Def}
+			
+			\subsubsection{Homomorphism}
+			\begin{Def}
+				Given two algewbras $(A,\alpha);(B,\beta)$, then a \textbf{T-algebra homomorphism} satisfies: The following diagram commutes
+				\begin{center}
+					\begin{tikzcd}
+						TA\arrow[r,"Tf"]\arrow[d]&TB\arrow[d]\\
+						A\arrow[r,"f"]&B
+					\end{tikzcd}
+				\end{center}
+			\end{Def}
+			\subsubsection{Free Algebras}
+			
+			\begin{Def}
+				Given a monad $(T,\mu,\eta)$, then for every object $X\in \mathcal{C}$, $TX$ has a $T$-algebra structure
+				\begin{gather*}
+					\mu_X:T(T(X))\rightarrow T(X)
+				\end{gather*}
+				
+				$T$-algebra of this sort is called \textbf{free $T$-algebra}.
+			\end{Def}
+			\subsection{Eilenberg-Moore Category}
+			\begin{Def}
+				Let $(T,\eta,\mu)$ be a monad, with $T:C\rightarrow C$ is an endofunctor with multiplication
+				\begin{gather*}
+					\mu:TT\rightarrow T\qquad \eta:Id_\mathcal{C}\rightarrow T
+				\end{gather*}
+				
+				There is a forgetful functor
+				\begin{gather*}
+					U^T:C^T\rightarrow C
+				\end{gather*}
+			\end{Def}
+			
+			\begin{Def}
+				(E-M Object)
+			\end{Def}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Tensor Products}
+			
+			\begin{Def}
+				Especially, for the monad $(T,\mu,\eta)$ over a commutative monad $(\mathcal{C},\otimes,1)$, and denote the multiplication of $T$ by $\triangledown$. Then, the \textbf{tensor algebra} $A\otimes_T B$ is defined as coequalizer of diagram
+				\begin{center}
+					\begin{tikzcd}
+						T(TA\otimes TB)&TT(A\otimes B)&T(A\otimes B)&A\otimes_T B
+					\end{tikzcd}
+				\end{center}
+			\end{Def}
+			
+			\subsubsection{Bimorphisms, and Universal Property}
+			\subsubsection{Monoidal Closed Case}
+			\subsection{Bar Constructions}
+			\begin{Def}
+				(Monoid $\Delta_a$) Actually, $\Delta_a$ has following structure:
+				\begin{itemize}
+					\item Objects: $[n],n\in \NN$;
+					\item Morphisms: Order-Preserving Maps
+				\end{itemize}
+				
+				and
+				\begin{itemize}
+					\item Tensor product: $[n]\otimes [m]:=[m+n]$;
+					\item Unit Object: $[0]$;
+					\item Initial, Terminal Object: $[0],[1]$;
+				\end{itemize}
+				
+				Actually, $(\Delta_a,+,[0])$ is a strict monoidal category.
+				
+				\textbf{Remark} It is not strict: The category contains no isomorphism $[m]+[n]\stackrel{\simeq}{\rightarrow} [n]+[m]$.
+				
+				And: $[1]$ is a monoid object. With
+				\begin{gather*}
+					[n]=\sum [1]
+				\end{gather*}
+				
+				So: $\Delta_a$ is free strict monoidal category, generated by a monoid object.
+			\end{Def}
+			
+			Now: Let $E$ be a category with monad $(T,m:TT\rightarrow T,u:1_E\rightarrow T)$, and category of $T$-algebras $E^T$, and a forget functor
+			\begin{gather*}
+				U:E^T\rightarrow E
+			\end{gather*}
+			
+			with $U\dashv F$. Such $FU$ is a comonoid in $[E^T,E^T]$:
+			\begin{gather*}
+				\delta:FU\Rightarrow FUFU\qquad \epsilon:FU\Rightarrow Id
+			\end{gather*}
+			
+			With unit $\eta:Id_E\Rightarrow UF$, counit $FU\Rightarrow Id_{E^T}$, then $\delta=F\eta U:FU\rightarrow FUFU$.
+			
+			Thus, we got a correspondence: Comonad on 
+			
+			\subsubsection{Bar Constructions}
+			\begin{Def}
+				There is a stroing monoidal functor
+				\begin{gather*}
+					\Delta^{op}_a\stackrel{Bar_T}{\rightarrow} [E^T,E^T]
+				\end{gather*}
+				
+				such that $1\mapsto FU,[n]\mapsto [FU]^n$. 
+				
+				Actually: Let $G=FU$
+				\begin{gather*}
+					Bar_T(A)_n:=T^{n+1}(A)
+				\end{gather*}
+				
+				And:
+				\begin{gather*}
+					Bar_T(A)=
+				\end{gather*}
+			\end{Def}
+			
+			With evaluation for  $A\in E^T$,
+			\begin{gather*}
+				[E^T,E^T]
+			\end{gather*}
+			
+			Then:
+			\begin{Def}
+				\begin{itemize}
+					\item 
+					A \textbf{bar construction} is
+					\begin{gather*}
+						\Delta_{a}^{op}\rightarrow [E^T,E^T]\rightarrow E^T
+					\end{gather*}
+					\item A \textbf{bar resolution} is the composite
+					\begin{gather*}
+						\Delta_a^{op}\rightarrow E^T\rightarrow E
+					\end{gather*}
+					
+					Now let $T=UF$,
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			
+			
+			Some special cases should be given here, to show that Bar construction works:
+			\begin{example}
+				(Classifying Space)
+			\end{example}
+			
+			\begin{example}
+				(Group Cohomology)
+			\end{example}
+			
+			\begin{example}
+				(Hochschild Homology)
+			\end{example}
+			
+			\begin{example}
+				(Descending Theory of Module)
+			\end{example}
+			
+			\begin{example}
+				(Adams Spectral Sequence)
+			\end{example}
+			
+			\begin{example}
+				(Konzul Duality)
+			\end{example}
+	\chapter{Monoidal Category}
+		\section{Fundamentals}
+			\subsection{Monoidal Category}
+				\begin{Def}
+					A \textbf{monoidal category} is a category $\mathcal{C}=(\mathcal{C})$ equpped with
 					\begin{itemize}
 						\item A functor
 						\begin{gather*}
@@ -358,13 +2082,569 @@
 						\end{gather*}
 						
 						out of the product cateegory of $\mathcal{C}$ with itself, called the \textbf{tensor product}.
-						\item 
+						\item An object $1\in \mathcal{C}$ called \textbf{unit object} or \textbf{tensor object}
+						\item A natural isomorphism
+						\begin{gather*}
+							\alpha:((-)\otimes (-))\otimes (-)\stackrel{\simeq}{\rightarrow} (-)\otimes ((-)\otimes (-))
+						\end{gather*}
+						
+						called \textbf{associator}.
+						\item A natural isomorphism: \textbf{Right Unitor}
+						\begin{gather*}
+							\lambda:(1\otimes(-))\stackrel{\cong}{\rightarrow}(-)
+						\end{gather*}
+						\item A natural isomorphism : \textbf{Left Unitor}
+						\begin{gather*}
+							\rho:(-)\otimes 1\stackrel{\cong}{\rightarrow} (-)
+						\end{gather*}
+					\end{itemize}
+					
+					Such that
+					\begin{itemize}
+						\item (Triangle Identity) We have 
+						\begin{center}
+							\begin{tikzcd}
+								(x\otimes 1)\otimes y&&x\otimes(1\otimes y)\\
+								&x\otimes y
+							\end{tikzcd}
+						\end{center}
+						\item (Pentagon Identity)
+						\begin{center}
+							\begin{tikzcd}
+								&(w\otimes x)\otimes (y\otimes z)\\
+								((w\otimes x)\otimes y)\otimes z&&w\otimes (x\otimes (y\otimes z))\\
+								(w\otimes (x\otimes y))\otimes z&&w\otimes ((x\otimes y)\otimes z)
+							\end{tikzcd}
+						\end{center}
 					\end{itemize}
 				\end{Def}
+				
+				\begin{example}
+					(Monad) Especially, a \textbf{monad} is category $\mathcal{C}=(\mathcal{C},\otimes,1,\lambda)$, with $(End(\mathcal{C}),id\mathcal{C}\circ,T,T)$
+				\end{example}
 				
 				\begin{example}
 					\begin{itemize}
 						\item Category $Vect_k$;
 					\end{itemize}
 				\end{example}
+				
+				\subsubsection{Strict Monoidal Cateogory}
+				\begin{Def}
+					Instead of natural isomorphism, we have
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{Def}
+				\subsection{Monoid}
+					\begin{Def}
+						Given a monoidal category, then the \textbf{monoid} is the object $M\in \mathcal{C}$, equipped with object $\mu:1\rightarrow M$ satisfying
+						\begin{center}
+							(Associative Law)\begin{tikzcd}
+								(M\otimes M)\otimes M&&M\otimes (M\otimes M)&&M\otimes M\\
+								&M\otimes M&&M
+							\end{tikzcd}
+						\end{center}
+						\begin{center}
+							(Left and Right Unit Law)\begin{tikzcd}
+								I\otimes M&M\otimes M&M\otimes I\\
+								&M
+							\end{tikzcd}
+						\end{center}
+					\end{Def}
+				\subsection{Monoidal Functor}
+			\begin{Def}
+				Let $(\mathcal{C},\otimes_\mathcal{C},1_\mathcal{C})$ and $(\mathcal{D},\otimes_\mathcal{D},1_\mathcal{D})$ be monoidal categories. A \textbf{lax monoidal functor} between them is a functor 
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				
+				together with coherence maps:
+				\begin{itemize}
+					\item $\eta:1_\mathcal{D}\rightarrow F(1_\mathcal{C})$;
+					\item $\mu_{x,y}:F(x)\otimes_\mathcal{D} F(y)\rightarrow F(x\otimes_\mathcal{C} y)$, $x,y\in \mathcal{C}$
+				\end{itemize}
+				
+				Satisfies:
+				\begin{itemize}
+					\item (Associativity)
+					\item (Unitality)
+				\end{itemize}
+			\end{Def}
+			\subsection{Dualizable Object}
+				\begin{Def}
+					An object $A$ in $(\mathcal{C},\otimes,1)$ is \textbf{dualizable}, if it has an adjoint regarded as a morphism in the one-object delooping category $B\mathcal{C}$ corresponding to $\mathcal{C}$.
+					
+					Precisely, suppose $Ob(B\mathcal{C})=*$, and $B\mathcal{C}$ is a 2-category, $\mathcal{C}$ is a category, then
+					\begin{itemize}
+						\item $Hom(*,*)=\mathcal{C}$;
+						\item Given $A,B\in \mathcal{C}$, then they should be seen as a 1-morphisms in $B\mathcal{C}$:
+						\begin{gather*}
+							A,B:*\rightarrow *
+						\end{gather*}
+						
+						And morphism $f:A\rightarrow B$ became 2-morphism in $B\mathcal{C}$.
+						\item Especially, the composition in $B\mathcal{C}$ corresponds the tensor product in $\mathcal{C}$:
+						\begin{gather*}
+							A\circ B\qquad \mbox{in }B\mathcal{C}\\
+							\Leftrightarrow A\otimes B \qquad\mbox{in }\mathcal{C	}
+						\end{gather*}
+					\end{itemize}
+					
+					And adjointness: For object $A\in \mathcal{C}=$1-morphism in $B\mathcal{C}$ there exists 
+					\begin{gather*}
+						coev:\qquad ev
+					\end{gather*}
+					
+					which satisfies \textbf{Zig-zag identities}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+				
+				And:
+				\begin{Def}
+					(Terminologies) 
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+			\subsection{Symmetric Monoidal Category}
+				
+				\subsubsection{Symmetric Monoidal Category}
+				\begin{Def}
+					A monoidal category is \textbf{symmetric} if it has a braiding.
+				\end{Def}
+				\subsubsection{Invertible Object}
+				\begin{Def}
+					In a monoidal category, an \textbf{invertible object} is a \underline{dualizable object}, such that unit and counit maps are isomorphsim(in $B\mathcal{C}$)
+					
+					Especially: For a symmetric monoidal category, we just need to verify the unit map.
+				\end{Def}
+				\subsubsection{Line Object}
+					\begin{Def}
+						内容...
+					\end{Def}
+				\subsubsection{Picard Groups}
+				\begin{Def}
+					Given a (symmetric) monoidal category $(\mathcal{C},\otimes,1)$, then the \textbf{Picard group} is the \underline{isomorphism classes} of invertible objects, those that have an inverse under the tensor proudct.
+					
+					Take the following notion
+					\begin{gather*}
+						Pic(\mathcal{C})=\{[L]|L\mbox{ is inversable}\}
+					\end{gather*}
+				\end{Def}
+				
+				\textbf{Remark} Why is isomorphism class?
+				
+				\begin{proposition}
+					$\mathcal{C}$ is symmetric$\Rightarrow Pic(\mathcal{C})$ is abelian group.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				Furthermore, we have \textbf{Picard groupoid}
+				\begin{Def}
+					A \textbf{Picard groupoid} is a \textbf{strict symmetric monoidal category} $(\mathcal{A},\otimes,1)$ in which:
+					
+					Take the following notion
+					\begin{gather*}
+						\mathbf{Pic}(\mathcal{C}):=\mbox{Picard Groupoid}
+					\end{gather*}
+				\end{Def}
+				
+				The Picard groupoid is a kind of abelian $2$-group. By definition we got
+				\begin{gather*}
+					Pic(\mathcal{C})=\pi_0\mathbf{Pic} (\mathcal{C})
+				\end{gather*}
+			\subsection{Closed Monoidal Category}
+			\subsubsection{Closed Monoidal Category}
+			\begin{Def}
+				A \textbf{symmetric monoidal category} $\mathcal{C}$ is \textbf{closed}, if for all objects $b\in Ob(C)$, there exists adjunction
+				\begin{itemize}
+					\item Functor
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					\item Right Adjoint Functor
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{itemize}
+				
+				Then, $hom$-isomorphism
+				\begin{gather*}
+					Hom_\mathcal{C}(X\otimes Y,Z)\cong Hom_\mathcal{C}(X,[Y,Z])
+				\end{gather*}
+			\end{Def}
+			\subsection{Lax Monoidal Category,Lax Monoidal Functors}
+			\subsubsection{Lax Monoidal Category}
+			
+			\subsubsection{Lax Monoidal Functors }
+			
+			\begin{Def}
+				内
+			\end{Def}
+			
+			\subsubsection{Oplax Monoidal}
+			\subsection{Cartesian Monoidal Category}
+			\begin{Def}
+				A \textbf{cartesian monoidal category} is a \textbf{monoidal category}, with the monoidal structure
+				\begin{gather*}
+					(-)\otimes -(-)=(-)\times (-)
+				\end{gather*}
+			\end{Def}
+			
+			
+			\subsubsection{Cartesian Closed Category, ccc}
+			\begin{Def}
+				\begin{itemize}
+					\item 
+					A \textbf{cartesian closed category,ccc} is a category with finite products which is closed with respect to its cartesian monoidal structure.
+					
+					\item The \textbf{internal hom} $[S,X]$ in a cartesian closed category is often called \textbf{exponentiation}, denoted by
+					\begin{gather*}
+						X^S
+					\end{gather*}
+					
+					the existence of $[-,-]$ is specified by the closed category.
+					\item A \textbf{cartesian closed functor} between cartesian closed categories $C,D$ is a functor $F:C\rightarrow D$ thath is \underline{product-preserving}, and that is also \underline{expotential-preserving}, i.e.
+					\begin{gather*}
+						内容...
+					\end{gather*}
+					
+					corresponding to the composite
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				Every ccc is self-enriched. (Definition in Next Section)
+			\end{proposition}
+			\begin{proof}
+				Given $(\mathcal{C},\times ,1)$, and exponential objects 
+				\begin{gather*}
+					Y^X:=[X,Y]
+				\end{gather*}
+				
+				which is specified by
+				\begin{gather*}
+					Hom_C(A,Y^X)\cong Hom_C(A\times X,Y)
+				\end{gather*}
+				
+				$Hom(-\times X,Y)$ is representable. Then, define the enriched hom
+				\begin{gather*}
+					\underline{Hom}_\mathcal{C}(X,Y)\in Y^X\in \mathcal{C}
+				\end{gather*}
+				
+				\begin{itemize}
+					\item Composition
+					\begin{gather*}
+						Z^Y\times Y^X\rightarrow Z^X
+					\end{gather*}
+					
+					By adjunction $Hom_\mathcal{C}(Z^Y\times Y^X,Z^X)\cong Hom_\mathcal{C}((Z^Y\times Y^X)\times X,Z)$, the corresponding map could be given by
+					\begin{gather*}
+						(Z^Y\times Y^X)\times X=Z^Y\times (Y^X\times X)\stackrel{id_{Z^Y}\times ev}{\rightarrow} Z^Y\times Y\stackrel{ev}{\rightarrow} Z
+					\end{gather*}
+					\item Identity
+					\begin{gather*}
+						1\rightarrow X^X
+					\end{gather*}
+					
+					We have $Hom(1,X^X)\cong Hom(1\times X,X)\cong Hom(X,X)$. This is enriched identity.
+					
+					which is specified 
+					\item Left, Right morphism trivial.
+				\end{itemize}
+				
+				Thus, $C(X,Y)_{enriched}=Y^X$.
+			\end{proof}
+			
+			\begin{corollary}
+				$\mathbf sSet$ is self-enriched.
+			\end{corollary}
+			\begin{proof}
+				Given by the strucuture
+				\begin{gather*}
+					({\mathbf sSet},\times,\Delta[0])
+				\end{gather*}
+			\end{proof}
+		\section{Braiding}
+			\begin{Def}
+				Given a monoidal category $(\mathcal{C},1,\otimes,\alpha,\lambda,\rho)$, the \textbf{braid structure} is the isomorphism between binary functors
+				\begin{gather*}
+					c(X,Y):X\otimes Y\stackrel{\sim}{\rightarrow } Y\otimes X;X,Y\in Ob(\mathcal{C})
+				\end{gather*}
+				
+				Such that the following diagram commutes:
+				\begin{center}
+					\begin{tikzcd}
+						内容...
+					\end{tikzcd}
+				\end{center}
+			\end{Def}
+			
+			\begin{Def}
+				(Symmetric Monoidal Category) If
+				\begin{gather*}
+					c(X,Y)\circ c(Y,X)=id_{X\otimes Y}\qquad \forall X,Y\in Ob(\mathcal{C})
+				\end{gather*}
+				
+				Then, the category is called \textbf{symmetric monoidal category}.
+			\end{Def}
+			
+			\begin{proposition}
+				(Yang-Baxter Equation) Suppose $\mathcal{C}$ be a monoidal category with braid, then the following diagram commutes:
+				\begin{center}
+					\begin{tikzcd}
+						内容...
+					\end{tikzcd}
+				\end{center}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			Especially:
+			\begin{corollary}
+				If $\mathcal{V}$ is strict monoidal category with braid, then the diagram is equivalent to say:
+				\begin{gather*}
+					(c(Y,Z)\otimes id_X)(id_Y\otimes c(X,Z))(c(X,Y)\otimes id_Z)=(id_Z\otimes c(X,Y))(c(X,Z)\otimes id_Y)(id_X\otimes c(Y,Z))
+				\end{gather*}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Braid Category}
+			
+			We will introduce Braid category, the contents of braid group, we will study it in an another topic.
+			
+			
+		\section{Enrichment of Monoidal Category}
+		
+			Instead of $Hom$-Set, we want to observe $Hom$-Objects.
+			\begin{Def}
+				Let $V$ be a monoidal category, then a \textbf{small $V$-category} or \textbf{V-enriched category} is:
+				\begin{itemize}
+					\item A \textbf{set} $Obj(\mathcal{C})\in Set$, the set of objects;
+					\item For each pair
+					\begin{gather*}
+						(a,b)\in Ob(\mathcal{C})\times Ob( \mathcal{C})
+					\end{gather*}
+					
+					There exists an object $C(a,b)\in Obj(V)$ called \textbf{hom-object}
+					
+					Sometimes, the collection is called \textbf{enriched $Hom$-object} and can be written as 
+					\begin{gather*}
+						\underline{Hom}_\mathcal{C}(X,Y)
+					\end{gather*}
+					\item For each order triple $(a,b,c)$, $[\circ_{a,b,c}:C(b,c)\otimes C(a,b)\rightarrow C(a,c)]\in Mor(V)$, called \textbf{composition morphism}
+					\item Identity Element: For $a\in Obj(\mathcal{C})$, ther e exists a morphism $[j_a:1\rightarrow C(a,a)]\in Mor(V)$ called \textbf{identity element}
+					\item The following diagrams commutes:
+					\begin{center}
+						\begin{tikzcd}
+							(C(c,d)\otimes C(b,c)\otimes C(a,b))&&C(c,d)\otimes(C(b,c)\otimes C(a,b))\\
+							C(b,d)\otimes C(a,b)&&C(a,d)\otimes C(a,c)\\
+							&C(a,d)
+						\end{tikzcd}\\ \begin{tikzcd}
+							C(b,b)\otimes C(a,b)&&C(a,b)\otimes C(a,a)\\
+							&C(a,b)\\
+							I\otimes C(a,b)&&C(a,b)\otimes I
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
+			\end{Def}
+			\subsection{Enriched Functor}
+				\begin{Def}
+					Let $C,D$ be enriched in monoidal category $V$, and \textbf{enriched functor} $F:C\rightarrow D$ consists of:
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+			\subsection{Enrichment by Lax Monoidal Functor}
+			
+				\begin{Def}
+					Let $V$ be a monoidal category, then $V$-category can be viewed, as a set $X\in Set$ together with a \textbf{lax monoidal functor} $\Phi=\Phi_d$, of the form
+					\begin{gather*}
+						\Phi:V^{op}\rightarrow Set^V\stackrel{d}{\rightarrow} Set^{X\times X}
+					\end{gather*}
+					
+					With:
+					\begin{itemize}
+						\item $d$ is induced by the pairing $(a,b)\mapsto C(a,b)$;
+						\item $Set^{X\times X}$ has the convolution structure
+						\begin{gather*}
+							(F\odot G)(x,z):=\sqcup_{y\in X} F(y,z)\times G(x,y)
+						\end{gather*}
+						\item $\Phi(v)_{x,y}:=hom_V(v,d(x,y))$;
+						
+						Under the composition,
+						\begin{gather*}
+							Hom(v,C(x,y))\times Hom(v',C(y,z))\rightarrow Hom(v\otimes v',C(x,y)\otimes C(y,z))\stackrel{(Hom(1,comp))}{\rightarrow } Hom(v\otimes v',C(x,z))
+						\end{gather*}
+						
+						We have
+						\begin{gather*}
+							\Phi_d(v)\odot \Phi_d(w)\rightarrow \Phi_d(v\otimes w)
+						\end{gather*}
+						
+						which is a lax monoidal structure.
+					\end{itemize}
+				\end{Def}
+		\section{MacLane's Coherence Theorem}
+		
+		According to the definition of monoidal category, the associator, left unitor and right unitor are given by the equivalence relation. But furthermore, a question is: We have
+		\begin{gather*}
+			((X\otimes Y)\otimes Z)\otimes W\sim (X\otimes (Y\otimes Z))\otimes W\sim X\otimes ((Y\otimes Z)\otimes W)\sim X\otimes (Y\otimes (Z\otimes W))\\
+			((X\otimes Y)\otimes Z)\otimes W\sim (X\otimes Y)\otimes (Z\otimes W)\sim X\otimes (Y\otimes (Z\otimes W))
+		\end{gather*}
+		
+		And the isomorphisms are may be not trivial. If it is strict, then the process is unncessary. 
+		\begin{theorem}
+			(MacLane) 
+			\begin{itemize}
+				\item 
+				\item 
+				\item 
+				\item 
+			\end{itemize}
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			(Stritification Theorem)For every monoidal category, there exists a canonical isomorphism
+			\begin{gather*}
+				\mathcal{C}\simeq \mathcal{C}_{str},\alpha,\lambda,\rho=1
+			\end{gather*}
+		\end{corollary}
+	\chapter{Enriched Category}
+		Reference:
+		\begin{itemize}
+			\item \url{ https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/kelly-book.pdf}
+		\end{itemize}
+		
+	\chapter{Bicategory,2-Category}
+		\section{Bicategory}
+			\begin{Def}
+				A \textbf{bicategory} $B$ consists of:
+				\begin{itemize}
+					\item A collection of objects called $0$-cells;
+					
+					\item For each pair $0$-cells $(x,y)$, a category
+					\begin{gather*}
+						B(x,y)
+					\end{gather*}
+					
+					whose objects are called \textbf{morphisms} or \textbf{1-cells} and whose morphisms are called \textbf{2-morphisms} or \textbf{2-cells}
+					\item For each $0$-cell $x$, a distinguished 1-cell
+					\begin{gather*}
+						1_x\in B(x,x)
+					\end{gather*}
+					
+					called the \textbf{identity morphism} or \textbf{identity $1$-cell} at $x$.
+					\item For 0-cell $x,y,z$, horizontal composition
+					\begin{gather*}
+						\circ: B(y,z)\times B(x,y)\rightarrow B(x,z)
+					\end{gather*}
+					
+					called \textbf{horizontal composition}
+					\item For each pair of $0$-cell , natural isomorphism in $B(x,y)$ called \textbf{unitors}
+					\begin{gather*}
+						\begin{pmatrix}
+							f\mapsto f\circ 1_x\\
+							\theta\mapsto \theta\circ 1_x
+						\end{pmatrix}\cong id_{B(x,y)}\cong \begin{pmatrix}
+							f\mapsto 1_y\circ f\\
+							\theta\mapsto1_{1_y}\circ \theta
+						\end{pmatrix}:B(x,y)\rightarrow B(x,y)
+					\end{gather*}
+					
+					As tradition, denoted by $\lambda_{x,y},\rho_{x,y}$.
+					\item Associators:Consider the composition funcotr
+					\begin{gather*}
+						c_{x,y,z}:B(y,z)\times B(x,y)\rightarrow B(x,z)\qquad (g,f)\mapsto g\circ f
+					\end{gather*}
+					
+					Then, there exists an natural isomorphism between functors:
+					\begin{gather*}
+						a_{w,x,y,z}:c_{w,x,z}\circ (c_{x,y,z}\times 1_{B(w,x)})\Rightarrow  c_{w,y,z}\circ (1_{B(y,z)}\times c_{w,x,y})
+					\end{gather*}
+					
+					They are functors $B(x,y)\times B(y,z)\times B(z,w)\rightarrow B(x,w)$. And componentwise, they are 1-morphisms:
+					\begin{gather*}
+						a_{f,g,h}:(h\circ g)\circ f\stackrel{\cong}{\Rightarrow} h\circ (g\circ h)
+					\end{gather*}
+				\end{itemize}
+				
+				Such that:
+				\begin{itemize}
+					\item The pentagon identity is satified by the associators;
+					\[\small
+					\begin{tikzcd}[column sep=4.5em,row sep=4em]
+						& (((k\circ h)\circ g)\circ f)
+						\arrow[rr,"a_{k,h,g}\ast 1_f"]
+						\arrow[dl,"a_{k\circ h,g,f}"']
+						&& ((k\circ (h\circ g))\circ f)
+						\arrow[dr,"a_{k,h\circ g,f}"] & \\
+						((k\circ h)\circ (g\circ f))
+						\arrow[drr,"a_{k,h,g\circ f}"']
+						&&&& k\circ ((h\circ g)\circ f)
+						\arrow[dll,"1_k\ast a_{h,g,f}"] \\
+						&& k\circ (h\circ (g\circ f)) &&
+					\end{tikzcd}
+					\]
+					\item The Triangle Identity is satisfied by unitors.
+					\[
+					\begin{tikzcd}[column sep=huge,row sep=large]
+						(g\circ 1_y)\circ f
+						\arrow[rr,"a_{g,1_y,f}"]
+						\arrow[dr,"\rho_g\ast 1_f"']
+						&&
+						g\circ(1_y\circ f)
+						\arrow[dl,"1_g\ast\lambda_f"]
+						\\
+						&
+						g\circ f
+						&
+					\end{tikzcd}
+					\]
+				\end{itemize}
+			\end{Def}
+			
+			Actually, it is a weak 2-category.
+			\subsection{2-Functors}
+			\begin{Def}
+				内容...
+			\end{Def}
+			\subsubsection{Pseudo-Natural Transformations}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsubsection{Biadjunction}
+			\begin{Def}
+				Given $2$-categories $A,C$, with two functors
+				\begin{gather*}
+					F:A\rightarrow C\qquad U:C\rightarrow A
+				\end{gather*}
+				
+				Then, a \textbf{biadjunction} is given by: For each object $a\in A;c\in C$ there exists equivalence of categories
+				\begin{gather*}
+					C(Fa,c)\cong A(a,Uc)
+				\end{gather*}
+				
+				which is \underline{pseudo-natural} both $a$ and $c$.
+			\end{Def}
+		
+			\section{2-Category}
 \end{document}

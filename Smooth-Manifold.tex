@@ -1,6 +1,23 @@
 \documentclass[Total.tex]{subfiles}
 
 \begin{document}
+	Some of contents:
+	\begin{itemize}
+		\item Smooth Manifold;
+		\item De Rham Cohomology;
+		\item Integratiability, Foliation;
+		\item Differential Geometry without Metric(Connection Geometry);
+		\item 
+	\end{itemize}
+	
+	And the following contents are not contained:
+	\begin{itemize}
+		\item Specified Geometry;
+		\item Characteristic Classes;
+		\item Algebraic Topology: Manifolds;
+		\item Chern-Weil;
+		\item Analysis on Manifolds;
+	\end{itemize}
 	\chapter{Smooth Manifold}
 		\section{Definitions}
 			\begin{Def}
@@ -117,7 +134,39 @@
 			\end{proof}
 		\section{Partition Unity}
 	\chapter{Tangent Spaces}
-		\section{Tangent Vectors}
+		\section{Tangent Vectors}	
+			\subsection{Tangent Space as Derivation of the Space of Germs}
+				\subsubsection{Germs}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						The \textbf{germ} on $C_p^\infty(M)$ is specified by the equivalence class by:
+						\begin{gather*}
+							(U,f)\simeq (V,g)\Leftrightarrow \exists W,p\in W\subseteq U\cap V, f|W=g|W
+						\end{gather*}
+						
+						And operations
+						\begin{gather*}
+							内容...
+						\end{gather*}
+						Thus is a linear space;
+						\item A \textbf{derivation} of $C_p^\infty(M)$ is a linear map
+						\begin{gather*}
+							v:C^\infty_p(M)\rightarrow \RR
+						\end{gather*}
+						
+						which satisfies Lebnitz's law:
+						\begin{gather*}
+							内容...
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+			\subsection{Tangent Vectors as Equivalence Classes of Vectors}
+				\begin{Def}
+					内容...
+				\end{Def}
+		\section{Differentials}
 			\subsection{Derivative on Opens}
 				
 				\begin{Def}
@@ -125,24 +174,40 @@
 				\end{Def}
 				
 			\subsection{Formel Derivations}
-			
-			\subsection{Tangent Vectors on a Manifold}
-				
-				\begin{example}
-					(Tangent Space of Vector Space) Let $V\cong \RR^n$ be a vector space. We have
-					
+				\begin{Def}
+					Let $M$be a manifold (with or without boundary), then a linear map
 					\begin{gather*}
-						T_wV=V;w\in V
-					\end{gather*} 
-				\end{example}
+						C^\infty(M)^*\ni v:C^\infty(M)\rightarrow \RR
+					\end{gather*}
+					
+					such that:
+					\begin{itemize}
+						\item (Lebnitz's Law) $v(fg)=f(p)v(g)+g(p)v(f)$;
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					The follwoings vector spaces are isomorphic:
+					\begin{itemize}
+						\item 
+						\item 
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsection{Differential of Smooth Map}
+				\begin{Def}
+					内容...
+				\end{Def}
+				
 			\subsection{Pushforwards}
+			
 		\section{Coordinate Computations}
 		\section{Tangent Vectors to Curves,Fibres}
 			\subsection{Curves}
 			\subsection{Fibres}
-				
-		
-	\chapter{Vector Fields}
 		\section{Tangent Bundles}
 			\begin{Def}
 				Define: For manifold $M$, the \textbf{tangent space}
@@ -208,7 +273,11 @@
 			\begin{gather*}
 				\Omega^1(M,V)
 			\end{gather*}
-			Especially, when $V=\RR$, denoted by $\Omega_1(M)$.
+			
+			Especially, when $V=\RR$, denoted by $\Omega_1(M)$. As a matter of fact
+			\begin{gather*}
+				\Omega^1(M,V)=\{\omega|\omega_p:T_p M\rightarrow V,p\in M\}
+			\end{gather*}
 			
 			\begin{Def}
 				Define the product
@@ -228,11 +297,153 @@
 				Let $f:N\rightarrow M$. Then, the \textbf{pullback}
 				\begin{gather*}
 					f^*:\Omega^1(M,V)\rightarrow \Omega^1(N,V)\\
-					\omega\mapsto \omega\circ Tf
+					\omega\mapsto \omega\circ (Tf)
 				\end{gather*}
 			\end{Def}
 			
-		\section{Lie Algebra of Vector Fields}
+			\subsubsection{Pfaffian Form with Vector Bundles}
+				\qquad Consider the vector bundle:
+				\begin{gather*}
+					\pi:E\rightarrow M\qquad \tau:T^*M\rightarrow M
+				\end{gather*}
+				
+				Notice that:
+				\begin{gather*}
+					\mbox{(Locally Trivial)}\qquad \pi^{-1}(U)\cong U\times \RR^n
+				\end{gather*}
+				
+				Then, define:
+				\begin{gather*}
+					\Omega^1(M;E)=\Gamma(T^*M\otimes E)
+				\end{gather*}
+				
+				And we observe the section locally, with local triviality $\pi^{-1}(U)\cong U\times \RR^n$, we have
+				\begin{gather*}
+					\Gamma(T^*\otimes E)|U=\Omega(U;\RR^n)
+				\end{gather*}
+			\subsection{Curve, and its Derivative}
+			\begin{Def}
+				\begin{itemize}
+					\item 
+					A \textbf{smooth curve} is a smooth function
+					\begin{gather*}
+						\gamma:I\rightarrow M
+					\end{gather*}
+					\item  If $\gamma$ could be seen as a smooth map between manifolds $I$ and $M$, now under the standard basis of $I$, we obtain
+					\begin{gather*}
+						(d\gamma)_t: T_tI=\RR\rightarrow T_{\gamma(t)} M
+					\end{gather*}
+					
+					Especially, with the basis $(\frac{\partial }{\partial t}|t_0)$, define
+					\begin{gather*}
+						\dot{\gamma}: I\rightarrow TM\qquad t\mapsto (d\gamma)_{t_0}(\frac{\partial}{\partial t}|t_0)\in T_{\gamma(t_0)}M
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+				\begin{proposition}
+					\begin{itemize}
+						\item 
+						We have:
+						\begin{gather*}
+							\tau \circ \dot{\gamma}=\gamma
+						\end{gather*}
+						\item And $\dot{\gamma}$ is actually the section of pullback bundle: The pullback bundle induced by $\gamma$:
+						\begin{center}
+							\begin{tikzcd}
+								\gamma^* TM\arrow[r,dashrightarrow]\arrow[d,dashrightarrow]&TM\arrow[d]\\
+								I\arrow[r]&M
+							\end{tikzcd}
+						\end{center}
+						
+						Then, $\dot{\gamma}\in \gamma^*TM$. 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item Definition;
+						\item Omitted;
+					\end{itemize}
+				\end{proof}
+				
+		\section{Vector Fields and Tensor Fields}	
+			\begin{Def}
+				Let $M$ be a manifold. 
+				\begin{itemize}
+					\item 
+					A \textbf{vector field} on $M$ a section of the map $\pi:TM\rightarrow M$.
+					
+					\item  More concretely, is a continuous map $X:M\rightarrow TM$, with
+					\begin{gather*}
+						\pi\circ X=Id_M
+					\end{gather*}
+					
+					Denoted by: 
+					\begin{itemize}
+						\item $\mathfrak{X}(M)$; or
+						\item $\Gamma(M,TM)$; or
+						\item $H^0(M,\mathcal{T}_M)=\Gamma(M,\mathcal{T}_M)$; For sheaf $\mathcal{T}_M(U):=\Gamma(U,TU)$;
+					\end{itemize}
+				\end{itemize}
+				
+				Equivalently, this is a continuous map with $X_p\in T_p M$;
+			\end{Def}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Smoothness of Vector Field}
+			
+			\begin{proposition}
+				(Smooth Vector Fields as $C^\infty(M)$-Module)
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Extension of Vector Field}
+			
+			\subsubsection{Local and Global Frames}
+		\subsection{Vector Fields as Derivation of $C^\infty(M)$}
+			\begin{Def}
+				Define the action of $X\in \mathfrak{X}(M)$:
+				\begin{gather*}
+					X:C^\infty(M)\rightarrow C^\infty(M)\qquad f\mapsto (Xf:p\mapsto (Xf)(p)=X_p f)
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				For $X\in \mathfrak{X}(M);f,g\in C^\infty(M)$ we have
+				\begin{gather*}
+					X(fg)=X(f)g+X(g)f\qquad X_p(fg)=X_p(g)f(p)+X_p(f)g(p)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				Conversely, given $D\in Der_\RR(C^\infty(M),C^\infty(M))$, then
+				\begin{gather*}
+					X:M\rightarrow TM\qquad X_p(f):=(Df)(p)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				We should verify:  $X_p$ is the element of $T_p M$. 
+			\end{proof}
+			
+			\begin{corollary}
+				There exists an isomrophsim
+				\begin{gather*}
+					\mathfrak{X}(M)\cong Der_\RR(C^\infty(M),C^\infty(M))
+				\end{gather*}
+			\end{corollary}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+		\subsection{Lie Derivatives}
 			\begin{lemma}
 				If $U\subseteq M$ is an open subset and $f\in C^\infty(U,V)$ is a smooth function on $U$ with values in $V$, where $V$ is a finite dimensional vector space, $X\in \mathcal{V}(M)$.
 				
@@ -249,24 +460,27 @@
 				Such $\mathcal{L}_X(f)$ is called \textbf{Lie derivative} of $f$ with respect to $X$.
 			\end{Def}
 			\subsection{Lie Bracket}
-			
-			\begin{lemma}
-				Let $U\subseteq \RR^n$ be an open subset. Then we obtain a Lie bracket on the space $C^\infty(U,\RR^n)$ by
+			\begin{Def}
+				Define the \textbf{Lie bracket} on $\mathfrak{X}(M)$: For $X,Y\in \mathfrak{X}(M)$, 
 				\begin{gather*}
-					[X,Y](p):=dY(p)X(p)-dX(p)Y(p);p\in U
+					[X,Y]:C^1(M)\rightarrow C^\infty(M)\qquad [X,Y]f:=X(Yf)-Y(Xf)
 				\end{gather*}
-				The map
-				\begin{gather*}
-					C^\infty(U,\RR^n)\rightarrow End(C^\infty(U,\RR)),X\mapsto \mathcal{L}_X
-				\end{gather*}
-				where $\mathcal{L}_X(f)(p)=df(p)X(p)$. is an injective homomorphism of Lie algebras. i.e. $\mathcal{L}_{[X,Y]}=[\mathcal{L}_X,\mathcal{L}_Y]$
-			\end{lemma}
+			\end{Def}
+			\begin{proposition}
+				$(\mathfrak{X}(M),[-,-])$ is a Lie algebra. And $[X,Y]$ is smooth.
+			\end{proposition}
 			\begin{proof}
 				内容...
 			\end{proof}
 			
-		\section{Vector Field as Derivations}
-	\chapter{The Cotangent Bundle}
+			\begin{proposition}
+				(Naturality)
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Coordinate Calculating of Lie Bracket}
+			
 		\section{Tangent Covectors on Manifolds}
 			\begin{Def}
 				Let $M$ be a manifold. For each $p\in M$, we define the \textbf{cotangent space} at $p$, 
@@ -274,12 +488,1018 @@
 					T_p^*M:=(T_p M)^\vee
 				\end{gather*}
 			\end{Def}
-		\section{Differentials}
+			\subsection{Conservative Covector Fields}
+	\chapter{Bundles}
+		Some of contents should refer to the note: Bundles. We will discuss the bundles in general there. Others: Principle Bundles, Associated Bundles, usw. 
+		\section{Vector Bundles}
 			
 			\begin{Def}
 				内容...
 			\end{Def}
+			\subsubsection{$C^\infty(U)$-Module Structure}
+				\begin{Def}
+					The vector bundle $s\in \Gamma(U)$ has a $C^\infty(U)$-structure: For $f\in C^\infty(U)$,
+					\begin{gather*}
+						f\cdot s\in C^\infty(U)
+					\end{gather*}
+				\end{Def}
+			\subsection{Vector-Bundle Valued Differential Forms}
+				\begin{Def}
+					Let $\pi:E\rightarrow M$ be a vector bundle. Now, there exists two bundles
+					\begin{gather*}
+						\pi:E\rightarrow M\qquad \tau:TM\rightarrow M\Rightarrow \Lambda^k \tau\otimes \pi
+					\end{gather*}
+					Define:
+					\begin{gather*}
+						\Omega^k(M;E):=\Gamma(\Lambda^k T^*M\otimes E)
+					\end{gather*}
+				\end{Def}
+				
+				Especially: We will not define the differential here, to make $(\Omega^i(M;E))$ a chain complex. 
+				
+				Because: There exists no differential $d$ without a structure of connection. We will discuss thsi later. 
+				\subsubsection{$\Omega^0(M;E)$}
+				
+				We have $\Omega^0(M,E)=\Gamma(E)$;
+				
+				\subsubsection{$\Omega^1(M;E)$, $\Omega^k(M;E)$}
+				
+				\begin{proposition}
+					For vector bundle $\pi:E\rightarrow M$:
+					\begin{gather*}
+						\Omega^1(M;E)=\Gamma(T^*M\otimes E)\cong Hom_{C^\infty(M)}(\mathfrak{X}(M),\Gamma(E))\\
+						\Omega^k(M;E)=\Gamma(\Lambda^k T^* M\otimes E)\cong Alt^k_{C^\infty(M)}(\mathfrak{X}(M),\Gamma(E))
+ 					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					We just need to verify, that
+					\begin{gather*}
+						\Gamma(\Lambda^k T^*M\otimes E)\cong Alt^k_{C^\infty(M)}(\mathfrak{X}(M),\Gamma(E))
+					\end{gather*}
+					
+					Because in linear algebra:
+					\begin{gather*}
+						\Lambda^k V^*\otimes W\cong Alt^k(V,M)
+					\end{gather*}
+				\end{proof}
+				
+			\subsubsection{Local Frame Calculating}
+			
+			
+			\subsection{Fibre, and Operations by Fibrewise Construction}
+			
+			\subsection{Bundle Metric}
+				\begin{Def}
+					Let $\pi:E\rightarrow M$ be a vector bundle, then, the \textbf{bundle metric} is 
+					\begin{gather*}
+						k:E\times_M E\rightarrow M\times \RR
+					\end{gather*}
+					
+					where the restriction of $k$ on the fibre of $M$ is a bilinear map over vector space. This implies: 
+					\begin{gather*}
+						k|\pi^{-1}(m)\times \pi^{-1}(m):k^{-1}(\{m\}\times \RR)\rightarrow \{m\}\times \RR
+					\end{gather*}
+					
+					Because: $E\times_M E=\sqcup_{m\in M} \pi^{-1}(m)\times \pi^{-1}(m),M\times \RR=\sqcup_{m\in M} \RR$
+				\end{Def}
+				
+				Another viewpoint is: That $k:E\otimes_M E\rightarrow \underline{\RR}$, where $\underline{\RR}$ is the trivial vector bundle $M\times \RR\rightarrow M$. This is a bundle morphism.
+			
+				\begin{lemma}
+					Every vector bundle over a paracompact space admits a (positive-definite) metric. 
+				\end{lemma}
+				\begin{proof}
+					We will prove this in the theory of bundles.  
+				\end{proof}
+				
+				\begin{corollary}
+					Every bundle on smooth manifold admits a bundle metric. 
+				\end{corollary}
+				\begin{proof}
+					By paracompactness of smooth manifold. 
+				\end{proof}
+		\section{Tangent Bundles}
+		\section{Cotangent Bundles}
+		
+		
+	
+		\section{Frame Bundle}
+			\begin{Def}
+				Let $M$ be an $n$-dimensional manifold. For every $p\in M$, define:
+				\begin{gather*}
+					Fr_p(TM):=\{(e_1,\dots,e_n)|Span(e_1,\dots,e_n)=T_p M\}
+				\end{gather*}
+				
+				with $Fr(M):=\sqcup_{p\in M} Fr_p (M)$; Proejction $\pi:Fr(M)\rightarrow M$;
+			\end{Def}
+			
+			\begin{lemma}
+				As a matter of fact,
+				\begin{gather*}
+					Fr_p(TM)\cong Iso(\RR^n,T_p M)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			Notice that: $Fr(M)|U\subseteq [\mathfrak{X}(U)]^n$. It contains a Lie-bracket structure, but not over $\RR$.
+			
+			If $span_\RR(E_1,\dots,E_n)$ is a finite dimensional Lie algebra, then
+			\begin{gather*}
+				[E_i,E_j]=c_{ij}^kE_k\qquad c_{ij}^k:U\rightarrow \RR
+			\end{gather*}
+			
+			But $c_{ij}^k$ is not constant. If we consider it as $C^\infty(U)$-module, then
+			\begin{gather*}
+				[E_i,E_j]=c^k_{ij}E_k
+			\end{gather*}
+			
+			is actually a 'Lie bracket'.
+			\subsubsection{Einstein's Summation Convention}
+				Sometimes, instead of
+				\begin{gather*}
+					\sum_i a_i
+				\end{gather*}
+				
+				We just use $a_i$, if there is no confusing. 
+			\subsection{Principal $GL(n,\RR)$-Bundle Structure}
+				
+			\begin{proposition}
+				For each fibre $Fr_p M$, it contains a $GL_n(\RR)$-transform
+				\begin{gather*}
+					(e_1,\dots,e_n)\cdot A=(\sum e_j A_{j1},\dots,\sum_j e_j A_{jn})
+				\end{gather*}
+				
+				And such action is: Free and transitive. Thus $\pi$ is a principal $GL_n(\RR)$-bundle. 
+			\end{proposition}
+			\begin{proof}
+				We just need to verify, $\pi$ is locally trivial: Notice that $\pi^{-1}(U)\cong \sqcup_{q\in U} Fr_q(M)\cong U\times GL(n,\RR)$. The isomorphism is given by: Choose a local coordinate $(U;x^1,\dots,x^n)$, with local frame
+				\begin{gather*}
+					(\frac{\partial}{\partial x^1},\dots,\frac{\partial}{\partial x^n})
+				\end{gather*}
+				
+				Then, we got a section $s:U\rightarrow \sqcup_{p\in U} Fr_p(M),p\mapsto (\frac{\partial}{\partial x^1},\dots,\frac{\partial}{\partial x^n})$, and any frame on $p$ could be represented as 
+				\begin{gather*}
+					(e_1,\dots,e_n)=(\frac{\partial}{\partial x^i})_{i=1}^n\cdot A
+				\end{gather*}
+				
+				Thus, $Fr(TM)|U\cong GL_n(\RR)\times U$;
+			\end{proof}
+			The followings are equivalent:
+			\begin{itemize}
+				\item Local frame;
+				\item Section $s:U\rightarrow \sqcup Fr_p(M)$;
+				\item Local trivialization;
+			\end{itemize}
+			
+			\begin{proof}
+				As a matter of fact: We could take another viewpoint. Given an original local frame
+				\begin{gather*}
+					s:U\rightarrow Fr(M)|U
+				\end{gather*}
+				
+				Then, we got a form of $s(p)=s_0(p)g(p),p\in U$; Thus we obtain a smooth map
+				\begin{gather*}
+					g:U\rightarrow GL_n(\RR)
+				\end{gather*}
+				
+				This obtains a bijection:
+				\begin{gather*}
+					Fr(M)|U\Leftrightarrow C^\infty(U,GL_n(\RR))
+				\end{gather*}
+				
+				Now, for the local trivialization: We choose a local frame $s\in Fr(M)|U$, then corresponds $C^\infty(U,GL_n(\RR))$.
+				
+				For selected point $q\in U$, and every $u\in Fr(T_p M)$, there exists decomposition
+				\begin{gather*}
+					u=s(p)g
+				\end{gather*}
+				
+				Thus, $u\mapsto (p,g)\qquad Fr(T_p M)\cong (p,GL_n(\RR))\Rightarrow Fr(TM)\cong \sqcup_{p\in U} (p,GL_n(\RR))=U\times GL_n(\RR)$
+			\end{proof}
+			
+			So, the isomorphism is not canonically. It depends on choice of local frame. 
+			
+			\begin{proposition}
+				Furthermore, there exists associated bundle structure
+				\begin{gather*} 
+					TM\cong Fr(M)\times_{GL_n(\RR)} \RR^n
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				
+			\end{proof}
+			
+			\begin{example}
+				(Frame Bundle of $\RR^n$) Especially, the frame bundle of $\RR^n$ is trivial:
+				\begin{gather*}
+					Fr(\RR^n)\cong \RR^n\times GL_n(\RR)
+				\end{gather*}
+				
+				Because $\RR^n$ has a standard basis on each tangent space. 
+			\end{example}
+			
+			\begin{example}
+				(The Action of $SO(3)$ on $TS^2$)
+			\end{example}
+			
+			For the orthogonal frames, we will discuss the in Riemann geometry;
+			
+			\subsubsection{Geometric Structure}
+			
+			\begin{itemize}
+				\item Riemannian Metrics$\Leftrightarrow$ $O(n)$;
+				\item Oriented Riemann Manifolds$\Leftrightarrow SO(n)$;
+				\item $GL(m;\CC)\subseteq GL(2m,\RR)$: Almost Complex Structure;
+				\item $U(m)$: Almost Hermitian Geometry;
+				\item \dots
+			\end{itemize}
+			
+			We will research $G$-structure in other topics.
+			
+			\subsubsection{Transition Function}
+			\begin{Def}
+				Now, consider two elements in frame:$p\in U\cap V$, then for $s\in Fr(M)|U,s'\in Fr(M)|V$, we have
+				\begin{gather*}
+					s|U\cap V=s'|U\cap V\cdot (g_{ij})
+				\end{gather*}
+				
+				Such $(g_{ij}):U\cap V\rightarrow GL_n(\RR)$ is called \textbf{transition function}
+			\end{Def}
+			
+			\subsubsection{Coframe}
+			\begin{Def}
+				Define the \textbf{coframe}: Given $(E_1,\dots,E_n)\in Fr(M)|U$, then the \textbf{dual coframe} is the unqiue basis:
+				\begin{gather*}
+					(\theta^1,\dots,\theta^n)\qquad \theta^i\in \Omega^1(U)
+				\end{gather*}
+				
+				such that $\theta^i(E_j)=\delta_{ij}$. 
+				
+				Then, the \textbf{coframe} on $U$ is
+				\begin{gather*}
+					Fr(T^*M)
+				\end{gather*}
+			\end{Def}
+			\subsection{Moving Frame}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						A \textbf{moving frame} is a local section of frame bundle
+						\begin{gather*}
+							s:U\rightarrow Fr(M)
+						\end{gather*}
+						\item The \textbf{structure constant} of moving frame is $(c_{ij}^k)$ given by:
+						\begin{gather*}
+							[E_i,E_j]=\sum c^k_{ij}E_k
+						\end{gather*}
+						
+						where the Lie bracket is well-defined on $\mathfrak{X}(U)$;
+					\end{itemize}
+				\end{Def}
+				\subsubsection{Moving Coframe}
+				\begin{proposition}
+					(Structure Equation of Coframe)Now, consider moving frame $(E_1,\dots,E_n)$, with structure constant
+					\begin{gather*}
+						[E_i,E_j]=\sum c_{ij}^kE_k
+					\end{gather*} ,then for the dual coframe $(\theta^1,\dots,\theta^n)$, we have a basis $\{\theta^i\wedge \theta^j\}_{i<j}$ for the local frame $\Lambda^2 T_* M$: Thus for every $d\theta^k\in \Omega^2(U)$,
+					\begin{gather*}
+						d\theta^k=-\frac{1}{2}c_{ij}^k \theta^i\wedge \theta^j
+					\end{gather*}
+					
+					Conversely, we could also obtain the structure constant from .
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\subsubsection{Moving Frame with Connection}
+		\section{Orientation Bundle}
+			\begin{Def}
+				内容...
+			\end{Def}
+			\section{Connections without Metric Structures}
+		\begin{Def}
+			Let: $\pi:E\rightarrow M$ be a smooth vector bundle. 
+			\begin{itemize}
+				\item 
+				A \textbf{(Koszul) connection} is a linear map
+				\begin{gather*}
+					\triangledown:\Gamma(E)\rightarrow \Omega^1(M;E)=\Gamma(T^*M\otimes E)\cong \sqcup_p Hom_\RR (T_p M,E_p)
+				\end{gather*}
+				
+				which satisfies Lebnitz's Law
+				\begin{gather*}
+					\triangledown(fs)=df\otimes s+f\triangledown s\qquad f\in C^\infty(M),s\in \Gamma(E)
+				\end{gather*}
+				
+				Thus, the value of $\triangledown s,s\in \Gamma(E)$　could be seen as a morphism between vector bundles
+				\begin{gather*}
+					\triangledown s:TM\rightarrow E
+				\end{gather*}
+				\item Or equivalently, in \textbf{covariant derivative}
+				\begin{gather*}
+					\triangledown_{(-)}(-):\mathfrak{X}(M)\times \Gamma(E)\rightarrow \Gamma(E)
+				\end{gather*}
+				
+				It is actually a bilinear form, which satisfies:
+				\begin{itemize}
+					\item $\triangledown_{fX+gY}s=f\triangledown_X s+g\triangledown_Y s$;(linear)
+					\item $\triangledown_X(s+t)=\triangledown_X(t)+\triangledown_X(t)$;(Additive)
+					\item $\triangledown_X(fs)=X(f)s+f\triangledown_X s$;(Lebnitz)
+				\end{itemize}
+				
+				Notice, it is not bilinear, and
+				\begin{gather*}
+					\triangledown_X(-):\Gamma(E)\rightarrow \Gamma(E)\qquad \triangledown_X\in \operatorname{Diff}^1_\RR(\Gamma(E))\\
+					\triangledown_{(-)}(s):\mathfrak{X}(M)\rightarrow \Gamma(E)\qquad s\in \Gamma(E)
+				\end{gather*}
+			\end{itemize}
+			
+			The two definition corresponds through:
+			\begin{gather*}
+				(\triangledown s)(X)=\triangledown_X s\qquad X\in \mathfrak{X}(M)=TM\qquad s\in \Gamma(E)\qquad X\in \mathfrak{X}(M)
+			\end{gather*}
+			
+			\end{Def}
+		
+		The followings are equivalent:
+		\begin{itemize}
+			\item $\Omega^1(M;E)$;
+			\item $\Gamma(T^*M\otimes E)$;
+			\item The morphisms $Mor_{VectBund}(TM,E)$;
+		\end{itemize}
+		
+		
+		And: $\triangledown_X(-)$ is actually a differential operator: We will learn this in \underline{analysis on manifold}, and towards \underline{geometric analysis}.
+		
+		\begin{proposition}
+			The map
+			\begin{gather*}
+				\mathfrak{X}(M)\hookrightarrow Diff_\RR^1(\Gamma(E))\qquad X\mapsto \triangledown_X
+			\end{gather*}
+			
+			is injective. 
+		\end{proposition}
+		\begin{proof}
+			Notice that: For every $f\in C^\infty(M)$, $s\in \Gamma(E)$, 
+			\begin{gather*}
+				0=(\triangledown_X-\triangledown_Y)(fs)\\
+				=(X(f)s+f\triangledown_X s)-(Y(f)s+f\triangledown_Y s)
+			\end{gather*}
+			
+			Especially, when $f=1_M$, $(\triangledown_X-\triangledown_Y)(1_M)=0$, thus
+			\begin{gather*}
+				=(X(f)-Y(f))s
+			\end{gather*}
+			
+			$s$ is arbitrary, thus $X(f)=Y(f)\Rightarrow X=Y$.
+		\end{proof}
+		
+		\subsubsection{Local Frame Calculating}
+			\begin{proposition}
+				Let $\pi:E\rightarrow M$ be a vector bundle. If $(e_1,\dots,e_r)\in Fr(M)|U$ is a frame on $U$, with dual frame $(\theta^1,\dots,\theta^r)$, then for connection $\triangledown:\Gamma(E)\rightarrow \Omega^1(M;E)$,
+				\begin{gather*}
+					\triangledown e_j=\sum_i \omega^i_j \otimes e_i\qquad 
+				\end{gather*}
+				
+				where $\omega^i_j\in \Omega^1(U)=\Gamma(T^*U)$ 1-form, and 
+				\begin{gather*}
+					\omega^i_j=\sum_k \Gamma^{i}_{jk} \theta^k\\
+					\Rightarrow \triangledown e_j=\sum_i \sum_k \Gamma^i_{jk} \theta^k\otimes e_i
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\subsubsection{Dual Connection}
+				\begin{Def}
+					Consider a connection: For bundle $E\rightarrow M$, 
+					\begin{gather*}
+						\triangledown:\Gamma(E)\rightarrow \Omega^1(M;E)
+					\end{gather*}
+					
+					Then, the induced connection:
+					\begin{itemize}
+						\item  With pairing 
+						\begin{gather*}
+							<-,->:E\otimes E^*\rightarrow M\times \RR\\
+							(e,e')\mapsto (p,<e,e'>)\qquad e\in E_p,e'\in E_p^*
+						\end{gather*}
+						
+						We got
+						\begin{gather*}
+							<-,->:\Gamma(E\otimes E^*)=\Gamma(E)\otimes \Gamma(E^*)\rightarrow C^\infty(M)
+						\end{gather*}
+						
+						\item Then, define the \textbf{dual connection}
+						\begin{gather*}
+							\triangledown:\Gamma(E^*)\rightarrow \Omega^1(M;E^*)=\Gamma(T^*M\otimes E^*)\\
+							\alpha\mapsto (s\mapsto X(\alpha(s))-\alpha(\triangledown_X s))
+						\end{gather*}
+						
+						It is the \underline{unique} connection such that
+						\begin{gather*}
+							X(<\alpha,s>)=<\triangledown_X \alpha s>+<\alpha,\triangledown_X s>
+						\end{gather*}
+						
+						Equivalently,
+						\begin{gather*}
+							d<\alpha,s>=(\triangledown \alpha,s)=<\alpha,\triangledown s>
+						\end{gather*}
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					For the , the followings are equivalent:
+					\begin{itemize}
+						\item $X(<\alpha,s>)=<\triangledown_X \alpha s>+<\alpha,\triangledown_X s>$;
+						\item $d<\alpha,s>=(\triangledown \alpha,s)=<\alpha,\triangledown s>$;
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{proposition}
+					The dual connection satisfies the required condition.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+			\subsubsection{Pullback of Connection, Covariant Derivative}
+				\begin{Def}
+					Given:
+					\begin{itemize}
+						\item Vector bundle $\pi:E\rightarrow M$;
+						\item Associated connection and covariant derivative 
+						\begin{gather*}
+							\triangledown:\Gamma(E)\rightarrow \Omega^1(M;E)\qquad \triangledown_{(-)}^{(-)}:\mathfrak{X}(M)\times \Gamma(E)\rightarrow \Gamma(E)
+						\end{gather*}
+						\item Smooth map $f:N\rightarrow M$
+					\end{itemize}
+					
+					Then, the \textbf{pullback} is given by: With induced bundle $f^*\pi:f^*E\rightarrow N$ and induced 
+					\begin{gather*}
+						f^*\triangledown:\Gamma(f^*E)\rightarrow \Omega^1(N;f^*E)\qquad f^*s\mapsto f^*(\triangledown s)\qquad s\in \Gamma(E)
+					\end{gather*}
+					
+					where $f^*:\Omega^1(M;E)=\Gamma(T^*M\otimes E)\rightarrow \Omega^1(N,f^*E)=\Gamma(T^*N\otimes f^*E),\omega\otimes s\mapsto f^*\omega\otimes f^*s$
+				\end{Def}
+				
+				\begin{proposition}
+					(Universal Property of Pullback) The following diagram commutes:
+					\begin{center}
+						\begin{tikzcd}
+							\Gamma(E)\arrow[d,"\triangledown"]\arrow[r,"f^*"]&\Gamma(f^*E)\arrow[d,"f^*\triangledown",dashrightarrow]\\
+							\Omega^1(M;E)\arrow[r,"f^*"]&\Omega^1(N,f^*E)
+						\end{tikzcd}
+					\end{center}
+					
+					
+				\end{proposition}
+				\begin{proof}
+					Omitted;
+				\end{proof}
+			\subsubsection{Parallel Transport}
+				\begin{Def}
+					Let
+					\begin{itemize}
+						\item $\pi:E\rightarrow M$ be a bundle;
+						\item Connection, covariant derivative $\triangledown$;
+						\item Path $\gamma:I=[a,b]\rightarrow M$, which is smooth;
+					\end{itemize}
+					
+					Then, we obtain:
+					\begin{itemize}
+						\item Pullback bundle $\gamma^*\pi:\gamma^*E\rightarrow [a,b]$;
+						\item Pullback of connection $\gamma^*\triangledown:\Gamma(\gamma^*E)\rightarrow \Omega^1(I,\gamma^*E)$;
+					\end{itemize}
+					
+					Notice, $\Gamma(\gamma^*E)\ni V:I\rightarrow \gamma^*E$, and $TI$ has a global frame $\frac{\partial}{\partial t}$, $T^*I$ for $\partial t\in T^*I=\Gamma(T^*I\otimes \gamma^*E)$.
+					
+					Now, define the \textbf{covariant derivative}
+					\begin{gather*}
+						\frac{D^\triangledown}{dt}:\Gamma(\gamma^*E)\rightarrow \Gamma(\gamma^*E)\qquad V\mapsto (\gamma^*\triangledown V)(\partial t)
+					\end{gather*}
+
+					\begin{itemize}
+						\item $V$ is called \textbf{parallel along} $\gamma$, if $\frac{D^\triangledown V}{dt}=0$.
+					\end{itemize}
+				\end{Def}
+				
+				Namely, we should solve the problem in ODE:
+				\begin{gather*}
+					\begin{cases}
+						\frac{D^\triangledown}{dt}V=0\\
+						V(a)=v
+					\end{cases}
+				\end{gather*}
+				
+				
+				\begin{proposition}
+					(Turn into Lienar ODE under Local Frame) 
+					\begin{itemize}
+						\item Under local frame $(e_1,\dots,e_n)$, if 
+						\begin{gather*}
+							内容...
+						\end{gather*}
+						
+						Then, the parallel equation become:
+						\begin{gather*}
+							\dot{v}^i+\omega^i_j(\dot{\gamma})v^j=0
+						\end{gather*}
+						\item And such $v(t)$ is unique. 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					\begin{itemize}
+						\item 
+						\item By ODE uniqueness theorem;
+					\end{itemize}
+				\end{proof}
+				
+				
+				
+				\begin{Def}
+					Given $v\in E_{\gamma(a)}$, there exists a unique parallel section $V:I\rightarrow \gamma^*E$ such that $V(a)=v$.
+					
+					A \textbf{parallel transport} is a linear transformation
+					\begin{gather*}
+						P^\triangledown_\gamma:E_{\gamma(a)}\rightarrow E_{\gamma(b)}\qquad P^\triangledown_\gamma(v)=v
+					\end{gather*}
+				\end{Def}
+				
+				With these preparation, we will discuss \underline{holonomy group} later. 
+				
+				\textbf{Remark} More general theory, will be given in \underline{fibre bundle} and \underline{Ehresmann connection}. 
+			\subsubsection{Connection in First Jet Exact Sequences}
+				\begin{proposition}
+					The followings are equivalent:
+					\begin{itemize}
+						\item A connection $\triangledown:\Gamma(E)\rightarrow \Omega^1(M;E)$;
+						\item The first jet exact sequence splits
+						\begin{gather*}
+							0\rightarrow T^*M\otimes E\rightarrow J^1E\rightarrow E\rightarrow 0
+						\end{gather*}
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\subsection{Principal Bundle from Connection, Pincipal Connection Form}
+			\begin{Def}
+				Let $\pi:E\rightarrow M$ be a vector bundle with $rank(\pi)=r$, the Koszul connection $\triangledown:\Gamma(E)\rightarrow \Omega^1(M,E)$
+				
+				Under frame bundle $P=Fr(E)$
+				\begin{gather*}
+					P\rightarrow M
+				\end{gather*}
+			\end{Def}
+		\subsection{Linear/Affine Connections}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item Especially, if $E=TM$, then the connection
+				\begin{gather*}
+					\triangledown:\Gamma(TM)\rightarrow \Gamma(T^*M\otimes TM)=\Gamma(End_\RR(TM))\cong End_{C^\infty(M)}(\mathfrak{X}(M))
+				\end{gather*}
+				
+				is called \textbf{linear connection}.
+				
+				\item Under this definition, the covariant derivative: $\Gamma(TM)=\mathfrak{X}(M)$, 
+				\begin{gather*}
+					\triangledown_{-}(-):\mathfrak{X}(M)\times \mathfrak{X}(M)\rightarrow \mathfrak{X}(M)
+				\end{gather*}
+				
+			\end{itemize}
+		\end{Def}
+		
+		For each $A\in \Gamma(TM\otimes T^* M)$, we have expansion under the frame and dual coframe
+		\begin{gather*}
+			(e_1,\dots,e_n)\qquad (\theta^1,\dots,\theta^n)
+		\end{gather*}
+		
+		Then, $A=\sum A^i_j e_i\otimes \theta^j$;
+		
+		Furthermore, a moving frame turns a tensor field in a scalar coefficiet functions. The example above is $(1,1)$ tensor field.
+		
+		
+		\begin{corollary}
+			For fixed bundle $\pi:E\rightarrow M$, the collection of linear collections $Conn(E)$ is an affine space, and a correspondent vector space could be:
+			\begin{gather*}
+				\Omega^1(M;End(E))
+			\end{gather*}
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\textbf{Remark} The differential 
+		\begin{gather*}
+			内容...
+		\end{gather*}
+		
+		is not a (linear) connection, but actually $C^\infty(M)$-linear:
+		\begin{gather*}
+			A=
+		\end{gather*}
+		
+		\subsubsection{Torsion Tensor}
+		\begin{Def}
+			Define 
+			\begin{itemize}
+				\item the \textbf{torsion}
+				\begin{gather*}
+					T^\triangledown(X,Y):=\triangledown_X Y-\triangledown_Y X-[X,Y]\qquad \mathfrak{X}(M)\times \mathfrak{X}(M)\rightarrow \mathfrak{X}(M)
+				\end{gather*}
+				\item the \textbf{curvature}
+				\begin{gather*}
+					R(X,Y)Z=\triangledown_X\triangledown_Y Z-\triangledown_Y\triangledown_XZ-\triangledown_{[X,Y]}Z\qquad \mathfrak{X}(M)\times \mathfrak{X}(M)\times \mathfrak{X}(M)\rightarrow \mathfrak{X}(M)
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		We will calculate the coordinate form of the two valuables in next secion. 
+		
+		\begin{proposition}
+			(Torsion) For the connection $\triangledown$:
+			\begin{itemize}
+				\item It is anti-symmetric:
+				\begin{gather*}
+					内容...
+				\end{gather*}
+				\item Thus, it can be factorized in 
+				\begin{gather*}
+					T\in \Gamma(\Lambda^2 T^* M\otimes TM)=\Omega^2(M;TM)
+				\end{gather*}
+			\end{itemize}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{proposition}
+			(Curvature) For the connection $\triangledown$:
+			\begin{itemize}
+				\item $R(X,Y)=-R(X,Y)$;
+				\item $R\in \Gamma(\Lambda^2 T^*M\otimes T^* M\otimes TM)=\Omega^2(M;End(TM))$;
+			\end{itemize}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item If $T(X,Y)=0$, then \textbf{torsion-free};
+				\item If $R(X,Y)=0$, then \textbf{connection flat};
+			\end{itemize}
+		\end{Def}
+		\subsubsection{Cartan's Structure Theorem I II and Component Expansion}
+			\begin{Def}
+				Given a frame bundle $(e_1,\dots,e_n)$ of $TM\rightarrow M$ with coframe $(\theta^1,\dots,\theta^n)$, we have 
+				\begin{gather*}
+					\triangledown e_j=\omega^i_j\otimes e_i\qquad \omega^i_j\in \Gamma(T^*M)=\Omega^1(U)
+				\end{gather*}
+				
+				Then, $\omega=(\omega^i_j)\in \Omega^1(U;\mathfrak{gl}_n(\RR))$;
+			\end{Def}
+				\begin{theorem}
+					(Cartan) For connection $\triangledown$ and torsion $T^\triangledown$, under the frame $(e_1,\dots,e_n)$, and dual frame $(\theta^1,\dots,\theta^n)$, we have
+					\begin{gather*}
+						T=\sum_i T^i\otimes e_i\\
+						T^i=d\theta^i+\sum_j \omega^i_j\wedge \theta^j
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{theorem}
+					(Cartan) For connection $\triangledown$ and curvature $R$, under the frame $(e_1,\dots,e_n)$ and $(\theta^1,\dots,\theta^n)$,
+					\begin{gather*}
+						R(X,Y)e_j=\sum_i (\Omega^i_j (X,Y))e_i\qquad \Omega^i_j=\theta^i(R(-,-)e_j)\\
+						\Omega^i_j=\sum_k d\omega^i_j+\omega^i_k\wedge \omega^k_j
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\subsection{Existence of a Connection}	
+			Recall:
+			\begin{lemma}
+				Every paracompact manifold has a unity of partion. 
+			\end{lemma}
+			\begin{proof}
+				In 'general topology'
+			\end{proof}
+			
+			\begin{theorem}
+				(Existence of Connection) For smooth bundle $\pi:E\rightarrow M$, and $M$ is a paracompact smooth manifold, then:
+				
+				Every smooth vector bundle admits a connection;
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				The collection of connections $Conn(E)$ is an affine space. i.e. for $A':=\triangledown'-\triangledown$, it is $C^\infty(M)$-linear. 
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			Especially, with condition for Riemann metric $g$, we have
+			\begin{gather*}
+				\triangledown g=0\qquad T^\triangledown =0
+			\end{gather*}
+			
+			We got Levi-Civita connection.
+		\subsection{Flat Connections, and Twisted De Rham Cohomology}
+		\subsubsection{Parallel Frame}
+			\begin{Def}
+				Let $\pi:E\rightarrow M$ be a vector bundle, with connection $\triangledown$:
+				\begin{itemize}
+					\item A local frame $(e_1,\dots,e_n)$ is called a \textbf{parallel frame}, if
+					\begin{gather*}
+						\triangledown e_i=0
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\subsubsection{Flat Connections}
+		\begin{Def}
+			Let $E\rightarrow M$ be a vector bundle. $\triangledown$ is a connection.
+			
+			$\triangledown$ is called a \textbf{flat connection}, if for any $X,Y\in \mathfrak{X}(M)$ 
+			\begin{gather*}
+				内容...
+			\end{gather*}
+		\end{Def}
+			\subsubsection{Covariant Derivative}
+			\begin{Def}
+				Define: The \textbf{covariant exterior derivative}
+				\begin{gather*}
+					d_\triangledown:\Omega^k(M;E)\rightarrow \Omega^{k+1}(M;E)\qquad \alpha\otimes s\mapsto d\alpha \otimes s+(-1)^k \alpha\wedge \triangledown s
+				\end{gather*}
+			\end{Def}
+			
+			The following rule
+			\begin{gather*}
+				内容...
+			\end{gather*}
+			
+			is called \textbf{graded Lebnitz rule}.
+			
+			\textbf{Remarks} Sometimes operator $d_\triangledown$ could be denoted as $D$, if the context is in Cartan's equation. 
+			
+			\begin{proposition}
+				\begin{itemize}
+					\item (Derivative)
+					\item (Curvature)
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				(Affine Case of Covariant Exterior Derivative, Torsion)
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsubsection{Twisted De Rham Complex}
+			\begin{proposition}
+				\begin{itemize}
+					\item When $k=0$, $d_\triangledown s=\triangledown s$; Thus, $d_\triangledown$ is a continuation of connection;
+					\item If $\triangledown$ is flat, then
+					\begin{gather*}
+						d_\triangledown^2=0
+					\end{gather*}
+					
+					thus $(\Omega^k(M;E))$ is a cochain complex.
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			
+			\subsubsection{Twisted De Rham Cohomology}
+			\begin{Def}
+				
+			\end{Def}
+			
+			\subsection{Holonomy Groups}
+				\begin{Def}
+					Let $\pi:E\rightarrow M$ be a vector bundle with connection $\triangledown$. And fix a point $p\in M$:
+					\begin{itemize}
+						\item  Consider the loop space with point $(\Omega M,p)$
+						
+						Define:
+						\begin{gather*}
+							Hol_p(\triangledown):=\{P_\gamma|\gamma\in \Omega M,P_\gamma\mbox{ is Parallel}\}\subseteq GL(E_p)
+						\end{gather*}
+						
+						is called the \textbf{holonomy group} at point $p$. 
+					\end{itemize}
+				\end{Def}
+				
+				\begin{proposition}
+					It is actually a group, with
+					\begin{gather*}
+						P_{\gamma_1}\circ P_{\gamma_2}=P_{\gamma_1\circ \gamma_2}
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Restricted Holonomy Group}
+				\subsubsection{Infinitesimal Holonomy}
+				\subsubsection{Flatness}
+					\begin{corollary}
+						(Flatness) If $R^\triangledown=0$, then 
+						\begin{gather*}
+							Hol^0_p(\triangledown)=1
+						\end{gather*}
+					\end{corollary}
+					\begin{proof}
+						内容...
+					\end{proof}
+					
+				\subsubsection{Ambrose–Singer theorem}
+			\subsection{Mappings of Connections}
+				\begin{Def}
+					内容...
+				\end{Def}
+			\subsection{Invariant Connections}
+		\section{Curvature}
+		
+		In the pasting discussion, we have know: The differential map of chain complex relies on the flatness of connections. But if not, we have
+		\begin{gather*}
+			d_{\triangledown}^2\not=0
+		\end{gather*}
+		
+		We could do some research of the obstruntion to the connection-induced differential squaring to zero:
+		\begin{Def}
+			Suppose $\pi:E\rightarrow M$ be a vector bundle, then, 
+			\begin{gather*}
+				F_{\triangledown}:=d_\triangledown^2
+			\end{gather*}
+			
+			is called \textbf{curvature}. 
+		\end{Def}
+		\subsubsection{Affine Connection Case}
+		\begin{proposition}
+			Especially: For the bundle $\tau:TM\rightarrow M$, we have
+			\begin{gather*}
+				R=F_\triangledown
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsection{Bianchi Identity I II}
+			\subsubsection{Bianchi I}
+				\begin{theorem}
+					(Bianchi) Suppose $E=TM$, $\triangledown$ is an affine connection. 
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+			\subsubsection{Bianchi II}
+				\begin{theorem}
+					(Bianchi)
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+		\section{Jet Bundles}
+		\textbf{Remark} And in the future, we will work with Chern-Weil theory.
 	\chapter{Submersions, Immersions and Embeddings}
+		\section{Maps of Constant Rank}
+		\section{Embeddings}
+			\begin{Def}
+				Let $M,N$ be two manifolds. Then, a \textbf{smooth embedding} $i:N\rightarrow M$ satisfies:
+				\begin{itemize}
+					\item $i$ is topological embedding;
+					\item $i$ is smooth;
+				\end{itemize}
+			\end{Def}
+			\subsection{Normal Bundle}
+				\begin{Def}
+					Suppose $i:N\hookrightarrow M$ be a smooth embedding, then define the \textbf{normal bundle}
+					
+					\begin{gather*}
+						v_{N/M}:=i^*TM/TN
+					\end{gather*}
+					
+					Induced by $i^*:TN\rightarrow i^*TM$. The bundle structure
+					\begin{gather*}
+						v_{N/M}\rightarrow N
+					\end{gather*}
+				\end{Def}
+				
+				\textbf{Remark} The structure of normal bundle here depends on the differential structure(Especially, tangential space), thus we could not generalize this definition to the topological manifold. 
+				
+				An alternative is \textbf{microbundle} given by Milnor. We will introduce this in topological manifold.
+				
+				\begin{proposition}
+					There exists a short exact sequence
+					\begin{gather*}
+						0\rightarrow TN\stackrel{i^*}{\rightarrow} i^* TM\stackrel{p}{\rightarrow}v_{N/M}\rightarrow 0
+					\end{gather*}
+					
+					and the sequence splits. i.e. There exists $\iota:v_{N/M}\rightarrow i_*TM$ with $p\circ \iota=id_{v_{N/M}}$. 
+				\end{proposition}
+				\begin{proof}
+					We just observe the sequence fibrewise. 
+				\end{proof}
+				
+				Especially, according to our definition of bundle metric, by choosing a positive-definite metric, we obtain 
+				\begin{gather*}
+					v_{N/M}\cong TN^\perp
+				\end{gather*}
+				
+				Thus, $i_* TM\cong v_{N/M}\oplus TN$. 
+				
+				\textbf{Remark} This property depends on $Ext^1$ for the nontrivial extension.(If trivial, then splits, and isomorphic to direct sum) 
+				
+				\begin{proposition}
+					(Embedded in $\RR^n$) Suppose $M\subseteq \RR^n$, then $NM$ is an embedded submanifold of 
+					\begin{gather*}
+						T\RR^n\cong \RR^n\times \RR^n
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsection{Tubular Neighborhood}
+				Instead of $v_{M/N}$, we will use: $v_{M/N}$ as the map and $Tot(v_{M/N})=Tot(v_i)$ as the total space, $N$ for Base space. 
+				
+				\begin{theorem}
+					Suppose $i:N\hookrightarrow M$ be a smooth embedding. Then, there exists a natural zero-section 
+					\begin{gather*}
+						0_{N}:N\rightarrow Tot(v_{N/M})=Tot(v_i)\qquad p\mapsto 0_p
+					\end{gather*}
+					
+					Then, there exists an open neighborhood $V\subseteq Tot(v_i)$ of $0_N$, and smooth embedding $\Phi:V\rightarrow M$ such that
+					\begin{gather*}
+						\Phi\circ 0_N=i
+					\end{gather*}
+				\end{theorem}
+				
+				i.e. There exists factorization
+				\begin{center}
+					\begin{tikzcd}
+						N\arrow[rd,hookrightarrow]\arrow[r,"0_N"]&\exists V\arrow[d,"\Phi",hookrightarrow,dashrightarrow]&\subseteq Tot(v_{N/M})\\
+						&M
+					\end{tikzcd}
+				\end{center}
+				
+				And $\Phi:V\rightarrow W=\Phi(V)\subseteq M$ is a diffeomorphism. 
+				
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{corollary}
+					If $M\subseteq N$, then there exists 
+				\end{corollary}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				Now, notice that $V$ is open in $Tot(v_{N/M})$. Then, it could be described as
+				\begin{gather*}
+					V=\{(x,v)||v|<\epsilon(x)\}\subseteq Tot(v_{N/M})=\sqcup_{x\in N} i^* T_{i(x )} M/T_xN
+				\end{gather*}
+				
+				Especially, if $N$ is compact, then we obtain that
+				\begin{gather*}
+					V=\{(x,v)||v|<\epsilon\}
+				\end{gather*}
+		\section{Submersions}
+		
+		\section{Smooth Covering Maps}
+			Recall
+			\begin{Def}
+				内容...
+			\end{Def}
 	\chapter{Submanifolds}
 		\section{Embedded Submanifold}
 			\begin{proposition}
@@ -288,7 +1508,10 @@
 					T_p(f^{-1}(q))=Ker(d_p F)
 				\end{gather*}
 			\end{proposition}
-		\section{Immersed Submanifold}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\subsection{Immersed Submanifold}
 			\begin{Def}
 				Immersed submanifold: Image of injective immersion.
 			\end{Def}
@@ -297,18 +1520,112 @@
 			\end{example}
 			
 			\textbf{Fact} If $f$ is closed injective immersion then $Im(f)$ is an embedded submanifold.
+			
+			
+			\subsection{Sard's Theorem}
+			\begin{theorem}
+				(Sard) Suppose:
+			\end{theorem}
+			
+			\subsection{Reuglar Level Set}
+			\begin{Def} Let $f:M\rightarrow N$ be a smooth map:
+				\begin{itemize}
+					\item A point $c\in M$ is called a \textbf{regular point} if $df_c:T_p M\rightarrow T_p N$ is surjective;
+					
+					Elsewise, $c$ is called \textbf{critical point}.
+					\item A point $d\in N$ is called a \textbf{regular value} if $\Phi^{-1}(c)$ is a collection of regular points;
+					
+					Such $\Phi^{-1}(c)$ is called a \textbf{regular value set};
+				\end{itemize}
+			\end{Def}
+			
+			\begin{theorem}
+				(Regular Value Set Theorem)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\section{Whitney's Embedding Theorem}
+		\section{Whitney's Approxiamation Theorem}
+			\begin{Def}
+				内容...
+			\end{Def}
+		\section{Transversality}
+		\begin{Def}
+			\begin{itemize}
+				\item 
+				Let: $M$ be a manifold, and $S,S'\subseteq M$ are embedded submanifolds. 	
+				
+				$S,S'$ are said to \textbf{intersect transversely} if
+				\begin{gather*}
+					T_p M=T_p S\oplus T_p S'
+				\end{gather*}
+				
+				\item For a smooth map $F:N\rightarrow M$, and $S\subseteq M$ be a submanifold. Then, $F$ is tranverse to $F$ if $T_{F(x)} M=dF_{x }(T_x N)\oplus T_{F(x)} S$. 
+			\end{itemize}
+		\end{Def}
+		
+		\begin{proposition}
+			内容...
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			内容...
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\subsection{Graphs}
+			\begin{proposition}
+				(Global Characterization of Graphs)
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				(Local Characterization of Graphs)
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				(Parametric Transversality Theorem)
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\subsection{Transversility Homotopy Theorem}
+		
+		\section{Properties of Morphisms}
+	\chapter{Flows}
 	\chapter{Differential Forms}
 		\section{Differential Form}
-			\subsection{title}
-			Here is some of review of 
+			\subsection{Linear Algebras}
+			Here is some of review of linear algebra.
+			\begin{Def}
+				Take the following notions: $k$-multilinear map $T^k(V)$, and symmetric/Alternating $\Lambda^k(V)$.
+				
+				And
+				\begin{gather*}
+					Alt(T):=\frac{1}{k!}\sum_{\sigma\in S_k} sgn(\sigma)T^\sigma;T\in T^k(V)\\
+					\wedge:\Lambda^k(V)\times \Lambda^l(V)\rightarrow \Lambda^{k+l}(V)\\
+					\Lambda(V):=\oplus_{k=0}^n \Lambda_k(V)
+				\end{gather*}
+			\end{Def}
 			\begin{proposition}
 				We have
 				\begin{gather*}
 					\begin{cases}
 						dim\Lambda(V)=2^d\\
 						dim\Lambda_k(V)=\binom{d}{k},0\leq k\leq d
-					\end{cases},dim(V)=d
-					\wedge_k=\{0\};k\geq d
+					\end{cases},dim
+					\wedge_k(V)=\{0\};k\geq d
 				\end{gather*}
 			\end{proposition}
 			\begin{proof}
@@ -354,8 +1671,77 @@
 						\begin{gather*}
 							End(\Lambda(V))
 						\end{gather*}
-						for the endomorphisms of $\Lambda(V)$>
+						for the endomorphisms of $\Lambda(V)$
 			\subsection{Tensor Fields and Differential Forms}
+				\subsubsection{Differential Forms}
+					\begin{Def}
+						Define:
+						\begin{gather*}
+							\Lambda^k M:=\sqcup_{p\in M} \Lambda^k(T_p M);
+						\end{gather*}
+						
+						The $k$-forms locally written as:
+						\begin{gather*}
+							\omega=\sum_I \omega^I dx^I\qquad dx^I=dx^{i_1}\wedge\dots\wedge dx^{i_k}\qquad 1\leq i_1<\dots<i_k\leq n
+						\end{gather*}
+						
+						Take the following notion $\Omega^k(M)$
+					\end{Def}
+					
+					And action
+					\begin{gather*}
+						dx^{i_1}\wedge dx^{i_k}(\frac{\partial}{\partial x_{j_1}},\dots,\frac{\partial}{\partial x^{i_k}})=\delta^I_J
+					\end{gather*}
+					
+			\subsection{Exterior Derivative}
+				\begin{Def}
+					Define: For $k$-form $\omega=\sum_J \omega_J dx^J dx^J$, then 
+					\begin{gather*}
+						d\omega:=\sum d\omega_J\wedge dx^J\\
+						\qquad=\sum_J \sum_{i} \frac{\partial_J}{\partial x^i}dx^i\wedge dx^J
+					\end{gather*}
+				\end{Def}
+				
+				\begin{proposition}
+					\begin{itemize}
+						\item $d$ is linear over $\RR$;
+						\item Given $k$-form $\omega$, $l$-form $\eta$, $U\subseteq \RR^n$ or $\mathbb{H}^n$
+						\item $d^2=0$;
+						\item $d$ commutes with pullback
+						\begin{gather*}
+							F^*(d\omega)=d(F^*\omega)
+						\end{gather*}
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{theorem}
+					(Existence and Uniqueness of Exterior Differentation)
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\subsubsection{Closed,Exact Form}
+				\begin{Def}
+					Consider the cohomology: $\dots\rightarrow H^{k+1}_{dR}(M)\rightarrow H^k_{dR}(M)\rightarrow\dots$. Then, the differential form $\omega\in \Omega(M)$ is:
+					\begin{itemize}
+						\item Closed, if $d\omega=0$;
+						\item Exact, if there exsits some $f$ such that $\omega=df$;
+					\end{itemize}
+				\end{Def}
+				
+				Especially, for $1$-form:
+				\begin{proposition}
+					For $1$-form $\omega=\sum a_i dx^i$, we have
+					\begin{gather*}
+						d\omega=\sum (\frac{\partial a_i}{\partial x_i}-\frac{\partial a_j}{x_j})dx^i\wedge dx^j
+					\end{gather*}
+					
+					Thus closedness$\Leftrightarrow \frac{\partial a_i}{\partial x_i}=\frac{\partial a_j}{\partial x_j}$
+				\end{proposition}
 			\subsection{The Lie Derivative}
 		\section{Orientation}
 			\subsection{Orientation of Vector Spaces}
@@ -394,6 +1780,15 @@
 			\subsection{The Orientation of Hypersurface}
 			\subsection{The Orientation of }
 	\chapter{Integration on Manifolds}
+		\section{Integration on Manifolds}
+		\subsection{Euclidean Space}
+			\begin{Def}
+				Defien:
+				\begin{gather*}
+					f:D\rightarrow \RR\qquad \int_D fdx^1\wedge\dots\wedge dx^n:=\int_D fdx^1\dots dx^n
+				\end{gather*}
+			\end{Def}
+		\subsection{Manifolds}
 		\begin{Def}
 			Let $M$ be a manifold. A \textbf{partition of unity} is a collection of smooth maps $(\varphi_i:M\rightarrow \RR)$ 
 			\begin{itemize}
@@ -412,13 +1807,75 @@
 			\end{gather*}
 		\end{Def}
 	\chapter{De Rham Cohomology}
-	\chapter{The de Rham Theorems}
-	\chapter{Integral Curves, and Flows}
-		\section{Integral Curves}
+		\section{De Rham Complex}
+	\chapter{Integratability}
+		\section{Integral Curve}
 			\begin{Def}
-				内容...
+				Let: $M$ be a smooth manifold, $X\in \mathfrak{X}(M)$. 
+				
+				A \textbf{integral curve} is a smooth curve $\gamma:I\rightarrow M$ such that, for every $t\in I$,
+				\begin{gather*}
+					\dot{\gamma}(t)=X_{\gamma(t)}
+				\end{gather*}
+				
+				where $\dot{\gamma}(t)=(d\gamma)_t(\frac{\partial}{\partial t})\in T_{\gamma(t)}M$
 			\end{Def}
-	\chapter{Integral Manifolds and Foliations}
-	\chapter{The Hodge Theorem}
+			
+			Sometimnes we will use the notion $d_{\gamma_s}(1)$, because $1\in \RR$ corresponds the standard tangent vector $\frac{\partial}{\partial t}|s$.
+			
+			Or, another explaination is to consider the curve goes through $t$: $c(r)=t+r$, $d\gamma_s(1)=d\gamma_s(c'(0))=(\gamma\circ c)'(0)=\frac{d}{dr}|_{r=0} \gamma(s+r)$.
 		
+			\subsection{Existence of Maximal Integral Curve}
+					\begin{proposition}
+					(Frame Coordinate of Integral Curve) Take frame bundle $(x^1,\dots,x^n$), and $X\in \mathfrak{X}(M)$, then the equation of integral curve at $p$ with coordinate $\varphi=(x^1,\dots,x^n):U\rightarrow \RR^n$, then
+					\begin{gather*}
+						X|U=\sum X^i(x)\frac{\partial}{\partial x^i}\\
+						x(t)=\varphi(\gamma(t))
+					\end{gather*}
+					
+					We obtain
+					\begin{gather*}
+						\dot{x(t)}=(X^1(x(t)),\dots,X^n(x(t)))
+					\end{gather*}
+					
+					Especially, it is local-Lipschitz. 
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				\begin{proposition}
+					(Local Existence) For each point $p\in M$, there exists a local integral curve $\gamma$ which goes through $p$.
+				\end{proposition}
+				\begin{proof}
+					Apply Picard-Lindelof.
+				\end{proof}
+			\subsection{Maximal Integral Curve}
+				\begin{Def}
+					Let $X\in \mathfrak{X}(M)$. Now, consider the inclusion of curves:
+					\begin{gather*}
+						(\gamma:I\rightarrow M,I)\subseteq (\theta:J\rightarrow M,J)\Leftrightarrow i\subseteq J,\theta|I=\gamma
+					\end{gather*}
+				\end{Def}
+				
+				\begin{proposition}
+					There exists a unique maximal curve which goes through $p$. (We could take $\gamma_p(0)=p$)
+				\end{proposition}
+				\begin{proof}
+					By uniqueness of ODE. 
+				\end{proof}
+			\subsection{Visualization of Integral Curve}
+			\subsection{Compelete Vector Field}
+				\begin{Def}
+					A vector field $X\in \mathfrak{X}(M)$ is called \textbf{compelete}, if for each $p\in M$, there exists a \underline{unique} maximal integral curve
+					\begin{gather*}
+						\gamma_p:I_p\rightarrow M,\gamma_p(0)=p\qquad I_p=\RR,\forall p\in M
+					\end{gather*}
+				\end{Def}
+		\section{Distributions and Involutivity}
+		\section{Frobenius Theorems}
+		
+	\chapter{Appendix: Smooth Category}
+		\begin{Def}
+			内容...
+		\end{Def}
 \end{document}

@@ -1,0 +1,385 @@
+\documentclass[Total.tex]{subfiles}
+
+\begin{document}
+		\chapter{The Space $L^p$ and Spaces of Measures}
+	\section{Space $L^p$}
+	\begin{Def}
+		Let $(X,\mathcal{A},\mu)$ be a measure space, with nonegative measure $\mu$, and $p\in [1,\infty)$. Then denote
+		\begin{gather*}
+			\mathcal{L}^p(\mu):=\{f:X\rightarrow [-\infty,\infty]||f|^p\mbox{ is }\mu\mbox{-integrable}\}
+		\end{gather*}
+		
+		Define $\mu$-equivalent: The sets $\mathcal{L}^p(\mu)$ are equipped with the equivalent relation, $\mu$-almost everywhere equivalent
+		\begin{gather*}
+			f\sim g\Leftrightarrow \mu(\{x\in X|f(x)\not=g(x)\})=0
+		\end{gather*}
+		Then, denote $L^p(\mu)$ as the factor-space of $\mathcal{L}^p(\mu)$ with respect to the equivalence relation. 
+		
+		The norm structure is specified by
+		\begin{gather*}
+			\Vert-\Vert_{L^p(X,\mu)}:f\mapsto (\int_X |f|^p d\mu)^{\frac{1}{p}}
+		\end{gather*} 
+	\end{Def}
+	
+	Furthermore, with the limit
+	\begin{gather*}
+		\lim_{p\rightarrow\infty} (\int_X |f|^p d\mu)^\frac{1}{p}
+	\end{gather*}
+	\subsubsection{Norm $\Vert\cdot\Vert_p$}
+	\begin{lemma}
+		For all $\lambda\in \RR,f,g\in \mathcal{L}^p(\mu)$, we have
+		\begin{gather*}
+			\Vert\lambda f\Vert_p=|\lambda|\Vert f\Vert_p\qquad \Vert f+g\Vert_p\leq \Vert f\Vert_p+\Vert g\Vert_g
+		\end{gather*}
+	\end{lemma}
+	\begin{proof}
+		Easy to check, by property of integration. 
+	\end{proof}
+	
+	\begin{corollary}
+		The function $\Vert\cdot\Vert_p$ is a norm on the space $L^p(\mu)$. 
+	\end{corollary}
+	\begin{proof}
+		Omitted. 
+	\end{proof}
+	
+	\begin{theorem}
+		The space $L^p(\mu)$ is compelete, $p\in [1,+\infty]$. 
+	\end{theorem}
+	\begin{proof}
+		Consider the Cauchy sequence 
+	\end{proof}
+	\subsection{Convolutions}
+		\begin{Def}
+			Suppsoe $f,g\in L^1(G)$. Define the \textbf{convolution}
+			\begin{gather*}
+				f*g(x):=\int_G f(y)g(y^{-1}x)d\lambda(y)
+			\end{gather*}
+			
+			Especially, when $G=(\RR^n,+)$, then
+			\begin{gather*}
+				f*g(x)=\int_{\RR^n} f(y)g(x-y)dy
+			\end{gather*}
+		\end{Def}
+		
+		Especially, change of variable $z=x^{-1}y$,
+		\begin{gather*}
+			=\int_G f(xz)g(z^{-1})d\lambda(z)
+		\end{gather*}
+		
+		\begin{proposition}
+			For all $f,g,h\in L^1(G)$
+			\begin{gather*}
+				内容...
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		
+		\subsubsection{Convolution Inequalities}
+			\begin{theorem}
+				(Minkowski with Convolution)
+				\begin{gather*}
+					\Vert g* f\Vert_{L^p(G)}\leq \Vert g\Vert_{L^1(G)}\Vert f\Vert_{L^p(G)}
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				(Young)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{theorem}
+				(Young)
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\subsubsection{Approximate Identities}
+			\begin{Def}
+				内容...
+			\end{Def}
+			\begin{Def}
+				Let $T$ be an operator defined on a linear space of complex-valued measure functions on a measure space
+				
+				Then, $T$ is called \textbf{linear} if for all $f,g\in T$, and $\lambda\in \CC$, we have
+				\begin{gather*}
+					内容...
+				\end{gather*}
+			\end{Def}
+	\subsection{Properties}
+	
+	
+	\begin{Def}
+		For $0<p<\infty$, the space $L_{loc}^p(\RR^n,|\cdot|)$ or simply $L_{loc}^p(\RR^n)$ is the set of all Lesbegue0mesurable functions $f$ on $\RR^n$, that satisfies
+		\begin{gather*}
+			内容...
+		\end{gather*}
+		
+		is the \textbf{locally $p$-integrable function} on $\RR^n$. 
+	\end{Def}
+	
+	\begin{theorem}
+		(H\"older) Let $0<p,p_1,\dots,p_k\leq \infty$, where $k\geq 2$, and let $f_j$ be 
+	\end{theorem}
+	
+	\begin{theorem}
+		(Jensen)
+	\end{theorem}
+	
+	\begin{theorem}
+		\begin{itemize}
+			\item (Discrete Minkowski)
+				\begin{itemize}
+					\item 
+					\item 
+				\end{itemize}
+			\item (Integral Inequality)
+			
+		\end{itemize}
+	\end{theorem}
+	
+	\begin{proof}
+		内容...
+	\end{proof}
+	
+	\begin{theorem}
+		(Young)
+	\end{theorem}
+	
+	\begin{theorem}
+		(Hardy's Inequality)
+	\end{theorem}
+	
+	\subsection{Approximation of $L^p$}
+		
+		\begin{lemma}
+			The set of all simple functions is everywhere dense in every space $L^p(\mu),1\leq p<\infty$. 
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			Let a nonnegative Borel measure $\mu$ on $\RR^n$ be bounded on bounded sets.
+			
+			Then, the class $C_0^\infty(\RR^n)$ of \underline{smooth functions with bounded support} is everywhere dense in $L^p(\mu),1\leq p<\infty$. 
+			
+			In particular, the spaces $L^p(\mu),1\leq p<\infty$, are separable.
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{Def}
+			Let $\rho$ be a function integrable over $\RR^n$ such that
+			\begin{gather*}
+				\int_{\RR^n} \rho(x)dx=1
+			\end{gather*}
+			
+			Now, set $\rho_\epsilon(x)=\frac{\rho(\frac{x}{\epsilon})}{\epsilon^n},\epsilon>0$. 
+		\end{Def}
+		
+		\begin{lemma}
+			Let $f\in \mathcal{L}^p(\RR^n),1\leq p<\infty$, then the mapping
+			\begin{gather*}
+				T_f:\RR^n\rightarrow L^p(\RR^n)\qquad T_f(v)(x)=f(x+v)
+			\end{gather*}
+			
+			is continuous and bounded.
+		\end{lemma}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{theorem}
+			Let $f\in \mathcal{L}^p(\RR^n)$, $1\leq p<\infty$, then one has
+			\begin{gather*}
+				\lim_{\epsilon\rightarrow 0}\Vert f*\rho-f\Vert_p=0
+			\end{gather*}
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			内容...
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+	\subsection{The Weak Topology in $L^p$}
+	
+	\section{Uniform Integrability}
+	\section{Convergence of Measures}
+	
+	\section{The Hilbert Space $L^2$}
+		\begin{Def}
+			Let $\mu$ be a measure with values in $[0,+\infty]$.
+			
+			The space $L^2(\mu)$ is distinguished among other $L^p(\mu)$ by the property that it is 
+			\begin{itemize}
+				\item Euclidean: With the inner product
+				\begin{gather*}
+					(f,g)=\int_X fgd\mu
+				\end{gather*}
+				
+				\item or, Hermitian: With the inner product
+				\begin{gather*}
+					(f,g)=\int_X f\bar{g}d\mu
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		
+		Notice: From $|fg|\leq f^2+g^2$, 
+		\begin{gather*}
+			f,g\in \mathcal{L}^2(\mu)\Rightarrow fg\in \mathcal{L}^1(\mu)
+		\end{gather*}
+		
+		\begin{proposition}
+			Let $H_0$ be a closed linear subspace in a Hilbert space.
+			
+			Then, $H_0^\perp=\{x\in H|x\perp h,\forall h\in H_0\}$ is a closed linear subspace in $H$, and 
+			\begin{gather*}
+				H=H_0\oplus H_0^\perp
+			\end{gather*}
+			
+			Hence, for every $h\in H$, there exists a unique vector $h_0$, with $h-h_0\in H_0^\perp$. In addition
+			\begin{gather*}
+				\Vert h-h_0\Vert=\inf\{\Vert h-x\Vert|x\in H_0\}
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			Let $f$ be a continuous linear function on a Hilbert space $H$.
+			
+			Then, there exists a unique vector $v$ such that
+			\begin{gather*}
+				内容...
+			\end{gather*}
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			\begin{itemize}
+				\item 
+				There exists a family of mutually orthogonal unit vector $e_\alpha\in L^2(\mu)$ such that: Every element $f$ in $L^2(\mu)$ is the sum of the following series covergent in $L^2(\mu)$:
+				\begin{gather*}
+					f=\sum_\alpha c_\alpha e_\alpha
+				\end{gather*}
+				
+				where at most countably many coefficients $c_\alpha$ may be nonzero. 
+				
+				In addition, one has
+				\begin{gather*}
+					c_\alpha=(f,e_\alpha)\qquad \Vert f\Vert^2=\sum_\alpha |c_\alpha|^2
+				\end{gather*}
+				
+				The family is calleld an \textbf{orthogonal basis} of space $L^2(\mu)$.
+				\item 
+			\end{itemize}
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{theorem}
+			For any orthonormal system $\{\varphi_n\}$ in $L^2(\mu)$, and any sequence $\{c_n\}\in l^2$, the series
+			\begin{gather*}
+				\sum_{n=1}^\infty c_n\varphi_n\in L^2(\mu)
+			\end{gather*}
+			
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{theorem}
+			Let $\{\varphi_n\}$ be an orthonormal sequence $L^2(\mu)$.
+			
+			Then, for all $f\in L^2(\mu)$, the following Bessel inequality holds
+			\begin{gather*}
+				\sum_{n=1}^\infty |(f,\varphi_n)|^2\leq \Vert f\Vert^2_{L^2(\mu)}
+			\end{gather*}
+			
+			In particular, this equality is true if $\{\varphi_n\}$ is an orthonormal basis. 
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
+		\section{Duality of the Space $L^p$}
+	\chapter{Weak $L^p$ Spaces}
+	
+		
+		\section{Definitions and Properties}
+		\begin{Def}
+			Take the following of distribution function
+			\begin{gather*}
+				d_f(\alpha):=\mu(\{x\in X||f(x)>\alpha\})\qquad \alpha>0
+			\end{gather*}
+			
+			Let $f:X\rightarrow \CC$ be measurable, with $p\in [1,\infty)$, then define
+			\begin{gather*}
+				\Vert f\Vert_{L^{p,\infty}}:=\inf\{C>0|d_f(\alpha)\leq (\frac{C}{\lambda})^p,\forall \alpha>0\}=\sup_{\lambda>0} \lambda d_f(\lambda)^{\frac{1}{p}}
+			\end{gather*}
+		\end{Def}
+		
+		\subsection{$L^p$ and $L^{p,\infty}$}
+		
+		\begin{proposition}
+			There is embedding 
+			\begin{gather*}
+				\mathcal{L}^p(X,\mu)\hookrightarrow \mathcal{L}^{p,\infty}(X,\mu)
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\subsection{Covergence in Measure}
+	\chapter{Lorentz Spaces}
+		\section{Definitions}
+			\begin{Def}
+				内容...
+			\end{Def}
+			
+			
+			\subsection{Duals of Lorentz Spaces}
+	\chapter{Interpolation Theory of Lesbegue Space}
+		In general, we will develope the interpolation theory in Banach space. Here we just mainly concern 
+		\begin{itemize}
+			\item 
+			\item 
+		\end{itemize}
+		
+		
+		\begin{proposition}
+			(Interpolation in Lesbegue Space)Let $0<p<q\leq \infty$, and let $f\in L^{p,\infty}(X,\mu)\cap L^{q,\infty}(X,\mu)$, where $X$ is a $\sigma$-finite measure space. 
+			
+			Then, $f\in L^r(X,\mu)$, for all $p<r<q$ and
+			\begin{gather*}
+				\Vert f\Vert_{L^r}\leq (\frac{r}{r-p}+\frac{r}{q-r})^{\frac{1}{r}}\Vert f\Vert_{L^{p,\infty}}^{\frac{\frac{1}{r}-\frac{1}{q}}{\frac{1}{p}-\frac{1}{q}}}\Vert f\Vert_{L^{q,\infty}}^{\frac{\frac{1}{p}-\frac{1}{r}}{\frac{1}{p}-\frac{1}{q}}}
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\section{Real Interpolation}
+		\section{Complex Interpolation}
+		\section{Interpolation of Operators}
+			\subsection{Interpolation of Analytic Family of Operators}
+\end{document}

@@ -157,7 +157,7 @@
 		\section{Lie Groups}
 			Given in Lie theory.
 		\section{Fibre Bundles}
-			\subsection{Differentiable Principle Fibre Bundle}
+			\subsection{Differentiable Principle Fibre Bundle($G$-Bundles)}
 			
 				\begin{Def}
 					A \textbf{differentiable principle fibre bundle} over $M$ with group $G$ consists of $P(M,G,\pi)$, where:
@@ -172,16 +172,18 @@
 							\pi:P\rightarrow M
 						\end{gather*}
 						is differentiable;
-						
 						\item $P$ is locally trivial:
+						\begin{gather*}
+							\pi^{-1}(U)\cong U\times G
+						\end{gather*}
+						
+						in the sense of diffeomorphism $\psi:\pi^{-1}(U)\rightarrow U\times G,u\mapsto (\pi(u),\varphi(u));\varphi(ua)=(\varphi(u))a,u\in\pi^{-1}(U),a\in G$. 
 					\end{itemize}
+					
+					Take the following notion of fibre bundles $P(M,G,\pi)$. 
 				\end{Def}
 				
-				We call:
-				
-				\begin{itemize}
-					\item 
-				\end{itemize}
+				\subsubsection{Example: Lie Group}
 				
 				\subsubsection{Fibre of Differentiable Principle Fibre Bundle}
 				

@@ -12,7 +12,6 @@
 	\begin{Def}
 		\begin{itemize}
 			\item In \underline{most} general case, a \textbf{bundle} over an object $B$ in a category $\mathcal{C}$ is simply an object $E$ of $\mathcal{C}$ equipped wiht a morphism in $\mathcal{C}$ from $E$ to $B$
-			
 			\begin{gather*}
 				p:E\rightarrow B
 			\end{gather*}
@@ -24,10 +23,8 @@
 					U\arrow[r,"x"]&B
 				\end{tikzcd}
 			\end{center}
-			Here, $U=1$.
 			
-			Such bundles over $B$ is a category. Called \textbf{slide category} $\mathcal{C}_{/B}$ of $\mathcal{C}$ over $B$.
-			
+			Such bundles over $B$ is a category. Called \textbf{slide category} $\mathcal{C}/\mathcal{B}$ of $\mathcal{C}$ over $B$.(We will recall this one more time in category theory)
 			\item The morphism $E_1\rightarrow E_2$ is a diagram such that the following diagram commutes
 			\begin{center}
 				\begin{tikzcd}
@@ -35,11 +32,12 @@
 					&B
 				\end{tikzcd}
 			\end{center}
+			
+			of \underline{slide category}.
 		\end{itemize}
 	\end{Def}
 	
 	Some of Bundles are listed as following:
-	
 	\begin{itemize}
 		\item Fibre Bundle;
 		\item Micro Bundle;
@@ -50,36 +48,365 @@
 	
 	\subsubsection{Cross Sections}
 	\begin{Def}
-		A \textbf{cross section} of a bundle $(E,p,B)$ is a 
+		\begin{itemize}
+			\item 
+			A \textbf{cross section} of a bundle $(E,p,B)$ is a map $s:B\rightarrow E$, such that
+			\begin{gather*}
+				ps=1_B
+			\end{gather*}
+			
+			In other words, a cross section is a map $s:B\rightarrow E$ such that, $s(b)\in p^{-1}(b),b\in B$. 
+			\item Furthermore, a cross subsection $(E',p',B)\subseteq (E,p,B)$, is a section such that $s(b)\in E',b\in B$.
+		\end{itemize}
 	\end{Def}
 	
-	\subsubsection{Product Bundle}
-	
-	\subsubsection{Stiefel Variety}
-	
+	\subsubsection{Product Bundles}
 	\begin{Def}
-		内容...
+		The product bunlde $(B\times F ,p,B)$ is a bijection 
 	\end{Def}
 	
-	\subsubsection{Grasmannian Variety}
-	\begin{Def}
-		内容...
-	\end{Def}
-	\subsection{Morphsims of Bundles}
-	\subsection{Product and Fibre Products}
-	\subsection{Restriction and Induced Bundles}
+	\begin{proposition}
+		Every cross section $s$ of a product bundle $(B\times F,p,B)$ has the form
+		\begin{gather*}
+			s(b)=(b,f(b))\qquad p:B\times F\rightarrow B\qquad f: B\rightarrow F
+		\end{gather*}
+	\end{proposition}
+	\begin{proof}
+		Notice: $ps=1_B\Leftrightarrow  ps(b)=b\Leftrightarrow p(b,f(b))=b$
+	\end{proof}
+	\subsubsection{Morphisms of Bundles}
+		\begin{Def}
+			Let $(E,p,B)$ and $(E',p',B')$ be twon bundles, then a morphism is given by
+			\begin{gather*}
+				(u,f):(E,p,B)\rightarrow (E',p',B')
+			\end{gather*}
+			
+			such that $p'u=fp$. 
+			\begin{center}
+				\begin{tikzcd}
+					E\arrow[r,"u"]\arrow[d,"p"]&E'\arrow[d,"p'"]\\
+					B\arrow[r,"f"]&B'
+				\end{tikzcd}
+			\end{center}
+			
+			And a special case is the morphism in slice category. 
+		\end{Def}
+		
+		\begin{Def}
+			Take the notion of the category of bundles
+			\begin{gather*}
+				Bun
+			\end{gather*}
+		\end{Def}
+		
+		\textbf{Remark} And, the slice category $\mathcal{C}/\mathcal{B}=Bun(X)$
+		
+		\subsubsection{Product and Sum of Bundles}
+		\begin{Def}
+			\begin{itemize}
+				\item 
+				\item 
+			\end{itemize}
+		\end{Def}
+		\subsubsection{Restriction and Induced Bundles}
+		\begin{Def}
+			Let $\xi=(E,p,B)$ be a bundle, and let $A$ be a subset of $B$.
+			
+			Then, the restriction of $\xi$ to $A$, denoted by $\xi|A$, is the bundle $(E',p',A);E'=p^{-1}(A),p'=p|E$.
+		\end{Def}
+		
+		The restriction is a map $Bun_B\rightarrow Bun_A,A\subseteq B$. 
+		
+		\begin{Def}
+			内容...
+		\end{Def}
+		
+		\begin{proposition}
+			内容...
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
 	\subsection{Local Properties}
-	
+		\begin{Def}
+			\begin{itemize}
+				\item 
+				Two bundles $\xi$ and $\eta$ over $B$ are locally isomorphic provided for each $b\in B$, there exists an open neighborhood $U$ of $b$ such that
+				\begin{gather*}
+					\xi|U\cong \eta|U
+				\end{gather*}
+				\item A bundle $\xi$ over $B$ is locally trivial with fibre $F$, provided $\xi$ is locally isomorphic with the product bundle $(B\times F,p,B)$. 
+			\end{itemize}
+		\end{Def}
+		
+		\begin{proposition}
+			The relation of being locally isomorphic is an equivalence relation on the class of all bundles over $B$.
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{corollary}
+			If $\xi$ is locally isomorphic to a locally trivial bundle, $\xi$ is locally trivial. 
+		\end{corollary}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		\begin{proposition}
+			Let $\xi$ andd $\eta$ be two bundles over $B$, with a map $f:C\rightarrow B$.
+			
+			Then, if $\xi$ and $\eta$ are locally isomorphic, then $f^*(\xi)$ and $f^*(\eta)$ are locally isomorphic over $C$. 
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+	\section{Homotopies,and CW-Complexes}
+		\begin{theorem}
+			$\xi=(E,p,B)$ be a locally trivial bundle, with fibre $F$, where $(B,A)$ is a relative CW-complex.
+			
+			Then, all cross sections $s$ of $\xi|A$ prolong to a cross section $s^*$ of $\xi$, under either of following hypothesis:
+			\begin{itemize}
+				\item The space $F$ is $(m-1)$-connected for each $m\leq dim(B)$;
+				\item There is a relative CW-complex $(Y,X)$ such that
+				\begin{gather*}
+					B=Y\times I\qquad A=(X\times I)\cap (Y\times 0)\qquad I=[0,1]
+				\end{gather*}
+			\end{itemize}
+		\end{theorem}
+		\begin{proof}
+			内容...
+		\end{proof}
 	\section{Connections}
 	
 	\chapter{Fibre Bundles}
 		\section{Fibre Bundles}
 			\begin{Def}
-				Let $\eta:E\rightarrow B$ be a bundle. Then, a \textbf{fiber bundle} is $(\eta,E,B,F)$ with standard fiber $F$, such that for every general element $1\rightarrow B$, the pullback of $E$ along $x$ is isomorphic to $F$.
+				Let $\eta:E\rightarrow B$ be a bundle. Then, a \textbf{fiber bundle} is 
+				\begin{gather*}
+					(\eta,E,B,F)
+				\end{gather*} with a topological space called: \underline{standard fiber} $F$, such that for every general element $1\rightarrow B$, the pullback of $E$ along $x$ is isomorphic to $F$.
 				
-				i.e. $E_x\cong F$.
+				i.e. $E_x=\eta^{-1}(x)\cong F$.
 			\end{Def}
+			
+			Equivalently, there exists factorization
+			\begin{gather*}
+				F\rightarrow E\stackrel{\eta}{\rightarrow} X
+			\end{gather*}
+			
+			Such $F\rightarrow E$ is not canonical: Choose a base point $x_0\in X$, thus there exists factorization
+			\begin{gather*}
+				F\stackrel{\cong}{\rightarrow} E_{x_0}\hookrightarrow E
+			\end{gather*}
+			
 	\chapter{Associated Bundles}
+	
+	\chapter{Principal $G$-Bundles and Classifying Space}
+		\section{Principal $G$-Bundles}
+			\begin{Def}
+				For $G$ a group, and $X$ some other object.
+				
+				A $G$-principal bundle over $X$, also called $G$-torsor over $X$, is a bundle $P\rightarrow X$ equipped with $G$-action
+				\begin{gather*}
+					\rho:P\times G\rightarrow P
+				\end{gather*}
+				
+				such that
+				\begin{itemize}
+					\item The action is pricipal: The shear map
+					\begin{gather*}
+						(p_1,\rho):P\times G\rightarrow P\times_X P\qquad (s,t)\mapsto (p_1(s),\rho(t))
+					\end{gather*}
+					
+					is an isomorphism. And the free action and transitive
+					\begin{gather*}
+						\rho(s,t)=s\Rightarrow t=e\qquad \rho(s,t_1t_2)=\rho(\rho(s,t_1),t_2)
+					\end{gather*}
+					\item or equivalently,
+					\begin{gather*}
+						(P\rightarrow X)\cong (P\rightarrow P/G)
+					\end{gather*}
+					\item or, with the cotinuous function $p:P\rightarrow X$ and the action $\rho:P\times G\rightarrow P$ on $G$ over $X$, fitting into coequalizing diagram
+					\begin{center}
+						\begin{tikzcd}
+							P\times G\arrow[d,shift left=2,"p_1"]\arrow[d,shift right=2,"\rho",swap]\\
+							P\arrow[d,"p"]\\
+							X
+						\end{tikzcd}
+					\end{center}
+					
+					and this is locally trivial in the sense that
+					\begin{center}
+						\begin{tikzcd}
+							U\times G\arrow[rd,"p_1"]&P|U\arrow[l,"\simeq_G"]\arrow[d,"p|U"]\arrow[r]&P\arrow[d,"p"]\\
+							&U\arrow[r]&X
+						\end{tikzcd}
+					\end{center}
+				\end{itemize}
+			\end{Def}
+			
+				We will firstly show
+				\begin{proposition}
+					The definitions are equivalent.
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				\begin{Def}
+					The morphisms between principal $G$-bundles is specified by
+					\begin{center}
+						\begin{tikzcd}
+							P\arrow[rd]\arrow[rr]&&P'\arrow[ld]\\
+							&X
+						\end{tikzcd}\begin{tikzcd}
+							P\times G\arrow[r]\arrow[d]&P'\times G\arrow[d]\\
+							P\arrow[r]&P'
+						\end{tikzcd}\\
+						\begin{tikzcd}
+							P\arrow[d]\arrow[r]&P'\arrow[d]\\
+							X\arrow[r]&X'
+						\end{tikzcd}\begin{tikzcd}
+							P\times G\arrow[r]\arrow[d]&P'\times G\arrow[d]\\
+							P\arrow[r]&P'
+						\end{tikzcd}
+					\end{center}
+					
+				\end{Def}
+				
+				\subsubsection{Pullback}
+				
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				
+				\begin{lemma}
+					For every $G$-bundle morphism $(F,f)$, there exists a natural isomorphism
+					\begin{gather*}
+						P\cong f^*Q
+					\end{gather*}
+				\end{lemma}
+				\begin{proof}
+					By universal property, there exists a mapping
+					\begin{gather*}
+						\Phi:P\rightarrow f^*Q\qquad 
+					\end{gather*}
+					
+					Then:
+					\begin{itemize}
+						\item It is well-defined:
+						\item It is $G$-equivariant:
+						\item $\Phi$ is a homeomorphism:
+					\end{itemize}
+					
+					Now, via local trivialization, on $U\subseteq X$,
+					\begin{gather*}
+						P|U\cong U\times G\qquad (f^*Q)|U\cong U\times G
+					\end{gather*}
+				\end{proof}
+			\subsection{Groupoind over $G$-Bundles}
+			\begin{proposition}
+				TFAE: For \begin{center}
+					\begin{tikzcd}
+						P\arrow[r,"F"]\arrow[d,"p"]&Q\arrow[d,"q"]\\
+						X\arrow[r,"f"]&Y
+					\end{tikzcd}
+				\end{center}
+				\begin{itemize}
+					\item $(F,f)$ is inversable. 
+					\item $f$ is a homeomorphism
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				$\Rightarrow$ Proved;
+				
+				$\Leftarrow$ If $f:X\rightarrow Y$ is a homeomorphism, the projection
+				\begin{gather*}
+					\pi_2:f^*Q\rightarrow Q
+				\end{gather*}
+				
+				is also a homeomorphism:
+				
+				
+				And, $F=\pi_2\circ \Phi$ is also a homeomorphism. Thus, 
+				\begin{gather*}
+					(F,f)^{-1}=(F^{-1},f^{-1})
+				\end{gather*}
+			\end{proof}
+				\begin{proposition}
+					$Bun_G(X)$ is actually a groupoid. 
+				\end{proposition}
+				\begin{proof}
+					By above. 
+				\end{proof}
+				
+				\textbf{Remark} $Bund_G$ may be not groupoid!!
+				
+			
+			\subsection{Degree-$1$ Cohomology}
+			\begin{proposition}
+				Let $G$ be a topological space. Then, there exists isomorphism
+				\begin{gather*}
+					H^1(X,\underline{G})\simeq GBund(X)/\simeq=\pi_0 \operatorname{Bun}_G(X)\qquad \underline{G}(U)=C(U,G)
+				\end{gather*}
+				
+				between the degree-1 $G$ cohomology of $X$, and the isomorphism classes of $G$-principal bundles over $X$. 
+				
+				\textbf{Remark} Here, the cohomology is the \underline{Cech cohomology}.
+			\end{proposition} 
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			Furthermore:
+			\begin{proposition}
+				If $X$ can CW-approxiamated, then
+				\begin{gather*}
+					H^1(X,\underline{G})\cong  H^2(X;\ZZ)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+		\section{Classyfing Space}
+			\subsection{Grassmannians, and Infinite Grassmannians, Stiefel Manifold}
+				\begin{Def}
+					内容...
+				\end{Def}
+			
+			\subsection{title}
+				\begin{Def}
+					For $G$ a topological group, there is a classifying space $BG\in Top$, for topological $G$-principal bundles. With the following natural isomorphsim
+					\begin{gather*}
+						GBund(X)_0\simeq \pi_0 Top(X,BG)
+					\end{gather*}
+				\end{Def}
+			
+			
+			\subsection{Milnor's Construction of Universal Bundle}
+				\begin{theorem}
+					(Milnor) Let $G$ be a topological space. Then, there exists factorization
+					\begin{gather*}
+						G\rightarrow EG\rightarrow BG
+					\end{gather*}
+					where:
+					\begin{itemize}
+						\item $EG$ is constractible;
+						\item $G$ acts freely on $G$, and $p$ is the locally trivial principal bundle;
+					\end{itemize}
+					
+					Furthermore, if $X$ is a paracompact Hausddorff space, then
+					\begin{gather*}
+						[X,BG]\cong \pi_0 Bun_G(X)
+					\end{gather*}
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+			\subsection{Stiefel Construction}
 	\chapter{Projective Modules and Vector Bundles}
 	\section{Free module, $GL_n$ and Stably Free Modules}
 	
