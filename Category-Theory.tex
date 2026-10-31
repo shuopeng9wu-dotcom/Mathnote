@@ -57,9 +57,64 @@
 		
 			\subsection{Categories}
 				\begin{Def}
-					内容...
+					A category $\mathcal{C}$ consists of the following elements:
+					\begin{itemize}
+						\item Objects $Ob(\mathcal{C})$;
+						\item Morphisms $Mor(\mathcal{C})$,equipped with the mapping
+						\begin{gather*}
+							s:Mor(\mathcal{C})\rightarrow Ob(\mathcal{C})\qquad t:Mor(\mathcal{C})\rightarrow Ob(\mathcal{C})
+						\end{gather*}
+						
+						with:
+						\begin{itemize}
+							\item Composition:
+							\begin{gather*}
+								\circ:  Mor(B,C)\times Mor(A,B)\rightarrow Mor(A,C)
+							\end{gather*}
+							
+							\item Identity: 
+							\begin{gather*}
+								id_A\in Mor(A,A)
+							\end{gather*}
+							
+							with
+							\begin{gather*}
+								f\circ id_A=f,f\in Mor(A,B)\\
+								id_A\circ f=f,f\in Mor(B,A)
+							\end{gather*}
+							
+							\item Associativity
+							\begin{gather*}
+								(f\circ g)\circ h=f\circ (g\circ h)
+							\end{gather*}
+						\end{itemize}
+					\end{itemize}
 				\end{Def}
 			\subsection{Functors}
+				\begin{Def}
+					Let $\mathcal{C},\mathcal{D}$ be two categories. 
+					
+					Then, the functor is given by: $F:\mathcal{C}\rightarrow \mathcal{D}$ such that: For $s:C_1\rightarrow C_2$, 
+					\begin{gather*}
+						F_t:F(C_1)\rightarrow F(C_2)
+					\end{gather*}
+				\end{Def}
+				
+				Notice
+				
+				\begin{example}
+					Although sometimes could be
+					\begin{gather*}
+						F,G:\mathcal{C}\rightarrow \mathcal{D}\qquad F(C)=G(C)
+					\end{gather*}
+					
+					But it is still possible that
+					\begin{gather*}
+						F\not=G
+					\end{gather*}
+					
+					For example: $\mathcal{C}=[1]$, we could obtain $G$ from $F$ by exchange the direction of arrow.
+				\end{example}
 				\subsubsection{Full,Faithful}
 					\begin{Def}
 						A functor $F:X\rightarrow Y$
@@ -94,6 +149,32 @@
 					\begin{proof}
 						内容...
 					\end{proof}
+					
+					\subsubsection{Pre- and Postcomposition}
+					
+					\begin{Def} Let $f:x\rightarrow y$ be in 
+						\begin{itemize}
+							\item $f_*(c):Hom(c,x)\rightarrow Hom(c,y),g\mapsto f\circ g$;
+							\item $f^*(c):Hom(y,c)\rightarrow Hom(x,c),g\mapsto g\circ f$;
+						\end{itemize}
+					\end{Def}
+					
+					\begin{proposition}
+						TFAE:
+						\begin{itemize}
+							\item $f:x\rightarrow y$ is an isomorphism;
+							\item $f_*(c):Hom(c,x)\rightarrow Hom(c,y)$ is bijection for all $c$;
+							\item $f^*(c):Hom(y,c)\rightarrow Hom(x,c)$ is bijection for all $c$;
+						\end{itemize}
+					\end{proposition}
+					\begin{proof}
+						$\Rightarrow$
+						
+						
+						$\Rightarrow$
+						
+						$\Rightarrow$
+					\end{proof}
 				\subsection{Natural Transformation}
 			\begin{Def}
 				Consider the natural transformation $F:\mathcal{C}\rightarrow \mathcal{D}$ is \textbf{natural isomorphism} if there exists functor $G:\mathcal{D}\rightarrow \mathcal{C}$ such that
@@ -122,20 +203,44 @@
 					F:\mathcal{C}\rightarrow \mathcal{D}\qquad G:\mathcal{D}\rightarrow \mathcal{C}
 				\end{gather*}
 				
-				are called \textbf{adjunction}, if there exists a bijection
+				are called \textbf{adjunction}, if there exists a natural bijection
 				\begin{gather*}
-					\Phi_{x,y}:Hom_\mathcal{C}(Fx,y)\rightarrow Hom_\mathcal{D}(x,Gy) 
+					\Phi_{x,y}:Hom_\mathcal{C}(Fx,y)\stackrel{}{\rightarrow} Hom_\mathcal{D}(x,Gy) 
 				\end{gather*}
 				
 				i.e. a natural isomorphism of functors
 				\begin{gather*}
-					\Phi:Hom_D(F^{op}(-),-)\simeq Hom_C(-,G(-)):\mathcal{C}^{op}\times D\rightarrow Set
+					H_1:\mathcal{C}^{op}\times \mathcal{D}\rightarrow Set\qquad (x,y)\mapsto Hom(Fx,y)\\
+					H_2:\mathcal{C}^{op}\times \mathcal{D}\rightarrow Set\qquad (x,y)\mapsto Hom(x,Gy)
 				\end{gather*}
+				
+				\begin{center}
+					\begin{tikzcd}
+						\mathcal{C}^{op}\times \mathcal{D}\arrow[rr,bend left=20]\arrow[rr,bend right=20]&\Downarrow&Set
+					\end{tikzcd}
+				\end{center}
 			\end{Def}
 			
 			We will take the following notion
 			\begin{gather*}
 				F\dashv G
+			\end{gather*}
+			
+			To check the naturality, we should check the first and second variable:
+			\begin{itemize}
+				\item $u:X'\rightarrow X,f:FX\rightarrow Y$,
+				\begin{gather*}
+					\Phi_{X',Y}(f\circ F(u))=\Phi_{X,Y}(f)\circ u
+				\end{gather*}
+				\item $v:Y\rightarrow Y',f:FX\rightarrow Y$,
+				\begin{gather*}
+					\Phi_{X,Y'}(v\circ f)=G(v)\circ \Phi_{X,Y}(F)
+				\end{gather*}
+			\end{itemize}
+			
+			This implies, that
+			\begin{gather*}
+				\Phi_{X',Y'}(v\circ f\circ F(u))=G(v)\circ \Phi_{X,Y}(f)\circ u
 			\end{gather*}
 			
 			\begin{proposition}
@@ -151,6 +256,46 @@
 					\item 
 				\end{itemize}
 			\end{proof}
+			
+			\textbf{Remark} Naturality is necessary. There exists some example, that
+			\begin{gather*}
+				\Phi_{X,Y}: Hom_\mathcal{C}(Fx,y)\cong Hom_\mathcal{D}(x,Gy)
+			\end{gather*}
+			
+			Let $G,H$ be two groups
+			\begin{gather*}
+				\beta:BG\rightarrow BH,g\mapsto id\qquad \alpha:BH\rightarrow BG\qquad h\mapsto id
+			\end{gather*}
+			
+			Then,
+			\begin{gather*}
+				Hom_\mathcal{C}(\alpha *,*)\cong G;Hom_\mathcal{D}(*,\beta *)\cong H
+			\end{gather*}
+			
+			If there exists bijection $G\rightarrow H$, or furthermore $G=H$, 
+			\begin{gather*}
+				\Phi:Hom_\mathcal{C}(\alpha*,*)\cong Hom_\mathcal{D}(*,\beta*)
+			\end{gather*}
+			
+			But this might be not natural: If natural, then 
+			\begin{gather*}
+				\Phi(uk\alpha(v))=\beta(u)\Phi(k)v\qquad u\in G,v\in H,k\in G
+			\end{gather*}
+			
+			when $\alpha,\beta$ are trivial:
+			\begin{gather*}
+				\Phi(uk)=\Phi(k)v
+			\end{gather*}
+			
+			when $v=e_H$,
+			\begin{gather*}
+				\Phi(uk)=\Phi(k)
+			\end{gather*}
+			
+			when $G=H,\Phi=id_G$, then 
+			\begin{gather*}
+				\Phi(\bar{0}\cdot \bar{1})\not=\Phi(\bar{1})
+			\end{gather*}
 			\subsubsection{Whiskering}
 				\begin{Def}
 					Let $F,F':\mathcal{C}\rightarrow \mathcal{D},E:\mathcal{B}\rightarrow \mathcal{C},G:\mathcal{D}\rightarrow \mathcal{E}$.
@@ -200,6 +345,7 @@
 				\textbf{Remark} Here, $\circ$ is the composition of natural transformations, $*$ is \textbf{whiskering}.
 			\end{Def}
 			
+			
 			\begin{proposition}
 				The followings are equivalent:
 				\begin{itemize}
@@ -208,7 +354,10 @@
 				\end{itemize}
 			\end{proposition}
 			\begin{proof}
-				内容...
+				\begin{itemize}
+					\item $\Rightarrow$
+					\item $\Leftarrow$ 
+				\end{itemize}
 			\end{proof}
 			\subsubsection{Limits, Colimits}
 				\begin{theorem} In general, we could say that: 
@@ -272,7 +421,12 @@
 			\subsection{Functor Category, and Power, Copower}
 				\subsubsection{Functor Category}
 					\begin{Def}
-						内容...
+						Let $\mathcal{C},\mathcal{D}$ be two categories. Take the notion of
+						\begin{gather*}
+							Fun(\mathcal{C},\mathcal{D})=[\mathcal{C},\mathcal{D}]
+						\end{gather*}
+						
+						whose morphisms are natural morphisms $Nat(F,G)\subseteq Mor(Fun(\mathcal{C},\mathcal{D}))$. 
 					\end{Def}
 				\subsubsection{Power and Copower}
 					(This power/copower is not the power in closed monoidal category, the 'internal hom')
@@ -403,7 +557,21 @@
 					\end{itemize}
 				\end{lemma}
 				\begin{proof}
-					内容...
+					Omitted.
+				\end{proof}
+				
+				Thus,
+				
+				\begin{proposition}
+					We obtain an isomorphism of categories
+					\begin{gather*}
+						Fun(I,\mathcal{C})\cong \mathcal{C}^I
+					\end{gather*}
+					
+					where $I$ could be the discrete category of cardinal $\omega$. This is the Cartesian product. 
+				\end{proposition}
+				\begin{proof}
+					Given by $F(1)=X\in \mathcal{C},F(2)=Y\in \mathcal{C}$. 
 				\end{proof}
 				
 				\subsection{Generating Objects}
@@ -463,6 +631,8 @@
 				
 				By the universal property, 
 			\end{Def}
+			
+			
 			\subsection{Limits, Colimits}
 				\subsubsection{Set-Valued Functor Limit}
 				\begin{Def} Suppose $D$ be small category. 
@@ -481,15 +651,17 @@
 				\end{gather*}
 				
 				\begin{proposition}
-					(Limit, Colimit as Equalizer, Coequalizer) 
-					\begin{itemize}
-						\item 
-						\item 
-					\end{itemize}
+					(Limit, Colimit as Equalizer, Coequalizer) We obtain, that for $F:I\rightarrow \mathcal{C}$
+					\begin{gather*}
+						\lim_I F=Eq(\prod_{i} F_i\stackrel{s,t}{\rightarrow} \prod_{u:i\rightarrow j} F_j)\\
+						\operatorname{colim}_I F=Coeq(\sqcup F_i\stackrel{s,t}{\rightarrow} \sqcup_{u:i\rightarrow j} F_j)
+					\end{gather*}
 				\end{proposition}
 				\begin{proof}
-					内容...
+					Omitted. We will prove this for equivalence: Compeleteness and Cocompeleteness. 
 				\end{proof}
+				
+				\subsubsection{Set-Theoretic Discussion}
 				
 				\begin{proposition}
 					There is bijection
@@ -667,13 +839,57 @@
 					\begin{proof}
 						内容...
 					\end{proof}
+					
+				\subsubsection{Terminal and Initial Objects}
+					\begin{Def}
+						\begin{itemize}
+							\item The \textbf{terminal object} of a category is an object $T\in \mathcal{C}$ such that: For every object $X\in \mathcal{C}$, there exists one and only one morphism $X\rightarrow T$;
+							\item The \textbf{initial object} of a category is an object $I\in \mathcal{C}$ such that:For every object $X\in \mathcal{C}$, there exists one and only one of morphism $I\rightarrow X$.
+						\end{itemize}
+					\end{Def}
+					
+					\begin{proposition}
+						The terminal and initial object are unique, up to isomorphism, if exists.
+					\end{proposition}
+					\begin{proof}
+						Omitted.
+					\end{proof}
+					
+					\begin{proposition}
+						Then,
+						\begin{gather*}
+							T\cong \lim_\emptyset F\qquad F:\emptyset\rightarrow C\\
+							I\cong \operatorname{colim}_\emptyset  G\qquad G:\mathcal{C}\rightarrow \emptyset
+						\end{gather*}
+					\end{proposition}
+					\begin{proof}
+						\begin{itemize}
+							\item 
+							\item 
+						\end{itemize}
+					\end{proof}
 			\subsection{Preverse of Limits and Colimits, Continuous annd Cocontinuous Functors}
 			\begin{Def} Let $F:\mathcal{C}\rightarrow \mathcal{D}$ be a functor:
 				\begin{itemize}
-					\item 
-					\item 
+					\item $F$ is called \textbf{continuous}, if it preserves all small limits;
+					\item $F$ is called \textbf{cocontinuous}, if it preserves all small colimits;
 				\end{itemize}
 			\end{Def}
+			
+			\begin{example}
+				\begin{itemize}
+					\item Consider the free-forgetful adjointness:
+					\begin{gather*}
+						Free:Set\stackrel{\rightarrow}{\leftarrow} Grp:U\qquad Free\dashv U
+					\end{gather*}
+					
+					Notice: $Free$ is cocontinuous and $U$ is continuous;
+					\begin{gather*}
+						Free(\{*\}\times \{*\})\cong \ZZ\\
+						Free(\{*\})\times Free(\{*\})\cong \ZZ\times \ZZ
+					\end{gather*}
+				\end{itemize}
+			\end{example}
 			
 			\subsection{Pullbacks and Pushout}
 				\begin{Def}
@@ -681,16 +897,16 @@
 						\item 
 						\begin{center}
 							\begin{tikzcd}
-								A\\
-								&X\times_Z Y&Y\\
-								&X&Z
+								A\arrow[rd,dashrightarrow]\arrow[rrd]\arrow[ddr]\\
+								&X\times_Z Y\arrow[r]\arrow[d]&Y\arrow[d]\\
+								&X\arrow[r]&Z
 							\end{tikzcd}
 						\end{center}
 						\item 
 						\begin{center}
 							\begin{tikzcd}
-								Z&X\\
-								Y&X\times_Z Y\\
+								Z\arrow[r]\arrow[d]&X\arrow[d]\arrow[ddr]\\
+								Y\arrow[r]\arrow[rrd]\arrow[rrd]&X\times_Z Y\arrow[rd,dashrightarrow]\\
 								&&A
 							\end{tikzcd}
 						\end{center}
@@ -715,22 +931,35 @@
 					\end{proof}
 			\section{Product, Coproduct}
 			\subsection{Definitions}
-				\begin{Def}
+				\begin{Def} Let $\{X_i\}_{i\in I}$ be a family of objects
 					\begin{itemize}
 						\item The product 
-						\item 
+						\begin{gather*}
+							\prod_{i\in I} X_i
+						\end{gather*}
+						
+						with universal property
+						\begin{center}
+							\begin{tikzcd}
+								Y\arrow[d]\arrow[rd]\\
+								\prod_{i\in I} X_i\arrow[r,"\pi_j"]&X_j
+							\end{tikzcd}
+						\end{center}
+						\item The coproduct
+						\begin{gather*}
+							\sqcup_{i\in I} X_i
+						\end{gather*}
+						
+						with universal property
+						\begin{center}
+							\begin{tikzcd}
+								X_i\arrow[r,"\iota_i"]\arrow[rd]&\sqcup_{i\in I} X_i\arrow[d]\\
+								&Y
+							\end{tikzcd}
+						\end{center}
 					\end{itemize}
 				\end{Def}
 				
-				\begin{proposition}
-					\begin{itemize}
-						\item 
-						\item 
-					\end{itemize}
-				\end{proposition}
-				\begin{proof}
-					内容...
-				\end{proof}
 				
 				\begin{proposition}
 					(Commutativity of Product, Coproducts) For index category $I,J$, and a family of objects $F_{i,j}$:
@@ -883,7 +1112,6 @@
 				\end{itemize}
 			\end{Def}
 			
-			\subsection{Limits and Colimits}\
 			\subsection{$I$-Shaped }
 				\begin{Def}
 					For fixed $I$, then 
@@ -946,39 +1174,114 @@
 				\end{Def}
 				
 				\begin{proposition}
-					There exists adjunction $\operatorname{colim}_I\dashv \Delta\dashv \lim_I$. i.e.
+					There exists adjunction $\operatorname{colim}_I\dashv \Delta\dashv \lim_I$. i.e. for $F:I\rightarrow \mathcal{C}$,
 					\begin{gather*}
-						Hom()\cong Hom()\\
-						Hom()\cong Hom()
+						Hom_{\mathcal{C}}(\operatorname{colim}_I F,Y)\cong Hom_{Fun}(F,\Delta_I Y)\\
+						Hom_{Fun}(\Delta_I Y,G)\cong Hom_\mathcal{C}(Y,\lim_I G)
 					\end{gather*}
+					
+					where $\Delta$ is the diagonal mapping.
 				\end{proposition}
 				\begin{proof}
-					内容...
+					We obtain this as following
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
 				\end{proof}
 				
 				\begin{corollary}
-					For $I=\{1,2\}$,
+					For $I=\{1,2\}$, and the diagram $F:I\rightarrow \mathcal{C}$,
 					\begin{gather*}
-						内容...
+						\sqcup \dashv \Delta\dashv \times
 					\end{gather*}
 				\end{corollary}
 				\begin{proof}
-					Omitted.
+					We just need to give $F(1),F(2)$. Thus,
+					\begin{gather*}
+						Func(I,\mathcal{C})\cong \mathcal{C}\times \mathcal{C}
+					\end{gather*}
 				\end{proof}
 				
 				\subsubsection{Compeletness}
 				
+				\begin{Def} Let $\mathcal{C}$ be a category:
+					\begin{itemize}
+						\item $\mathcal{C}$ is called \textbf{compelete}, if it contains all small limits;
+						\item $\mathcal{C}$ is called \textbf{cocomplete}, if it contains all small colimits;
+					\end{itemize}
+				\end{Def}
+				
 				\begin{proposition}
-					内容...
+					\begin{itemize}
+						\item TFAE:
+							\begin{itemize}
+								\item Completeness;
+								\item $\mathcal{C}$ has all small products and equalizers;
+							\end{itemize}
+						\item TFAE: 
+						\begin{itemize}
+							\item Cocompleteness;
+							\item $\mathcal{C}$ has all small products and equalizers;
+						\end{itemize}
+					\end{itemize}
 				\end{proposition}
 				\begin{proof}
-					内容...
+					We just need to prove the product: 
+					$\Rightarrow$ Small Product: The limit with discrete index category;
+					
+					Equalizers: The equalizer could be given by the diagram
+					\begin{center}
+						\begin{tikzcd}
+							Eq(f,g)\arrow[r,dashrightarrow]&X\arrow[r,shift left=2,"f"]\arrow[r,shift right=2,"g",swap] &Y
+						\end{tikzcd}
+					\end{center}
+					
+					It can be expressed as 
+					\begin{gather*}
+						Eq(f,g)=\lim_I F\qquad F:I\rightarrow \mathcal{C}
+					\end{gather*}
+					
+					where 
+					\begin{center}
+						$I=($\begin{tikzcd}
+							0\arrow[r,shift left=2,"u"]\arrow[r,shift right=2,"v"]&1
+						\end{tikzcd}$)$
+					\end{center}
+					
+					\begin{center}
+						\begin{tikzcd}
+							&X\arrow[ld,"f",swap]\arrow[rd,"g"]\\
+							Y\arrow[rr,"id_Y"]&&Y
+						\end{tikzcd}
+					\end{center}
+					
+					$\Leftarrow$ We obtain the limit as following: Notice that
+					\begin{center}
+						\begin{tikzcd}
+							&\lim_I F\arrow[d,dashrightarrow]\arrow[ldd]\arrow[rdd]\\
+							&\prod F(i)\arrow[ld]\arrow[rd]\\
+							F(j)\arrow[rr]&&F(k)
+						\end{tikzcd}
+					\end{center}
+					
+					Thus, for every $j,k$ and $F(j)\rightarrow F(k)$, we obtain 
+					\begin{gather*}
+						\lim_I F=Eq(\prod_{i} F(i)\stackrel{s,t}{\rightarrow} \prod_{u:i\rightarrow j} F(j))
+					\end{gather*}
+					
+					where
+					\begin{gather*}
+						s_u:\prod_i F(i)\rightarrow F(j)\qquad (s_i)_{i\in I}\mapsto s_{s(u)}\\
+						t_u:\prod_i F(i)\rightarrow F(j)\qquad (t_i)_{i\in I}\mapsto t_{t(u)}
+					\end{gather*}
 				\end{proof}
+				
 				
 				\subsubsection{Set-Theoretic Discussion}
 				
 					\begin{proposition}
-						内容...
+						Especially:
 					\end{proposition}
 					\begin{proof}
 						内容...
@@ -994,10 +1297,23 @@
 						\end{gather*}
 					\end{theorem}
 					\begin{proof}
-						内容...
+						Omitted.
 					\end{proof}
 			
-			
+				\subsubsection{Inverse/Projective Limit and Inuductive/Direct Limit}
+					\begin{Def}
+						Especially, on the partial ordered system $(I,\leq)$
+						\begin{itemize}
+							\item The \textbf{inductive limit}
+							\begin{gather*}
+								\varinjlim_{i\in I} A_i=\operatorname{colim}_{i\in I} A_i
+							\end{gather*}
+							\item The \textbf{inverse limit}
+							\begin{gather*}
+								\varprojlim_{i\in I} A_i=\lim_{i\in I} A_i
+							\end{gather*}
+						\end{itemize}
+					\end{Def}
 			\subsection{Restriction/Pullback of Diagrams/Precompostion}
 			\begin{proposition}
 				Given: Functor $u:I\rightarrow J$, then the precomposition
@@ -1006,7 +1322,7 @@
 				\end{gather*}
 			\end{proposition}
 			\begin{proof}
-				内容...
+				Omitted. 
 			\end{proof}
 			
 			\begin{corollary}
@@ -1288,23 +1604,80 @@
 					\item 
 					A \underline{small} groupoid $G$ is:
 					\begin{itemize}
-						\item A set, which is called the set if objects;
-						\item 
-						\item 
-						\item 
-						\item 
+						\item A set $X$, which is called the set if objects;
+						\item Pairs $(x,y)\in X\times X\Rightarrow Hom(x,y)$;
+						\item Triples $(x,y,z)\in X\times X\times X\Rightarrow \circ_{x,y,z}:Hom(y,z)\times Hom(x,y)\rightarrow Hom(x,z)$;
+						\item The identities
+						\begin{gather*}
+							id_x\in Hom(x,x)
+						\end{gather*}
+						\item For pairs $(x,y)\in X\times X$, a function
+						\begin{gather*}
+							(-)^{-1}:Hom(x,y)\rightarrow Hom(y,x)
+						\end{gather*}
+						
+						is the \underline{inverse-assigning function}.
 					\end{itemize}
 					
 					such that 
 					\begin{itemize}
+						\item (Associativity)  For $x_1,x_2,x_3,x_4$, 
+						\begin{gather*}
+							h\circ (g\circ f)=(h\circ g)\circ f
+						\end{gather*}
+						\item For $f\in Hom(x,y)$
+						\begin{gather*}
+							id_y\circ f=f\qquad f\circ id_x=f
+						\end{gather*}
 						\item 
-						\item 
-						\item 
+						\begin{gather*}
+							f^{-1}\circ f=id_x\qquad f\circ f^{-1}=id_y
+						\end{gather*}
 					\end{itemize}
-					\item 
+					\item Let $\mathcal{G}_1,\mathcal{G}_2$, then the \textbf{homotopy/natural transformation}
+					\begin{gather*}
+						\eta:F\Rightarrow G
+					\end{gather*}
+					
+					with:
+					\begin{itemize}
+						\item A function $F_0:X_1\rightarrow X_2$;
+						\item For $x,y\in X_1$, then 
+						\begin{gather*}
+							F_{x,y}:Hom(x,y)\rightarrow Hom(F_0(X),F_0(y))
+						\end{gather*}
+					\end{itemize}
+					
+					such that
+					\begin{itemize}
+						\item (Composition)
+						\item (Identities)
+					\end{itemize}
+					
+					\item The \textbf{conjugation} or \textbf{homotopy} $\eta:F\Rightarrow G$:
+					\begin{itemize}
+						\item For each object $x\in X_1$ of $\mathcal{G}_1$, a morphism $\eta_x\in Hom(F(x),G(x))$;
+						\item For all $x,y\in X_1$ and $f\in Hom(x,y)$, the equality
+						\begin{gather*}
+							\eta_y\circ F(f)=G(f)\circ \eta_x
+						\end{gather*}
+						\begin{center}
+							\begin{tikzcd}
+								F(x)\arrow[r,"\eta_x"]\arrow[d,"F(f)"]&G(x)\arrow[d,"G(f)"]\\
+								F(y)\arrow[r,"\eta_y"]&G(y)
+							\end{tikzcd}
+						\end{center}
+						
+					\end{itemize}
+					
+					
+					And composition of homotopies
+					\begin{gather*}
+						\eta_2\circ \eta_1:F\Rightarrow H
+					\end{gather*}
 				\end{itemize}
 			\end{Def}
-			\subsection{'Base Loops' of Category}
+			\subsection{'Base Loops' of Category:Base Loop Group}
 				\begin{Def}
 					Let $\mathcal{C}$ be a category, with object $x\in \mathcal{C}$.
 					
@@ -1315,7 +1688,7 @@
 				\end{Def}
 			\subsection{Deloping Category}
 				\begin{Def}
-					The \textbf{delooping} of an object $A$, it is exists, a uniquely pointed object $BA$ such that: $A$ is the loop space object of $BA$:
+					The \textbf{delooping} of an object $A\in \mathcal{C}$, it is exists, a uniquely pointed object $BA\in \mathcal{C}$ such that: $A$ is the loop space object of $BA$:
 					\begin{gather*}
 						A\simeq \Omega(BA)
 					\end{gather*}
@@ -1354,7 +1727,7 @@
 							\end{gather*}
 							\item Equivariant Maps:For the map $f:X\rightarrow Y$,
 							\begin{gather*}
-								\rho_X：G\times X\rightarrow X\qquad \rho_Y:G\times Y\\
+								\rho_X:G\times X\rightarrow X\qquad \rho_Y:G\times Y\rightarrow Y\\
 								f(g\cdot x)=g\cdot f(x)
 							\end{gather*}
 						\end{itemize}
@@ -1381,7 +1754,28 @@
 						F(\rho(g,x))=F(Bg\circ x)=F(Bg)\circ F(x)=
 					\end{gather*}
 					
-					$\Leftarrow$ 
+					$\Leftarrow$ Consider the $G$-set
+					\begin{gather*}
+						(X,\rho)
+					\end{gather*}
+					
+					Then, the mapping $F_X\in Fun(BG,Set)$ is specified by
+					\begin{gather*}
+						BG\rightarrow Set\qquad *\mapsto X\\
+						Mor(BG)\rightarrow Mor(Set)\qquad g\mapsto (x\mapsto g\cdot x)
+					\end{gather*}
+					
+					And satisfies
+					\begin{gather*}
+						F_X(gh)=F_X(g)\circ F_X(h)
+					\end{gather*}
+					
+					And the morphisms $f:X\rightarrow Y$ induces the natural transformation
+					\begin{gather*}
+						\eta_f: F_X\Rightarrow F_Y\qquad \qquad \eta_f(F_X(x)):=F_Y(f(y))
+					\end{gather*}
+					
+					which satisfies $\eta_f(g\circ h)=\eta_f(g)\circ \eta_f(h)$. 
 				\end{proof}
 				
 				\begin{corollary}
@@ -1391,9 +1785,113 @@
 					\end{gather*}
 				\end{corollary}
 				\begin{proof}
-					内容...
+					Similarly
+				\end{proof}
+				
+				Furthermore, we obtain that
+				\begin{proposition}
+					Let $G$ be a group. Then,
+					\begin{gather*}
+						Nat(Id_{BG},Id_{BG})\cong Z(G)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					Now, consider the diagram
+					\begin{center}
+						\begin{tikzcd}
+							BG\arrow[rr,bend left=20,"id_{BG}"]\arrow[rr,bend right=20,"id_{BG}",swap]&\Downarrow\eta&BG
+						\end{tikzcd}
+					\end{center}
+					
+					which maps $*$ to $*$, and for $g\in End(*)$,
+					\begin{gather*}
+						\eta_*\circ id_{BG}(g)=id_{BG}(g)\circ \eta_*\Rightarrow \eta_*\circ g=g\circ \eta_*
+					\end{gather*}
+					\begin{center}
+						\begin{tikzcd}
+							*\arrow[d,"g"]\arrow[r,"id_{BG}"]&*\arrow[r,"\eta_*"]\arrow[d,"id_{BG}(g)"]&*\arrow[d,"id_{BG}(g)"]\\
+							*\arrow[r,"id_{BG}"]&*\arrow[r,"\eta_*"]&*			\end{tikzcd}
+					\end{center}
+					
+					This implies, that $\eta_*$ is the commutator of $G$. 
+					\begin{gather*}
+						Nat(Id_{BG},Id_{BG}\cong Z(G)
+					\end{gather*}
 				\end{proof}
 		\section{Nerve Constructions}
+			\begin{Def}
+				Suppose $\mathcal{C}$, then, the \textbf{nerve}
+				\begin{gather*}
+					N(\mathcal{C}):\Delta^{op}\rightarrow Set
+				\end{gather*}
+				where
+				\begin{gather*}
+					Ob(\Delta)=\{[n]|n\in \NN\}\qquad Hom_{[n]}(i,j)=\begin{cases}
+						\{*\}&i\leq j\\
+						\emptyset&i>j
+					\end{cases}
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				(Strict Segal Condition) 
+				\begin{gather*}
+					N(\mathcal{C})_n\cong\underbrace{ N(\mathcal{C})_1\times_{N(\mathcal{C})_0}\times_{N(\mathcal{C}_0)} N(\mathcal{C})_1}
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				$\Rightarrow$ 
+				
+				$\Leftarrow$ 
+			\end{proof}
+			
+			\begin{Def}
+				A simplical set satisfies \textbf{Segal conditions}, if the Segal maps exhibit equivalences
+				\begin{gather*}
+					X_n\stackrel{\simeq}{\rightarrow} X_1\times_{X_0}\times\dots\times_{X_0} X_1
+				\end{gather*}
+			\end{Def}
+			
+			Furthermore, we have the following theorem, due to Grothendieck
+			\begin{theorem}
+				(Grothendieck) TFAE:
+				\begin{itemize}
+					\item A simplicial set is the nerve of a category;
+					\item It satisfies Segal conditions;
+				\end{itemize}
+			\end{theorem}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Internal Categories}
+			\begin{Def}
+				Let $\mathcal{E}$ be a category with (small) limit. Then, the \textbf{internal category} is 
+				\begin{gather*}
+					X:\Delta^{op}\rightarrow\mathcal{E}
+				\end{gather*}
+				
+				such that
+				\begin{gather*}
+					X_n\cong \underbrace{X_1\times_{X_0}\dots\times_{X_0} X_1}_n
+				\end{gather*}
+			\end{Def}
+			
+			We will generalize this in $\infty$-category.
+			
+			\subsection{Groupoid}
+				\begin{theorem}
+					TFAE:
+					\begin{itemize}
+						\item $\mathcal{C}$ is a groupoid;
+						\item $N(\mathcal{C})$ is a Kan complex;
+					\end{itemize}
+				\end{theorem}
+				\begin{proof}
+					$\Rightarrow$
+					
+					$\Leftarrow$
+				\end{proof}
 	\chapter{Presheaves, Yoneda Lemma}
 		\section{Presheaves}
 			\begin{Def}
@@ -1601,9 +2099,24 @@
 				\subsubsection{Cartesian Closed Category}
 				
 				\textbf{Remark} Not 'Closed' Cartesian category!
+			
 				
 				\begin{Def}
 					The Cartesian category has:
+					\begin{itemize}
+						\item $\mathcal{C}$ has a terminal object $1$;
+						\item Finite/Binary Product $X\times Y$;
+						\item There exists adjointness
+						\begin{gather*}
+							-\times X\dashv [X,-]
+						\end{gather*}
+						
+						i.e. $Hom(Z\times X,Y)\cong Hom(Z,[X,Y])$;
+						
+						Such $[X,Y]\in \mathcal{C}$ is called the \textbf{exponential object}.
+					\end{itemize}
+					
+					Thus, we obtain those maps:
 					\begin{itemize}
 						\item $!_X:X\rightarrow 1$;
 						\item $\Delta_X:X\rightarrow X\times X$;
@@ -1623,6 +2136,27 @@
 					\end{itemize}
 				\end{Def}
 				
+				\begin{proposition}
+					If $\mathcal{C}$ is a Cartesian closed category, then 
+					\begin{gather*}
+						X\times \sqcup_{i\in I} A_i\cong \sqcup_{i\in I} X\times A_i
+					\end{gather*}
+					
+					This implies, that this is a \underline{distributive category}.
+				\end{proposition}
+				\begin{proof}
+					We obtain, that
+					\begin{gather*}
+						Hom(X\times \sqcup A_i,Y)\cong Hom(\sqcup A_i,[X,Y])\cong \prod Hom_\mathcal{C}(X\times A_i,Y)\cong Hom(\sqcup (X\times A_i),Y)
+					\end{gather*}
+				\end{proof}
+				
+				Some of examples:
+				\begin{example}
+					\begin{itemize}
+						\item Category $\mathcal Set$;
+					\end{itemize}
+				\end{example}
 				\subsubsection{$S$-Combinator}
 				\begin{Def}
 					Consider:
@@ -1706,8 +2240,6 @@
 					\item Exists $A\otimes B$, $[A,[B,X]]\cong [A\otimes B,X]$
 				\end{itemize}
 	\chapter{Limits}
-		\section{Limits,Colimits (in Small Category)}
-		\subsection{Limits}
 		\subsubsection{Set-Thoeretic Limits}
 		\subsubsection{Limit of Functors in an Arbitrary Category}
 		
@@ -1808,14 +2340,96 @@
 			\end{itemize}
 	\chapter{Kan Extension}
 		\section{Definition}
-			\begin{Def}
+			\begin{Def} Suppose: $u:I\rightarrow J,F:I\rightarrow \mathcal{C}$. Now
 				\begin{itemize}
-					\item 
-					\item 
+					\item The \textbf{left Kan extension} $Lan_uF$
+					\begin{center}
+						\begin{tikzcd}
+							I\arrow[rr,"F"]\arrow[rd,"u"]&{ }\arrow[d,Rightarrow]&\mathcal{C}\\
+							&J\arrow[ru,"Lan_u F",swap]
+						\end{tikzcd}
+					\end{center} 
+					
+					It satisfies the following property: For $G:J\rightarrow \mathcal{C}$,
+					\begin{gather*}
+						Nat(Lan_u F,G)\cong Nat(F,G\circ u)
+					\end{gather*}
+					\item The \textbf{right Kan extension} $Ran_u F$:
+					\begin{center}
+						\begin{tikzcd}
+							I\arrow[rd,"u"]\arrow[rr,"F"]&{}&\mathcal{C}\\
+							&J\arrow[ru,"Ran_u F",swap]\arrow[u,Rightarrow]
+						\end{tikzcd}
+					\end{center}
+					
+					with the following property: For $G:J\rightarrow C$,
+					\begin{gather*}
+						Nat(Ran_u F,G)\cong Nat(G\circ u, F)
+					\end{gather*}
 				\end{itemize}
 			\end{Def}
-			\subsection{Formula}
+			
+			Thus, 
+			\begin{gather*}
+				Lan_u:Hom(I,C)\rightarrow Hom(J,C)\\
+				Ran_u:Hom(I,C)\rightarrow Hom(J,C)
+			\end{gather*}
+			
+			\begin{proposition}
+				Let $J=*$, then 
+				\begin{itemize}
+					\item The left kan extension operation forms the colimit of a functor;
+					\item The right Kan extension operation forms the limit of a functor. 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item 
+					
+					\item 
+					\begin{center}
+						\begin{tikzcd}
+							I\arrow[rr,"F"]\arrow[rd,"p"]&{ }&\mathcal{C}\\
+							&*\arrow[ru,"Ran_p F",swap]\arrow[u,Rightarrow]
+						\end{tikzcd}$\Rightarrow$\begin{tikzcd}
+							(Ran_p F\circ p)(x)\arrow[r,"(Ran_p F\circ p)(f)"]=*_\mathcal{C}\arrow[d,"\eta(x)"]&(Ran_p F\circ p)(y)=*_\mathcal{C}\arrow[d,"\eta(y)"]\\
+							F(x)\arrow[r,"F(f)"]&F(y)
+						\end{tikzcd}
+					\end{center}
+					
+					We obtain that
+					\begin{gather*}
+						F(f)\circ \eta(x)=\eta(y)\circ (Ran_p F\circ p)(f)
+					\end{gather*}
+					
+					And such $Ran_p F\circ p(f)=id_{*_\mathcal{C}}$, thus the diagram became the diagram of colimit;
+					
+					\item Similarly. 
+				\end{itemize}
+			\end{proof}
+			
+			\subsubsection{Presheaves}
+				\begin{proposition}
+					内容...
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
 			\subsection{Pointwise Kan Extensions}
+			
+			
+			\begin{theorem}
+				(Pointwise Kan Extension Formula) Suppose $u:I\rightarrow J$ be the functor between two small categories:
+				\begin{itemize}
+					\item If $\mathcal{C}$ is compelete, then the left Kan extension exists;
+					\item If $\mathcal{C}$ is cocompelete, then the right Kan extension exists;
+				\end{itemize}
+			\end{theorem}
+			\begin{proof}
+				
+				
+				Conversely similar. 
+			\end{proof}
 			\subsection{Kan Limits, and Other Categoricial Concepts}
 			
 			\begin{center}
