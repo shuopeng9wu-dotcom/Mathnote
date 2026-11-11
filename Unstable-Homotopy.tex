@@ -64,11 +64,31 @@
 				The group $\pi_n(X,x)$ is abelian, $n\geq 2$. 
 			\end{proposition}
 			\begin{proof}
-				We observe, that
+				We observe, that when $n\geq 2$, we could obtain two kinds of multiplication with identity $e$:
+				\begin{gather*}
+					内容...
+				\end{gather*}
 			\end{proof}
 			\subsubsection{Definition through Loop Space}
 			\subsubsection{Factorization through Sphere}
+			
 			\subsection{Functorial Property}
+			\begin{proposition}
+				The pointed map 
+				\begin{gather*}
+					u:(X,x_0)\rightarrow (Y,y_0)
+				\end{gather*}
+				
+				induces 
+				\begin{gather*}
+					u_*:\pi_n(X,x_0)\rightarrow \pi_n(Y,y_0)\qquad [f]\mapsto [u\circ f]
+				\end{gather*}
+				
+				which is a group map. 
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
 			\subsection{Coverings}
 			
 			\begin{theorem}
@@ -157,6 +177,47 @@
 		\section{Fibrations}
 			\subsection{Homotopy Lifting Property}
 			\subsection{Maps into Fibration}
+			
+		\section{Cofibrations}
+			\subsection{Homotopy Extension Prorperty}
+				\begin{Def}
+					A map $i:A\rightarrow X$ has the \textbf{homotopy extension property}(HEP) with respect to $Y$, if every pair of map $g:X\rightarrow Y,h:A\times I\rightarrow Y$ with 
+					\begin{gather*}
+						h(a,0)=g(i(a))\qquad \forall a\in A
+					\end{gather*}
+					
+					Admits an extension $H:X\times I\rightarrow Y$ satisfying
+					\begin{gather*}
+						H(x,0)=g(x)\qquad H(i(a),t)=h(a,t)
+					\end{gather*}
+				\end{Def}
+				
+				The following diagrams
+				\begin{center}
+					Map Space: \begin{tikzcd}
+						(X\times \{0\})\cup (A\times I)\arrow[r,"g\cup h"]\arrow[d]&Y\\
+						X\times I\arrow[ru,dashrightarrow]
+					\end{tikzcd}\\
+					Maps: \begin{tikzcd}
+						A\arrow[r]\arrow[d,"i"]&Fun(I,Y)\arrow[d]\\
+						X\arrow[r,"g"]\arrow[ru,dashrightarrow,"H"]&Y
+					\end{tikzcd}
+				\end{center}
+				
+				\begin{example}
+					A question is: Is any (closed) inclusion a cofibration? The answer is no. Given: $X=\{0\}\cup \{\frac{1}{n}|n\in \ZZ^+\},A=\{0\}$, then 
+					\begin{gather*}
+						T(X,A)=(X\times \{0\})\cup (A\times I)\subseteq X\times I
+					\end{gather*}
+					
+					\begin{proposition}
+						
+					\end{proposition}
+					\begin{proof}
+						内容...
+					\end{proof}
+				\end{example}
+			\subsection{title}
 	\chapter{Spectra}
 		Preparations: Recall some operations of spaces
 		\begin{itemize}

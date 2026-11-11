@@ -175,6 +175,25 @@
 						
 						$\Rightarrow$
 					\end{proof}
+					
+					\subsubsection{Extension of Functors}
+						\begin{Def}
+							Given:
+							\begin{itemize}
+								\item A functor $i:\mathcal{C}\rightarrow \mathcal{E}$;
+								\item Functor $F:\mathcal{C}\rightarrow \mathcal{D}$;
+							\end{itemize}
+							
+							Then, the \textbf{extension} of the functor is 
+							\begin{gather*}
+								\tilde{F}:\mathcal{E}\rightarrow \mathcal{D}
+							\end{gather*}
+							
+							such that
+							\begin{gather*}
+								\tilde{F}\circ i\cong F
+							\end{gather*}
+						\end{Def}
 				\subsection{Natural Transformation}
 			\begin{Def}
 				Consider the natural transformation $F:\mathcal{C}\rightarrow \mathcal{D}$ is \textbf{natural isomorphism} if there exists functor $G:\mathcal{D}\rightarrow \mathcal{C}$ such that
@@ -2340,6 +2359,7 @@
 			\end{itemize}
 	\chapter{Kan Extension}
 		\section{Definition}
+			\subsection{Local Kan Extension}
 			\begin{Def} Suppose: $u:I\rightarrow J,F:I\rightarrow \mathcal{C}$. Now
 				\begin{itemize}
 					\item The \textbf{left Kan extension} $Lan_uF$
@@ -2408,15 +2428,57 @@
 				\end{itemize}
 			\end{proof}
 			
-			\subsubsection{Presheaves}
-				\begin{proposition}
+			
+			Especially, local Kan extension is an extension of functor, if $\eta:F\Rightarrow (Lan_u F)\circ K$,(or conversely) is a natural transformation. 
+			
+			\begin{proposition}
+				If $u:I\rightarrow J$ is fully faithful, and $Lan_u F$ exists, then there exists a canonical natural transformation:
+				\begin{gather*}
 					内容...
-				\end{proposition}
-				\begin{proof}
-					内容...
-				\end{proof}
+				\end{gather*}
+				
+				with $\eta$ is a natural isomorphism. 
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			\subsection{Global Extension}
+			\begin{Def}  Notice that, we obtain the functors 
+				\begin{itemize}
+					\item $Lan_p:Hom(\mathcal{C},\mathcal{E})\rightarrow Hom(\mathcal{D},\mathcal{E})$;
+					\item  $Ran_p:Hom(\mathcal{C},\mathcal{E})\rightarrow Hom(\mathcal{D},\mathcal{E})$;
+				\end{itemize}
+				
+				Then,
+				\begin{gather*}
+					Lan_p\vdash p^*\dashv Ran_p
+				\end{gather*}
+				
+				i.e.
+				\begin{gather*}
+					Nat(Lan_p F,G)\cong Nat(F,p^* G)\qquad Nat(p^*,G)\cong Nat(G,Ran_p F)
+				\end{gather*}
+			\end{Def}
+			
+			\begin{proposition}
+				TFAE:
+				\begin{itemize}
+					\item Every $F\in [\mathcal{C},\mathcal{E}]$ admits a local left extension;
+					\item $p^*$ admits a left adjoint $Lan_p$.
+				\end{itemize}
+			\end{proposition}
 			\subsection{Pointwise Kan Extensions}
 			
+			\begin{lemma}
+				(Kan Extension by Limits and Colimits)
+				\begin{gather*}
+					(Lan_p F)(d)\cong \operatorname{colim}_{(p\downarrow d)} F\circ \pi_d\\
+					(Ran_p F)(d)\cong \lim_{d\downarrow p} F\circ \pi_d'
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				Directly from the diagram. 
+			\end{proof}
 			
 			\begin{theorem}
 				(Pointwise Kan Extension Formula) Suppose $u:I\rightarrow J$ be the functor between two small categories:
@@ -2426,16 +2488,54 @@
 				\end{itemize}
 			\end{theorem}
 			\begin{proof}
-				
-				
-				Conversely similar. 
+				Directly from above. 
 			\end{proof}
+			
+			\subsection{Composition of Kan Extensions}
 			\subsection{Kan Limits, and Other Categoricial Concepts}
 			
 			\begin{center}
 				All concepts are Kan extensions\qquad ------Mac Lane
 			\end{center}
-		\section{Derived Functors as Kan Extensions}
+			
+			
+			
+			\subsubsection{Presheaves and Yoneda's Lemma}
+				\begin{proposition}
+					Given:
+					\begin{itemize}
+						\item A small category $\mathcal{C}$;
+						\item A functor $F:\mathcal{C}\rightarrow \mathcal{D}$;
+						\item Yoneda embedding $Y:\mathcal{C}\rightarrow [\mathcal{C}^{op},Set]$;
+					\end{itemize}
+					
+					
+					Then, the \textbf{Yoneda extension}
+					\begin{gather*}
+						\tilde{F}:=Lan_Y F:[\mathcal{C}^{op},Set]\rightarrow \mathcal{D}
+					\end{gather*}
+					
+					If: $\mathcal{D}$ is cocompelete, then
+					\begin{gather*}
+						(Lan_Y F)(P)
+					\end{gather*}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
+				
+				Thus, Yoneda's extension is a Kan extension. 
+		\subsubsection{Derived Functors as Kan Extensions}
+				\begin{proposition}
+					\begin{itemize}
+						\item 
+						
+						\item 
+					\end{itemize}
+				\end{proposition}
+				\begin{proof}
+					内容...
+				\end{proof}
 		
 	\chapter{Monads, and Their Algebras}
 		\section{Monads}

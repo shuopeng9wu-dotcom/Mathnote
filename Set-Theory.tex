@@ -1,7 +1,192 @@
 \documentclass[Total.tex]{subfiles}
 
 \begin{document}
+	\chapter{Preparations}
+		\section{Class, and its Operations}
+		\section{Order Relations}
+			\begin{Def}
+				Consider the following first-order language
+				\begin{itemize}
+					\item 
+					\begin{gather*}
+						\mathcal{L}_{ord,strict}=(M,<)
+					\end{gather*}
+					
+					with: $M$ is a set, $<\subseteq M\times M$, and 
+					\begin{itemize}
+						\item Irreflexivity
+						\begin{gather*}
+							\forall x \neg(x<x)
+						\end{gather*}
+						\item Transitivity
+						\begin{gather*}
+							\forall x\forall y\forall z((x<y\wedge y<z)\rightarrow x<z)
+						\end{gather*}
+					\end{itemize}
+					
+					Thus, 
+					\begin{gather*}
+						T_{so}=\begin{Bmatrix}
+							\forall x \neg(x<x)\\
+							\forall x\forall y\forall z((x<y\wedge y<z)\rightarrow x<z)
+						\end{Bmatrix}\qquad \mathcal{M}\models T_{so}\Leftrightarrow \mathcal{M}\mbox{ is strictly partial order set}
+					\end{gather*}
+					
+					\item 
+					\begin{gather*}
+						\mathcal{L}_{ord}=(M,\{\leq,=\})
+					\end{gather*}
+					
+					with $M$ is a set, $\leq \quad\subseteq M\times M$, 
+					\begin{itemize}
+						
+						\item Reflecxitive
+						\begin{gather*}
+							\forall x(x\leq x)
+						\end{gather*}
+						\item Anti-Symmetric
+						\begin{gather*}
+							\forall x\forall y(x\leq y\wedge y\leq x\rightarrow x=y)
+						\end{gather*}
+						\item Transitivity
+						\begin{gather*}
+							\forall x\forall y\forall z((x\leq y\wedge y\leq z)\rightarrow x\leq z)
+						\end{gather*}
+					\end{itemize} 
+					
+					Thus,
+					\begin{gather*}
+						T_{o}=\begin{Bmatrix}
+							\forall x \neg(x<x)\\
+							\forall x\forall y(x\leq y\wedge y\leq x\rightarrow x=y)\\
+							\forall x\forall y\forall z((x\leq y\wedge y\leq z)\rightarrow x\leq z)
+						\end{Bmatrix}\qquad \mathcal{M}\models  T_\mathcal{o}\Leftrightarrow \mathcal{M}\mbox{ is a partial order}
+					\end{gather*}
+					
+				\end{itemize}
+			\end{Def}
+			\subsection{Linear-Ordering}
+			
+			\begin{Def}
+				Especially, a partial order $(M,<)$ is called \textbf{linear ordered}, if
+				\begin{gather*}
+					\forall x\forall y(x<y\vee y<x\vee x=y)
+				\end{gather*}
+				
+				Thus,
+				\begin{gather*}
+					\mathcal{T}_{lo}=\begin{Bmatrix}
+						\forall x \neg(x<x)\\
+						\forall x\forall y\forall z((x<y\wedge y<z)\rightarrow x<z)\\
+						\forall x\forall y(x<y\vee y<x\vee x=y)
+					\end{Bmatrix}\qquad \mathcal{M}\models T_{lo}\Leftrightarrow \mathcal{M}\mbox{ is linear ordered}
+				\end{gather*}
+
+
+			\end{Def}
+			\subsubsection{Well-Ordering}
+			
+			\begin{Def}
+				Let $(X,\leq)$ be linearly ordered. The relation $\leq$ is called \textbf{well-ordering} if every nonempty subset of $X$ has a least element. 
+				\begin{gather*}
+					\forall A\subseteq X,A\not=\emptyset\Rightarrow \exists a\in A\forall b\in A,a\leq b
+				\end{gather*}
+				
+				Thus,
+				\begin{gather*}
+					\mathcal{T}_{wo}=\begin{pmatrix}
+						\forall x \neg(x<x)\\
+						\forall x\forall y(x\leq y\wedge y\leq x\rightarrow x=y)\\
+						\forall x\forall y\forall z((x\leq y\wedge y\leq z)\rightarrow x\leq z)\\
+						\forall A\subseteq X,A\not=\emptyset\Rightarrow \exists a\in A\forall b\in A,a\leq b
+					\end{pmatrix}\qquad \mathcal{M}\models  \mathcal{T}\Leftrightarrow \mathcal{M}\mbox{ is well-ordered}
+				\end{gather*}
+			\end{Def}
+		\subsection{Well-Founded Order}
+			\begin{Def}
+				The well-founded order is the generation of well-ordering
+				\begin{gather*}
+					\forall A\subseteq X,A\not=\emptyset\Rightarrow \exists a\in A\forall b\in A,a\leq b
+				\end{gather*}
+			\end{Def}
+			
+		\subsection{Density}
+			\begin{Def}
+				内容...
+			\end{Def}
 	\chapter{ZFC Axioms}
+		\section{ZFC Axioms}
+			
+			\subsection{ZFC Axioms}
+			
+			
+			\subsection{Class, Properclass}
+		\section{Axiom of Regularity}
+			\begin{proposition}
+				There exists no set $x\in x$. 
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{corollary}
+				There is no pair of sets $x,y$ such that
+				\begin{gather*}
+					x\in y\qquad y\in x
+				\end{gather*}
+			\end{corollary}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsection{Von Neumann Hierarchy, Rank}
+				\begin{Def}
+					内容...
+				\end{Def}
+		\section{Axiom of Choice}
+			
+			\begin{proposition}
+				Assume: ZF axiom, the following statements are equivalent:
+				\begin{itemize}
+					\item The axiom of choice;
+					\item (Choice Function)If $x$ is such that $y\not=\emptyset,\forall y\in x$, then there exists a function
+					\begin{gather*}
+						f:x\rightarrow \cup x\qquad f(y)\in y
+					\end{gather*}
+					\item (Zorn's Lemma) Let $(x,\leq)$ be a partial order set. Then, suppose
+					\begin{itemize}
+						\item $x$ is nonempty;
+						\item Every chain has a upper bound. i.e. 
+						\begin{gather*}
+							\forall y(y\subseteq x\wedge (a\in y\wedge b\in y\rightarrow a\subseteq b\vee b\subseteq a))
+						\end{gather*}
+					\end{itemize}
+					
+					Then, $P$ has at least one maximal element $x$ such that: $\forall a(a\in x\rightarrow x\not\subset a)$. 
+					\item (Hausdorff's Maximal Principle) Let: $X\subseteq P(X)$ be a set, for $Y\subseteq X$, with 
+					\begin{gather*}
+						\forall a\forall b(a\in Y\wedge b\in Y\rightarrow a\subseteq b\vee b\subseteq a)
+					\end{gather*}
+					
+					Then, there must some $a\in X$ such that
+					\begin{gather*}
+						\forall b(b\in Y\rightarrow b\subseteq a)
+					\end{gather*}
+					
+					That is, some $a\in X$ such that there is no $b\in X$, with $a\subset b$. 
+					\item (well-ordered theorem)Every set can be well-ordered
+					
+					\item (Cartesian Product) The Cartesian product of any family of nonempty sets is nonempty. 
+				\end{itemize}
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item (2)$\Leftrightarrow$ (3)
+					\item (2)$\Leftrightarrow$ (4)
+					\item (2)$\Leftrightarrow$ (5)
+					\item (2)$\Leftrightarrow$ (6)
+				\end{itemize}
+			\end{proof}
 	\chapter{Construction of Real Numbers}
 		\section{Natural Numbers}
 		\section{Integer Numbers}
@@ -66,5 +251,56 @@
 					Then, 
 				\end{lemma}
 					
-		\chapter{title}
+		\chapter{Forcing}
+		
+			Our preparations:
+			\begin{itemize}
+				\item Models, Languages;
+				\item Filters;
+			\end{itemize}
+			
+			\subsection{Transitive Model}
+				\begin{Def}
+					Recall: Traisitive set;
+					\begin{itemize}
+						\item 
+						A set $M$ is called \textbf{transitive} if
+						\begin{gather*}
+							\forall x\in M,x\subseteq M
+						\end{gather*}
+						
+						equivalently, $\cup M\subseteq M$;
+						
+						\item Consider $\mathcal{L}_\in=\{\in\}$, with $\mathcal{M}=(M,E_\in)$, then, $M$ is called a \textbf{traisitive model} of theory $T$ if
+						\begin{itemize}
+							\item $M$ is a transitive set;
+							\item $E=\in |_{M\times M}$;
+							\item $(M,\in)\models T$, where $T$ is a set-theoretic theory;
+						\end{itemize}
+					\end{itemize}
+				\end{Def}
+			
+			\section{Forcing Notion}
+				\begin{Def}
+					Take the following notion $\mathbb{P}$ for the \textbf{forcing notion}, with
+					\begin{gather*}
+						\mathbb{P}=(P,\leq,1_\mathbb{P})
+					\end{gather*}
+					\begin{itemize}
+						\item $M^\mathbb{P}$ by recusion:
+						\begin{gather*}
+							M_0^\mathbb{P}:=\emptyset\\
+							M_{\alpha+1}^\mathbb{P}=P^M(\mathbb{P}\times M_\alpha^\mathbb{P})\\
+							M_\alpha^\mathbb{P}=\cup_{\beta<\alpha} M_\beta^\mathbb{P}\\
+							M^\mathbb{P}=\cup_{\alpha\in ord} M_\alpha^{\mathbb{P}}
+						\end{gather*}
+						
+						which is called \textbf{$\mathbb{P}$-Names}
+						\item $(P,\leq)$ is a preorder;
+					\end{itemize}
+					
+					
+					Here, $M$ is the universe of set theory. 
+				\end{Def}
+			
 \end{document}
