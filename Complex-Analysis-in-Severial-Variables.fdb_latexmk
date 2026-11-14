@@ -1,16 +1,16 @@
 # Fdb version 4
-["xdvipdfmx"] 1791891903.79379 "Complex-Analysis-in-Severial-Variables.xdv" "Complex-Analysis-in-Severial-Variables.pdf" "Complex-Analysis-in-Severial-Variables" 1791891904.78066 0
-  "Complex-Analysis-in-Severial-Variables.xdv" 1791891903 21276 2c4d69f84029616c4da264a24f270ea7 "xelatex"
+["xdvipdfmx"] 1792767361.54353 "Complex-Analysis-in-Severial-Variables.xdv" "Complex-Analysis-in-Severial-Variables.pdf" "Complex-Analysis-in-Severial-Variables" 1792767363.47849 0
+  "Complex-Analysis-in-Severial-Variables.xdv" 1792767361 118180 ea141837d1125b545d41d018fcca2fb2 "xelatex"
   (generated)
   "Complex-Analysis-in-Severial-Variables.pdf"
   (rewritten before read)
-["xelatex"] 1791891901.95822 "c:/Texnote/Mathnote/Complex-Analysis-in-Severial-Variables.tex" "Complex-Analysis-in-Severial-Variables.xdv" "Complex-Analysis-in-Severial-Variables" 1791891904.77274 0
-  "Complex-Analysis-in-Severial-Variables.aux" 1791891903 2532 8220e9bd2e716268591292e1c49684ed "xelatex"
-  "Complex-Analysis-in-Severial-Variables.out" 1791891903 1898 bd89c27454261b860ff7b97d56efbbba "xelatex"
-  "Complex-Analysis-in-Severial-Variables.tex" 1791891899 3819 d38e3f09610407355371fbfb5dfe79fe ""
+["xelatex"] 1792767358.88659 "c:/Texnote/Mathnote/Complex-Analysis-in-Severial-Variables.tex" "Complex-Analysis-in-Severial-Variables.xdv" "Complex-Analysis-in-Severial-Variables" 1792767363.46881 0
+  "Complex-Analysis-in-Severial-Variables.aux" 1792767361 9973 2d3bf286e2c058203199a15747f80fc2 "xelatex"
+  "Complex-Analysis-in-Severial-Variables.out" 1792767361 5355 19535da99e9d88b0e7750bb43f020207 "xelatex"
+  "Complex-Analysis-in-Severial-Variables.tex" 1792767331 19729 ec9a71d290fe71df88b6ff9d9378fb5f ""
   "ModulEN.cls" 1791889427 3487 9c397ce842b009c3bef16edb6bdb6d3a ""
   "Total.tex" 1791885581 3658 41f9309f65f794d7f75ac8197131e26a ""
-  "c:/Texnote/Mathnote/Complex-Analysis-in-Severial-Variables.tex" 1791891899 3819 d38e3f09610407355371fbfb5dfe79fe ""
+  "c:/Texnote/Mathnote/Complex-Analysis-in-Severial-Variables.tex" 1792767331 19729 ec9a71d290fe71df88b6ff9d9378fb5f ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1790190702 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1790211752 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1790188040 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -20,6 +20,7 @@
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm" 1790207001 520 82a3d37183f34b6eb363a161dfc002c2 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm" 1790207001 520 4889cce2180234b97cad636b6039c722 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm" 1790207001 520 a74c6ed8cb48679fdc3ea874d9d34a7e ""
+  "c:/texlive/2026/texmf-dist/fonts/tfm/public/latex-fonts/lasy8.tfm" 1790207001 520 7bb3abb160b19e0ed6ac404bb59052b7 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/stix-mathbb.tfm" 1790210329 1628 082e94509983dd1f77a7fdc44f712932 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/stix-mathbbit.tfm" 1790210329 2168 30d194a5875ada3505ad6a8c1bb54dea ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/stix-mathcal.tfm" 1790210329 2220 4be0194a42d141b33fa339861ecefc51 ""
@@ -33,6 +34,7 @@
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/stix-mathsfit.tfm" 1790210329 2560 304766c612fce5d4ce94849df0676616 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/stix-mathtt.tfm" 1790210329 1396 56f228418b8da227ec737e2e8eb165ee ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bold.tfm" 1790210329 11012 fe8465b2dc4812fb0ce069fcb0fe6af8 ""
+  "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-bolditalic.tfm" 1790210329 11132 876cc1f68923277b90e950337bde364f ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral-italic.tfm" 1790210329 11156 e8d76832153748248385d623691129d7 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/t1-stixgeneral.tfm" 1790210329 11184 42ce9dfc058df87da7094b2e2fab1260 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/stix/ts1-stixgeneral.tfm" 1790210329 1420 a3fb73e1fffd188e53dd5a0b1edb271e ""
