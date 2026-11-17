@@ -102,17 +102,17 @@
 \contentsline {subsubsection}{Quotient Category}{46}{subsubsection*.51}%
 \contentsline {subsection}{\numberline {2.4.2}Resolution}{46}{subsection.2.4.2}%
 \contentsline {section}{\numberline {2.5}Homology Exact Sequence}{46}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Some of Skills in Chain }{46}{subsection.2.5.1}%
-\contentsline {subsubsection}{$3\times 3$-Lemma}{46}{subsubsection*.52}%
-\contentsline {subsubsection}{Snake Lemma}{46}{subsubsection*.53}%
-\contentsline {subsubsection}{5-Lemma}{46}{subsubsection*.54}%
-\contentsline {subsubsection}{Addenbum}{46}{subsubsection*.55}%
-\contentsline {subsection}{\numberline {2.5.2}Existence of $\partial $ in Exact Chain Complexes}{46}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.1}Some of Skills in Chain }{47}{subsection.2.5.1}%
+\contentsline {subsubsection}{$3\times 3$-Lemma}{47}{subsubsection*.52}%
+\contentsline {subsubsection}{Snake Lemma}{47}{subsubsection*.53}%
+\contentsline {subsubsection}{5-Lemma}{47}{subsubsection*.54}%
+\contentsline {subsubsection}{Addenbum}{47}{subsubsection*.55}%
+\contentsline {subsection}{\numberline {2.5.2}Existence of $\partial $ in Exact Chain Complexes}{47}{subsection.2.5.2}%
 \contentsline {subsection}{\numberline {2.5.3}Resolution}{47}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Functor $Ext^1$}{47}{subsection.2.5.4}%
-\contentsline {subsubsection}{Extension and Ext}{47}{subsubsection*.56}%
-\contentsline {section}{\numberline {2.6}Mapping Cones and Cylinders}{48}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Mapping Cones}{48}{subsection.2.6.1}%
+\contentsline {subsubsection}{Extension and Ext}{48}{subsubsection*.56}%
+\contentsline {section}{\numberline {2.6}Mapping Cones and Cylinders}{49}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Mapping Cones}{49}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Mapping Cylinder}{49}{subsection.2.6.2}%
 \contentsline {subsubsection}{Exact Sequence between }{51}{subsubsection*.57}%
 \contentsline {section}{\numberline {2.7}Euler Characteristics}{51}{section.2.7}%

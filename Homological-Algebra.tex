@@ -2426,6 +2426,22 @@
 					\begin{proof}
 						内容...
 					\end{proof}
+
+
+					What's the relation between chain homotopy and homotopy of topological spaces? The following proposition gives a partial answer:
+					\begin{proposition}
+						Let $X$ be a topological space, and $C_*(X)$ be the singular chain complex of $X$. Then, if $f,g:X\rightarrow Y$ are homotopic maps, then the induced chain maps $f_*,g_*:C_*(X)\rightarrow C_*(Y)$ are chain homotopic.
+					\end{proposition}
+					\begin{proof}
+						Given a homotpy \begin{gather*}
+							H:X\times I\rightarrow Y\qquad H(x,0)=f(x),H(x,1)=g(x)
+						\end{gather*}
+
+						Then, $H$ induces a chain map $H_*:C_*(X\times I)\rightarrow C_*(Y)$. By the Eilenberg-Zilber theorem, we have a chain homotopy equivalence
+						\begin{gather*}
+							C_*(X\times I)\simeq C_*(X)\otimes C_*(I)
+						\end{gather*}
+					\end{proof}
 				\subsubsection{Quotient Category}
 					\begin{proposition}
 						Let $K$ be a quotient category of $Ch$.Then, the functor
