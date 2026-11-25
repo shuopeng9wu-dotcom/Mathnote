@@ -1,0 +1,207 @@
+\documentclass[Total.tex]{subfiles}
+\begin{document}
+	\chapter{Metric Spaces}
+	\subsubsection{Tangent Cone as Limit of Cone}
+		\begin{Def}
+			\begin{itemize}
+				\item We could do \textbf{homothety} in the affine space. 
+				
+				Thus,
+				\begin{gather*}
+					H_{p,\lambda}：\RR^n\rightarrow \RR^n\qquad x\mapsto \lambda(x-p)
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+	\subsubsection{Aymptotic Cone}
+	\section{Lipschitz Distance}
+		
+	\section{Hausdorff-Gromov Distance}
+		\subsection{Hausdorff Distance}
+			\begin{Def}
+				Let:$A,B$ be two metric space. Define:
+				\begin{gather*}
+				d_H(A,B):=\inf\{\epsilon>0|A\subseteq B_\epsilon(B),B\subseteq B_\epsilon (A)\}
+			\end{gather*}
+			
+			where 
+			\begin{gather*}
+				B(x,X)=\{x\in X|d(x,A)<\epsilon\}
+			\end{gather*}
+			\end{Def}
+			
+			Especially:
+			\begin{itemize}
+				\item $d_H(A,B)=\infty$ is possible: 
+				\begin{gather*}
+					A=\{(0,1)\}\qquad B=\{(x,0)|x\in \RR\}
+				\end{gather*}
+				
+				If $\epsilon$ is finite, it is impossible that $B\subseteq B_\epsilon(A)$.
+				\item $d_H(A,B),A\cap B$ is possible:
+				\begin{gather*}
+					Q=\QQ\qquad B=\RR-\QQ
+				\end{gather*}
+			\end{itemize}
+			
+			\begin{lemma}
+				Suppose $A,B\subseteq X$, and
+				\begin{gather*}
+					d_A=diam(A)\qquad d_B=diam(B)\\
+					d(A,B):=\inf\{d(a,b)|a\in A,b\in B\}
+				\end{gather*}
+				
+				Then,
+				\begin{gather*}
+					A\subset B_{d_A+d_B+d(A,B)+1}(B)\qquad 
+					B\subset B_{d_A+d_B+d(A,B)+1}(A)
+				\end{gather*}
+			\end{lemma}
+			\begin{proof}
+				We will expand one of them: By triangle inequality
+				\begin{gather*}
+					A\subseteq B_{d_A+d(A,B)}(B)\qquad B\subseteq A_{d_A+d(A,B)}(B)
+				\end{gather*}
+				
+				Then, we obtain the relation. Notice: A extreme condition is $d(B)=0$ for pointed set.
+			\end{proof}
+			
+			\begin{corollary} If $A,B$ are bounded(or compact), then
+				\begin{gather*}
+					d_H(A,B)<\infty
+				\end{gather*}
+			\end{corollary}
+			\begin{proof}
+				Omitted.
+			\end{proof}
+			
+			\begin{proposition}
+				$d_H$ is a metric on the set of compact subsets.
+			\end{proposition}
+			\begin{proof}
+				\begin{itemize}
+					\item Bounded: Thus the value of $d_H$ is in $[0,\infty)$;
+					\item Positivity: $d_H(A,A)=0$.
+					
+					If $d_H(A,B)=0$, then $A\subseteq B,B\subseteq A$;
+					\item Symmetry: $d_H(A,B)=d_H(B,A)$
+					\item Triangle inequality: $d_H(A,B)=\epsilon_1,d_H(B,C)=\epsilon_2,d_H(A,C)=\epsilon$, then
+					\begin{gather*}
+						\epsilon_1+
+					\end{gather*}
+				\end{itemize}
+			\end{proof}
+			
+			We observe: Compactness is a relative weaker condition. We could generalize the theory to 
+			\begin{proposition}
+				Let $(X,d)$ be a metric space, then, $d_H$ is a metric on 
+				\begin{gather*}
+					\mathcal{CB}(X)=\{A\subseteq X|A\not=\emptyset,\mbox{ closed and bounded}\}
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				Similarly
+			\end{proof}
+			
+			We will take the notion of $d_H^d$ for the metric induced by $d$.
+			
+			
+		\subsection{Gromov-Hausdorff Distance}
+		
+		\begin{Def}
+			\begin{itemize}
+				\item $f:(X_1,d_1)\rightarrow (Z,d)$ is called an \textbf{isometric} embedding, if 
+				\begin{gather*}
+					\bar{f}:(X_1,d_1)\rightarrow (f(X_1),d_2)
+				\end{gather*}
+				
+				is an isometry.
+				\item Given two metric space $(X_1,d_1);(X_2,d_2)$, then
+				\begin{gather*}
+					d_{GH}((X_1,d_1),(X_2,d_2))=
+				\end{gather*}
+				\item Given two metric space $(X_1,d_1),(X_2,d_2)$, then, the metric space $(Z,d)$ induced by them is 
+				\begin{gather*}
+					..
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		\begin{proposition}
+			Let $(X_1,d_1),(X_2,d_2)$ be metric spaces, then
+			\begin{gather*}
+				d_{GH}((X_1,d_1),(X_2,d_2))=\inf\{d_H^d(X_1,X_2)\}
+			\end{gather*}
+		\end{proposition}
+		\begin{proof}
+			\begin{itemize}
+				\item $\leq$:
+				
+				
+				\item $\geq$:
+			\end{itemize}
+		\end{proof}
+		
+		\subsection{$\epsilon$-Approxiamation}
+			\begin{Def}
+				Let:$(X,d_X),(Y,d_Y)$ be two metric spaces. 
+				
+				A map $f:X\rightarrow Y$ is called $\epsilon$-\textbf{approxiamation} if:
+				\begin{itemize}
+					\item 
+					\item
+				\end{itemize}
+			\end{Def}
+			
+			\begin{theorem}
+				If $d_{GH}((X_1,d_1),(X_2,d_2))<\epsilon$, then we obtain that, there exists a pair $f,g$
+				\begin{gather*}
+					Inhalt...
+				\end{gather*}
+				
+				which is an $\epsilon$-approxiamation. i.e. 
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item 
+				\end{itemize}
+			\end{theorem}
+			\textbf{Remark} Such given $f,g$ could be not continuous: An example is
+			\begin{gather*}
+				x_1=S^1,x_2
+			\end{gather*}
+			\begin{proof}
+				Inhalt...
+			\end{proof}
+			
+			Conversely:
+			\begin{proposition}
+				If the four conditions above are satisfied, then
+				\begin{gather*}
+					Inhalt...
+				\end{gather*}
+			\end{proposition}
+			
+			\subsection{Isometry, Class of Isometric Spaces, and its Gromov-Hausdorff Metric}
+				\begin{Def}
+					\begin{itemize}
+						\item 
+						\item 
+					\end{itemize}
+				\end{Def}
+				
+				\begin{theorem}
+					(Gromov-Hausdorff Distance is a Metric,David A. Edwards,1975)
+					
+					 The Gromov-Hausdorff distance defines a metric.
+				\end{theorem}
+				\begin{proof}
+					Inhalt...
+				\end{proof}
+			
+			\subsection{General-Topologic Properties}
+				\subsubsection{Seperability}
+				\subsubsection{Compeleteness}
+		\chapter{Topics in Riemannian Geometry}
+\end{document}

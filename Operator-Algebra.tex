@@ -10,7 +10,230 @@
 	\end{itemize}
 	
 	\chapter{Banach Algebras}
-	
-	
-	
+		\section{Algebras, Banach Algebras}
+		\subsection{Fundamentals}
+		\subsubsection{Algebras}
+		\begin{Def}
+			\begin{itemize}
+				\item An \textbf{algebra} is: A vector space $A$ with bilinear map
+				\begin{gather*}
+					\cdot:A\times A\rightarrow A
+				\end{gather*}
+				
+				which satisfies: Associativity
+				\begin{gather*}
+					a\cdot (b\cdot c)=(a\cdot b)\cdot c
+				\end{gather*}
+				\item A \textbf{subalgebra} is: A vector space $B\subseteq A$ with
+				\begin{gather*}
+					b,b'\in B\Rightarrow bb'\in B
+				\end{gather*}
+				
+				\item Norm on algebra
+				\begin{gather*}
+					\Vert ab\Vert\leq \Vert a\Vert\Vert b\Vert
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		\begin{proposition}
+			For a norm $\Vert-\Vert$ on algebra $A$, we obtain that
+			\begin{gather*}
+				\Vert ab-a'b'\Vert\leq \Vert a\Vert\Vert b-b'\Vert+\Vert a-a'\Vert\Vert b'\Vert
+			\end{gather*}
+		\end{proposition}
+		\subsubsection{Banach Algebras}
+		\begin{Def}
+			\begin{itemize}
+				\item A \textbf{compelete} algebra is called \textbf{Banach algebra}. i.e. Cauchy Sequence$\Rightarrow$ Convergent Sequence
+				\item Unitial: with $1_A\in A$ as identity, and $\Vert 1_A\Vert=1$;
+			\end{itemize}
+		\end{Def}
+		
+		\begin{proposition}
+			\begin{itemize}
+				\item 
+				Every normed algebra $A$ admits a Banach algebra $\hat{A}$ and an embedding $A\hookrightarrow \hat{A}$
+				
+				\item Furthermore, suppose $f:A\rightarrow B$, where $B$ is Banach, then there exists a unique homomorphism of (Banach) algebras
+				\begin{center}
+					\begin{tikzcd}
+						内容...
+					\end{tikzcd}
+				\end{center}
+			\end{itemize}
+		\end{proposition}
+		\begin{proof}
+			内容...
+		\end{proof}
+		
+		Define followings sets:
+		\begin{Def}
+			\begin{itemize}
+				\item $S$ be a set, 
+				\begin{gather*}
+					l^\infty(S):=\{f:S\rightarrow \CC|f\mbox{ is bounded-valued}\}
+				\end{gather*}
+				
+				Then, $l^\infty(S)$ is unitial Banach algebra, with norm
+				\begin{gather*}
+					\Vert f\Vert_\infty=\sup_{S} \Vert f(x)\Vert
+				\end{gather*}
+				\item Subalgebra
+				\begin{gather*}
+					C_b(\Omega)=C(\Omega)\cap l^\infty(\Omega)
+				\end{gather*}
+			\end{itemize}
+		\end{Def}
+		
+		And:
+		\begin{Def}
+			Let $\Omega$ be a locally compact Hausdorff space, then a function is \textbf{vanishes at infinity} if
+			\begin{gather*}
+				\{\omega\in \Omega||f(\omega)|\geq \omega\}
+			\end{gather*}
+			
+			is compact. Denoted by $C_0(\Omega)$. 
+		\end{Def}
+		
+		It is a closed subalgebra $C_0(\Omega)\subseteq C(\Omega)$. 
+		
+		\subsubsection{Subalgebras, Ideals,Quotients}
+			\begin{Def}
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item Especially, a \textbf{modular ideal} is an ideal $I\subseteq A$ such that
+					\begin{gather*}
+						A/I
+					\end{gather*}
+					
+					is unitial. Equivalently, there exists some $u\in A$ such that
+					\begin{gather*}
+						内容...
+					\end{gather*}
+				\end{itemize}
+			\end{Def}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+		\subsubsection{Operator Spaces}
+			\begin{Def}
+				内容...
+			\end{Def}
+		\subsection{Spectrum}
+			、\begin{Def} Let $A$ be a unitary $\CC$-algebra, then 
+				\begin{gather*}
+					\CC[z]\rightarrow A\qquad p=\sum a_i z^i\mapsto \sum a_i a^i\qquad a\in A
+				\end{gather*}
+			\end{Def}
+			
+			
+			And,
+			\begin{Def}
+				The \textbf{invertible elements}
+				\begin{gather*}
+					Inv(A)=\{a\in A|\exists b, ab=ba=1_A\}
+				\end{gather*}
+			\end{Def}
+			
+			Then,
+			\begin{Def}
+				\begin{gather*}
+					\sigma_A(a):=\{\lambda\in \CC|\lambda 1-a\notin Inv(A)\}
+				\end{gather*}
+			\end{Def}
+			
+			Especially, for the finite-dimensional case $A=M_n(\CC)$,
+			\begin{gather*}
+				\sigma_A(a)=Eig(a)
+			\end{gather*}
+			
+			By
+			\begin{gather*}
+				\lambda\in Eig(a)\Leftarrow \lambda I-a\mbox{ is not invertible}\Leftarrow det(\lambda I-a)=0\Leftarrow \exists v\not=0, Tv=\lambda v
+			\end{gather*}
+			
+			\begin{proposition}
+				内容...
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\begin{proposition}
+				Let $B\subseteq A$ be a unitial subalgebra, then
+				\begin{gather*}
+					Inv(B)=B\cap Inv(A)
+				\end{gather*}
+			\end{proposition}
+			\begin{proof}
+				内容...
+			\end{proof}
+			
+			\subsubsection{Spectral Polynomial  Mapping Theorem, Neumann Series}
+			
+			
+			\begin{theorem}
+				(Spectral Polynomial  Mapping Theorem) 
+				Let $p\in \CC[z]$, and $a\in A$, $A$ a unital algebra(maybe not Banach!!), then
+				\begin{gather*}
+					\sigma(p(a))=p(\sigma(a))\subseteq \CC
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				Some of proves are given here:
+				\begin{itemize}
+					\item 
+					\item 
+					\item 
+					\item (Gelfand's Theorem) Assume Gelfand's theorem, then\
+				\end{itemize}
+			\end{proof}
+			\begin{theorem}
+				Let: $A$ be a unital Banach algebra, and $a$ an element of $A$ with $\vert A\Vert<1$, then $1-a\in Inv(A)$, and
+				\begin{gather*}
+					(1-a)(\sum a^i)=1_A
+				\end{gather*}
+			\end{theorem}
+			\begin{proof}
+				Omitted. 
+			\end{proof}
+			
+			\begin{Def}
+				Such series
+				\begin{gather*}
+					\sum a^i
+				\end{gather*}
+				
+				is called \textbf{Von neumann series}
+			\end{Def}
+			
+			\subsubsection{Gelfand Theorem, Gelfand-Marzur Theorem}
+			
+			\subsubsection{Spectral Radius}
+				\begin{Def}
+					Let $A$ be an algebra. The \textbf{spectrum radius} of $a\in A$,
+					\begin{gather*}
+						r(a):=\sup_{\lambda\in \sigma(a)} |\lambda|
+					\end{gather*}
+				\end{Def}
+				
+				\begin{theorem}
+					(Beurling)
+				\end{theorem}
+				\begin{proof}
+					内容...
+				\end{proof}
+		\section{Gelfand Representation}
+			
+		\chapter{Compact and Fredholm Operators}
+		
+		\chapter{C*-Algebras and	Hilbert Space Operators}
 \end{document}
